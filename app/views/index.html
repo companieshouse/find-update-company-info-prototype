@@ -1,44 +1,135 @@
-
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Home – GOV.UK Prototype Kit
+  Shortcuts – {{ serviceName }} - GOV.UK
 {% endblock %}
 
 {% block content %}
 
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-      <h1 class="govuk-heading-xl">
-        Prototype your service using GOV.UK Prototype Kit
-        <span class="govuk-caption-xl">{{releaseVersion}}</span>
-      </h1>{{releaseVersion | log }}
-      <p>
-        This kit lets you rapidly create HTML prototypes of GOV.UK services.
-      </p>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <h1 class="govuk-heading-xl">
+      {{serviceName}}
+      <span class="govuk-caption-xl">Version 1</span>
+    </h1>
 
-      <p>
-        It contains all you need to prototype anything from simple static pages to complex, data-driven transactions.
-      </p>
-
-      <h2 class="govuk-heading-m">About this page</h2>
-
-      <p>We recommend you add links to your prototype to this page, rather than delete it.
-        You'll find this page in the kit at '/app/views/index.html'.</p>
-
-      <p>You can change the service name by editing the file '/app/config.js'.</p>
-
-      <h2 class="govuk-heading-m">Examples and documentation</h2>
-
-      <ul class="govuk-list govuk-list--bullet">
-        <li>
-          <a href="/docs/tutorials-and-examples">Tutorials and templates</a>
+    {{ govukWarningText({
+      text: "This prototype is being actively worked on - things might break or change very quickly", iconFallbackText: "Warning" })
+    }}
+    
+    {# ENTRY POINTS AND LINKS TAB #}
+    <div class="govuk-tabs" data-module="govuk-tabs">
+      <h4 class="govuk-tabs__title">Contents</h4>
+      <ul class="govuk-tabs__list">
+        <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+          <a class="govuk-tabs__tab" href="#code"> Entry points and links </a>
         </li>
-        <li>
-          <a href="https://design-system.service.gov.uk">GOV.UK Design System</a>
+        <li class="govuk-tabs__list-item">
+          <a class="govuk-tabs__tab" href="#form-versions">
+            Previous versions
+          </a>
         </li>
       </ul>
+      <div class="govuk-tabs__panel" id="code">
+        <h2 class="govuk-heading-m">Initial screen builds</h2>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>
+            <a href="search">Search the register</a>
+          </li>
+          <li>
+            <a href="search-results">Search results</a>
+          </li>
+        </ul>
+      </div>
+
+      {# PREVIOUS VERSIONS TAB #}
+      <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="form-versions">
+        <table class="govuk-table version-history">
+          <caption class="govuk-table__caption govuk-heading-l">
+            Previous versions
+          </caption>
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">
+                Version
+              </th>
+              <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">
+                Tested on
+              </th>
+              <th scope="col" class="govuk-table__header govuk-!-width-one-half">
+                Changes
+              </th>
+              <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">
+                Status
+              </th>
+            </tr>
+          </thead>
+
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                <a href="javascript: void(0)">Version X</a>
+              </th>
+              <td class="govuk-table__cell">TBA</td>
+              <td class="govuk-table__cell">
+                <p><a href="#">Feature</a></p>
+                <p></p>
+                <ul class="govuk-list govuk-list--bullet">
+                  <li>Feature description</li>
+                </ul>
+              </td>
+              <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--red">
+                  Not ready for user testing
+                </strong>
+              </td>
+            </tr>
+
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                <a href="https://roe-v8.herokuapp.com/">Version X</a>
+              </th>
+              <td class="govuk-table__cell">June 2022</td>
+              <td class="govuk-table__cell">
+                <p><a href="#">Feature</a></p>
+                <p></p>
+                <ul class="govuk-list govuk-list--bullet">
+                  <li>Feature description</li>
+                </ul>
+              </td>
+              <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--green">
+                  Ready for user testing
+                </strong>
+              </td>
+            </tr>
+
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                <a href="https://roe-v7.herokuapp.com/">Version X</a>
+              </th>
+              <td class="govuk-table__cell">May 2022</td>
+              <td class="govuk-table__cell">
+                <p><a href="#">Feature</a></p>
+                <p></p>
+                <ul class="govuk-list govuk-list--bullet">
+                  <li>Feature description</li>
+                </ul>
+              </td>
+
+              <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--green">
+                  User tested
+                </strong>
+              </td>
+            </tr>
+
+          </tbody>
+
+        </table>
+      </div>
     </div>
   </div>
+</div>
 
 {% endblock %}
