@@ -1,4 +1,4 @@
-{% extends "layout.html" %}
+{% extends "layout-signed-out.html" %}
 {% block pageTitle %}
   {{serviceName}}
   - GOV.UK
@@ -8,10 +8,8 @@
     <div class="govuk-grid-column-two-thirds-from-desktop">
       <h1 class="govuk-heading-xl">We are changing the way you log in to Companies House</h1>
      
-     <p class="govuk-body">_______________________________________________________ </p>
-     <p class="govuk-body">_______________________________________________________ </p>
-     <p class="govuk-body">_______________________________________________________ </p>
-
+     <p class="govuk-body">From 2nd March 2023, you will login to Companies House using GOV.UK One Login, instead of having a separate username and password.</p>
+     <p class="govuk-body"> Webfiling accounts will not change. </p>
       {{ govukButton({
         text: "Continue",
         href: "create-or-sign-in",
@@ -44,10 +42,12 @@
           },
           {
             heading: {
-              text: "Anything else"
+              text: "I can no longer access the email address I used to use for Companies House"
             },
             content: {
-              html: "<p class='govuk-body'>This is the content for ....</p>"
+              html: "<p class='govuk-body'>Since you need to enter a code received by email when signing up for GOV.UK One Login, you will need to use an email address you have access to.</p>
+
+                <p> Please contact us with details of your old and new email address and we will do what we can to help.</p>"
             }
           },
           {

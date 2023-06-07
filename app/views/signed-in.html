@@ -1,0 +1,53 @@
+{% extends "layout-signed-out.html" %}
+
+{% block pageTitle %}
+  You’ve signed in to your GOV.UK One Login – GOV.UK One Login prototype
+{% endblock %}
+{% set serviceName %}
+  
+{% endset%}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        The email address used for GOV.UK One login has a Companies House account
+      </h1>
+
+      {{ govukRadios({
+        name: "where-do-you-live",
+        fieldset: {
+          legend: {
+            text: "Do you want 'your filing' and 'companies you follow' to be stored on GOV.UK One login?",
+            isPageHeading: false,
+            classes: "govuk-fieldset__legend--m"
+          }
+        },
+        items: [
+          {
+            value: "yes",
+            text: "Yes"
+          },
+          {
+            value: "no",
+            text: "No"
+          }
+        ]
+      }) }}
+
+      
+
+        <a href="sign-in">
+        <button class="govuk-button">Continue</button>
+        </a>
+
+    </div>
+  </div>
+
+{% endblock %}

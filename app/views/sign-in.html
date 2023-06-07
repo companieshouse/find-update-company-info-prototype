@@ -1,4 +1,4 @@
-{% extends "layout.html" %}
+{% extends "layout-signed-out.html" %}
 {% block pageTitle %}
   {{serviceName}} - GOV.UK
 {% endblock %}
@@ -29,10 +29,12 @@
         name: "password"
       }) }}
       {{ govukButton({
-        text: "Sign in"
+        text: "Sign in",
+        href:"accounts-linked"
       }) }}
       </form>
-      <p class="govuk-body"><a href="#" class="govuk-link">Create an account</a></p>
+     <!-- No needed --> 
+     <!-- <p class="govuk-body"><a href="#" class="govuk-link">Create an account</a></p> -->
       <p class="govuk-body"><a href="#" class="govuk-link">I've forgotten my password</a></p>
       <p class="govuk-body"><a href="#" class="govuk-link">I need to file a charge (mortgage) document using a lender authentication code</a></p>
     </div>
