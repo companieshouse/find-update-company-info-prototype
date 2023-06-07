@@ -1,0 +1,154 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  tesco - {{serviceName}} - GOV.UK
+{% endblock %}
+{% block beforeContent %}
+  {% include "includes/header_links.html" %}
+{% endblock %}
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <form action="/results" method="post">
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="weight">
+                Search
+              </label>
+              <div class="govuk-input__wrapper">
+                <input class="govuk-input govuk-input--width-520" id="weight" name="weight" type="text" spellcheck="false" value="{{search}}">
+                <div class="govuk-input__suffix" aria-hidden="true">            
+                  <button style="background: none;border: none;" class="govuk-link">
+                    <svg class="gem-c-search__icon" width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                    <circle cx="12.0161" cy="11.0161" r="8.51613" stroke="currentColor" stroke-width="3"></circle>
+                    <line x1="17.8668" y1="17.3587" x2="26.4475" y2="25.9393" stroke="currentColor" stroke-width="3"></line>
+                    </svg>
+                  </button>
+                </div>
+          </form>
+        </div>
+      </div>
+      <span class="govuk-caption-l">Company number 00445790</span>
+      <h1 class="govuk-heading-l">TESCO PLC</h1>
+    </div>
+  </div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-quarter">
+      {% include "includes/company_sidebar_links.html" %}
+    </div>
+    <div class="govuk-grid-column-three-quarters">
+      <h2 class="govuk-heading-m">Officers</h2>
+      {{ govukCheckboxes({
+        idPrefix: "waste",
+        name: "waste",
+        classes: "govuk-checkboxes--small",
+        fieldset: {
+          legend: {
+            text: "Filter officers "
+          }
+        },
+        items: [
+          {
+            value: "carcasses",
+            text: "Current officers"
+          }
+        ]
+      }) }}
+      <p class="govuk-body">68 officers and 54 resignations</p>
+      <div class="govuk-summary-card govuk-!-margin-bottom-4">
+        <div class="govuk-summary-card_heading govuk-!-padding-top-4 govuk-!-padding-bottom-4 govuk-!-padding-right-3 govuk-!-padding-left-3">
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+              <p class="govuk-!-font-weight-bold govuk-!-margin-0"><a href="#" class="govuk-link">WELCH, Robert John</a></p>
+            </div>
+            <div class="govuk-grid-column-one-third">
+              {{ govukTag({
+                text: "active"
+              }) }}
+            </div>
+          </div>
+        </div>
+        <div class="govuk-!-padding-1">
+          <dl class="govuk-summary-list govuk-!-margin-3">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">Correspondence address</dt>
+              <dd class="govuk-summary-list__value">
+                Tesco House, Shire Park, Kestrel Way, Welwyn Garden City, United Kingdom, AL7 1GA 
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">Role</dt>
+              <dd class="govuk-summary-list__value">
+                Secretary
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">Appointed on</dt>
+              <dd class="govuk-summary-list__value">
+                10 August 2016 
+              </dd>
+            </div>
+          </div>
+        </div>
+        <div class="govuk-summary-card govuk-!-margin-bottom-4">
+          <div class="govuk-summary-card_heading govuk-!-padding-top-4 govuk-!-padding-bottom-4 govuk-!-padding-right-3 govuk-!-padding-left-3">
+            <div class="govuk-grid-row">
+              <div class="govuk-grid-column-two-thirds">
+                <p class="govuk-!-font-weight-bold govuk-!-margin-0"><a href="#" class="govuk-link">ALLAN, John Murray</a></p>
+              </div>
+              <div class="govuk-grid-column-one-third">
+                {{ govukTag({
+                  text: "active"
+                }) }}
+              </div>
+            </div>
+            </div>
+            <div class="govuk-!-padding-1">
+              <dl class="govuk-summary-list govuk-!-margin-3">
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">Correspondence address</dt>
+                  <dd class="govuk-summary-list__value">Tesco House, Shire Park, Kestrel Way, Welwyn Garden City, United Kingdom, AL7 1GA </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">Role</dt>
+                  <dd class="govuk-summary-list__value">
+                    Director
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">Appointed on</dt>
+                  <dd class="govuk-summary-list__value">
+                    1 March 2015 
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">Date of birth</dt>
+                  <dd class="govuk-summary-list__value">
+                    August 1948 
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">Nationality</dt>
+                  <dd class="govuk-summary-list__value">
+                    British
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">Country of residence</dt>
+                  <dd class="govuk-summary-list__value">
+                    England
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">Occupation</dt>
+                  <dd class="govuk-summary-list__value">
+                    Chairman
+                  </dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </div>      
+{% endblock %}

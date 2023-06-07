@@ -1,0 +1,207 @@
+<div class="app-c-option-select js-collapsible" data-module="option-select">
+    <h2 class="app-c-option-select__heading js-container-heading govuk-!-margin-0">
+    <button class="js-container-button app-c-option-select__title app-c-option-select__button" type="button" aria-expanded="true" id="option-select-title-market-sector" aria-controls="list_of_sectors">Types of results</button>
+    <svg version="1.1" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="app-c-option-select__icon app-c-option-select__icon--up" aria-hidden="true" focusable="false"><path d="m798.16 609.84l-256-256c-16.683-16.683-43.691-16.683-60.331 0l-256 256c-16.683 16.683-16.683 43.691 0 60.331s43.691 16.683 60.331 0l225.84-225.84 225.84 225.84c16.683 16.683 43.691 16.683 60.331 0s16.683-43.691 0-60.331z"></path></svg>
+    <svg version="1.1" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="app-c-option-select__icon app-c-option-select__icon--down" aria-hidden="true" focusable="false"><path d="m225.84 414.16l256 256c16.683 16.683 43.691 16.683 60.331 0l256-256c16.683-16.683 16.683-43.691 0-60.331s-43.691-16.683-60.331 0l-225.84 225.84-225.84-225.84c-16.683-16.683-43.691-16.683-60.331 0s-16.683 43.691 0 60.331z"></path></svg>
+    </h2>
+    <div role="group" aria-labelledby="option-select-title-market-sector" class="app-c-option-select__container js-options-container" id="list_of_sectors" tabindex="-1">
+        <div class="app-c-option-select__container-inner js-auto-height-inner">
+            <div id="checkboxes-a8e2813c" class="gem-c-checkboxes govuk-form-group govuk-checkboxes--small" data-module="gem-checkboxes">
+                {{ govukCheckboxes({
+                    idPrefix: "waste",
+                    name: "waste",
+                    fieldset: {
+                        legend: {
+                            text: "Filter types"
+                        }
+                    },
+                    items: [
+                        {
+                            value: "carcasses",
+                            text: "Companies",
+                            checked: true
+                        },
+                        {
+                            value: "mines",
+                            text: "Officers",
+                            checked: true
+                        },
+                        {
+                            value: "farm",
+                            text: "Disqualifications",
+                            checked: true
+                        }
+                    ]
+                }) }}
+            </div>
+        </div>
+    </div>
+</div>
+<div class="app-c-option-select js-collapsible" data-module="option-select">
+    <h2 class="app-c-option-select__heading js-container-heading govuk-!-margin-0">
+        <button class="js-container-button app-c-option-select__title app-c-option-select__button" type="button" aria-expanded="true" id="option-select-title-market-sector" aria-controls="list_of_sectors">Company name</button>
+        <svg version="1.1" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="app-c-option-select__icon app-c-option-select__icon--up" aria-hidden="true" focusable="false"><path d="m798.16 609.84l-256-256c-16.683-16.683-43.691-16.683-60.331 0l-256 256c-16.683 16.683-16.683 43.691 0 60.331s43.691 16.683 60.331 0l225.84-225.84 225.84 225.84c16.683 16.683 43.691 16.683 60.331 0s16.683-43.691 0-60.331z"></path></svg>
+        <svg version="1.1" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="app-c-option-select__icon app-c-option-select__icon--down" aria-hidden="true" focusable="false"><path d="m225.84 414.16l256 256c16.683 16.683 43.691 16.683 60.331 0l256-256c16.683-16.683 16.683-43.691 0-60.331s-43.691-16.683-60.331 0l-225.84 225.84-225.84-225.84c-16.683-16.683-43.691-16.683-60.331 0s-16.683 43.691 0 60.331z"></path></svg>
+    </h2>
+    <div role="group" aria-labelledby="option-select-title-market-sector" class="app-c-option-select__container js-options-container" id="list_of_sectors" tabindex="-1">
+        <div class="app-c-option-select__container-inner js-auto-height-inner">
+            <div id="checkboxes-a8e2813c" class="gem-c-checkboxes govuk-form-group govuk-checkboxes--small" data-module="gem-checkboxes">
+
+{{ govukInput({
+  label: {
+    text: "Company names that contain"
+  },
+  id: "event-name",
+  name: "event-name"
+}) }}
+{{ govukInput({
+  label: {
+    text: "Exclude company names that contain"
+  },
+  id: "event-name",
+  name: "event-name"
+}) }}
+                    </div>
+                </div>
+            </div>
+        </div>
+                    <div class="app-c-option-select js-collapsible" data-module="option-select">
+            <h2 class="app-c-option-select__heading js-container-heading govuk-!-margin-0">
+            <button class="js-container-button app-c-option-select__title app-c-option-select__button" type="button" aria-expanded="true" id="option-select-title-market-sector" aria-controls="list_of_sectors">Registered office address</button>
+            <svg version="1.1" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="app-c-option-select__icon app-c-option-select__icon--up" aria-hidden="true" focusable="false"><path d="m798.16 609.84l-256-256c-16.683-16.683-43.691-16.683-60.331 0l-256 256c-16.683 16.683-16.683 43.691 0 60.331s43.691 16.683 60.331 0l225.84-225.84 225.84 225.84c16.683 16.683 43.691 16.683 60.331 0s16.683-43.691 0-60.331z"></path></svg>
+            <svg version="1.1" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="app-c-option-select__icon app-c-option-select__icon--down" aria-hidden="true" focusable="false"><path d="m225.84 414.16l256 256c16.683 16.683 43.691 16.683 60.331 0l256-256c16.683-16.683 16.683-43.691 0-60.331s-43.691-16.683-60.331 0l-225.84 225.84-225.84-225.84c-16.683-16.683-43.691-16.683-60.331 0s-16.683 43.691 0 60.331z"></path></svg>
+            </h2>
+            <div role="group" aria-labelledby="option-select-title-market-sector" class="app-c-option-select__container js-options-container" id="list_of_sectors" tabindex="-1">
+                <div class="app-c-option-select__container-inner js-auto-height-inner">
+                    <div id="checkboxes-a8e2813c" class="gem-c-checkboxes govuk-form-group govuk-checkboxes--small" data-module="gem-checkboxes">
+
+{{ govukInput({
+  label: {
+    text: "Enter a full or partial address"
+  },
+  id: "event-name",
+  name: "event-name"
+}) }}
+                    </div>
+                </div>
+            </div>
+        </div>
+                    <div class="app-c-option-select js-collapsible" data-module="option-select">
+            <h2 class="app-c-option-select__heading js-container-heading govuk-!-margin-0">
+            <button class="js-container-button app-c-option-select__title app-c-option-select__button" type="button" aria-expanded="true" id="option-select-title-market-sector" aria-controls="list_of_sectors">Nature of business</button>
+            <svg version="1.1" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="app-c-option-select__icon app-c-option-select__icon--up" aria-hidden="true" focusable="false"><path d="m798.16 609.84l-256-256c-16.683-16.683-43.691-16.683-60.331 0l-256 256c-16.683 16.683-16.683 43.691 0 60.331s43.691 16.683 60.331 0l225.84-225.84 225.84 225.84c16.683 16.683 43.691 16.683 60.331 0s16.683-43.691 0-60.331z"></path></svg>
+            <svg version="1.1" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="app-c-option-select__icon app-c-option-select__icon--down" aria-hidden="true" focusable="false"><path d="m225.84 414.16l256 256c16.683 16.683 43.691 16.683 60.331 0l256-256c16.683-16.683 16.683-43.691 0-60.331s-43.691-16.683-60.331 0l-225.84 225.84-225.84-225.84c-16.683-16.683-43.691-16.683-60.331 0s-16.683 43.691 0 60.331z"></path></svg>
+            </h2>
+            <div role="group" aria-labelledby="option-select-title-market-sector" class="app-c-option-select__container js-options-container" id="list_of_sectors" tabindex="-1">
+                <div class="app-c-option-select__container-inner js-auto-height-inner">
+                    <div id="checkboxes-a8e2813c" class="gem-c-checkboxes govuk-form-group govuk-checkboxes--small" data-module="gem-checkboxes">
+
+{{ govukInput({
+  label: {
+    text: "Enter a Standard Industrial Classification (SIC) code to search by nature of business. "
+  },
+  id: "event-name",
+  name: "event-name"
+}) }}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="app-c-option-select js-collapsible" data-module="option-select">
+            <h2 class="app-c-option-select__heading js-container-heading govuk-!-margin-0">
+            <button class="js-container-button app-c-option-select__title app-c-option-select__button" type="button" aria-expanded="true" id="option-select-title-market-sector" aria-controls="list_of_sectors">Company status</button>
+            <svg version="1.1" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="app-c-option-select__icon app-c-option-select__icon--up" aria-hidden="true" focusable="false"><path d="m798.16 609.84l-256-256c-16.683-16.683-43.691-16.683-60.331 0l-256 256c-16.683 16.683-16.683 43.691 0 60.331s43.691 16.683 60.331 0l225.84-225.84 225.84 225.84c16.683 16.683 43.691 16.683 60.331 0s16.683-43.691 0-60.331z"></path></svg>
+            <svg version="1.1" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="app-c-option-select__icon app-c-option-select__icon--down" aria-hidden="true" focusable="false"><path d="m225.84 414.16l256 256c16.683 16.683 43.691 16.683 60.331 0l256-256c16.683-16.683 16.683-43.691 0-60.331s-43.691-16.683-60.331 0l-225.84 225.84-225.84-225.84c-16.683-16.683-43.691-16.683-60.331 0s-16.683 43.691 0 60.331z"></path></svg>
+            </h2>
+            <div role="group" aria-labelledby="option-select-title-market-sector" class="app-c-option-select__container js-options-container" id="list_of_sectors" tabindex="-1">
+                <div class="app-c-option-select__container-inner js-auto-height-inner">
+                    <div id="checkboxes-a8e2813c" class="gem-c-checkboxes govuk-form-group govuk-checkboxes--small" data-module="gem-checkboxes">
+                        <fieldset class="govuk-fieldset">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m govuk-visually-hidden">Company status</legend>
+                        <ul class="govuk-checkboxes gem-c-checkboxes__list govuk-list">
+                            <li class="govuk-checkboxes__item">
+                                <input type="checkbox" name="market_sector[]" id="aerospace" value="aerospace" class="govuk-checkboxes__input"><label for="aerospace" class="govuk-label govuk-checkboxes__label">Active</label>
+                            </li>              
+                            <li class="govuk-checkboxes__item">
+                                <input type="checkbox" name="market_sector[]" id="agriculture-environment-and-natural-resources" value="agriculture-environment-and-natural-resources" class="govuk-checkboxes__input"><label for="agriculture-environment-and-natural-resources" class="govuk-label govuk-checkboxes__label">Dissolved</label>
+                            </li>              
+                            <li class="govuk-checkboxes__item">
+                                <input type="checkbox" name="market_sector[]" id="building-and-construction" value="building-and-construction" class="govuk-checkboxes__input"><label for="building-and-construction" class="govuk-label govuk-checkboxes__label">Open</label>
+                            </li>              
+                            <li class="govuk-checkboxes__item">
+                                <input type="checkbox" name="market_sector[]" id="chemicals" value="chemicals" class="govuk-checkboxes__input"><label for="chemicals" class="govuk-label govuk-checkboxes__label">Closed</label>
+                            </li>              
+                            <li class="govuk-checkboxes__item">
+                                <input type="checkbox" name="market_sector[]" id="clothing-footwear-and-fashion" value="clothing-footwear-and-fashion" class="govuk-checkboxes__input"><label for="clothing-footwear-and-fashion" class="govuk-label govuk-checkboxes__label">Converted closed</label>
+                            </li>              
+                            <li class="govuk-checkboxes__item">
+                                <input type="checkbox" name="market_sector[]" id="defence" value="defence" class="govuk-checkboxes__input"><label for="defence" class="govuk-label govuk-checkboxes__label">Receivership</label>
+                            </li>              
+                            <li class="govuk-checkboxes__item">
+                                <input type="checkbox" name="market_sector[]" id="distribution-and-service-industries" value="distribution-and-service-industries" class="govuk-checkboxes__input"><label for="distribution-and-service-industries" class="govuk-label govuk-checkboxes__label">Liquidation</label>
+                            </li>              
+                            <li class="govuk-checkboxes__item">
+                                <input type="checkbox" name="market_sector[]" id="electronics-industry" value="electronics-industry" class="govuk-checkboxes__input"><label for="electronics-industry" class="govuk-label govuk-checkboxes__label">Adminstration</label>
+                            </li>              
+                            <li class="govuk-checkboxes__item">
+                                <input type="checkbox" name="market_sector[]" id="energy" value="energy" class="govuk-checkboxes__input"><label for="energy" class="govuk-label govuk-checkboxes__label">Insolvency proceedings</label> 
+                            </li>              
+                            <li class="govuk-checkboxes__item">
+                                <input type="checkbox" name="market_sector[]" id="engineering" value="engineering" class="govuk-checkboxes__input"><label for="engineering" class="govuk-label govuk-checkboxes__label">Voluntary arrangement</label>
+
+                            </li>             
+                        </ul>
+                        </fieldset>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="app-c-option-select js-collapsible" data-module="option-select">
+            <h2 class="app-c-option-select__heading js-container-heading govuk-!-margin-0">
+            <button class="js-container-button app-c-option-select__title app-c-option-select__button" type="button" aria-expanded="true" id="option-select-title-market-sector" aria-controls="list_of_sectors">Company type</button>
+            <svg version="1.1" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="app-c-option-select__icon app-c-option-select__icon--up" aria-hidden="true" focusable="false"><path d="m798.16 609.84l-256-256c-16.683-16.683-43.691-16.683-60.331 0l-256 256c-16.683 16.683-16.683 43.691 0 60.331s43.691 16.683 60.331 0l225.84-225.84 225.84 225.84c16.683 16.683 43.691 16.683 60.331 0s16.683-43.691 0-60.331z"></path></svg>
+            <svg version="1.1" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="app-c-option-select__icon app-c-option-select__icon--down" aria-hidden="true" focusable="false"><path d="m225.84 414.16l256 256c16.683 16.683 43.691 16.683 60.331 0l256-256c16.683-16.683 16.683-43.691 0-60.331s-43.691-16.683-60.331 0l-225.84 225.84-225.84-225.84c-16.683-16.683-43.691-16.683-60.331 0s-16.683 43.691 0 60.331z"></path></svg>
+            </h2>
+            <div role="group" aria-labelledby="option-select-title-market-sector" class="app-c-option-select__container js-options-container" id="list_of_sectors" tabindex="-1">
+                <div class="app-c-option-select__container-inner js-auto-height-inner">
+                    <div id="checkboxes-a8e2813c" class="gem-c-checkboxes govuk-form-group govuk-checkboxes--small" data-module="gem-checkboxes">
+                        <fieldset class="govuk-fieldset">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m govuk-visually-hidden">Company type</legend>
+                        <ul class="govuk-checkboxes gem-c-checkboxes__list govuk-list">
+                            <li class="govuk-checkboxes__item">
+                                <input type="checkbox" name="market_sector[]" id="aerospace" value="aerospace" class="govuk-checkboxes__input"><label for="aerospace" class="govuk-label govuk-checkboxes__label">Private unlimited company</label>
+                            </li>              
+                            <li class="govuk-checkboxes__item">
+                                <input type="checkbox" name="market_sector[]" id="agriculture-environment-and-natural-resources" value="agriculture-environment-and-natural-resources" class="govuk-checkboxes__input"><label for="agriculture-environment-and-natural-resources" class="govuk-label govuk-checkboxes__label">Private limited company</label>
+                            </li>              
+                            <li class="govuk-checkboxes__item">
+                                <input type="checkbox" name="market_sector[]" id="building-and-construction" value="building-and-construction" class="govuk-checkboxes__input"><label for="building-and-construction" class="govuk-label govuk-checkboxes__label">Public limited company</label>
+                            </li>              
+                            <li class="govuk-checkboxes__item">
+                                <input type="checkbox" name="market_sector[]" id="chemicals" value="chemicals" class="govuk-checkboxes__input"><label for="chemicals" class="govuk-label govuk-checkboxes__label">Old public company</label>
+                            </li>              
+                            <li class="govuk-checkboxes__item">
+                                <input type="checkbox" name="market_sector[]" id="clothing-footwear-and-fashion" value="clothing-footwear-and-fashion" class="govuk-checkboxes__input"><label for="clothing-footwear-and-fashion" class="govuk-label govuk-checkboxes__label">Private limited company by guarantee without share capital, use of 'Limited' exemption</label>
+                            </li>              
+                            <li class="govuk-checkboxes__item">
+                                <input type="checkbox" name="market_sector[]" id="defence" value="defence" class="govuk-checkboxes__input"><label for="defence" class="govuk-label govuk-checkboxes__label">Limited partnership</label>
+                            </li>              
+                            <li class="govuk-checkboxes__item">
+                                <input type="checkbox" name="market_sector[]" id="distribution-and-service-industries" value="distribution-and-service-industries" class="govuk-checkboxes__input"><label for="distribution-and-service-industries" class="govuk-label govuk-checkboxes__label">Private limited by guarantee without share capital</label>
+                            </li>              
+                            <li class="govuk-checkboxes__item">
+                                <input type="checkbox" name="market_sector[]" id="electronics-industry" value="electronics-industry" class="govuk-checkboxes__input"><label for="electronics-industry" class="govuk-label govuk-checkboxes__label">Converted or closed</label>
+                            </li>              
+                            <li class="govuk-checkboxes__item">
+                                <input type="checkbox" name="market_sector[]" id="energy" value="energy" class="govuk-checkboxes__input"><label for="energy" class="govuk-label govuk-checkboxes__label">Private unlimited company without share capital</label> 
+                            </li>              
+                            <li class="govuk-checkboxes__item">
+                                <input type="checkbox" name="market_sector[]" id="engineering" value="engineering" class="govuk-checkboxes__input"><label for="engineering" class="govuk-label govuk-checkboxes__label">Voluntary arrangement</label>
+
+                            </li>             
+                        </ul>
+                        </fieldset>
+                    </div>
+                </div>
+            </div>
+        </div>
