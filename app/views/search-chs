@@ -5,6 +5,16 @@ Home – {{serviceName}} – GOV.UK
 {% endblock %}
 
 
+{% block header %}
+{% include "includes/header_links.html" %}
+{% endblock %}
+
+
+
+{% block beforeContent %}
+  
+{% endblock %}
+
 
 {% block content %}
   <div class="govuk-grid-row">

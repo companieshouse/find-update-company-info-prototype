@@ -1,0 +1,68 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+  {{serviceName}}
+  - GOV.UK
+{% endblock %}
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+      <h1 class="govuk-heading-xl">We are changing the way you log in to Companies House</h1>
+     
+     <p class="govuk-body">_______________________________________________________ </p>
+     <p class="govuk-body">_______________________________________________________ </p>
+     <p class="govuk-body">_______________________________________________________ </p>
+
+      {{ govukButton({
+        text: "Continue",
+        href: "one-login",
+        classes: "govuk-!-margin-top-4 govuk-!-margin-bottom-8",
+        isStartButton: true
+      }) }}
+
+
+
+      {{ govukAccordion({
+        id: "accordion-default",
+        items: [
+          {
+            heading: {
+              text: "What is GOV.UK One login"
+            },
+            content: {
+              html: "<p class='govuk-body'>GOV.UK One Login will be the new way for you to sign into all central government services. It will allow you to easily access all the services you use with GOV.UK One Login in one place, using the same email address and password.</p>"
+            }
+          },
+          {
+            heading: {
+              text: "Which email address should I use for GOV.UK One login"
+            },
+            content: {
+              html: "<p class='govuk-body'>We suggest using your work email address for GOV.UK One Login to access Companies House.
+
+                If you're an existing user .... <!--and use the same email address that you have previously used for the Modern slavery statement registry,--> we will match your GOV.UK One Login to your existing Companies House account....</p>"
+            }
+          },
+          {
+            heading: {
+              text: "Anything else"
+            },
+            content: {
+              html: "<p class='govuk-body'>This is the content for ....</p>"
+            }
+          },
+          {
+            heading: {
+              text: "Anything else"
+            },
+            content: {
+              html: "<p class='govuk-body'>This is the content for .....</p>"
+            }
+          }
+        ]
+      }) }}
+
+      
+     
+    </div>
+  </div>
+{% endblock %}
