@@ -41,34 +41,7 @@
 
 {% block header %}
   {# Set serviceName in config.js. #}
-  {{ govukHeader({
-    homepageUrl: "/",
-    serviceName: serviceName,
-    serviceUrl: "/",
-    containerClasses: "govuk-width-container"
-  }) }}
-  <div class="govuk-body" id="chs-customer-insights-top">
-    <div class="govuk-width-container">
-      <a class="govuk-link" href="https://www.smartsurvey.co.uk/s/csat-companieshouseservice/">Tell us what you think of Companies House</a>
-    </div>
-  </div>
-  <div class="govuk-width-container small-text" style="padding-top: 0px;">
-    <a class="govuk-link" href="http://resources.companieshouse.gov.uk/serviceInformation.shtml#compInfo" target="_blank">
-      Companies House does not verify the accuracy of the information filed<span class="govuk-visually-hidden">(link opens a new window)</span>
-    </a>
-    <div class="js-toggle-nav" id="global-nav">
-      <a id="user-signin-mobile" href="/signin" class="sign-in govuk-link">Sign in / Register</a>
-      <nav role="navigation" class="content mobile-hidden">
-        <ul id="navigation" class="mobile-hidden">
-          <li class="authenticated">address@domain.co.uk:</li>
-          <li class="your-details"><a class="govuk-link" id="user-signout" href="">Your details</a></li>
-          <li class="your-filings"><a class="govuk-link" id="user-signout" href="/your-filings">Your filings</a></li>
-          <li class="companies-you-follow"><a class="govuk-link" id="user-signout" href="">Companies you follow</a></li>
-          <li class="authenticated"><a class="govuk-link" id="user-signout" href="/signout">Sign out</a></li>
-        </ul>
-      </nav>
-    </div>
-  </div>
+
 {% endblock %}
 
 {% set mainClasses = mainClasses | default("govuk-main-wrapper--auto-spacing") %}
