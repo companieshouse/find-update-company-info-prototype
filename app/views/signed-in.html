@@ -16,17 +16,20 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <h1 class="govuk-heading-l">
-        The email address used for GOV.UK One login has a Companies House account
-      </h1>
+      <h1 class="govuk-heading-xl">Do you want to link your GOV.UK One login account to an existing Companies House account? </h1>
+
+      {{ govukInsetText({
+        text: "By linking your accounts 'your filings' and 'companies you follow' will be stored on GOV.UK One login account."
+      }) }}
+
 
       {{ govukRadios({
         name: "where-do-you-live",
         fieldset: {
           legend: {
-            text: "Do you want 'your filing' and 'companies you follow' to be stored on GOV.UK One login?",
+            text: "",
             isPageHeading: false,
-            classes: "govuk-fieldset__legend--m"
+            classes: "govuk-fieldset__legend--l"
           }
         },
         items: [
