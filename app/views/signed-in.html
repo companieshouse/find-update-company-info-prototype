@@ -16,10 +16,10 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <h1 class="govuk-heading-xl">Do you want to link your GOV.UK One login account to an existing Companies House account? </h1>
+      <h1 class="govuk-heading-xl">Do you have an existing Companies House account? </h1>
 
       {{ govukInsetText({
-        text: "By linking your accounts 'your filings' and 'companies you follow' will be stored on GOV.UK One login account."
+        text: "If you want to store 'Your filing' history and the 'companies you follow' on your GOV.UK account we will ask you now sign in to your Companies House account. Your accounts will then be linked."
       }) }}
 
 
@@ -35,11 +35,11 @@
         items: [
           {
             value: "yes",
-            text: "Yes"
+            text: "Yes, I want to link my Companies House account and GOV.UK One login"
           },
           {
             value: "no",
-            text: "No"
+            text: "No, I don't want to link to an existing Companies House account"
           }
         ]
       }) }}
