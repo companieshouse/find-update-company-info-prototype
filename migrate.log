@@ -1,0 +1,6 @@
+2023-06-14T13:49:30.126Z
+cwd: ~/Documents/GitHub/find-update-company-info-prototype
+package: govuk-prototype-kit@13.8.1
+argv: /usr/local/bin/node ~/.npm/_npx/ab0cb2c39bc0319f/node_modules/.bin/govuk-prototype-kit migrate
+Started [Check migration is being applied to a pre v13 prototype]
+Failed [Check migration is being applied to a pre v13 prototype]
