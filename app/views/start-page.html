@@ -6,63 +6,26 @@
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds-from-desktop">
-      <h1 class="govuk-heading-xl">We are changing the way you log in to Companies House</h1>
+      <h1 class="govuk-heading-xl">We have changed the way you sign in to Companies House</h1>
      
-     <p class="govuk-body">From 2nd March 2023, you will login to Companies House using GOV.UK One Login, instead of having a separate username and password.</p>
-     <p class="govuk-body"> Webfiling accounts will not change. </p>
+     <p class="govuk-body">From now on, you need to sign in to Companies House using GOV.UK One Login. </p>
+
+     {{ govukDetails({
+      summaryText: "What is GOV.UK One Login",
+      text: "This is the new way for you to sign in to GOV.UK services. In the future, you’ll be able to use it to access all services, using the same email address and password."
+    }) }}
+
+    <div class="govuk-inset-text">
+      <p class="govuk-body"> If you have a <a href="https://idam-ui.company-information.service.gov.uk/" class="govuk-link">WebFiling</a> account, your sign in details will not change for that account. </p>
+    </div>
+   
       {{ govukButton({
-        text: "Create a GOV.UK One login or sign in ",
+        text: "Continue ",
         href: "create-or-sign-in",
         classes: "govuk-!-margin-top-4 govuk-!-margin-bottom-8",
         isStartButton: true
       }) }}
 
-
-
-      {{ govukAccordion({
-        id: "accordion-default",
-        items: [
-          {
-            heading: {
-              text: "What is GOV.UK One login"
-            },
-            content: {
-              html: "<p class='govuk-body'>GOV.UK One Login will be the new way for you to sign into all central government services. It will allow you to easily access all the services you use with GOV.UK One Login in one place, using the same email address and password.</p>"
-            }
-          },
-          {
-            heading: {
-              text: "Which email address should I use for GOV.UK One login"
-            },
-            content: {
-              html: "<p class='govuk-body'>We suggest using your work email address for GOV.UK One Login to access Companies House.
-
-                If you're an existing user .... <!--and use the same email address that you have previously used for the Modern slavery statement registry,--> we will match your GOV.UK One Login to your existing Companies House account....</p>"
-            }
-          },
-          {
-            heading: {
-              text: "I can no longer access the email address I used to use for Companies House"
-            },
-            content: {
-              html: "<p class='govuk-body'>Since you need to enter a code received by email when signing up for GOV.UK One Login, you will need to use an email address you have access to.</p>
-
-                <p> Please contact us with details of your old and new email address and we will do what we can to help.</p>"
-            }
-          },
-          {
-            heading: {
-              text: "Anything else"
-            },
-            content: {
-              html: "<p class='govuk-body'>This is the content for .....</p>"
-            }
-          }
-        ]
-      }) }}
-
-      
-     
     </div>
   </div>
 {% endblock %}
