@@ -18,10 +18,6 @@
 
       <h1 class="govuk-heading-xl">Do you have an existing Companies House account? </h1>
 
-      {{ govukInsetText({
-        text: "If you want to store 'Your filing' history and the 'companies you follow' on your GOV.UK account we will ask you now sign in to your Companies House account. Your accounts will then be linked."
-      }) }}
-
 
       {{ govukRadios({
         name: "where-do-you-live",
@@ -35,11 +31,11 @@
         items: [
           {
             value: "yes",
-            text: "Yes, I want to link my Companies House account and GOV.UK One login"
+            text: "Yes"
           },
           {
             value: "no",
-            text: "No, I don't want to link to an existing Companies House account"
+            text: "No"
           }
         ]
       }) }}
