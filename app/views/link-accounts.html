@@ -17,31 +17,19 @@
     <div class="govuk-grid-column-two-thirds">
 
       
-      <h1 class="govuk-heading-l">Linking your GOV.UK One login to your Companies House account </h1>
+      <h1 class="govuk-heading-l">Save your Companies House information</h1>
       
-            <p class="govuk-body">
-              Add content here.
-            </p>
-      
-            <p class="govuk-body">
-              Add content here.
-            </p>
-      
-            <p class="govuk-body">
-              Add content here.
-            </p>
-      
-            <p class="govuk-body">
-              Add content here.
-            </p>
-      
-           
-      
+      <p class="govuk-body">You may have information currently stored in your Companies House account, such as:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>a record of your filing history</li>
+        <li>companies you follow</li>
+      </ul>
+
               {{ govukRadios({
                 name: "link-accounts",
                 fieldset: {
                   legend: {
-                    text: "Do you want to link your acounts?",
+                    text: "Do you want us to save your existing Companies House information?",
                     isPageHeading: false,
                     classes: "govuk-fieldset__legend--m"
                   }
@@ -53,7 +41,11 @@
                   },
                   {
                     value: "no",
-                    text: "No"
+                    text: "No",
+                    
+  hint: {
+    text: "You will lose this information if you select ‘no’."
+  }
                   }
                 ]
               }) }}
