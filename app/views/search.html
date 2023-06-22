@@ -1,4 +1,4 @@
-{% extends "layout-search.html" %}
+{% extends "layout-search-results.html" %}
 
 {% block pageTitle %}
   {{ serviceName }} - GOV.UK
@@ -17,11 +17,13 @@
         Enter company name, number or officer name
       </p>
 
-      <div class="search-bar-active">
+      <div class="">
         <div class="searchfield">
           <label class="govuk-visually-hidden" for="site-search-text">Enter company name, number or officer name</label>
-          <input type="search" autocomplete="off" name="q" id="site-search-text" title="Search" value="" placeholder="Start here...">
-          <button type="submit" id="search-submit" class="search-submit">Search</button>
+            <input class="govuk-input govuk-input--width-30" id="site-search-text" title="Search" name="q" value="" type="search" autocomplete="off"  placeholder="Start here...">
+            <button class="govuk-button govuk-button--secondary" data-module="govuk-button" type="submit" id="search-submit" class="search-submit govuk-!-padding-0">
+              Search
+            </button>
           <p id="slowsearch" class="slow-search-msg" style="display:none">Please press ENTER to search</p>
         </div>
       </div>
