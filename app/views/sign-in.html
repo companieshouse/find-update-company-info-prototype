@@ -12,8 +12,13 @@
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds-from-desktop">
-      <h1 class="govuk-heading-l">Sign in to Companies House</h1>
+      <h1 class="govuk-heading-l">Sign in to your Companies House account so we can save your information</h1>
       <form action="/sign-in" method="post" novalidate="">
+
+
+      <p class="govuk-body govuk-!-padding-bottom-5">Use the email address and password you usually use to sign in to Companies House. This will allow us to save your existing Companies House information.</p>
+
+
       {{ govukInput({
         label: {
           text: "Email address"
@@ -21,6 +26,9 @@
         id: "email-address",
         name: "email-address"
       }) }}
+
+
+
       {{ govukInput({
         label: {
           text: "Password"
@@ -36,7 +44,7 @@
      <!-- No needed --> 
      <!-- <p class="govuk-body"><a href="#" class="govuk-link">Create an account</a></p> -->
       <p class="govuk-body"><a href="#" class="govuk-link">I've forgotten my password</a></p>
-      <p class="govuk-body"><a href="#" class="govuk-link">I need to file a charge (mortgage) document using a lender authentication code</a></p>
+     
     </div>
   </div>
 {% endblock %}
