@@ -41,8 +41,57 @@
 
 {% block header %}
   {# Set serviceName in config.js. #}
+  {{ govukHeader({
+    homepageUrl: "/",
+    serviceName: serviceName,
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+  }) }}
 
-{% endblock %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <div id="chs-customer-insights">
+        <a class="govuk-link" href="https://www.research.net/r/S78XJMV" target="_blank" onclick="javascript:_paq.push(['trackEvent', 'Beta', 'Feedback']);">Tell us what you think of this service<span class="govuk-visually-hidden">(link opens a new window)</span></a>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <div class="govuk-width-container small-text" style="padding-top: 12px;">
+    <a class="govuk-link govuk-link--no-visited-state govuk-!-padding-top-2" href="" target="_blank">
+      Companies House does not verify the accuracy of the information filed<span class="govuk-visually-hidden">(link opens a new window)</span>
+    </a>
+    <div class="js-toggle-nav" id="global-nav">
+      <a id="user-signin-mobile" href="/signin" class="sign-in govuk-link">Sign in / Register</a>
+     
+      <nav role="navigation" class="content mobile-hidden">
+        <ul id="navigation" class="mobile-hidden">
+          <li class="authenticated">example@example.co.uk:</li>
+          <li class="your-details"><a class="govuk-link" id="user-signout" href="">Your details</a></li>
+          <li class="your-filings"><a class="govuk-link" id="user-signout" href="/your-filings">Your filings</a></li>
+          <li class="companies-you-follow"><a class="govuk-link" id="user-signout" href="">Companies you follow</a></li>
+          <li class="authenticated"><a class="govuk-link" id="user-signout" href="/signout">Sign out</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div> 
+
+ <!-- <div class="govuk-width-container small-text" style="padding-top: 12px;">
+    <a class="govuk-link govuk-link--no-visited-state govuk-!-padding-top-2" href="" target="_blank">
+      Companies House does not verify the accuracy of the information filed<span class="govuk-visually-hidden">(link opens a new window)</span>
+    </a>
+    <div class="js-toggle-nav" id="global-nav">
+      <nav role="navigation" class="content mobile-hidden">
+        <ul id="navigation" class="mobile-hidden">
+          <li class="authenticated"><a class="govuk-link" id="user-signin" href="start-page">Sign in/Register</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>-->
+{% endblock %} 
 
 {% set mainClasses = mainClasses | default("govuk-main-wrapper--auto-spacing") %}
 
