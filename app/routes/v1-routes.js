@@ -4,10 +4,34 @@ const router = express.Router()
 // Add your routes here - above the module.exports line
 
 
-router.post('/', function (req, res) {
- 
-  res.redirect('results')
+//start page
+router.post('/v1/start-page', function (req, res) {
+  res.redirect('create-or-sign-in')
 })
+
+//One login create or sign in 
+
+
+
+//One loginsign in email address
+
+//One loginsign in password
+
+
+//One loginsign in check phone 
+
+// Do you have an existing Companies House account?
+
+// Companies House sign in 
+
+//Save your Companies House information
+
+
+//We have saved your Companies House information
+
+
+// Companies House Service signed in 
+
 
 
 
