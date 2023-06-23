@@ -1,207 +1,67 @@
-{% extends "layout-no-header.html" %}
+{% extends "layout.html" %}
 
 {% block pageTitle %}
-  Shortcuts – {{ serviceName }} - GOV.UK
+Home – {{serviceName}} – GOV.UK Prototype Kit
 {% endblock %}
+
+{% block beforeContent %}
+  {% include "includes/phase-banner.html" %}
+{% endblock %}
+
 
 {% block content %}
 
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-full">
-    <h1 class="govuk-heading-xl">
-      {{serviceName}}
-      <span class="govuk-caption-xl">Version 1</span>
-    </h1>
+<div class="govuk-width-container">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
 
-    {{ govukWarningText({
-      text: "This prototype is being actively worked on - things might break or change very quickly", iconFallbackText: "Warning" })
-    }}
-    
-    {# ENTRY POINTS AND LINKS TAB #}
-    <div class="govuk-tabs" data-module="govuk-tabs">
-      <h4 class="govuk-tabs__title">Contents</h4>
-      <ul class="govuk-tabs__list">
-        <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-          <a class="govuk-tabs__tab" href="#code"> Entry points and links </a>
-        </li>
-        <li class="govuk-tabs__list-item">
-          <a class="govuk-tabs__tab" href="#form-versions">
-            Previous versions
-          </a>
-        </li>
-      </ul>
+      <h1 class="govuk-heading-xl">
+        {{ serviceName }}
+      </h1>
 
-      <div class="govuk-tabs__panel" id="code">
-        <h2 class="govuk-heading-m">Moving CHS accounts over to GOV.UK One login </h2>
-        <ul class="govuk-list govuk-list--bullet">
-          <li>
-            <a href="chs-home">Companies House Service Home</a>
-          </li>
-          <li>
-            <a href="start-page">Start page - Changing the way you log in to Companies House</a>
-          </li>
-          <li>
-            <a href="create-or-sign-in">Create a GOV.UK One Login or sign in
-            </a>
-          </li>
-          <li>
-            <a href="/enter-email">Enter email address
-            </a>
-          </li>
-          <li>
-            <a href="/enter-password">Enter password
-            </a>
-          </li>
-          <li>
-            <a href="/enter-code">Check your phone
-            </a>
-          </li>
-          <li>
-            <a href="/signed-in">Do you have an existing Companies House account?
-            </a>
-          </li>
-          <li>
-            <a href="/link-accounts">Linking your GOV.UK One login to your Companies House account
-            </a>
-          </li>
-          <li>
-            <a href="/sign-in">Sign in
-            </a>
-          </li>
-          <li>
-            <a href="/accounts-linked">We have matched your GOV.UK One login to you Companies House account
-            </a>
-          </li>
-          <li>
-            <a href="/chs-home-signed-in">Signed in to Companies House Service account
-            </a>
-          </li>
-          </ul>
-          
-          
-          <h2 class="govuk-heading-m">Re-design of Companies House service</h2>
-          <ul class="govuk-list govuk-list--bullet">
-          <li>
-            <a href="home-chs">Search the register</a>
-          </li>
-          <li>
-            <a href="filing-history">Filing history</a>
-          </li>
-          <li>
-            <a href="officers">Officers</a>
-          </li>
-          <li>
-            <a href="results">Search results</a>
-          </li>
-        </ul>
+      {{ govukWarningText({
+        text: "This prototype is being actively worked on - things might break or change very quickly",
+        iconFallbackText: "Warning"
+      }) }}
 
-        <h2 class="govuk-heading-m">Adding companies to your  of Companies House Service account</h2>
-        <ul class="govuk-list govuk-list--bullet">
-        <li>
-          <a href="new-chs-account">New Companies House Service account</a>
-        </li>
-      </ul>
+      <h2 class="govuk-heading-m" id="authScreens">Murals</h2>
+      <p class="govuk-body"><a class="govuk-link govuk-link--no-visited-state" target="_blank" href="https://app.mural.co/invitation/mural/companieshouse8589/1674141024210?sender=ejames5948&key=2e9f9c77-c184-43ce-92ed-39508254a70a">Flows in mural (opens in a new tab)</a></p>
+
+
+      <h2 class="govuk-heading-m govuk-!-padding-top-4">
+        Prototypes
+      </h2>
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="col">Version</th>
+            <th class="govuk-table__header" scope="col">Date</th>
+            <th class="govuk-table__header" scope="col">Status</th>
+            <th class="govuk-table__header" scope="col">User Research</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+              <a href="v1/index">Version 1</a>
+            </td>
+            <td class="govuk-table__cell">
+              26th June 2023
+            </td>
+            <td class="govuk-table__cell">
+              <strong class="govuk-tag govuk-tag--blue">
+                In progress
+              </strong>
+            </td>
+            <td class="govuk-table__cell">
+              <a target="_blank" href="" class="govuk-link govuk-link--no-visited-state"></a>
+            </td>    
+          </tr>
+        </tbody>
+      </table>
+
      
-      <!-- <h2 class="govuk-heading-m">Existing Companies House service</h2>
-        <ul class="govuk-list govuk-list--bullet">
-          <li>
-            <a href="search">Search the register</a>
-          </li>
-          <li>
-            <a href="search-results">Search results</a>
-          </li>
-        </ul>-->
-      </div> 
 
 
-      {# PREVIOUS VERSIONS TAB #}
-      <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="form-versions">
-        <table class="govuk-table version-history">
-          <caption class="govuk-table__caption govuk-heading-l">
-            Previous versions
-          </caption>
-          <thead class="govuk-table__head">
-            <tr class="govuk-table__row">
-              <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">
-                Version
-              </th>
-              <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">
-                Tested on
-              </th>
-              <th scope="col" class="govuk-table__header govuk-!-width-one-half">
-                Changes
-              </th>
-              <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">
-                Status
-              </th>
-            </tr>
-          </thead>
-
-          <tbody class="govuk-table__body">
-           <!-- <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__header">
-                <a href="javascript: void(0)">Version X</a>
-              </th>
-              <td class="govuk-table__cell">TBA</td>
-              <td class="govuk-table__cell">
-                <p><a href="#">Feature</a></p>
-                <p></p>
-                <ul class="govuk-list govuk-list--bullet">
-                  <li>Feature description</li>
-                </ul>
-              </td>
-              <td class="govuk-table__cell">
-                <strong class="govuk-tag govuk-tag--red">
-                  Not ready for user testing
-                </strong>
-              </td>
-            </tr>
-
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__header">
-                <a href="">Version X</a>
-              </th>
-              <td class="govuk-table__cell">June 2022</td>
-              <td class="govuk-table__cell">
-                <p><a href="#">Feature</a></p>
-                <p></p>
-                <ul class="govuk-list govuk-list--bullet">
-                  <li>Feature description</li>
-                </ul>
-              </td>
-              <td class="govuk-table__cell">
-                <strong class="govuk-tag govuk-tag--green">
-                  Ready for user testing
-                </strong>
-              </td>
-            </tr> -->
-
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__header">
-                <a href="">Version 1</a>
-              </th>
-              <td class="govuk-table__cell">June 2023</td>
-              <td class="govuk-table__cell">
-                <p><a href="#">Feature</a></p>
-                <p></p>
-                <ul class="govuk-list govuk-list--bullet">
-                  <li>Add feature description</li>
-                </ul>
-              </td>
-
-              <td class="govuk-table__cell">
-                <strong class="govuk-tag govuk-tag--green">
-                  In progress 
-                </strong>
-              </td>
-            </tr>
-
-          </tbody>
-
-        </table>
-      </div>
-    </div>
-  </div>
-</div>
 
 {% endblock %}
