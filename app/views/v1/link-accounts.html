@@ -15,7 +15,7 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-
+    <form action="link-accounts" method="post" novalidate>
       
       <h1 class="govuk-heading-l">Save your Companies House information</h1>
       
@@ -28,12 +28,12 @@
       <p class="govuk-body">We need to know if you want us to save this information in your new GOV.UK One Login account that you've created.</p>
 
               {{ govukRadios({
-                name: "link-accounts",
+                name: "link-chs-account",
                 fieldset: {
                   legend: {
                     text: "Do you want us to save your Companies House information in your new account?",
                     isPageHeading: false,
-                    classes: "govuk-fieldset__legend--m"
+                    classes: "govuk-fieldset__legend--m govuk-!-padding-top-4 govuk-!-padding-bottom-2"
                   }
                 },
                 items: [
@@ -44,19 +44,17 @@
                   {
                     value: "no",
                     text: "No",
-                    
-  hint: {
-    text: "You will lose this information if you select ‘no’."
-  }
+                    hint: {
+                      text: "You will lose this information if you select ‘no’."
+                    }
                   }
                 ]
               }) }}
 
               {{ govukButton({
-                text: "Continue",
-                href:"accounts-linked"
+                text: "Continue"
               }) }}
-
+    </form>
     </div>
   </div>
 

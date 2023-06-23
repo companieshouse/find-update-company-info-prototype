@@ -5,26 +5,62 @@ const router = express.Router()
 
 
 //start page
-router.post('/v1/start-page', function (req, res) {
-  res.redirect('create-or-sign-in')
-})
-
 //One login create or sign in 
 
 
 
 //One loginsign in email address
 
+
 //One loginsign in password
 
 
 //One loginsign in check phone 
+router.post('/v1/enter-code', function (req, res) {
+
+  res.redirect('existing-account')
+})
+
 
 // Do you have an existing Companies House account?
+router.post('/v1/existing-account', function (req, res) {
+
+    //If they have an existing chs account
+    if (req.session.data['existing-chs-account'] === 'yes') {
+        
+      res.redirect('chs-sign-in')
+  }
+  // Otherwise take them to a stop screen
+  else{
+
+      res.redirect('chs-home-signed-in')
+  }
+  
+})
 
 // Companies House sign in 
+router.post('/v1/chs-sign-in', function (req, res) {
+
+  res.redirect('link-accounts')
+})
+
+
 
 //Save your Companies House information
+router.post('/v1/link-accounts', function (req, res) {
+
+  //Save information from their account
+  if (req.session.data['link-chs-account'] === 'yes') {
+      
+    res.redirect('accounts-linked')
+}
+//do not save things on their account
+else{
+
+    res.redirect('chs-home-signed-in')
+}
+
+})
 
 
 //We have saved your Companies House information
@@ -35,18 +71,9 @@ router.post('/v1/start-page', function (req, res) {
 
 
 
-router.post('/sign-in', function (req, res) {
-    req.session.signin = true;
 
-    req.session.data['signin'] = true;
-    res.redirect('/')
-})
 
-router.get('/sign-in', function (req, res) {
-    res.render('sign-in', {
-      signin: true
-    })
-})
+
 
 router.get('/officers', function (req, res) {
   // Render the confirm company page

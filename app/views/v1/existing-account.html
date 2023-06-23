@@ -15,16 +15,14 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-
-      <h1 class="govuk-heading-l">Do you have an existing Companies House account? </h1>
-
+    <form action="existing-account" method="post" novalidate>
 
       {{ govukRadios({
-        name: "where-do-you-live",
+        name: "existing-chs-account",
         fieldset: {
           legend: {
-            text: "",
-            isPageHeading: false,
+            text: "Do you have an existing Companies House account?",
+            isPageHeading: true,
             classes: "govuk-fieldset__legend--l"
           }
         },
@@ -40,11 +38,12 @@
         ]
       }) }}
 
-      
+      {{ govukButton({
+        text: "Continue"
+      }) }}
+    
 
-        <a href="sign-in">
-        <button class="govuk-button">Continue</button>
-        </a>
+    </form>
 
     </div>
   </div>
