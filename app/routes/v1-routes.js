@@ -9,10 +9,76 @@ const router = express.Router()
 
 
 
-//One loginsign in email address
+//One loginsign create - email address
+router.post('/v1/create-enter-email', function (req, res) {
+
+  res.redirect('create-check-your-email')
+})
+
+//One loginsign create - check email 
+router.post('/v1/create-check-your-email', function (req, res) {
+
+  res.redirect('create-enter-password')
+})
 
 
-//One loginsign in password
+//One loginsign create - check email 
+router.post('/v1/create-enter-password', function (req, res) {
+
+  res.redirect('create-choose-security-type')
+})
+
+//One loginsign create - check email 
+router.post('/v1/create-choose-security-type', function (req, res) {
+
+   //If they have an existing chs account
+   if (req.session.data['choose-security-type'] === 'text-message-on-sign-in') {
+        
+    res.redirect('create-enter-mobile-number')
+  }
+  // Otherwise take them to a stop screen
+  else{
+
+      res.redirect('create-set-up-auth-app')
+  }
+})
+
+//One loginsign set up auth app
+router.post('/v1/create-set-up-auth-app', function (req, res) {
+
+  res.redirect('create-complete')
+})
+
+
+//One loginsign enter mobile number
+router.post('/v1/create-enter-mobile-number', function (req, res) {
+
+  res.redirect('create-check-your-phone')
+})
+
+//One loginsign enter mobile number
+router.post('/v1/create-check-your-phone', function (req, res) {
+
+  res.redirect('create-complete')
+})
+
+
+//One loginsign create complete
+router.post('/v1/create-complete', function (req, res) {
+
+  res.redirect('existing-account')
+})
+
+
+//One loginsign enter mobile number
+router.post('/v1/create-enter-mobile-number', function (req, res) {
+
+  res.redirect('create-check-your-phone')
+})
+
+
+
+//One loginsign create - check your email 
 
 
 //One loginsign in check phone 
@@ -43,6 +109,7 @@ router.post('/v1/chs-sign-in', function (req, res) {
 
   res.redirect('link-accounts')
 })
+
 
 
 
