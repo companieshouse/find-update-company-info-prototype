@@ -1,0 +1,95 @@
+{% extends "layout-chs-signed-out.html" %}
+
+{% block pageTitle %}
+  {{ serviceName }} - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl govuk-!-margin-bottom-9">
+      Your details
+    </h1>
+    
+    
+    <p class="govuk-body govuk-!-static-padding-bottom-5">Make changes to your details and account settings.</p>
+   
+
+
+    {{ govukSummaryList({
+      rows: [
+        {
+          key: {
+            text: "Email"
+          },
+          value: {
+            html: "nathan@example.com"
+          },
+          actions: {
+            items: [
+              {
+                href: "#",
+                text: "Update",
+                visuallyHiddenText: "correspondence address"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            text: "Password"
+          },
+          value: {
+            html: "**************"
+          },
+          actions: {
+            items: [
+              {
+                href: "#",
+                text: "Update",
+                visuallyHiddenText: "Update your password"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            text: "Mobile number"
+          },
+          value: {
+            text: "07899 766 886"
+          },
+          actions: {
+            items: [
+              {
+                href: "#",
+                text: "Update",
+                visuallyHiddenText: "Update your mobile number"
+              }
+            ]
+          }
+        }
+      ]
+    }) }}
+
+
+    <p class="govuk-body govuk-!-margin-top-8 govuk-!-margin-bottom-8"> <a href="#" class="govuk-link govuk-link--no-visited-state">Third party applications</a></p>
+
+    {{ govukButton({
+      text: "Go to search for a company",
+      classes: "govuk-button--secondary"
+    }) }}
+
+
+
+
+
+
+
+
+
+  </div>
+</div>
+
+{% endblock %}
