@@ -1,0 +1,102 @@
+{% extends "layout-signed-in.html" %}
+
+{% block pageTitle %}
+Home – {{serviceName}} – GOV.UK
+{% endblock %}
+
+
+{% block beforeContent %}
+  
+{% endblock %}
+
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+      {% set html %}
+        <p class="govuk-notification-banner__heading">Maintenance: Find and update service updates on Wednesday April 18 at 05:00am     <a class="govuk-notification-banner__link" href="#">View details</a>.</p>
+      {% endset %}
+      {{ govukNotificationBanner({
+        html: html
+      }) }}
+      <h2 class="govuk-heading-s govuk-!-margin-bottom-1">For information</h2>
+      <p class="govuk-body-s govuk-!-margin-bottom-6">The <a class="govuk-link" href="https://www.gov.uk/government/news/automatic-filing-extensions-granted-by-the-corporate-insolvency-and-governance-act-due-to-come-to-an-end">automatic filing extensions</a> granted by the Corporate Insolvency and Governance Act has ended for filing deadlines that occur after 5 April 2021. Eligible companies can still <a href="https://find-and-update.company-information.service.gov.uk/extensions" class="govuk-link">apply for an accounts filing deadline</a> extension if their deadline is after 5 April.</p>   
+      <h1 class="govuk-heading-l">
+         Search the Companies House register 
+      </h1>
+      <div class="govuk-form-group govuk-!-margin-bottom-9">
+        <form action="/results" method="post">
+          <label class="govuk-label" for="weight">Enter a company name, company number or officer name. </label>
+          <div class="govuk-input__wrapper ">
+          <input class="govuk-input" id="weight" name="weight" type="text" spellcheck="false">
+          <div class="govuk-input__suffix" style="background: #1d70b8;border: 2px solid #1d70b8" aria-hidden="true">
+            <button  style="background: none;border: none;" class="govuk-link">
+            <svg class="gem-c-search__icon" width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+            <svg class="gem-c-search__icon" width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+            <circle cx="12.0161" cy="11.0161" r="8.51613" stroke="#fff" stroke-width="3"></circle>
+            <line x1="17.8668" y1="17.3587" x2="26.4475" y2="25.9393" stroke="#fff" stroke-width="3"></line>
+            </svg>
+            </button>
+          </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+ <!--  {% if signin === true %} -->
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+      </div>
+    </div>
+    <div class="govuk-grid-row govuk-signed-block" style="display: flex">
+      <div class="govuk-grid-column-one-third govuk-signin-block" style=" ">
+        <h2 class="govuk-heading-m govuk-!-padding-top-1" style="color:#003078"><a href="../webfiling/company-number" class="govuk-link ">WebFiling</a></h2>
+        <p class="govuk-body govuk-!-font-size-16">You can:</p>
+        <ul class="govuk-list govuk-list--bullet govuk-!-font-size-16">
+          <li>file your company’s annual accounts</li>
+          <li>file your company’s confirmation statement</li>
+          <li>file your company’s director or secretary changes</li>
+          <li>sign up to get email reminders</li>
+        </ul>
+      </div>
+      <div class="govuk-grid-column-one-third govuk-signin-block">
+        <h2 class="govuk-heading-m govuk-!-padding-top-1 govuk-!-margin-bottom-1" style="color:#003078"> <a href="../user-account/home-no-companies-no-notification" class="govuk-link"> Your companies</a> </h2>
+        <p class="govuk-body govuk-!-font-size-18 govuk-!-margin-top-3" style="color:#4c2c92">0 companies </p>
+        <p class="govuk-body govuk-body govuk-!-font-size-16">You can:</p>
+        <ul class="govuk-list govuk-list--bullet govuk-body govuk-!-font-size-16">
+          <li>add a company to your WebFiling account</li>
+          <li>view, manage and file for companies you’ve added</li>
+          <li>authorise people to file documents for your company online</li>
+          <li>view and manage authorised people</li>
+        </ul>
+      </div>
+      <div class="govuk-grid-column-one-third govuk-signin-block">
+        <h2 class="govuk-heading-m govuk-!-padding-top-1 govuk-!-margin-bottom-1" style="color:#003078"> <a href="../messages/no-messages" class="govuk-link"> Messages</a></h2>
+        <p class="govuk-body govuk-!-font-size-18 govuk-!-margin-top-3" style="color:#4c2c92">0 new messages </p>
+        <p class="govuk-body govuk-!-font-size-16">View messages relating to your WebFiling account.</p>
+      </div>
+    </div>
+<!--  {% else %} --> 
+      <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+        <h2 class="govuk-heading-m">Topics</h2>
+        <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-third-from-desktop govuk-topic-block">
+          <h3 class="govuk-heading-s"><a href="https://www.gov.uk/set-up-limited-company" class="govuk-link">Set up a limited company</a></h3>
+          <p class="govuk-body">How to set up a limited company, appoint directors and shareholders or guarantors, and register for tax.</p>
+        </div>
+        <div class="govuk-grid-column-one-third-from-desktop govuk-topic-block">
+          <h3 class="govuk-heading-s"><a href="https://www.gov.uk/running-a-limited-company/company-and-accounting-records" class="govuk-link">Running a limited company: your responsibilities </a></h3>
+          <p class="govuk-body">How to maintain a company, update directors and shareholders or guarantors, and file your accounts.</p>
+        </div>
+        <div class="govuk-grid-column-one-third-from-desktop govuk-topic-block">
+          <h3 class="govuk-heading-s"><a href="https://www.gov.uk/closing-a-limited-company" class="govuk-link">Closing a limited company</a></h3>
+          <p class="govuk-body">How to dissolve a company and what you must do before applying to strike off a company from the register.</p>
+        </div>
+      </div>
+      </div>
+    </div>
+<!--   {% endif %} -->
+
+
+{% endblock %}

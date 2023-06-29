@@ -1,0 +1,49 @@
+{% extends "layout-signed-out.html" %}
+
+{% block pageTitle %}
+  You’ve signed in to your GOV.UK One Login – GOV.UK One Login prototype
+{% endblock %}
+
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+    <form action="existing-account" method="post" novalidate>
+
+      {{ govukRadios({
+        name: "existing-chs-account",
+        fieldset: {
+          legend: {
+            text: "Do you have an existing Companies House account?",
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--l"
+          }
+        },
+        items: [
+          {
+            value: "yes",
+            text: "Yes"
+          },
+          {
+            value: "no",
+            text: "No"
+          }
+        ]
+      }) }}
+
+      {{ govukButton({
+        text: "Continue"
+      }) }}
+    
+
+    </form>
+
+    </div>
+  </div>
+
+{% endblock %}

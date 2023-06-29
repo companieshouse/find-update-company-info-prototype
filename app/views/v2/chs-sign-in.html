@@ -1,0 +1,48 @@
+{% extends "layout-signed-out.html" %}
+{% block pageTitle %}
+  {{serviceName}} - GOV.UK
+{% endblock %}
+{% block beforeContent %}
+{{ govukBackLink({
+  text: "Back",
+  href: "/"
+}) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+      <h1 class="govuk-heading-l">What are your Companies House sign in details?</h1>
+      <form action="chs-sign-in" method="post" novalidate="">
+
+        <p class="govuk-body govuk-!-padding-bottom-3">Enter the email address and password you usually use to sign in to your Companies House account. This is different to a WebFiling account. </p>
+
+
+        {{ govukInput({
+          label: {
+            text: "Email address"
+          },
+          id: "email-address",
+          name: "email-address"
+        }) }}
+
+        {{ govukInput({
+          label: {
+            text: "Password"
+          },
+          id: "password",
+          name: "password"
+        }) }}
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+        
+      </form>
+     <!-- No needed --> 
+     <!-- <p class="govuk-body"><a href="#" class="govuk-link">Create an account</a></p> -->
+      <p class="govuk-body"><a href="#" class="govuk-link">I've forgotten my password</a></p>
+     
+    </div>
+  </div>
+{% endblock %}
