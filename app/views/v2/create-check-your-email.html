@@ -23,12 +23,13 @@
           Check your email
         </label>
         </h1>
-        {{ govukInsetText({
-          text: "We have sent an email to: example@example.co.uk"
-        }) }}
+        <div class="govuk-inset-text">
+          We have sent an email to: <strong>email@address.com</strong>
+        </div>
+       
         <p class="govuk-body">This email contains a 6 digit security code. </p>
 
-        <p class="govuk-body">Your email might take a few minutes to arrive. If you do not get an email, check your spam folders. </p>
+        <p class="govuk-body">Your email might take a few minutes to arrive. If you do not get an email, check your spam folder. </p>
 
         <p class="govuk-body">The code will expire after 2 hours.</p>
 
