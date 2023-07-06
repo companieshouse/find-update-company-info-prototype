@@ -18,19 +18,19 @@
       
       <h1 class="govuk-heading-l">Save your Companies House information</h1>
       
-      <p class="govuk-body">You may have information stored in your previous Companies House account, such as:</p>
+      <p class="govuk-body">You may have information stored in your original Companies House account, such as:</p>
       <ul class="govuk-list govuk-list--bullet">
         <li>a record of your filing history</li>
         <li>companies you follow</li>
       </ul>
 
-      <p class="govuk-body">We need to know if you want us to save this information in your new GOV.UK One Login account that you've created.</p>
+      <p class="govuk-body">We need to know if you want us to save this information.</p>
 
               {{ govukRadios({
                 name: "link-chs-account",
                 fieldset: {
                   legend: {
-                    text: "Do you want us to save your Companies House information in your new account?",
+                    text: "Do you want us to save your Companies House information in your GOV.UK One Login account?",
                     isPageHeading: false,
                     classes: "govuk-fieldset__legend--m govuk-!-padding-top-4 govuk-!-padding-bottom-2"
                   }
@@ -44,7 +44,7 @@
                     value: "no",
                     text: "No",
                     hint: {
-                      text: "You will lose this information if you select ‘no’."
+                      text: "You will lose this information if you select ‘no’. This cannot be undone."
                     }
                   }
                 ]
