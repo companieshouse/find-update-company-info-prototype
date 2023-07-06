@@ -13,23 +13,55 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds-from-desktop">
       <h1 class="govuk-heading-l">What are your Companies House sign in details?</h1>
+
+      <p class="govuk-body"> Enter the email address and password you usually use to sign in to your Companies House account. This is different to a WebFiling account. </p>
       <form action="chs-sign-in" method="post" novalidate="">
 
-        <p class="govuk-body govuk-!-padding-bottom-3">Enter the email address and password you usually use to sign in to your Companies House account. This is different to a WebFiling account. </p>
-
-
+        {% set emailHtml %}
         {{ govukInput({
+          id: "chs-email",
+          name: "chs-email",
+          type: "email",
+          autocomplete: "email",
+          spellcheck: false,
           label: {
             text: "Email address"
-          },
-          id: "email-address",
-          name: "email-address"
+          }
         }) }}
+        {% endset -%}
+
+        {{ govukRadios({
+          name: "chs-sign-in-details",
+          fieldset: {
+            legend: {
+              text: "Email address",
+              isPageHeading: false
+            }
+          },
+          hint: {
+            text: ""
+          },
+          items: [
+            {
+              value: "email",
+              text: " email@address.com"
+            },
+            {
+              value: "phone",
+              text: "A different email address",
+              conditional: {
+                html: emailHtml
+              }
+            }
+          ]
+        }) }}
+
 
         {{ govukInput({
           label: {
             text: "Password"
           },
+          classes: "govuk-!-width-three-quarters",
           id: "password",
           name: "password"
         }) }}
