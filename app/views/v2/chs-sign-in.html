@@ -12,9 +12,11 @@
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds-from-desktop">
-      <h1 class="govuk-heading-l">What are your Companies House sign in details?</h1>
+      <h1 class="govuk-heading-l">Your Companies House sign in details</h1>
 
-      <p class="govuk-body"> Enter the email address and password you usually use to sign in to your Companies House account. This is different to a WebFiling account. </p>
+      <p class="govuk-body"> We need to know your sign in details so that we can access your stored information, and enable you to save it in your GOV.UK One Login account. </p>
+
+ 
       <form action="chs-sign-in" method="post" novalidate="">
 
         {% set emailHtml %}
@@ -34,7 +36,7 @@
           name: "chs-sign-in-details",
           fieldset: {
             legend: {
-              text: "Email address",
+              text: "Which email address do you use to sign in to Companies House?",
               isPageHeading: false
             }
           },
@@ -59,7 +61,7 @@
 
         {{ govukInput({
           label: {
-            text: "Password"
+            text: "Which password do you use to sign in to Companies House?"
           },
           classes: "govuk-!-width-three-quarters",
           id: "password",
