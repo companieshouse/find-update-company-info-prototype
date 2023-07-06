@@ -37,11 +37,9 @@
           fieldset: {
             legend: {
               text: "Which email address do you use to sign in to Companies House?",
-              isPageHeading: false
+              isPageHeading: false,
+              classes: "govuk-fieldset__legend--m"
             }
-          },
-          hint: {
-            text: ""
           },
           items: [
             {
@@ -61,7 +59,9 @@
 
         {{ govukInput({
           label: {
-            text: "Which password do you use to sign in to Companies House?"
+            text: "Which password do you use to sign in to Companies House?",
+            isPageHeading: false,
+            classes: "govuk-label--m"
           },
           classes: "govuk-!-width-three-quarters",
           id: "password",
