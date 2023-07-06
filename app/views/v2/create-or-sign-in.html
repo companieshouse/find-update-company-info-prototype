@@ -35,10 +35,17 @@
         </div>
 
         <div class="govuk-button-group">
-          {{ govukButton({
-            text: "Create a GOV.UK One Login",
-            href: "create-enter-email"
-          }) }}
+          <div class="govuk-button-group">
+            {{ govukButton({
+              text: "Create a GOV.UK One Login",
+              href: "create-enter-email"
+            }) }}
+            {{ govukButton({
+              text: "Sign in",
+              href: "one-login-sign-in",
+              classes: "govuk-button--secondary"
+            }) }}
+          </div>
         </div>
 
         <p class="govuk-body">If you already have a GOV.UK One Login you can <a href="one-login-sign-in" class="govuk-link">sign in</a>.</p>
