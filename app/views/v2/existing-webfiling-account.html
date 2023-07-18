@@ -1,0 +1,67 @@
+{% extends "layout-signed-out.html" %}
+
+{% block pageTitle %}
+  You’ve signed in to your GOV.UK One Login – GOV.UK One Login prototype
+{% endblock %}
+
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+    <form action="existing-webfiling-account" method="post" novalidate>
+
+      {{ govukRadios({
+        name: "existing-webfiling-account",
+        fieldset: {
+          legend: {
+            text: "Do you have an existing *WebFiling* Companies House account?",
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--l"
+          }
+        },
+        items: [
+          {
+            value: "yes",
+            text: "Yes",
+            hint: {
+              text: "We'll ask if you want to save any stored information in your GOV.UK One Login account."
+            }
+          },
+          {
+            value: "no",
+            text: "No"     
+          }
+        ]
+      }) }}
+
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+           What is a Companies House account?
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          <p class="govuk-body">This is the account used to sign in to:</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>the Companies House register (sometimes known as Companies House service or the Find and update company information service)</li>
+            <li>some of our online services, such as Register your company or Upload a document to Companies House</li>
+          </ul>
+        </div>
+      </details>
+
+      {{ govukButton({
+        text: "Continue"
+      }) }}
+    
+
+    </form>
+
+    </div>
+  </div>
+
+{% endblock %}

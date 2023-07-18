@@ -12,17 +12,17 @@
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds-from-desktop">
-      <h1 class="govuk-heading-l">Your Companies House sign in details</h1>
+      <h1 class="govuk-heading-l">Your *WebFiling* Companies House sign in details</h1>
 
       <p class="govuk-body"> We need to know your sign in details so that we can access your stored information, and enable you to save it in your GOV.UK One Login account. </p>
 
  
-      <form action="chs-sign-in" method="post" novalidate="">
+      <form action="webfiling-sign-in" method="post" novalidate="">
 
         {% set emailHtml %}
         {{ govukInput({
-          id: "chs-email",
-          name: "chs-email",
+          id: "webfiling-email",
+          name: "webfiling-email",
           type: "email",
           autocomplete: "email",
           spellcheck: false,
@@ -33,7 +33,7 @@
         {% endset -%}
 
         {{ govukRadios({
-          name: "chs-sign-in-details",
+          name: "webfiling-sign-in-details",
           fieldset: {
             legend: {
               text: "Which email address do you use to sign in to Companies House?",

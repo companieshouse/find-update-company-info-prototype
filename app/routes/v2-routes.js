@@ -87,6 +87,9 @@ router.post('/v2/enter-code', function (req, res) {
   res.redirect('existing-account')
 })
 
+ /*
+  * Saving CHS account information
+  */
 
 // Do you have an existing Companies House account?
 router.post('/v2/existing-account', function (req, res) {
@@ -112,14 +115,56 @@ router.post('/v2/chs-sign-in', function (req, res) {
 
 
 
-
 //Save your Companies House information
 router.post('/v2/link-accounts', function (req, res) {
 
   //Save information from their account
   if (req.session.data['link-chs-account'] === 'yes') {
       
-    res.redirect('accounts-linked')
+    res.redirect('accounts-linked') 
+}
+//do not save things on their account
+else{
+
+    res.redirect('chs-home-signed-in')
+}
+
+})
+
+ /*
+  * Saving WebFiling account information
+  */
+
+// Do you have an existing webfiling Companies House account?
+router.post('/v2/existing-webfiling-account', function (req, res) {
+
+  //If they have an existing webfiling account
+  if (req.session.data['existing-webfiling-account'] === 'yes') {
+      
+    res.redirect('webfiling-sign-in')
+}
+// Otherwise take them to a stop screen
+else{
+
+  //***review  */
+    res.redirect('chs-home-signed-in')
+}
+
+})
+
+// WebFiling sign in 
+router.post('/v2/webfiling-sign-in', function (req, res) {
+
+  res.redirect('link-webfiling-accounts')
+})
+
+//Save your Companies House information
+router.post('/v2/link-webfiling-accounts', function (req, res) {
+
+  //Save information from their account
+  if (req.session.data['link-webfiling-account'] === 'yes') {
+      
+    res.redirect('webfiling-accounts-linked') 
 }
 //do not save things on their account
 else{
@@ -130,11 +175,16 @@ else{
 })
 
 
+
+
+//accounts are linked ***********
+//res.redirect('existing-webfiling-account')
+
 //We have saved your Companies House information
 
 
 // Companies House Service signed in 
-
+//*******chs-home-signed-in*****
 
 
 
