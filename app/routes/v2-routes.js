@@ -102,7 +102,7 @@ router.post('/v2/existing-account', function (req, res) {
   // Otherwise take them to a stop screen
   else{
 
-      res.redirect('chs-home-signed-in')
+      res.redirect('existing-webfiling-account')
   }
   
 })
