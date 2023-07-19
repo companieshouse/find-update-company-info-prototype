@@ -114,14 +114,13 @@ router.post('/v2/chs-sign-in', function (req, res) {
 })
 
 
-
 //Save your Companies House information
 router.post('/v2/link-accounts', function (req, res) {
 
   //Save information from their account
   if (req.session.data['link-chs-account'] === 'yes') {
       
-    res.redirect('accounts-linked') 
+    res.redirect('existing-webfiling-account') 
 }
 //do not save things on their account
 else{

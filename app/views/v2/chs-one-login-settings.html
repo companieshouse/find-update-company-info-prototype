@@ -91,7 +91,11 @@
 
     <p class="govuk-body">This will permanently delete your GOV.UK One Login. You’ll no longer be able to access the services you’ve used with it.</p>
     
-    <p class="govuk-body govuk-!-margin-bottom-8"> <a href="#" class="govuk-link govuk-link--no-visited-state">Delete your GOV.UK One Login</a></p>
+  
+    {{ govukButton({
+      text: "Delete your GOV.UK One Login",
+      classes: "govuk-button--warning"
+    }) }}
 
 
     <p class="govuk-body govuk-!-margin-top-8 govuk-!-margin-bottom-8"> <a href="#" class="govuk-link govuk-link--no-visited-state">Third party applications</a></p>
@@ -100,13 +104,6 @@
       text: "Go to search for a company",
       classes: "govuk-button--secondary"
     }) }}
-
-
-
-
-
-
-
 
 
   </div>
