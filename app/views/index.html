@@ -13,7 +13,7 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
 
 <div class="govuk-width-container">
   <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-grid-column-three-quarters">
 
       <h1 class="govuk-heading-xl">
         {{ serviceName }}
@@ -25,10 +25,131 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
       }) }}
 
       <h2 class="govuk-heading-m" id="authScreens">Murals</h2>
-      <p class="govuk-body"><a class="govuk-link govuk-link--no-visited-state" target="_blank" href="https://app.mural.co/invitation/mural/companieshouse8589/1683023570541?sender=ejames5948&key=1fcba315-249b-45b2-bf2a-813605159a88">Flows in mural (opens in a new tab)</a></p>
+      <p class="govuk-body"><a class="govuk-link govuk-link--no-visited-state" target="_blank" href="https://app.mural.co/invitation/room/1683279704950?code=809740fcd4f742228d1caee6c1707607&sender=ejames5948">IDAM mural room for User Centred Design (opens in a new tab)</a></p>
 
-
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
       <h2 class="govuk-heading-m govuk-!-padding-top-4">
+        Version 2
+      </h2>
+      
+      {{ govukSummaryList({
+        card: {
+          title: {
+            text: "Migrating CHS and WebFiling accounts to GOV.UK One Login"
+          },
+          actions: {
+            items: [
+              {
+                href: "v2/index",
+                text: "View prototype",
+                visuallyHiddenText: "of version 2"
+              }
+            ]
+          }
+        },
+        rows: [
+        {
+          key: {
+            text: "Status"
+          },
+          value: {
+            html: "<strong class='govuk-tag govuk-tag--blue'>
+              In progress
+            </strong>"
+          }
+        },
+          {
+            key: {
+              text: "Summary"
+            },
+            value: {
+              html: "Migrating Companies House search users accounts and WebFiling accounts to GOV.UK One Login"
+            }
+          },
+          {
+            key: {
+              text: "Version 2"
+            },
+            value: {
+              html: "Added pages for sign in to WebFiling and migrating WebFiling account <br> Updating CHS account <br> Updating WebFiling account"
+            }
+          },
+          {
+            key: {
+              text: "User Research"
+            },
+            value: {
+              html: ""
+            }
+          }
+        ]
+      }) }}
+
+
+
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+      <h2 class="govuk-heading-m govuk-!-padding-top-4">
+        Version 1
+      </h2>
+      
+      {{ govukSummaryList({
+        card: {
+          title: {
+            text: "Migrating CHS accounts to GOV.UK One Login"
+          },
+          actions: {
+            items: [
+              {
+                href: "v1/index",
+                text: "View prototype",
+                visuallyHiddenText: "of version 1"
+              }
+            ]
+          }
+        },
+        rows: [
+        {
+          key: {
+            text: "Status"
+          },
+          value: {
+            html: "<strong class='govuk-tag govuk-tag--green'>
+              Tested
+            </strong>"
+          }
+        },
+          {
+            key: {
+              text: "Summary"
+            },
+            value: {
+              html: "Migrating Companies House search users accounts to GOV.UK One Login"
+            }
+          },
+          {
+            key: {
+              text: "Version 1"
+            },
+            value: {
+              html: "Companies House sign in homepage<br>Interrupt information page<br> GOV.UK One Login create and sign in flows <br> Migrating Companies House Service (CHS) accounts and CHS sign in <br> Companies House homepage "
+            }
+          },
+          {
+            key: {
+              text: "User Research"
+            },
+            value: {
+              html: "26th June 2023 "
+            }
+          }
+        ]
+      }) }}
+
+
+
+
+
+ <!--      <h2 class="govuk-heading-m govuk-!-padding-top-4">
         Prototypes
       </h2>
       <table class="govuk-table">
@@ -74,7 +195,7 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
             </td>    
           </tr>
         </tbody>
-      </table>
+      </table> -->
 
      
 
