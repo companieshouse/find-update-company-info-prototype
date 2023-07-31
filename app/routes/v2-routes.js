@@ -4,8 +4,27 @@ const router = express.Router()
 // Add your routes here - above the module.exports line
 
 
-//start page
-//One login create or sign in 
+
+
+
+//One Login sign in 
+
+
+
+//One login sign in
+router.post('/v2/one-login-enter-password', function (req, res) {
+
+  res.redirect('enter-code')
+})
+
+
+//sign in
+router.post('/v2/enter-code', function (req, res) {
+
+  res.redirect('existing-webfiling-account')
+})
+
+
 
 
 
