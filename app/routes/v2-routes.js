@@ -123,7 +123,7 @@ router.post('/v2/link-webfiling-accounts', function (req, res) {
   //Save information from their account
   if (req.session.data['link-webfiling-account'] === 'yes') {
       
-    res.redirect('existing-account') 
+    res.redirect('existing-webfiling-account') 
 }
 //do not save things on their account
 else{
