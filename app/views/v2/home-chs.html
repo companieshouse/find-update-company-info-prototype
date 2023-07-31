@@ -5,7 +5,7 @@ Home – {{serviceName}} – GOV.UK
 {% endblock %}
 
 {% block head %}
-  {% include "includes/head.html" %}
+  {% include "includes/head-signed-out.html" %}
 {% endblock %}
 
 
@@ -51,7 +51,7 @@ Home – {{serviceName}} – GOV.UK
       
     </div>
   </div>
- <!--  {% if signin === true %} -->
+ <!--  {% if signin === true %} 
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-full">
       </div>
@@ -84,9 +84,9 @@ Home – {{serviceName}} – GOV.UK
         <p class="govuk-body govuk-!-font-size-16">View messages relating to your WebFiling account.</p>
       </div>
     </div>
-<!--  {% else %} --> 
+  {% else %} --> 
 
-<div class="govuk-grid-row">
+<!-- <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <h2 class="govuk-heading-m">Filing services</h2>
 
@@ -130,8 +130,7 @@ Home – {{serviceName}} – GOV.UK
 
 
     </div>
-    </div>
-
+    </div> -->
 
       <div class="govuk-grid-row">
       <div class="govuk-grid-column-full">
