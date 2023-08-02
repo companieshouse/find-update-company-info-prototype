@@ -1,4 +1,4 @@
-{% extends "layout-signed-out.html" %}
+{% extends "layout_unbranded-with-banner.html" %}
 
 {% set serviceName %}
   
@@ -9,7 +9,7 @@
 {% endblock %}
 
 {% block beforeContent %}
-  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+
 {% endblock %}
 
 {% block content %}
@@ -48,20 +48,12 @@
           </div>
         </div>
 
-        <p class="govuk-body">If you already have a GOV.UK One Login you can <a href="one-login-sign-in" class="govuk-link">sign in</a>.</p>
-
         <details class="govuk-details" data-module="govuk-details">
           <summary class="govuk-details__summary">
             <span class="govuk-details__summary-text">About GOV.UK One Login</span>
           </summary>
           <div class="govuk-details__text">
-            <p class="govuk-body">GOV.UK One Login is new. At the moment you can only use your GOV.UK One Login with:
-<ul class="govuk-list govuk-list--bullet">
-  <li>Apply for a vehicle operator licence</li>
-  <li>GOV.UK email subscriptions</li>
-  <li>LITE (Licencing for International Trade and Enterprise)</li>
-  <li>Request a basic DBS check</li>
-</ul>
+            <p class="govuk-body">GOV.UK One Login is new. At the moment you can only use it to access some government services.
             </p>
 
             <p class="govuk-body">It does not work with all government accounts or services yet (for example Government Gateway or Universal Credit).</p>

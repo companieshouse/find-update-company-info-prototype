@@ -48,19 +48,19 @@
     containerClasses: "govuk-width-container"
   }) }}
 
-   <!-- <div class="govuk-grid-row">
+  <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
 
       <div id="chs-customer-insights">
         <a class="govuk-link" href="https://www.research.net/r/S78XJMV" target="_blank" onclick="javascript:_paq.push(['trackEvent', 'Beta', 'Feedback']);">Tell us what you think of this service<span class="govuk-visually-hidden">(link opens a new window)</span></a>
       </div>
     </div>
-  </div>  -->
+  </div>
 
 
 
 
-<!--   <div class="govuk-width-container small-text" style="padding-top: 12px;">
+  <div class="govuk-width-container small-text" style="padding-top: 12px;">
     <a class="govuk-link govuk-link--no-visited-state govuk-!-padding-top-2" href="" target="_blank">
       Companies House does not verify the accuracy of the information filed<span class="govuk-visually-hidden">(link opens a new window)</span>
     </a>
@@ -69,13 +69,15 @@
      
       <nav role="navigation" class="content mobile-hidden">
         <ul id="navigation" class="mobile-hidden">
-          <li class="authenticated">example@example.co.uk:</li>
+          <!-- <li class="authenticated">example@example.co.uk:</li> -->
+
+          <li class="your-companies"><a class="govuk-link" id="user-signout" href="">Manage authorised agent</a></li>
           <li class="your-companies"><a class="govuk-link" id="user-signout" href="">Your companies</a></li>
           <li class="your-filings"><a class="govuk-link" id="user-signout" href="/your-filings">Your filings</a></li>
           <li class="companies-you-follow"><a class="govuk-link" id="user-signout" href="">Companies you follow</a></li>
           
-         
-          <li class="your-details"><a class="govuk-link" id="user-signout" href="chs-one-login-settings">Your details</a></li>
+          <!-- Note: GOV.UK One Login uses Security instead of 'Your details'-->
+          <li class="your-details"><a class="govuk-link" id="user-signout" href="chs-one-login-settings">Manage account</a></li>
          
          
           <li class="authenticated"><a class="govuk-link" id="user-signout" href="/signout">Sign out</a></li>
@@ -84,7 +86,7 @@
     </div>
   </div> 
 
- <div class="govuk-width-container small-text" style="padding-top: 12px;">
+ <!-- <div class="govuk-width-container small-text" style="padding-top: 12px;">
     <a class="govuk-link govuk-link--no-visited-state govuk-!-padding-top-2" href="" target="_blank">
       Companies House does not verify the accuracy of the information filed<span class="govuk-visually-hidden">(link opens a new window)</span>
     </a>
@@ -103,11 +105,11 @@
 {% if useAutoStoreData %}
   {% block footer %}
 
-   <!--  <div id="chs-customer-insights">
+    <div id="chs-customer-insights">
       <a class="govuk-link" href="https://www.research.net/r/S78XJMV" target="_blank" onclick="javascript:_paq.push(['trackEvent', 'Beta', 'Feedback']);">Tell us what you think of this service<span class="govuk-visually-hidden">(link opens a new window)</span></a>
       <a id="feedback-link" class="govuk-link secondary-customer-insights" target="_blank" href="/help/feedback?sourceurl=https://find-and-update.company-information.service.gov.uk/">Is there anything wrong with this page?<span class="govuk-visually-hidden">(link opens a new window)</span></a>
     </div>
-    <div class="blue-footer-border"></div> -->
+    <div class="blue-footer-border"></div>
 
     {{ govukFooter({
       meta: {

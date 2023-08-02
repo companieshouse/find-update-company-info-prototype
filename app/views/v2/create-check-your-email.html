@@ -1,4 +1,4 @@
-{% extends "layout-signed-out.html" %}
+{% extends "layout_unbranded-with-banner.html" %}
 <!-- Overwrite suerfice name -->
 {% set serviceName %}
   
@@ -24,7 +24,7 @@
         </label>
         </h1>
         <div class="govuk-inset-text">
-          We have sent an email to: <strong>email@address.com</strong>
+          We have sent an email to: <strong>{{ data['email'] }}</strong>
         </div>
        
         <p class="govuk-body">This email contains a 6 digit security code. </p>
