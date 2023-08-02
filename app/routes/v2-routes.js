@@ -147,7 +147,7 @@ router.post('/v2/link-webfiling-accounts', function (req, res) {
 //do not save things on their account
 else{
 
-    res.redirect('chs-home-signed-in')
+    res.redirect('existing-account')
 }
 
 })
