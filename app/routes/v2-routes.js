@@ -191,7 +191,7 @@ router.post('/v2/link-accounts', function (req, res) {
 //do not save things on their account
 else{
 
-    res.redirect('home-chs-signed-in')
+    res.redirect('')
 }
 
 })
