@@ -17,6 +17,11 @@
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds ">
 
+
+    <!-- CHS info saved -->
+
+      {% if (data['link-chs-account'] === "yes") %}
+      {% set html %}
       {% set html %}
         <h3 class="govuk-notification-banner__heading">
           We have saved your Companies House account information.
@@ -27,6 +32,25 @@
         html: html,
         type: 'success'
       }) }}
+
+       <!-- CHS info not saved -->
+
+
+    {% elif (data['link-chs-account'] === "no") %}
+   
+    {% set html %}
+    <h3 class="govuk-notification-banner__heading">
+      *We have not saved your Companies House account information.*
+    </h3>
+  {% endset %}
+
+  {{ govukNotificationBanner({
+    html: html
+  }) }}
+
+  {% endset %}
+
+
 
 
       <h1 class="govuk-heading-l">Use your GOV.UK One Login details to sign in from now on</h1>
