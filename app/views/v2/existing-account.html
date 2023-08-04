@@ -15,7 +15,7 @@
     <div class="govuk-grid-column-two-thirds">
     <form action="existing-account" method="post" novalidate>
 
-
+      {% if (data['link-webfiling-account'] === "yes") %}
       {% set html %}
       <h3 class="govuk-notification-banner__heading">
         We have saved your WebFiling information.
@@ -27,10 +27,22 @@
       type: 'success'
     }) }}
 
-
+    {% elif (data['link-webfiling-account'] === "no") %}
    
+   
+    {% set html %}
+    <h3 class="govuk-notification-banner__heading">
+      * We have not saved your WebFiling information.*
+    </h3>
+  {% endset %}
+
+  {{ govukNotificationBanner({
+    html: html,
+    type: 'success'
+  }) }}
 
 
+    {% endif %}
 
       {{ govukRadios({
         name: "existing-chs-account",
