@@ -18,29 +18,28 @@
     <div class="govuk-grid-column-two-thirds ">
 
 
-    <!-- CHS info saved -->
+     <!-- chs info saved -->
 
       {% if (data['link-chs-account'] === "yes") %}
       {% set html %}
-      {% set html %}
-        <h3 class="govuk-notification-banner__heading">
-          We have saved your Companies House account information.
-        </h3>
-      {% endset %}
+      <h3 class="govuk-notification-banner__heading">
+        We have saved your WebFiling information.
+      </h3>
+    {% endset %}
 
-      {{ govukNotificationBanner({
-        html: html,
-        type: 'success'
-      }) }}
+    {{ govukNotificationBanner({
+      html: html,
+      type: 'success'
+    }) }}
 
-       <!-- CHS info not saved -->
-
+     <!-- chs info not saved -->
 
     {% elif (data['link-chs-account'] === "no") %}
    
+   
     {% set html %}
     <h3 class="govuk-notification-banner__heading">
-      *We have not saved your Companies House account information.*
+      * We have not saved your WebFiling information.*
     </h3>
   {% endset %}
 
@@ -48,7 +47,8 @@
     html: html
   }) }}
 
-  {% endif %}
+
+    {% endif %}
 
 
 
