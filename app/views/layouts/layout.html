@@ -1,7 +1,10 @@
-{#- We can't mount GOV.UK Frontend's assets at root as it's done automatically by the extensions framework. -#}
-{%- set assetPath = '/govuk/assets' -%}
+{#
+For guidance on how to use layouts see:
+https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
+#}
 
-{% extends "govuk/template.njk" %}
+{% extends "govuk-prototype-kit/layouts/govuk-branded.njk" %}
+
 
 {% from "govuk/components/accordion/macro.njk" import govukAccordion %}
 {% from "govuk/components/back-link/macro.njk"           import govukBackLink %}
@@ -32,7 +35,7 @@
 {% from "govuk/components/warning-text/macro.njk"        import govukWarningText %}
 
 {% block head %}
-  {% include "includes/head-signed-out.html" %}
+  {% include "includes/head.html" %}
 {% endblock %}
 
 {% block pageTitle %}
@@ -41,18 +44,14 @@
 
 {% block header %}
   {# Set serviceName in config.js. #}
-  
+  {{ govukHeader({
+    homepageUrl: "/",
+    serviceName: serviceName,
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+  }) }}
   <div class="govuk-width-container">
-    <div class="govuk-phase-banner govuk-!-padding-top-5">
-      <p class="govuk-phase-banner__content">
-        <strong class="govuk-tag govuk-phase-banner__content__tag">
-          Beta
-        </strong>
-        <span class="govuk-phase-banner__text">
-          This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
-        </span>
-      </p>
-    </div>
+  
   </div>
 {% endblock %}
 

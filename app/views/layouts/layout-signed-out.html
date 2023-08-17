@@ -1,8 +1,11 @@
-{#- We can't mount GOV.UK Frontend's assets at root as it's done automatically by the extensions framework. -#}
-{%- set assetPath = '/govuk/assets' -%}
+{#
+  For guidance on how to use layouts see:
+  https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
+  #}
+  
+  {% extends "govuk-prototype-kit/layouts/govuk-branded.njk" %}
 
-{% extends "govuk/template.njk" %}
-
+  
 {% from "govuk/components/accordion/macro.njk" import govukAccordion %}
 {% from "govuk/components/back-link/macro.njk"           import govukBackLink %}
 {% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
@@ -32,7 +35,7 @@
 {% from "govuk/components/warning-text/macro.njk"        import govukWarningText %}
 
 {% block head %}
-  {% include "includes/head-account-signed-in.html" %}
+  {% include "includes/head-signed-out.html" %}
 {% endblock %}
 
 {% block pageTitle %}

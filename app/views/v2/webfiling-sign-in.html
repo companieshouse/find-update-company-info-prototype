@@ -1,83 +1,88 @@
-{% extends "layout_unbranded-with-banner.html" %}
+{% extends "layouts/main.html" %}
+<!-- Overwrite suerfice name -->
+
+
 {% block pageTitle %}
-  {{serviceName}} - GOV.UK
+  {{ serviceName }} – Prototype
 {% endblock %}
+
 {% block beforeContent %}
-{{ govukBackLink({
-  text: "Back",
-  href: "/"
-}) }}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+
 {% endblock %}
+
 
 {% block content %}
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds-from-desktop">
-      <h1 class="govuk-heading-l">Your WebFiling sign in details</h1>
 
-      <p class="govuk-body"> We need to know your sign in details so that we can access your stored information. This will allow you to save your information in your GOV.UK One Login. </p>
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-two-thirds ">
+  <h1 class="govuk-heading-l">Your WebFiling sign in details</h1>
 
- 
-      <form action="webfiling-sign-in" method="post" novalidate="">
-
-        {% set emailHtml %}
-        {{ govukInput({
-          id: "webfiling-email",
-          name: "webfiling-email",
-          type: "email",
-          autocomplete: "email",
-          spellcheck: false,
-          label: {
-            text: "Email address"
-          }
-        }) }}
-        {% endset -%}
-
-        {{ govukRadios({
-          name: "webfiling-sign-in-details",
-          fieldset: {
-            legend: {
-              text: "Which email address do you use to sign in to WebFiling?",
-              isPageHeading: false,
-              classes: "govuk-!-padding-top-3"
-            }
-          },
-          items: [
-            {
-              value: "email",
-              text: "example@gmail.com"
-            },
-            {
-              value: "different-email",
-              text: "A different email address",
-              conditional: {
-                html: emailHtml
-              }
-            }
-          ]
-        }) }}
+  <p class="govuk-body"> We need to know your sign in details so that we can access your stored information. This will allow you to save your information in your GOV.UK One Login. </p>
 
 
-        {{ govukInput({
-          label: {
-            text: "Which password do you use to sign in to WebFiling?",
-            isPageHeading: false
-          },
-          classes: "govuk-!-width-three-quarters",
-          id: "password",
-          name: "password"
-        }) }}
+  <form action="webfiling-sign-in" method="post" novalidate="">
 
-        {{ govukButton({
-          text: "Continue"
-        }) }}
+              
+  {% set emailHtml %}
+  {{ govukInput({
+    id: "webfiling-email",
+    name: "webfiling-email",
+    type: "email",
+    autocomplete: "email",
+    spellcheck: false,
+    classes: "govuk-!-width-three-quarters",
+    label: {
+      text: "Email address"
+    }
+  }) }}
+  {% endset -%}
+  
+  {{ govukRadios({
+    name: "webfiling-sign-in-details",
+    fieldset: {
+      legend: {
+        text: "Which email address do you use to sign in to WebFiling?",
+        isPageHeading: false,
+        classes: "govuk-!-padding-top-3"
+      }
+    },
+    hint: {
+      text: "Select one option."
+    },
+    items: [
+      {
+        value: "email-entered",
+        text: data['email']
+      },
+      {
+        value: "email",
+        text: "A different email address",
+        conditional: {
+          html: emailHtml
+        }
+      }
+    ]
+  }) }}
 
-        
-        
-      </form>
-     <!-- No needed --> 
-     <!-- <p class="govuk-body"><a href="#" class="govuk-link">Create an account</a></p> -->
-      <p class="govuk-body"><a href="#" class="govuk-link">I've forgotten my password</a></p>
-     
-    </div>
-  </div>
+
+  {{ govukInput({
+    label: {
+      text: "Which password do you use to sign in to WebFiling?",
+      isPageHeading: false
+    },
+    classes: "govuk-!-width-three-quarters",
+    id: "password",
+    name: "password"
+  }) }}
+
+  {{ govukButton({
+    text: "Continue"
+  }) }}        
+  
+  </form>
+
+</div>
+</div>
+
 {% endblock %}

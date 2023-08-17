@@ -1,221 +1,209 @@
-{% extends "layout_unbranded.html" %}
+{% extends "layouts/main.html" %}
 
-{% block pageTitle %}
-Home – {{serviceName}} – GOV.UK Prototype Kit
-{% endblock %}
-
-<!--<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-
-    {% include "govuk-prototype-kit/includes/homepage-top.njk" %}
-
-    <h1 class="govuk-heading-xl">
-      {{ serviceName }}
-    </h1>
-
-    {% include "govuk-prototype-kit/includes/homepage-bottom.njk" %}
-  </div>
-</div> -->
-
+{% set pageName="Home" %}
 
 {% block content %}
 
-<div class="govuk-width-container">
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-three-quarters">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
 
-      <h1 class="govuk-heading-xl">
-        {{ serviceName }}
-      </h1>
-
-      {{ govukWarningText({
-        text: "This prototype is being actively worked on - things might break or change very quickly",
-        iconFallbackText: "Warning"
-      }) }}
-
-      <h2 class="govuk-heading-m" id="authScreens">Murals</h2>
-      <p class="govuk-body"><a class="govuk-link govuk-link--no-visited-state" target="_blank" href="https://app.mural.co/invitation/room/1683279704950?code=809740fcd4f742228d1caee6c1707607&sender=ejames5948">IDAM mural room for User Centred Design (opens in a new tab)</a></p>
-
-      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
-      <h2 class="govuk-heading-m govuk-!-padding-top-4">
-        Version 2
-      </h2>
-
-      <p class="govuk-body"> <a href="v2/index" class="govuk-link">Prototype version 2</a></p>
+  
+    <h1 class="govuk-heading-l">
+      {{ serviceName }}
+    </h1>
 
 
+    {{ govukWarningText({
+      text: "This prototype is being actively worked on - things might break or change very quickly",
+      iconFallbackText: "Warning"
+    }) }}
 
-      
-      {{ govukSummaryList({
-        card: {
-          title: {
-            text: "Migrating CHS and WebFiling accounts to GOV.UK One Login"
-          },
-          actions: {
-            items: [
-              {
-                href: "v2/index",
-                text: "View prototype",
-                visuallyHiddenText: "of version 2"
-              }
-            ]
-          }
+    <h2 class="govuk-heading-m" id="authScreens">Murals</h2>
+    <p class="govuk-body"><a class="govuk-link govuk-link--no-visited-state" target="_blank" href="https://app.mural.co/invitation/room/1683279704950?code=809740fcd4f742228d1caee6c1707607&sender=ejames5948">IDAM mural room for User Centred Design (opens in a new tab)</a></p>
+
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+    <h2 class="govuk-heading-m govuk-!-padding-top-4">
+      Version 2
+    </h2>
+
+    <p class="govuk-body"> <a href="v2/index" class="govuk-link">Prototype version 2</a></p>
+
+
+
+    
+    {{ govukSummaryList({
+      card: {
+        title: {
+          text: "Migrating CHS and WebFiling accounts to GOV.UK One Login"
         },
-        rows: [
+        actions: {
+          items: [
+            {
+              href: "v2/index",
+              text: "View prototype",
+              visuallyHiddenText: "of version 2"
+            }
+          ]
+        }
+      },
+      rows: [
+      {
+        key: {
+          text: "Status"
+        },
+        value: {
+          html: "<strong class='govuk-tag govuk-tag--blue'>
+            In progress
+          </strong>"
+        }
+      },
         {
           key: {
-            text: "Status"
+            text: "Summary"
           },
           value: {
-            html: "<strong class='govuk-tag govuk-tag--blue'>
+            html: "Migrating Companies House search users accounts and WebFiling accounts to GOV.UK One Login"
+          }
+        },
+        {
+          key: {
+            text: "Version 2"
+          },
+          value: {
+            html: "Added pages for sign in to WebFiling and migrating WebFiling account <br> Updating CHS account <br> Updating WebFiling account"
+          }
+        },
+        {
+          key: {
+            text: "User Research"
+          },
+          value: {
+            html: ""
+          }
+        }
+      ]
+    }) }}
+
+
+
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+    <h2 class="govuk-heading-m govuk-!-padding-top-4">
+      Version 1
+    </h2>
+    <p class="govuk-body"> <a href="v1/index" class="govuk-link">Prototype version 1</a></p>
+
+
+    
+    {{ govukSummaryList({
+      card: {
+        title: {
+          text: "Migrating CHS accounts to GOV.UK One Login"
+        },
+        actions: {
+          items: [
+            {
+              href: "v1/index",
+              text: "View prototype",
+              visuallyHiddenText: "of version 1"
+            }
+          ]
+        }
+      },
+      rows: [
+      {
+        key: {
+          text: "Status"
+        },
+        value: {
+          html: "<strong class='govuk-tag govuk-tag--green'>
+            Tested
+          </strong>"
+        }
+      },
+        {
+          key: {
+            text: "Summary"
+          },
+          value: {
+            html: "Migrating Companies House search users accounts to GOV.UK One Login"
+          }
+        },
+        {
+          key: {
+            text: "Version 1"
+          },
+          value: {
+            html: "Companies House sign in homepage<br>Interrupt information page<br> GOV.UK One Login create and sign in flows <br> Migrating Companies House Service (CHS) accounts and CHS sign in <br> Companies House homepage "
+          }
+        },
+        {
+          key: {
+            text: "User Research"
+          },
+          value: {
+            html: "26th June 2023 "
+          }
+        }
+      ]
+    }) }}
+
+
+
+
+
+<!--      <h2 class="govuk-heading-m govuk-!-padding-top-4">
+      Prototypes
+    </h2>
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header" scope="col">Version</th>
+          <th class="govuk-table__header" scope="col">Date</th>
+          <th class="govuk-table__header" scope="col">Status</th>
+          <th class="govuk-table__header" scope="col">User Research</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
+            <a href="v2/index">Version 2</a>
+          </td>
+          <td class="govuk-table__cell">
+             July 2023 TBC
+          </td>
+          <td class="govuk-table__cell">
+            <strong class="govuk-tag govuk-tag--blue">
               In progress
-            </strong>"
-          }
-        },
-          {
-            key: {
-              text: "Summary"
-            },
-            value: {
-              html: "Migrating Companies House search users accounts and WebFiling accounts to GOV.UK One Login"
-            }
-          },
-          {
-            key: {
-              text: "Version 2"
-            },
-            value: {
-              html: "Added pages for sign in to WebFiling and migrating WebFiling account <br> Updating CHS account <br> Updating WebFiling account"
-            }
-          },
-          {
-            key: {
-              text: "User Research"
-            },
-            value: {
-              html: ""
-            }
-          }
-        ]
-      }) }}
-
-
-
-      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
-      <h2 class="govuk-heading-m govuk-!-padding-top-4">
-        Version 1
-      </h2>
-      <p class="govuk-body"> <a href="v1/index" class="govuk-link">Prototype version 1</a></p>
-
-
-      
-      {{ govukSummaryList({
-        card: {
-          title: {
-            text: "Migrating CHS accounts to GOV.UK One Login"
-          },
-          actions: {
-            items: [
-              {
-                href: "v1/index",
-                text: "View prototype",
-                visuallyHiddenText: "of version 1"
-              }
-            ]
-          }
-        },
-        rows: [
-        {
-          key: {
-            text: "Status"
-          },
-          value: {
-            html: "<strong class='govuk-tag govuk-tag--green'>
+            </strong>
+          </td>
+          <td class="govuk-table__cell">
+            <a target="_blank" href="" class="govuk-link govuk-link--no-visited-state"></a>
+          </td>    
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
+            <a href="v1/index">Version 1</a>
+          </td>
+          <td class="govuk-table__cell">
+            26th June 2023
+          </td>
+          <td class="govuk-table__cell">
+            <strong class="govuk-tag govuk-tag--green">
               Tested
-            </strong>"
-          }
-        },
-          {
-            key: {
-              text: "Summary"
-            },
-            value: {
-              html: "Migrating Companies House search users accounts to GOV.UK One Login"
-            }
-          },
-          {
-            key: {
-              text: "Version 1"
-            },
-            value: {
-              html: "Companies House sign in homepage<br>Interrupt information page<br> GOV.UK One Login create and sign in flows <br> Migrating Companies House Service (CHS) accounts and CHS sign in <br> Companies House homepage "
-            }
-          },
-          {
-            key: {
-              text: "User Research"
-            },
-            value: {
-              html: "26th June 2023 "
-            }
-          }
-        ]
-      }) }}
+            </strong>
+          </td>
+          <td class="govuk-table__cell">
+            <a target="_blank" href="" class="govuk-link govuk-link--no-visited-state"></a>
+          </td>    
+        </tr>
+      </tbody>
+    </table> -->
+
+   
 
 
-
-
-
- <!--      <h2 class="govuk-heading-m govuk-!-padding-top-4">
-        Prototypes
-      </h2>
-      <table class="govuk-table">
-        <thead class="govuk-table__head">
-          <tr class="govuk-table__row">
-            <th class="govuk-table__header" scope="col">Version</th>
-            <th class="govuk-table__header" scope="col">Date</th>
-            <th class="govuk-table__header" scope="col">Status</th>
-            <th class="govuk-table__header" scope="col">User Research</th>
-          </tr>
-        </thead>
-        <tbody class="govuk-table__body">
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell">
-              <a href="v2/index">Version 2</a>
-            </td>
-            <td class="govuk-table__cell">
-               July 2023 TBC
-            </td>
-            <td class="govuk-table__cell">
-              <strong class="govuk-tag govuk-tag--blue">
-                In progress
-              </strong>
-            </td>
-            <td class="govuk-table__cell">
-              <a target="_blank" href="" class="govuk-link govuk-link--no-visited-state"></a>
-            </td>    
-          </tr>
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell">
-              <a href="v1/index">Version 1</a>
-            </td>
-            <td class="govuk-table__cell">
-              26th June 2023
-            </td>
-            <td class="govuk-table__cell">
-              <strong class="govuk-tag govuk-tag--green">
-                Tested
-              </strong>
-            </td>
-            <td class="govuk-table__cell">
-              <a target="_blank" href="" class="govuk-link govuk-link--no-visited-state"></a>
-            </td>    
-          </tr>
-        </tbody>
-      </table> -->
-
-     
-
-
+    {% include "govuk-prototype-kit/includes/homepage-top.njk" %}
+  </div>
+</div>
 
 {% endblock %}
