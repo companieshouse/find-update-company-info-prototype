@@ -24,7 +24,19 @@
         </label>
         </h1>
         <div class="govuk-inset-text">
-          We have sent an email to: <strong>{{ data['email'] }}</strong>
+          We have sent an email to: 
+          
+          {% if (data['email'] === "")%}
+
+            <strong> example@gmail.com </strong>
+          
+          {% else %}
+
+            <strong>{{ data['email'] }}</strong>
+          
+          {% endif %}
+          
+          
         </div>
        
         <p class="govuk-body">This email contains a 6 digit security code. </p>

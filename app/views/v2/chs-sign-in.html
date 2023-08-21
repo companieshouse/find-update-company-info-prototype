@@ -39,9 +39,35 @@
   {% endset -%}
 
   
-
+  {% if (data['email'] === "")%}
 
   
+  {{ govukRadios({
+    name: "chs-sign-in-details",
+    fieldset: {
+      legend: {
+        text: "Which email address do you use to sign in to your Companies House account?",
+        isPageHeading: false,
+        classes: "govuk-!-padding-top-3"
+      }
+    },
+    items: [
+      {
+        value: "email-entered-chs",
+        text: "example@gmail.com"
+      },
+      {
+        value: "chs-email",
+        text: "A different email address",
+        conditional: {
+          html: emailHtml
+        }
+      }
+    ]
+  }) }}
+
+  {% else %}
+
   {{ govukRadios({
     name: "chs-sign-in-details",
     fieldset: {
@@ -65,6 +91,9 @@
       }
     ]
   }) }}
+
+  {% endif %}
+
 
 
   {{ govukInput({
