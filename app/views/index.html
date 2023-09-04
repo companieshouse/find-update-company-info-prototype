@@ -23,6 +23,68 @@
 
     <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
     <h2 class="govuk-heading-m govuk-!-padding-top-4">
+      Version 3
+    </h2>
+
+
+    
+    {{ govukSummaryList({
+      card: {
+        title: {
+          text: "Migrating CHS and WebFiling accounts to GOV.UK One Login"
+        },
+        actions: {
+          items: [
+            {
+              href: "v3/index",
+              text: "View prototype",
+              visuallyHiddenText: "of version 3"
+            }
+          ]
+        }
+      },
+      rows: [
+      {
+        key: {
+          text: "Status"
+        },
+        value: {
+          html: "<strong class='govuk-tag govuk-tag--green'>
+            Tested
+          </strong>"
+        }
+      },
+        {
+          key: {
+            text: "Summary"
+          },
+          value: {
+            html: "Migrating Companies House search users accounts and WebFiling accounts to GOV.UK One Login"
+          }
+        },
+        {
+          key: {
+            text: "Version 3"
+          },
+          value: {
+            html: "New manage acount features. Reviewing migration account flow. "
+          }
+        },
+        {
+          key: {
+            text: "User Research"
+          },
+          value: {
+            html: ""
+          }
+        }
+      ]
+    }) }}
+
+
+
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+    <h2 class="govuk-heading-m govuk-!-padding-top-4">
       Version 2
     </h2>
 
@@ -49,8 +111,8 @@
           text: "Status"
         },
         value: {
-          html: "<strong class='govuk-tag govuk-tag--blue'>
-            In progress
+          html: "<strong class='govuk-tag govuk-tag--green'>
+            Tested
           </strong>"
         }
       },

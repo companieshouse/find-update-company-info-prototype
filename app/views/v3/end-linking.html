@@ -1,0 +1,69 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  {{serviceName}} - GOV.UK
+{% endblock %}
+
+
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds ">
+
+
+     <!-- chs info saved -->
+
+      {% if (data['link-chs-account'] === "yes") %}
+      {% set html %}
+      <h3 class="govuk-notification-banner__heading">
+        We have saved your Companies House account information.
+      </h3>
+    {% endset %}
+
+    {{ govukNotificationBanner({
+      html: html,
+      type: 'success'
+    }) }}
+
+     <!-- chs info not saved -->
+
+    {% elif (data['link-chs-account'] === "no") %}
+   
+   
+    {% set html %}
+    <h3 class="govuk-notification-banner__heading">
+      We have not saved your Companies House account information to your GOV.UK One Login.
+    </h3>
+  {% endset %}
+
+  {{ govukNotificationBanner({
+    html: html
+  }) }}
+
+
+    {% endif %}
+
+
+
+
+      <h1 class="govuk-heading-l">Use your GOV.UK One Login details to sign in from now on</h1>
+      
+      <p class="govuk-body">To access Companies House in future, sign in using your GOV.UK One Login email address and password.</p>
+      <a href="chs-home-signed-in">
+          <button type="Submit" class="govuk-button" data-module="govuk-button">
+              Continue
+          </button>
+      </a>
+
+
+    </div>
+</div>
+
+{% endblock %}
