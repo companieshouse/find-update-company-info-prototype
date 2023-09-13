@@ -17,7 +17,7 @@
 
        <!-- WebFiling info saved -->
 
-      {% if (data['link-webfiling-account'] === "yes") %}
+      {% if (data['existing-webfiling-account'] === "yes") %}
       {% set html %}
       <h3 class="govuk-notification-banner__heading">
         We have saved your WebFiling information.
@@ -31,10 +31,10 @@
 
      <!-- Webfiling info not saved -->
 
-    {% elif (data['link-webfiling-account'] === "no") %}
+    {% elif (data['existing-webfiling-account'] === "no") %}
    
    
-    {% set html %}
+   <!--  {% set html %}
     <h3 class="govuk-notification-banner__heading">
       We have not saved your WebFiling information to your GOV.UK One Login.
     </h3>
@@ -42,7 +42,7 @@
 
   {{ govukNotificationBanner({
     html: html
-  }) }}
+  }) }} -->
 
 
     {% endif %}
@@ -51,7 +51,7 @@
         name: "existing-chs-account",
         fieldset: {
           legend: {
-            text: "Do you have an existing Companies House account?",
+            text: "*Do you have an existing Companies House account?*",
             isPageHeading: true,
             classes: "govuk-fieldset__legend--l"
           }

@@ -107,7 +107,7 @@ router.post('/v3/one-login-enter-password', function (req, res) {
   //One loginsign create complete
   router.post('/v3/create-complete', function (req, res) {
   
-    res.redirect('end-linking')
+    res.redirect('existing-webfiling-account')
   })
   
   
@@ -123,11 +123,13 @@ router.post('/v3/one-login-enter-password', function (req, res) {
         
       res.redirect('webfiling-sign-in')
   }
-  // Otherwise take them to a stop screen
-  else{
+  else if (req.session.data['existing-webfiling-account'] === 'no') {
+        
+    res.redirect('existing-account')
+  }
+  else {
   
-    //***review  */
-      res.redirect('existing-account')
+    
   }
   
   })
@@ -142,7 +144,7 @@ router.post('/v3/one-login-enter-password', function (req, res) {
    // MFA for WebFiling sign in 
    router.post('/v3/webfiling-mfa', function (req, res) {
   
-    res.redirect('link-webfiling-accounts')
+    res.redirect('existing-account')
   
   })
   
@@ -170,15 +172,24 @@ router.post('/v3/one-login-enter-password', function (req, res) {
   // Do you have an existing Companies House account?
   router.post('/v3/existing-account', function (req, res) {
   
-      //If they have an existing chs account
-      if (req.session.data['existing-chs-account'] === 'yes') {
+    //If they have an existing chs account
+    if (req.session.data['existing-chs-account'] === 'yes') {
           
         res.redirect('chs-sign-in')
     }
     // Otherwise take them to a stop screen
+    else if ((req.session.data['existing-chs-account'] === 'no') && (req.session.data['existing-webfiling-account'] === 'no'))  {
+          
+      res.redirect('end-linking')
+  }
+    
+    //** if no CHS and No Webfiling take them directly to service */
+    
+    
+    
     else{
   
-        res.redirect('existing-account')
+        res.redirect('end-linking')
     }
     
   })
@@ -186,7 +197,7 @@ router.post('/v3/one-login-enter-password', function (req, res) {
   // Companies House sign in 
   router.post('/v3/chs-sign-in', function (req, res) {
   
-    res.redirect('link-accounts')
+    res.redirect('end-linking')
   })
   
   
@@ -206,7 +217,24 @@ router.post('/v3/one-login-enter-password', function (req, res) {
   
   })
   
-   
+     // Companies House sign in 
+  router.post('/v3/end-linking', function (req, res) {
+
+    //if they want to go back and save information
+
+    if (req.session.data['are-you-sure'] === 'no') {
+        
+      res.redirect('existing-webfiling-account') 
+    }
+    //do not save things on their account
+    else{
+    
+        res.redirect('chs-home-signed-in')
+    }
+
+
+  })
+  
   
   //accounts are linked ***********
   //res.redirect('existing-webfiling-account')
