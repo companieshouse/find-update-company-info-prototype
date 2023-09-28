@@ -180,7 +180,7 @@ router.post('/v3/one-login-enter-password', function (req, res) {
     // Otherwise take them to a stop screen
     else if ((req.session.data['existing-chs-account'] === 'no') && (req.session.data['existing-webfiling-account'] === 'no'))  {
           
-      res.redirect('end-linking')
+      res.redirect('chs-home-signed-in')
   }
     
     //** if no CHS and No Webfiling take them directly to service */
