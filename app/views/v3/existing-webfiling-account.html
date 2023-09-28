@@ -26,7 +26,47 @@
         type: 'success'
       }) }} -->
 
-      {{ govukRadios({
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              Do you have an existing WebFiling account?
+            </h1>
+          </legend>
+  
+          <div class="govuk-!-padding-top-4 govuk-!-padding-bottom-6">
+            <p>
+              WebFiling account
+            </p>
+  
+            <a href="">
+              <img src="/public/images/webfiling.png" alt="" style='border:1px solid #000000' height="175">
+              </a>
+            </div>
+  
+  
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="existing-webfiling-account" name="existing-webfiling-account" type="radio" value="yes">
+              <label class="govuk-label govuk-radios__label" for="existing-webfiling-account">
+                Yes
+              </label>
+              <div id="existing-webfiling-account-hint" class="govuk-hint govuk-radios__hint">
+                We'll ask you for your sign in details. This will enable us to save your existing information, so you can access it when you use your GOV.UK One Login to sign in to Companies House.
+              </div>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="existing-webfiling-account" name="existing-webfiling-account" type="radio" value="no">
+              <label class="govuk-label govuk-radios__label" for="existing-chs-account">
+                No
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+
+<!--       {{ govukRadios({
         name: "existing-webfiling-account",
         fieldset: {
           legend: {
@@ -51,7 +91,8 @@
             text: "No"     
           }
         ]
-      }) }}
+      }) }} -->
+
 
       <!--
       <details class="govuk-details" data-module="govuk-details">
