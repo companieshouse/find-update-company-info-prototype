@@ -22,7 +22,7 @@ router.post('/v3/one-login-enter-password', function (req, res) {
   //sign in
   router.post('/v3/enter-code', function (req, res) {
   
-    res.redirect('existing-webfiling-account')
+    res.redirect('enter-code')
   })
   
   
@@ -107,7 +107,7 @@ router.post('/v3/one-login-enter-password', function (req, res) {
   //One loginsign create complete
   router.post('/v3/create-complete', function (req, res) {
   
-    res.redirect('existing-webfiling-account')
+    res.redirect('create-complete')
   })
   
   
