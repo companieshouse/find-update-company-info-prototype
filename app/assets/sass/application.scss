@@ -1566,3 +1566,15 @@
     }
   }
 
+  .govuk-panel--interruption {
+    background-color: $govuk-brand-colour;
+    padding-top: govuk-spacing(6);
+    padding-left: govuk-spacing(6);
+    padding-right: govuk-spacing(6);
+
+  
+    * {
+      color: govuk-colour("white");
+    }
+
+  }
