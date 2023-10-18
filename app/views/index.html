@@ -22,6 +22,67 @@
     <p class="govuk-body"><a class="govuk-link govuk-link--no-visited-state" target="_blank" href="https://app.mural.co/invitation/room/1683279704950?code=809740fcd4f742228d1caee6c1707607&sender=ejames5948">IDAM mural room for User Centred Design (opens in a new tab)</a></p>
 
     <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+
+    <h2 class="govuk-heading-m govuk-!-padding-top-4">
+      Version 4
+    </h2>
+
+
+    
+    {{ govukSummaryList({
+      card: {
+        title: {
+          text: "Migrating CHS accounts to GOV.UK One Login"
+        },
+        actions: {
+          items: [
+            {
+              href: "v4/index",
+              text: "View prototype",
+              visuallyHiddenText: "of version 3"
+            }
+          ]
+        }
+      },
+      rows: [
+      {
+        key: {
+          text: "Status"
+        },
+        value: {
+          html: "<strong class='govuk-tag govuk-tag--blue'>
+            In progress 
+          </strong>"
+        }
+      },
+        {
+          key: {
+            text: "Summary"
+          },
+          value: {
+            html: "Migrating Companies House accounts to GOV.UK One Login automatically in the background."
+          }
+        },
+        {
+          key: {
+            text: "Version 4"
+          },
+          value: {
+            html: "*New manage acount features. Reviewing migration account flow.* "
+          }
+        },
+        {
+          key: {
+            text: "User Research"
+          },
+          value: {
+            html: " "
+          }
+        }
+      ]
+    }) }}
+
     <h2 class="govuk-heading-m govuk-!-padding-top-4">
       Version 3
     </h2>
@@ -49,8 +110,8 @@
           text: "Status"
         },
         value: {
-          html: "<strong class='govuk-tag govuk-tag--blue'>
-            In progress
+          html: "<strong class='govuk-tag govuk-tag--green'>
+            Tested
           </strong>"
         }
       },
@@ -75,7 +136,7 @@
             text: "User Research"
           },
           value: {
-            html: ""
+            html: "To be added soon "
           }
         }
       ]
@@ -83,7 +144,7 @@
 
 
 
-    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
     <h2 class="govuk-heading-m govuk-!-padding-top-4">
       Version 2
     </h2>
@@ -144,8 +205,6 @@
     }) }}
 
 
-
-    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
     <h2 class="govuk-heading-m govuk-!-padding-top-4">
       Version 1
     </h2>
