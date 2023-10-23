@@ -8,7 +8,11 @@ const router = govukPrototypeKit.requests.setupRouter()
 
 // Add your routes here
 
-//One Login sign in 
+//journey setting
+router.post('/v4/index', function (req, res) {
+
+  res.redirect('chs-home-sign-in')
+})
 
 
 
@@ -21,8 +25,10 @@ router.post('/v4/one-login-enter-password', function (req, res) {
   
   //sign in
   router.post('/v4/enter-code', function (req, res) {
-  
-    res.redirect('end-linking')
+
+      res.redirect('end-linking')
+
+
   })
   
   
@@ -97,17 +103,13 @@ router.post('/v4/one-login-enter-password', function (req, res) {
   //One loginsign create - check your email 
   
   
-  //One loginsign in check phone 
-  router.post('/v4/enter-code', function (req, res) {
-  
-    res.redirect('existing-account')
-  })
-  
+
   
   //One loginsign create complete
   router.post('/v4/create-complete', function (req, res) {
   
     res.redirect('end-linking')
+    
   })
   
   
