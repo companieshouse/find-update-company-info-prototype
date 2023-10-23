@@ -22,7 +22,7 @@ router.post('/v4/one-login-enter-password', function (req, res) {
   //sign in
   router.post('/v4/enter-code', function (req, res) {
   
-    res.redirect('existing-webfiling-account')
+    res.redirect('end-linking')
   })
   
   
@@ -107,7 +107,7 @@ router.post('/v4/one-login-enter-password', function (req, res) {
   //One loginsign create complete
   router.post('/v4/create-complete', function (req, res) {
   
-    res.redirect('existing-webfiling-account')
+    res.redirect('end-linking')
   })
   
   

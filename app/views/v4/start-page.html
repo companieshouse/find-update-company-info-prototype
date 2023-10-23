@@ -1,47 +1,56 @@
 {% extends "layouts/main.html" %}
 
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      Alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
 {% block pageTitle %}
   Start page – {{ serviceName }} - GOV.UK
 {% endblock %}
 
 
 
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      Alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
 
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds-from-desktop">
       <form action="start-page" method="post" novalidate>
-      <h1 class="govuk-heading-xl">We have changed the way you sign in to Companies House</h1>
+      <h1 class="govuk-heading-xl">We have changed the way you sign in</h1>
      
-     <p class="govuk-body">We’ll ask you to create a GOV.UK One Login, which is the new way to sign in to government services. In the future, it will allow you to access any government service using the same email address and password. </p>
-      
-      <p class="govuk-body">If you already have a GOV.UK One Login, you’ll be able to sign in. </p>
+     <p class="govuk-body">We’ll ask you to create a GOV.UK One Login, which is the new way to sign in to many government services. In the future, it will allow you to access any government service using the same email address and password. </p>
 
       <h2 class="govuk-heading-m">You can save your existing information</h2>
-      <p class="govuk-body">If you have an existing WebFiling or Companies House account, you may have information stored, such as:</p>
+      <p class="govuk-body">If you have an existing Companies House account, you may have information stored, such as:</p>
       <ul class="govuk-list govuk-list--bullet">
-        <li>email reminders</li>
-        <li>details of companies you file for</li>
         <li>your filing history</li>
         <li>companies you follow</li>
       </ul>
-      <p class="govuk-body">If you want to save this information, we'll ask you to enter the email address and password you use to sign in to these accounts.</p>
+     
+      <p class="govuk-body">To save your information, enter the email address you use to sign in to this account when you create your GOV.UK One Login.</p>
 
-      <details class="govuk-details" data-module="govuk-details">
-        <summary class="govuk-details__summary">
-          <span class="govuk-details__summary-text">
-           What is WebFiling?
-          </span>
-        </summary>
-        <div class="govuk-details__text">
-          <p class="govuk-body">This is an online service you can use to submit certain filings digitally, such as dormant accounts. </p>
-            <p class="govuk-body">In WebFiling, you can also:</p>
-          <ul class="govuk-list govuk-list--bullet">
-            <li>sign up for email reminders</li>
-            <li>request or change your authentication code</li>
-          </ul>
-        </div>
-      </details>
+      <h2 class="govuk-heading-m">If you already have a GOV.UK One Login</h2>
+
+      <p class="govuk-body">You’ll be able to sign in. If you created your GOV.UK One Login using your Companies House account email address, you'll be able to access your existing information when you sign in.</p>
+
+      <p class="govuk-body">If you’ve used a different email address, you can create a new GOV.UK One Login using your Companies House account email address to access your existing information.</p>
+
 
       <details class="govuk-details" data-module="govuk-details">
         <summary class="govuk-details__summary">
@@ -57,6 +66,7 @@
           </ul>
         </div>
       </details>
+
    
       {{ govukButton({
         text: "Continue ",
