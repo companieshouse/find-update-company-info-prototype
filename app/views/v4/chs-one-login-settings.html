@@ -15,10 +15,14 @@
   <div class="govuk-grid-column-two-thirds">
     <!-- Note: GOV.UK One Login uses Security as the title for this page -->
     <h1 class="govuk-heading-xl govuk-!-static-margin-bottom-0">
-      Manage account
+      Manage account {{ govukTag({
+        text: "Content TBC",
+        classes: "govuk-tag--pink"
+      }) }}
     </h1>
     <p class="govuk-body  govuk-!-padding-top-4 govuk-!-padding-bottom-4"> You’re signed in as <span class="govuk-body govuk-!-font-weight-bold">example@gmail.com </span> </p>
 
+    
 
  <!--    <p class="govuk-body">You can change your sign in details for this service in your GOV.UK One Login.</p>
     
@@ -36,10 +40,7 @@
 
     <div class="govuk-summary-card">
       <div class="govuk-summary-card__title-wrapper">
-        <h2 class="govuk-summary-card__title">Account name {{ govukTag({
-          text: "Content TBC",
-          classes: "govuk-tag--pink"
-        }) }} </h2>
+        <h2 class="govuk-summary-card__title">Account name  </h2>
       </div>
       <div class="govuk-summary-card__content">
         <dl class="govuk-summary-list">
@@ -73,10 +74,7 @@
 
     <div class="govuk-summary-card">
       <div class="govuk-summary-card__title-wrapper">
-        <h2 class="govuk-summary-card__title">Your details {{ govukTag({
-          text: "Content TBC",
-          classes: "govuk-tag--pink"
-        }) }}</h2>
+        <h2 class="govuk-summary-card__title">Your details </h2>
       </div>
       <div class="govuk-summary-card__content">
         <p class="govuk-body">You can change your sign in details for this service in your GOV.UK One Login.</p>
