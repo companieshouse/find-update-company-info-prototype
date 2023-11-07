@@ -14,6 +14,12 @@ router.post('/v4/index', function (req, res) {
   res.redirect('chs-home-sign-in')
 })
 
+//start page
+router.post('/v4/start-page', function (req, res) {
+
+  res.redirect('create-or-sign-in')
+})
+
 
 
 //One login sign in
@@ -26,7 +32,7 @@ router.post('/v4/one-login-enter-password', function (req, res) {
   //sign in
   router.post('/v4/enter-code', function (req, res) {
 
-      res.redirect('chs-home-signed-in')
+      res.redirect('end-linking')
 
 
   })
@@ -107,10 +113,27 @@ router.post('/v4/one-login-enter-password', function (req, res) {
   
   //One loginsign create complete
   router.post('/v4/create-complete', function (req, res) {
+
+      res.redirect('name')
   
-    res.redirect('chs-home-signed-in')
-    
   })
+
+    
+  //One loginsign create complete
+  router.post('/v4/name', function (req, res) {
+
+    res.redirect('email-preferences')
+
+})
+
+  //One loginsign create complete
+  router.post('/v4/email-preferences', function (req, res) {
+
+    res.redirect('end-linking')
+
+})
+
+
   
   
   /*
@@ -222,18 +245,7 @@ router.post('/v4/one-login-enter-password', function (req, res) {
      // Companies House sign in 
   router.post('/v4/end-linking', function (req, res) {
 
-    //if they want to go back and save information
-
-    if (req.session.data['are-you-sure'] === 'no') {
-        
-      res.redirect('existing-webfiling-account') 
-    }
-    //do not save things on their account
-    else{
-    
-        res.redirect('chs-home-signed-in')
-    }
-
+    res.redirect('chs-home-signed-in')
 
   })
   

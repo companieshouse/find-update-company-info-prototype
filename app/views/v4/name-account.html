@@ -10,7 +10,7 @@ Add your display name  – {{ serviceName }} - GOV.UK
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds-from-desktop">
-      <form action="name" method="post" novalidate>
+      <form action="name-account" method="post" novalidate>
       <h1 class="govuk-heading-l">Add your display name </h1>
 
 
@@ -50,7 +50,8 @@ Add your display name  – {{ serviceName }} - GOV.UK
 
       <div class="govuk-button-group">
         {{ govukButton({
-          text: "Continue"
+          text: "Continue",
+          href: "email-preferences"
         }) }}
       
         {{ govukButton({

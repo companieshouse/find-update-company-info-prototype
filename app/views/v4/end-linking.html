@@ -18,72 +18,15 @@
     <div class="govuk-grid-column-two-thirds ">
       <form action="end-linking" method="post" novalidate>
 
-
-     <!-- chs info saved -->
-
-      {% if (data['existing-chs-account'] === "yes") %}
-        {% set html %}
-        <h3 class="govuk-notification-banner__heading">
-          We have saved your Companies House account information.
-        </h3>
-      {% endset %}
-
-      {{ govukNotificationBanner({
-        html: html,
-        type: 'success'
-      }) }}
+      <h1 class="govuk-heading-l"> We have saved your Companies House account information</h1>
       
-      <h1 class="govuk-heading-l">Use your GOV.UK One Login details to sign in from now on</h1>
-      
-      <p class="govuk-body">To access Companies House in future, sign in using your GOV.UK One Login email address and password.</p>
+      <p class="govuk-body">*To access Companies House in future, sign in using your GOV.UK One Login email address and password.*</p>
      
           <button type="Submit" class="govuk-button" data-module="govuk-button">
               Continue
           </button>
     
 
-    <!-- If they haven't selected Yes to have both accounts - double check no existing information on the account -->
-    {% elseif  ((data['existing-chs-account'] == 'no') and (data['existing-webfiling-account'] == 'no') ) %}
-
-   
-    {{ govukRadios({
-      name: "are-you-sure",
-      fieldset: {
-        legend: {
-          text: "Are you sure you don't have existing information in your account that you want to save?",
-          isPageHeading: true,
-          classes: "govuk-fieldset__legend--l"
-        }
-      },
-      items: [
-        {
-          value: "yes",
-          text: "Yes"
-        },
-        {
-          value: "no",
-          text: "No"
-        }
-      ]
-    }) }}
-
-    {{ govukButton({
-      text: "Continue"
-    }) }}
-
-
-    {% else %}
-
-    <h1 class="govuk-heading-l">Use your GOV.UK One Login details to sign in from now on</h1>
-      
-    <p class="govuk-body">To access Companies House in future, sign in using your GOV.UK One Login email address and password.</p>
-   
-        <button type="Submit" class="govuk-button" data-module="govuk-button">
-            Continue
-        </button>
-
-
-    {% endif %}
 
   
       

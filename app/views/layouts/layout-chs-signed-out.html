@@ -69,7 +69,17 @@
      
       <nav role="navigation" class="content mobile-hidden">
         <ul id="navigation" class="mobile-hidden" style="padding-top: 8px;">
-          <li class="authenticated">example@gmail.com:</li>
+          <li class="authenticated">
+            {% if (data['display-name'] === "") %}
+
+            example@gmail.com
+
+            {% else %}
+            
+            {{data['display-name']}} 
+
+            {% endif %}
+          </li>
          
           <li class="your-companies"><a class="govuk-link" id="user-signout" href="">Your companies</a></li>
           <li class="your-filings"><a class="govuk-link" id="user-signout" href="/your-filings">Your filings</a></li>
