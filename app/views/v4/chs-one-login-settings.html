@@ -49,11 +49,20 @@
               Display name
             </dt>
             <dd class="govuk-summary-list__value">
-              Hannah Salt {{data['display-name']}} 
+              {% if (data['display-name'] === "") %}
+
+              example@gmail.com
+  
+              {% else %}
+              
+              {{data['display-name']}} 
+  
+              {% endif %}
+
             </dd>
             <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">
-                Change<span class="govuk-visually-hidden"></span>
+              <a class="govuk-link" href="name-account">
+                Update<span class="govuk-visually-hidden"></span>
               </a>
             </dd>
           </div>
@@ -77,12 +86,41 @@
               <p class="govuk-body">If you do not provide your name, your email address will be displayed instead.</p>
 
 
-
-
-
-
           </div>
         </details>
+      </div>
+    </div>
+
+    <div class="govuk-summary-card">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title">Identity verification</h2>
+        <ul class="govuk-summary-card__actions">
+          <li class="govuk-summary-card__action"> <a class="govuk-link" href="#">
+              View history<span class="govuk-visually-hidden"> of personal code</span>
+            </a>
+          </li>
+          <li class="govuk-summary-card__action"> <a class="govuk-link" href="#">
+              Create new code<span class="govuk-visually-hidden"> Create new code</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="govuk-summary-card__content">
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Personal code
+            </dt>
+            <dd class="govuk-summary-list__value">
+              **************
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Show<span class="govuk-visually-hidden"> Show personal code</span>
+              </a>
+            </dd>
+          </div>
+        </dl>
       </div>
     </div>
 
@@ -108,41 +146,6 @@
     
       </div>
     </div>
-
-    <div class="govuk-summary-card">
-      <div class="govuk-summary-card__title-wrapper">
-        <h2 class="govuk-summary-card__title">Identity verification</h2>
-        <ul class="govuk-summary-card__actions">
-          <li class="govuk-summary-card__action"> <a class="govuk-link" href="#">
-              View history<span class="govuk-visually-hidden"> of personal code</span>
-            </a>
-          </li>
-          <li class="govuk-summary-card__action"> <a class="govuk-link" href="#">
-              Create new code<span class="govuk-visually-hidden"> Create ne code</span>
-            </a>
-          </li>
-        </ul>
-      </div>
-      <div class="govuk-summary-card__content">
-        <dl class="govuk-summary-list">
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Personal code
-            </dt>
-            <dd class="govuk-summary-list__value">
-              **************
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">
-                Show<span class="govuk-visually-hidden"> Show personal code</span>
-              </a>
-            </dd>
-          </div>
-        </dl>
-      </div>
-    </div>
-    
-    
 
     <div class="govuk-summary-card">
       <div class="govuk-summary-card__title-wrapper">
