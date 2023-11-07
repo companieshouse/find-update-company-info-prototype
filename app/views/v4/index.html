@@ -17,6 +17,27 @@
       text: "This prototype is being actively worked on - things might break or change very quickly", iconFallbackText: "Warning" })
     }}
 
+   <!--  {{ govukRadios({
+      classes: "govuk-radios--inline",
+      name: "existing",
+      fieldset: {
+        legend: {
+          text: "Using a GOV.UK One Login with the same email address?",
+          classes: "govuk-fieldset__legend--s"
+        }
+      },
+      items: [
+        {
+          value: "yes",
+          text: "Yes"
+        },
+        {
+          value: "no",
+          text: "No"
+        }
+      ]
+    }) }} -->
+
     {{ govukButton({
       text: "Start prototype",
       href:"chs-home"
@@ -111,16 +132,111 @@
           <h2 class="govuk-heading-m">Manage account settings for CHS with GOV.UK One Login</h2>
           <ul class="govuk-list govuk-list--bullet">
             <li>
-              <a href="chs-one-login-settings">Your details - Managing your details through GOV.UK One Login</a>
+              <a href="chs-one-login-settings">Manage account</a>
+            </li>
+            <li>
+              <a href="">Update display name</a>
             </li>
           </ul>
           
           <h2 class="govuk-heading-m">Your companies - delegating the authority to file</h2>
+          <h3 class="govuk-heading-s">Add a company (existing CHS user)</h3>
           <ul class="govuk-list govuk-list--bullet">
             <li>
               <a href="chs-your-companies">Your companies - no companies </a>
             </li>
+            <li>
+              <a href="chs-your-companies-add">add-a-company -- Enter the details of the company you want to add to your account</a>
+            </li>
+            <li>
+              <a href="chs-your-companies-add">check-company-details -- Confirm this is the correct company</a>
+            </li>
+            <li>
+              <a href="chs-your-companies-auth-code">Enter the company authentication-code</a>
+            </li>
+            <li>
+              <a href="chs-your-companies-added">company-added -- Your companies - company has been added</a>
+            </li>
           </ul>
+
+          <h3 class="govuk-heading-s">Add a company (existing CHS user)</h3>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>
+              <a href="chs-your-companies">Your companies - no companies </a>
+            </li>
+            <li>
+              <a href="chs-your-companies-add">add-a-company -- Enter the details of the company you want to add to your account</a>
+            </li>
+            <li>
+              <a href="chs-your-companies-add">check-company-details -- Confirm this is the correct company</a>
+            </li>
+            <li>
+              <a href="chs-your-companies-auth-code">Enter the company authentication-code</a>
+            </li>
+            <li>
+              <a href="chs-your-companies-added">company-added -- Your companies - company has been added</a>
+            </li>
+          </ul>
+
+          
+          <h3 class="govuk-heading-s">Digitally authorise a person to file online for this company</h3>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>
+              <a href="chs-your-companies-add">What is the authorised person's email address?</a>
+            </li>
+            <li>
+              <a href="chs-your-companies-add">Check the authorised person's email address before we send the email</a>
+            </li>
+            <li>
+              <a href="chs-your-companies-add"> An email request has been sent </a>
+            </li>
+            </ul>
+
+            <h3 class="govuk-heading-s">Request to be digitally authorised to file</h3>
+            <ul class="govuk-list govuk-list--bullet">
+            <li>
+              <a href="chs-your-companies-add">Companies House account: authorisation to file online (email) </a>
+            </li>
+            <li>
+              <a href="chs-your-companies-add">Sign in </a>
+            </li>
+            <li>
+              <a href="chs-your-companies-add"> An email request has been sent </a>
+            </li>
+            <li>
+              <a href="chs-your-companies-add"> Awaiting confirmation </a>
+            </li>
+            <li>
+              <a href="chs-your-companies-add"> Confirmed - digitally authorised to file </a>
+            </li>
+            <li>
+              <a href="chs-your-companies-add"> Declined - digitally authorised to file </a>
+            </li>
+          </ul>
+
+         
+          <h3 class="govuk-heading-s">View details</h3>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>
+              <a href="chs-your-companies-add">view details - authorised-person-hannah -- Authorised person's details</a>
+            </li>
+            <li>
+              <a href="chs-your-companies-add">check-company-details -- Confirm this is the correct company</a>
+            </li>
+          </ul>
+
+
+          <h3 class="govuk-heading-s">Remove an authorised person</h3>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>
+              <a href="chs-your-companies-add">view details - authorised-person-hannah -- Authorised person's details</a>
+            </li>
+            <li>
+              <a href="chs-your-companies-add">check-company-details -- Confirm this is the correct company</a>
+            </li>
+          </ul>
+          
+          
           
           
           <h2 class="govuk-heading-m">Re-design of Companies House service</h2>
