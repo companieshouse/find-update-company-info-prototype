@@ -1,0 +1,67 @@
+{% extends "layouts/main.html" %}
+
+
+
+{% block pageTitle %}
+Add your display name  – {{ serviceName }} - GOV.UK
+{% endblock %}
+
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+      <form action="name" method="post" novalidate>
+      <h1 class="govuk-heading-l">Add your display name </h1>
+
+
+      <p class="govuk-hint govuk-!-padding-bottom-2">This is optional. You can update your name at any time. </p>
+
+
+      <div class="govuk-form-group">
+        <h1 class="govuk-label-wrapper">
+          <label class="govuk-label" for="display-name">
+            What is your display name? 
+          </label>
+        </h1>
+        <div id="display-name-hint" class="govuk-hint">
+          It is up to you how your name is shown. For example, ‘Jen Smith’ or ‘Jennifer Smith’. 
+        </div>
+        <input class="govuk-input" id="display-name" name="displayName" type="text" aria-describedby="display-name-hint">
+      </div>
+
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            Where we will show your display name
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          <p class="govuk-body">If you provide your name, we’ll show this in: </p>
+          
+          <ul class="govuk-list govuk-list--bullet">
+            <li>your account</li>
+            <li>emails we send you</li>
+            <li>emails we send to people who are authorised to file online for the same companies as you (and in their account)</li>
+          </ul>
+
+          <p class="govuk-body">If you do not provide your name, we’ll show your email address instead. </p>
+        </div>
+      </details>
+
+      <div class="govuk-button-group">
+        {{ govukButton({
+          text: "Continue",
+          href: "email-preferences"
+        }) }}
+      
+        {{ govukButton({
+          text: "Skip",
+          classes: "govuk-button--secondary",
+          href: "email-preferences"
+        }) }}
+      </div>
+
+    </form>
+    </div>
+  </div>
+{% endblock %}
