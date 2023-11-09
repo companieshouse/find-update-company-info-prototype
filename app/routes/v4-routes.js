@@ -12,7 +12,7 @@ const router = govukPrototypeKit.requests.setupRouter()
 router.get('/v4/user-journey', function (req, res) {
 
      //If they have an existing chs account
-     if (req.session.data['set-journey'] === 'existing-CHS') {
+    if (req.session.data['set-journey'] === 'existing-CHS') {
           
       res.redirect('chs-home')
     }
@@ -24,9 +24,9 @@ router.get('/v4/user-journey', function (req, res) {
           
       res.redirect('/v4/company-overview-gdst')
     } 
-    else if (req.session.data['set-journey'] === 'admin-user') {
+    else {
           
-      res.redirect('')
+      res.redirect('chs-home')
     }
 
 })
