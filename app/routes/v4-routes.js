@@ -9,10 +9,52 @@ const router = govukPrototypeKit.requests.setupRouter()
 // Add your routes here
 
 //journey setting
-router.post('/v4/index', function (req, res) {
+router.get('/v4/user-journey', function (req, res) {
 
-  res.redirect('chs-home-sign-in')
+     //If they have an existing chs account
+     if (req.session.data['set-journey'] === 'existing-CHS') {
+          
+      res.redirect('chs-home')
+    }
+    else if (req.session.data['set-journey'] === 'filing') {
+          
+      res.redirect('/v4/company-overview-gdst')
+    }
+    else if (req.session.data['set-journey'] === 'new-user') {
+          
+      res.redirect('/v4/company-overview-gdst')
+    } 
+    else if (req.session.data['set-journey'] === 'admin-user') {
+          
+      res.redirect('')
+    }
+
 })
+
+//start page
+router.post('/v4/enter-email-address', function (req, res) {
+
+   //If they have an existing chs account
+   if (req.session.data['set-journey'] === 'existing-CHS') {
+          
+    res.redirect('chs-sign-in')
+  }
+  else if (req.session.data['set-journey'] === 'filing') {
+        
+    res.redirect('/v4/start-page')
+  }
+  else if (req.session.data['set-journey'] === 'new-user') {
+        
+    res.redirect('create-or-sign-in')
+  } 
+  else if (req.session.data['set-journey'] === 'admin-user') {
+        
+    res.redirect('chs-sign-in')
+  }
+
+})
+
+
 
 //start page
 router.post('/v4/start-page', function (req, res) {
@@ -129,7 +171,15 @@ router.post('/v4/one-login-enter-password', function (req, res) {
   //One loginsign create complete
   router.post('/v4/email-preferences', function (req, res) {
 
+
+  if (req.session.data['set-journey'] === 'new-user') {
+        
+    res.redirect('chs-home-signed-in')
+  } 
+  else {
+        
     res.redirect('end-linking')
+  }
 
 })
 
@@ -222,7 +272,7 @@ router.post('/v4/one-login-enter-password', function (req, res) {
   // Companies House sign in 
   router.post('/v4/chs-sign-in', function (req, res) {
   
-    res.redirect('end-linking')
+    res.redirect('chs-home-signed-in')
   })
   
   
@@ -245,7 +295,16 @@ router.post('/v4/one-login-enter-password', function (req, res) {
      // Companies House sign in 
   router.post('/v4/end-linking', function (req, res) {
 
+
+  if (req.session.data['set-journey'] === 'filing') {
+        
+    res.redirect('/v4/company-overview-gdst-signed-in')
+  }
+ 
+  else {
+        
     res.redirect('chs-home-signed-in')
+  }
 
   })
   

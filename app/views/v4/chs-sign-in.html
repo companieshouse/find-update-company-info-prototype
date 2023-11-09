@@ -16,97 +16,44 @@
 
 <div class="govuk-grid-row">
 <div class="govuk-grid-column-two-thirds ">
-  <h1 class="govuk-heading-l">Your Companies House account sign in details</h1>
-
 
   <form action="chs-sign-in" method="post" novalidate="">
 
-              
-  {% set emailHtml %}
+
+    <h1 class="govuk-heading-l">Sign in to Companies House</h1> 
+
+    <p class="govuk-body"> You cannot use your WebFiling details to sign in. You must sign in to or register a Companies House account.</p>
+
   {{ govukInput({
-    id: "chs-email",
-    name: "chs-email",
+    label: {
+      text: "Email address",
+      classes:"govuk-!-font-weight-bold"
+    },
+    id: "email",
+    name: "email",
     type: "email",
     autocomplete: "email",
-    spellcheck: false,
-    classes: "govuk-!-width-three-quarters",
-    label: {
-      text: "Email address"
-    }
+    spellcheck: false
   }) }}
-  {% endset -%}
-
-  
-  {% if (data['email'] === "")%}
-
-  
-  {{ govukRadios({
-    name: "chs-sign-in-details",
-    fieldset: {
-      legend: {
-        text: "Which email address do you use to sign in to your Companies House account?",
-        isPageHeading: false,
-        classes: "govuk-!-padding-top-3"
-      }
-    },
-    items: [
-      {
-        value: "email-entered-chs",
-        text: "example@gmail.com"
-      },
-      {
-        value: "chs-email",
-        text: "A different email address",
-        conditional: {
-          html: emailHtml
-        }
-      }
-    ]
-  }) }}
-
-  {% else %}
-
-  {{ govukRadios({
-    name: "chs-sign-in-details",
-    fieldset: {
-      legend: {
-        text: "Which email address do you use to sign in to your Companies House account?",
-        isPageHeading: false,
-        classes: "govuk-!-padding-top-3"
-      }
-    },
-    items: [
-      {
-        value: "email-entered-chs",
-        text: data['email']
-      },
-      {
-        value: "chs-email",
-        text: "A different email address",
-        conditional: {
-          html: emailHtml
-        }
-      }
-    ]
-  }) }}
-
-  {% endif %}
-
-
 
   {{ govukInput({
     label: {
-      text: "Which password do you use to sign in to Companies House account?",
-      isPageHeading: false
+      text: "Password",
+      classes:"govuk-!-font-weight-bold"
     },
-    classes: "govuk-!-width-three-quarters",
-    id: "password",
-    name: "password"
+    id: "email",
+    name: "email",
+    type: "email",
+    autocomplete: "email",
+    spellcheck: false
   }) }}
+                
 
   {{ govukButton({
-    text: "Continue"
-  }) }}    
+    text: "Sign in"
+  }) }}   
+  
+  <p class="govuk-body"><a href="#" class="govuk-link">Register</a></p>
   
   <p class="govuk-body"><a href="#" class="govuk-link">I've forgotten my password</a></p>
   
