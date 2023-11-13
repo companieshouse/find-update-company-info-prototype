@@ -320,7 +320,25 @@ router.post('/v4/one-login-enter-password', function (req, res) {
   
   
   
+  /*
+  * Your companies
+  */
+
+    // your companies - no companies addded
+    router.post('/v4/add-a-company', function (req, res) {
   
+      res.redirect('confirm-company-details')
+    })
+    
+
+    // your companies - no companies addded
+    router.post('/v4/add-a-company', function (req, res) {
+  
+      res.redirect('confirm-company-details')
+    })
+    
+
+
   
   
   
