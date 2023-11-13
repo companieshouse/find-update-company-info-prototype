@@ -1,0 +1,71 @@
+{% extends "layouts/main.html" %}
+<!-- Overwrite suerfice name -->
+
+
+{% block pageTitle %}
+  {{ serviceName }} – Prototype
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-two-thirds ">
+
+  <form action="choose-how-to-sign-in" method="post" novalidate="">
+
+
+    {{ govukRadios({
+      name: "signIn",
+      fieldset: {
+        legend: {
+          text: "Choose how to sign in",
+          isPageHeading: true,
+          classes: "govuk-fieldset__legend--l"
+        }
+      },
+      hint: {
+        text: ""
+      },
+      items: [
+        {
+          value: "chose-OL",
+          text: "GOV.UK One Login details",
+          hint: {
+            text: ""
+          }
+        },
+        {
+          value: "chose-CHS",
+          text: "Companies House account details",
+          hint: {
+            text: ""
+          }
+        },
+        {
+          divider: "or"
+        },
+        {
+          value: "abroad",
+          text: "I am new to Companies House"
+        }
+      ]
+    }) }}
+                
+
+  {{ govukButton({
+    text: "Sign in"
+  }) }}   
+  
+  
+  </form>
+
+            </div>
+          </div>
+
+{% endblock %}
