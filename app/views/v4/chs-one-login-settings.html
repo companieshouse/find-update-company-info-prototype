@@ -41,13 +41,13 @@
 
     <div class="govuk-summary-card">
       <div class="govuk-summary-card__title-wrapper">
-        <h2 class="govuk-summary-card__title">Account details </h2>
+        <h2 class="govuk-summary-card__title">Your details </h2>
       </div>
       <div class="govuk-summary-card__content">
         <dl class="govuk-summary-list">
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Display name
+              How we display your name
             </dt>
             <dd class="govuk-summary-list__value">
               {% if (data['display-name'] === "") %}
@@ -115,10 +115,10 @@
         <p class="govuk-body">You use your GOV.UK One Login to sign in to your Companies House account.</p>
       
     
-        <p class="govuk-body"> You can change these details in your GOV.UK One Login:</p>
+        <p class="govuk-body">In your GOV.UK One Login, you can change:</p>
         <ul class="govuk-list govuk-list--bullet">
-          <li>email address</li>
-          <li>password</li>
+          <li>your email address</li>
+          <li>your password</li>
           <li>how you get security codes to sign in</li>
         </ul>
 
@@ -134,20 +134,24 @@
         <h2 class="govuk-summary-card__title">Email preferences</h2>
       </div>
       <div class="govuk-summary-card__content">
-        <p class="govuk-body govuk-hint">We may need to send you essential emails from time to time to help you manage your account.</p>
 
-      <p class="govuk-body">We’d like to send you emails to: </p>
+        <p class="govuk-body">We may need to send you essential emails from time to time to help you manage your account.</p>
+
+      <p class="govuk-body">We’d like to send you additional emails to: </p>
           
       <ul class="govuk-list govuk-list--bullet">
         <li>tell you about changes to services or legislation</li>
-        <li>give you information from other government departments which may be crucial to you</li>
+        <li>give you information from other government departments which may be important to you</li>
+        <li>help you run your company responsibly, if you're a new or existing 
+          director
+          </li>
         <li>invite you to take part in research to help us improve our services</li>
       </ul>
         <dl class="govuk-summary-list">
           <div class="govuk-summary-list__row">
             <div class="">
               <dt class="govuk-summary-list__key">
-                Can we send you these emails? 
+                Can we send you additional emails? 
               </dt>
             </div>
             <dd class="govuk-summary-list__value">
