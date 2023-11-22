@@ -9,27 +9,54 @@ const router = govukPrototypeKit.requests.setupRouter()
 // Add your routes here
 
 //journey setting
-router.get('/v4/user-journey', function (req, res) {
+router.post('/v4/prototype-set-up', function (req, res) {
 
-     //If they have an existing chs account
-    if (req.session.data['set-journey'] === 'existing-CHS') {
-          
-      res.redirect('chs-home')
-    }
-    else if (req.session.data['set-journey'] === 'filing') {
-          
-      res.redirect('/v4/company-overview-gdst')
-    }
-    else if (req.session.data['set-journey'] === 'new-user') {
-          
-      res.redirect('/v4/company-overview-gdst')
-    } 
-    else {
-          
-      res.redirect('chs-home')
-    }
+  res.redirect('/v4/choose-sign-in')
+ 
+})
+
+
+router.post('/v4/choose-sign-in', function (req, res) {
+
+  //If they have an existing chs account
+ if (req.session.data['sign-in-using'] === 'OL') {
+       
+   res.redirect('/v4/create-or-sign-in')
+ }
+ else if (req.session.data['sign-in-using'] === 'CHS') {
+       
+   res.redirect('/v4/chs-sign-in-email')
+ }
+ else if (req.session.data['sign-in-using'] === 'new') {
+       
+   res.redirect('/v4/create-or-sign-in')
+ } 
+
 
 })
+
+
+//new email address page for CHS 
+router.post('/v4/chs-sign-in-email', function (req, res) {
+
+  //If they have a GOV.UK One Login account
+if (req.session.data['set-journey'].includes('account-linked')) {
+       
+   res.redirect('/v4/sign-in-using-one-login')
+ }
+ //if they are a filer and want to sign in to CHS 
+ else if (req.session.data['set-journey'].includes('filer')) {
+       
+  res.redirect('/v4/start-page')
+}
+ //If they are an Admin user *adminXXX@companieshouse.gov.uk ** Need to do a case for admin && account migrated 
+ else{
+    
+   res.redirect('/v4/chs-sign-in-password')
+ } 
+
+})
+
 
 //start page
 router.post('/v4/enter-email-address', function (req, res) {
@@ -156,8 +183,19 @@ router.post('/v4/one-login-enter-password', function (req, res) {
   //One loginsign create complete
   router.post('/v4/create-complete', function (req, res) {
 
+    //if account linked to One Login
+    if (req.session.data['set-journey'].includes('account-linked')){
+        
+      res.redirect('chs-home-signed-in')
+
+    } 
+      
+    //if account not already linked
+    else {
+
       res.redirect('name')
-  
+
+    }
   })
 
     
@@ -172,13 +210,13 @@ router.post('/v4/one-login-enter-password', function (req, res) {
   router.post('/v4/email-preferences', function (req, res) {
 
 
-  if (req.session.data['set-journey'] === 'new-user') {
+  if (req.session.data['set-journey'].includes('account-linked')){
         
-    res.redirect('chs-home-signed-in')
+    res.redirect('end-linking')
   } 
   else {
         
-    res.redirect('end-linking')
+    res.redirect('chs-home-signed-in')
   }
 
 })
@@ -336,6 +374,19 @@ router.post('/v4/one-login-enter-password', function (req, res) {
   
       res.redirect('confirm-company-details')
     })
+
+      // your companies - no companies addded
+      router.post('/v4/confirm-company-details', function (req, res) {
+  
+        res.redirect('confirm-company-details')
+      })
+  
+       // your companies - no companies addded
+       router.post('/v4/confirm-company-details', function (req, res) {
+  
+        res.redirect('confirm-company-details')
+      })
+      
     
 
 

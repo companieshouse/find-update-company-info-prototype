@@ -1,5 +1,8 @@
 module.exports = {
 
-  // Insert values here
+  "chs-email":"example@gmail.com"
+
+
+  
 
 }

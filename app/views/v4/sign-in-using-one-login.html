@@ -1,0 +1,43 @@
+{% extends "layouts/main.html" %}
+<!-- Overwrite suerfice name -->
+
+
+{% block pageTitle %}
+  {{ serviceName }} – Prototype
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-two-thirds ">
+
+  <form action="sign-in-using-one-login" method="post" novalidate="">
+
+
+    <h1 class="govuk-heading-l">You have a GOV.UK One Login</h1> 
+
+    <p class="govuk-body"> There's already a GOV.UK One Login using <br> <span class="govuk-body govuk-!-font-weight-bold"> {{ data['chs-email'] }}</span> </p>
+
+    <p class="govuk-body">Sign in using GOV.UK One Login.</p>
+
+    {{ govukButton({
+      text: "Continue to GOV.UK One Login",
+      href:"create-or-sign-in"
+    }) }}   
+  
+  <!-- <p class="govuk-body"><a href="#" class="govuk-link">Register</a></p>
+  
+  <p class="govuk-body"><a href="#" class="govuk-link">I've forgotten my password</a></p> -->
+  
+  </form>
+
+            </div>
+          </div>
+
+{% endblock %}

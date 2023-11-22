@@ -18,65 +18,13 @@
     }}
   </div>
 </div>
-<div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
 
-      <div class="govuk-summary-card">
-        <div class="govuk-summary-card__title-wrapper">
-          <h2 class="govuk-summary-card__title">User journey options</h2>
-        </div>
-        <div class="govuk-summary-card__content">
-
-          <form action="user-journey" method="post" novalidate="novalidate">
+{{ govukButton({
+  text: "Start",
+  href:"prototype-set-up"
+}) }}
 
 
-      <ul class="govuk-list govuk-list--bullet">
-        <li>
-          <a href="choose-sign-in"> Choose how to sign in </a>
-        </li>
-        
-      </ul>
-
-          {{ govukRadios({
-            name: "set-journey",
-            fieldset: {
-              legend: {
-                text: "Select account journey:",
-                classes: "govuk-fieldset__legend--s"
-              }
-            },
-            items: [
-              {
-                value: "existing-CHS",
-                text: "Follow or search user (taken to CHS sign in)"
-              },
-              {
-                value: "filing",
-                text: "File for a company - CHS and GOV.UK One Login email address are the same"
-              },
-              {
-                value: "new-user",
-                text: "Any service - New user"
-              },
-              {
-                value: "admin-user",
-                text: "Admin user (taken to CHS sign in)"
-              }
-            ]
-          }) }}
-
-          </dl>
-          {{ govukButton({
-            text: "Start prototype"
-          }) }}
-          </form>
-        </div>
-      </div>
-
-
-
-  </div>
-</div>
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
@@ -95,15 +43,44 @@
         </li>
       </ul>
 
+
       <div class="govuk-tabs__panel" id="code">
-        <h2 class="govuk-heading-m">Moving CHS accounts over to GOV.UK One login </h2>
+        <h2 class="govuk-heading-m">Sign in options</h2>
         <ul class="govuk-list govuk-list--bullet">
           <li>
-            <a href="chs-home">Companies House Service Home</a>
+            <a href="choose-sign-in">Choose how to sign in to Companies House account</a> <strong class="govuk-tag govuk-tag--pink">
+              Content TBC
+            </strong>
+          </li>
+        </ul>
+
+        <h2 class="govuk-heading-m">Companies House account sign in</h2>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>
+            <a href="chs-sign-in-email">Companies House account email address</a> <strong class="govuk-tag govuk-tag--pink">
+              Content TBC
+            </strong>
           </li>
           <li>
-            <a href="start-page">Start page - Changing the way you log in to Companies House</a>
+            <a href="chs-sign-in-password">Companies House account password </a> <strong class="govuk-tag govuk-tag--pink">
+              Content TBC
+            </strong>
           </li>
+        </ul>
+
+
+        <h2 class="govuk-heading-m">Migrating account interrupt page</h2>
+        <ul class="govuk-list govuk-list--bullet">
+        
+          <li>
+            <a href="start-page">Changing the way you log in to Companies House</a> <strong class="govuk-tag govuk-tag--pink">
+              Content TBC
+            </strong>
+          </li>
+        </ul>
+
+          <h2 class="govuk-heading-m">GOV.UK One Login journey</h2>
+          <ul class="govuk-list govuk-list--bullet">
           <li>
             <a href="create-or-sign-in">Create a GOV.UK One Login or sign in
             </a>
@@ -169,10 +146,14 @@
           <h2 class="govuk-heading-m">Manage account settings for CHS with GOV.UK One Login</h2>
           <ul class="govuk-list govuk-list--bullet">
             <li>
-              <a href="chs-one-login-settings">Manage account</a>
+              <a href="chs-one-login-settings">Manage account</a> <strong class="govuk-tag govuk-tag--pink">
+                Content TBC
+              </strong>
             </li>
             <li>
-              <a href="name-account">Update display name</a>
+              <a href="name-account">Update display name</a> <strong class="govuk-tag govuk-tag--pink">
+                Content TBC
+              </strong>
             </li>
           </ul>
           
@@ -320,7 +301,7 @@
           <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 
         <h2 class="govuk-heading-m">View and search multiple companies <strong class="govuk-tag govuk-tag--pink">
-          Review live service
+          Review live service. Add pagination. Improve search criteria.
         </strong></h2>
 
         <ul class="govuk-list">
@@ -334,8 +315,11 @@
 
         <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 
+        <h2 class="govuk-heading-m">Error pages <strong class="govuk-tag govuk-tag--pink">
+          Review live service
+        </strong></h2>
+        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 
-          
           
           <h2 class="govuk-heading-m">Re-design of Companies House service</h2>
           <ul class="govuk-list govuk-list--bullet">

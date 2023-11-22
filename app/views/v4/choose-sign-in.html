@@ -17,11 +17,11 @@
 <div class="govuk-grid-row">
 <div class="govuk-grid-column-two-thirds ">
 
-  <form action="choose-how-to-sign-in" method="post" novalidate="">
+  <form action="choose-sign-in" method="post" novalidate="">
 
 
     {{ govukRadios({
-      name: "signIn",
+      name: "sign-in-using",
       fieldset: {
         legend: {
           text: "Choose how to sign in",
@@ -34,14 +34,14 @@
       },
       items: [
         {
-          value: "chose-OL",
+          value: "OL",
           text: "GOV.UK One Login details",
           hint: {
             text: ""
           }
         },
         {
-          value: "chose-CHS",
+          value: "CHS",
           text: "Companies House account details",
           hint: {
             text: ""
@@ -51,7 +51,7 @@
           divider: "or"
         },
         {
-          value: "abroad",
+          value: "new",
           text: "I am new to Companies House"
         }
       ]
