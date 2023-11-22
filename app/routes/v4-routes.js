@@ -49,7 +49,7 @@ if (req.session.data['set-journey'].includes('account-linked')) {
        
   res.redirect('/v4/start-page')
 }
- //If they are an Admin user *adminXXX@companieshouse.gov.uk ** Need to do a case for admin && account migrated 
+ //  **TODO** If they are an Admin user .includes @companieshouse.gov.uk we need to handle -> admin && account already migrated 
  else{
     
    res.redirect('/v4/chs-sign-in-password')
@@ -183,19 +183,8 @@ router.post('/v4/one-login-enter-password', function (req, res) {
   //One loginsign create complete
   router.post('/v4/create-complete', function (req, res) {
 
-    //if account linked to One Login
-    if (req.session.data['set-journey'].includes('account-linked')){
-        
-      res.redirect('chs-home-signed-in')
-
-    } 
-      
-    //if account not already linked
-    else {
-
       res.redirect('name')
 
-    }
   })
 
     
