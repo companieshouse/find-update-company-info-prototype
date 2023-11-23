@@ -20,15 +20,12 @@
   <form action="chs-sign-in-email" method="post" novalidate="">
 
 
-    <h1 class="govuk-heading-l">Sign in to Companies House (email address)</h1> 
+    <h1 class="govuk-heading-l">What is your Companies House account email address?</h1> 
 
-    <p class="govuk-body"> You cannot use your WebFiling details to sign in. You must sign in to or register a Companies House account.</p>
+   <!-- <p class="govuk-body"> You cannot use your WebFiling details to sign in.</p>-->
 
     {{ govukInput({
-      label: {
-        text: "Email address",
-        classes:"govuk-!-font-weight-bold"
-      },
+    
       id: "chs-email",
       name: "chs-email",
       type: "email",
