@@ -35,16 +35,16 @@
       items: [
         {
           value: "OL",
-          text: "GOV.UK One Login",
+          text: "Sign in to or create a GOV.UK One Login",
           hint: {
-            text: "If you've already created a GOV.UK One Login, sign in with your email address and password."
+            text: ""
           }
         },
         {
           value: "CHS",
-          text: "Companies House account",
+          text: "Sign in to a Companies House account",
           hint: {
-            text: "This is the account used to sign in to the Companies House register and some of our online services, such as 'Register your company'."
+            text: "You cannot use your WebFiling details to sign in to this account."
           }
         },
         {
@@ -56,7 +56,21 @@
         }
       ]
     }) }}
-                
+         
+    <details class="govuk-details" data-module="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+         What is a Companies House account?
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <p class="govuk-body">This is the account you can use to sign in to:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>the Companies House register - sometimes known as 'Companies House service' or 'Find and update company information'</li>
+          <li>some of our online services - for example, 'Register your company' or 'Upload a document to Companies House'</li>
+        </ul>
+      </div>
+    </details>
 
   {{ govukButton({
     text: "Continue"
