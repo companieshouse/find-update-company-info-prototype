@@ -11,9 +11,34 @@ const router = govukPrototypeKit.requests.setupRouter()
 //journey setting
 router.post('/v4/prototype-set-up', function (req, res) {
 
-  res.redirect('/v4/choose-sign-in')
- 
+  //if they are filing take the user to Upload a document
+
+  if (req.session.data['set-journey'].includes('filer')) {
+       
+    res.redirect('/v4/upload-a-document')
+  }
+  else if (req.session.data['set-journey'].includes('searcher')) {
+       
+    res.redirect('/v4/chs-home')
+  }
+  else{
+
+    res.redirect('/v4/choose-sign-in')
+
+  }
+
 })
+
+//upload a document service start page goes directly to sign in page
+router.post('/v4/upload-a-document', function (req, res) {
+
+  res.redirect('choose-sign-in')
+})
+
+
+
+
+
 
 
 router.post('/v4/choose-sign-in', function (req, res) {
@@ -198,16 +223,10 @@ router.post('/v4/one-login-enter-password', function (req, res) {
   //One loginsign create complete
   router.post('/v4/email-preferences', function (req, res) {
 
-
-  if (req.session.data['set-journey'].includes('account-linked')){
         
     res.redirect('end-linking')
-  } 
-  else {
-        
-    res.redirect('chs-home-signed-in')
-  }
 
+  
 })
 
 
@@ -323,15 +342,18 @@ router.post('/v4/one-login-enter-password', function (req, res) {
   router.post('/v4/end-linking', function (req, res) {
 
 
-  if (req.session.data['set-journey'] === 'filing') {
+    if (req.session.data['set-journey'].includes('filer')) {
+       
+      res.redirect('/v4/company-lookup')
+    }
+    else{
+
+      res.redirect('chs-home-signed-in')
+
+    }
         
-    res.redirect('/v4/company-overview-gdst-signed-in')
-  }
- 
-  else {
-        
-    res.redirect('chs-home-signed-in')
-  }
+
+  
 
   })
   
