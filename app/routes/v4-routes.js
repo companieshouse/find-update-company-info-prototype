@@ -32,12 +32,8 @@ router.post('/v4/prototype-set-up', function (req, res) {
 //upload a document service start page goes directly to sign in page
 router.post('/v4/upload-a-document', function (req, res) {
 
-  res.redirect('choose-sign-in')
+  res.redirect('start-page')
 })
-
-
-
-
 
 
 
@@ -50,7 +46,7 @@ router.post('/v4/choose-sign-in', function (req, res) {
  }
  else if (req.session.data['sign-in-using'] === 'CHS') {
        
-   res.redirect('/v4/chs-sign-in-email')
+   res.redirect('/v4/interrupt-')
  }
  else if (req.session.data['sign-in-using'] === 'new') {
        
