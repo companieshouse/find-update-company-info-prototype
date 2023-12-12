@@ -397,15 +397,6 @@ router.post('/v4/one-login-enter-password', function (req, res) {
     
         res.redirect('confirmation-company-added')
       })
-
-
-
-      
-    
-
-
-  
-  
   
   router.get('/officers', function (req, res) {
     // Render the confirm company page
