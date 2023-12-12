@@ -19,9 +19,8 @@
 
 <div class="govuk-grid-row">
 
-
-          <div class="govuk-grid-column-two-thirds">
-            <form action="/authentication-code" method="post">
+<div class="govuk-grid-column-two-thirds">
+    <form action="authentication-code" method="post">
 
               {% if errorAuthenticationCode == true %}
 
@@ -68,8 +67,7 @@
 
 
               {{ govukButton({
-                text: "Continue",
-                href:"company-added"
+                text: "Continue"
               }) }}
 
               {{ govukDetails({
@@ -86,8 +84,6 @@
 
     </div>
 </div>
-
-   <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
 
 

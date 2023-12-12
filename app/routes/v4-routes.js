@@ -373,30 +373,33 @@ router.post('/v4/one-login-enter-password', function (req, res) {
   * Your companies
   */
 
-    // your companies - no companies addded
+    /*
+    * Add a company
+    */
     router.post('/v4/add-a-company', function (req, res) {
   
       res.redirect('confirm-company-details')
     })
     
 
-    // your companies - no companies addded
-    router.post('/v4/add-a-company', function (req, res) {
+    /*
+     * Confirm company details
+    */
+    router.post('/v4/confirm-company-details', function (req, res) {
   
-      res.redirect('confirm-company-details')
+      res.redirect('authentication-code')
     })
 
-      // your companies - no companies addded
-      router.post('/v4/confirm-company-details', function (req, res) {
-  
-        res.redirect('confirm-company-details')
+      /*
+       * authentication code 
+       */ 
+      router.post('/v4/authentication-code', function (req, res) {
+    
+        res.redirect('confirmation-company-added')
       })
-  
-       // your companies - no companies addded
-       router.post('/v4/confirm-company-details', function (req, res) {
-  
-        res.redirect('confirm-company-details')
-      })
+
+
+
       
     
 
