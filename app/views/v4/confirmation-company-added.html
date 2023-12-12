@@ -18,17 +18,36 @@
 <form action="confirmation-company-added" method="post">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        {{ govukPanel({
-          titleText: "FLOWERS LIMITED has been added to your account"
+
+        {% set html %}
+        <p class="govuk-notification-banner__heading">
+          FLOWERS LIMITED has been added to your account.<br>
+          {% endset %}
+
+        {{ govukNotificationBanner({
+          html: html,
+          type: 'success'
         }) }}
+
+        <span class="govuk-caption-l">FLOWERS LIMITED</span>
+        <h1 class="govuk-heading-l">Digitally authorised to file</h1>
   
-        <p class="govuk-body">FLOWERS LIMITED has been added to the <a href="company-added" class="govuk-link"> list of your companies within your account</a>.</p>
+        <p class="govuk-body">Companies that have been added to your account can be found in the <a href="company-added" class="govuk-link">your companies tab</a>.</p>
 
         <p class="govuk-body">You can:</p>
         <ul class="govuk-list govuk-list--bullet">
-          <li>file for the company ...</li>
-          <li>manage people who file for the company ... </li>
+          <li>file for the company online</li>
+          <li>digitally authorise other people to file online for the company</li>
         </ul>
+
+        {{ govukButton({
+          text: "View your companies",
+          href:"company-added"
+        }) }}
+
+
+
+
   
 
       </div>
