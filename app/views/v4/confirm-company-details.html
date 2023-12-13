@@ -22,13 +22,19 @@
       <div class="govuk-grid-column-two-thirds">
       <form action="confirm-company-details" method="post" novalidate>
 
-      <h1 class="govuk-heading-xl">Confirm this is the correct company</h1>
-
-      <h2 class="govuk-heading-l">FLOWERS LIMITED</h2>
+      <h1 class="govuk-heading-l">Confirm this is the correct company</h1>
 
       {{ govukSummaryList({
         classes: 'govuk-!-margin-bottom-9',
         rows: [
+          {
+            key: {
+              text: "Company name"
+            },
+            value: {
+              text: "FLOWERS LIMITED"
+            }
+          },
           {
             key: {
               text: "Company number"
