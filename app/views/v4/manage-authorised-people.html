@@ -21,9 +21,14 @@
 
         <span class="govuk-caption-l">FLOWERS LIMITED</span>
         <h1 class="govuk-heading-l">
-        People digitally authorised
-  to file online for this company 
+        People digitally authorised to file online for this company 
       </h1>
+
+      <!-- Digitally authorise a person to file online for this company -->
+
+      {{ govukButton({
+        text: "Add a person"
+      }) }}
 
 
       {{ govukSummaryList({
@@ -35,7 +40,7 @@
             items: [
               {
                 href: "#",
-                text: "Remove user",
+                text: "Remove person",
                 visuallyHiddenText: "for FLOWERS LIMITED"
               }
             ]
