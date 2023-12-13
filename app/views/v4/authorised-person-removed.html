@@ -9,15 +9,15 @@
 {% block content %}
 
 <div class="govuk-width-container">
-
-    <div class="govuk-grid-row">
+  <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
-     {% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
+
 
     {% set html %}
       <p class="govuk-notification-banner__heading">
         Hannah Salt is no longer digitally authorised to file online for FLOWERS LIMITED.
-<p class="govuk-body">You may wish to <a class="govuk-notification-banner__link" href="https://www.gov.uk/guidance/company-authentication-codes-for-online-filing#change-or-cancel-your-code">change the authentication code</a> for this company if Hannah Salt still has access to it.</p>
+
+        <p class="govuk-body">You may wish to <a class="govuk-notification-banner__link" href="https://www.gov.uk/guidance/company-authentication-codes-for-online-filing#change-or-cancel-your-code">change the authentication code</a> for this company if Hannah Salt still has access to it.</p>
 
 
     {% endset %}
@@ -26,13 +26,6 @@
       html: html,
       type: 'success'
     }) }}
-
-</div>
-  </div>
-
-<div class="govuk-width-container">
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-full">
 
           <h1 class="govuk-heading-l">Your companies <span class="govuk-caption-m" style = "padding-top:0.5em;"></span></h1>
 

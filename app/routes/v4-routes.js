@@ -46,7 +46,7 @@ router.post('/v4/choose-sign-in', function (req, res) {
  }
  else if (req.session.data['sign-in-using'] === 'CHS') {
        
-   res.redirect('/v4/interrupt-')
+   res.redirect('/v4/chs-sign-in-email')
  }
  else if (req.session.data['sign-in-using'] === 'new') {
        
