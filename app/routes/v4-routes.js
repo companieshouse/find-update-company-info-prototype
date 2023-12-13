@@ -32,20 +32,47 @@ router.post('/v4/prototype-set-up', function (req, res) {
 //upload a document service start page goes directly to sign in page
 router.post('/v4/upload-a-document', function (req, res) {
 
-  res.redirect('start-page')
+  res.redirect('choose-sign-in')
 })
 
 
 
 router.post('/v4/choose-sign-in', function (req, res) {
 
+  /*
+   * Filer 
+   */
   //If they have an existing chs account
  if (req.session.data['sign-in-using'] === 'OL') {
        
    res.redirect('/v4/create-or-sign-in')
  }
  else if (req.session.data['sign-in-using'] === 'CHS') {
+
+       /*
+      * Follow
+      */
+      if (req.session.data['set-journey'].includes('searcher')) {
+
+        res.redirect('/v4/chs-sign-in-email')
+
+      }
+      /*
+      * Filer 
+      */
+      else if (req.session.data['set-journey'].includes('filer')) {
+
+        res.redirect('/v4/start-page')
+      
+      }
+
+ 
+  else if (req.session.data['sign-in-using'] === 'OL') {
        
+    res.redirect('/v4/create-or-sign-in')
+  }
+  
+ 
    res.redirect('/v4/chs-sign-in-email')
  }
  else if (req.session.data['sign-in-using'] === 'new') {
