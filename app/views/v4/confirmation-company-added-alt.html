@@ -1,0 +1,44 @@
+{% extends "layouts/layout-chs-signed-out.html" %}
+
+{% block pageTitle %}
+  Your companies - Enter the company authentication code - Companies House WebFiling account - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href:"check-company-details"
+  }) }}
+{% endblock %}
+
+
+
+{% block content %}
+
+<form action="confirmation-company-added" method="post">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+        {{ govukPanel({
+          titleText: "Company added"
+        }) }}
+
+        {% set html %}
+        <p class="govuk-notification-banner__heading">
+          FLOWERS LIMITED has been added to your account.
+          <a href="company-added" class="govuk-link">View your companies</a>.
+          {% endset %}
+
+        {{ govukNotificationBanner({
+          html: html,
+          type: 'success'
+        }) }}
+
+
+       <!--  <span class="govuk-caption-l">FLOWERS LIMITED</span>-->
+       
+      </div>
+  </div>
+</form>
+
+{% endblock %}
