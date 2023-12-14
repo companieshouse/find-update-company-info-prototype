@@ -24,7 +24,7 @@
         People digitally authorised to file online for this company 
       </h1>
 
-      <p class="govuk-hint govuk-!-margin-bottom-4">Anyone with access to the current authentication code can also file online for this company.</p>
+      <p class="govuk-hint govuk-!-padding-bottom-4">Anyone with access to the current authentication code can also file online for this company.</p>
 
       <!-- Digitally authorise a person to file online for this company -->
 
@@ -32,9 +32,97 @@
         text: "Add new authorised person",
         href:"add-presenter"
       }) }}
+      </div>
+    </div>
 
 
-      {{ govukSummaryList({
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+        <table class="govuk-table">
+          <!-- <caption class="govuk-table__caption govuk-table__caption--m">Dates and amounts</caption>-->
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Email address</th>
+              <th scope="col" class="govuk-table__header">Name</th>
+              <th scope="col" class="govuk-table__header">Authorisation status</th>
+              <th scope="col" class="govuk-table__header"></th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">	hannah.salt@gmail.com</td>
+              <th scope="row" class="govuk-table__header">Hannah Salt (you)</th>
+              <td class="govuk-table__cell">
+              {{govukTag({
+                text: "CONFIRMED",
+                classes: "govuk-tag--green"
+                })}}
+              </td>
+              <td class="govuk-table__cell">
+                <a href="remove-authorised-person" class="govuk-link">Remove</a>
+              </td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">	example@gmail.com</td>
+              <th scope="row" class="govuk-table__header"></th>
+              <td class="govuk-table__cell">
+              {{govukTag({
+                text: "CONFIRMED",
+                classes: "govuk-tag--green"
+                })}}
+              </td>
+              <td class="govuk-table__cell">
+                <a href="remove-authorised-person" class="govuk-link">Remove</a>
+              </td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">	James-morris@accounting-for-example.com</td>
+              <th scope="row" class="govuk-table__header">James Morris </th>
+              <td class="govuk-table__cell">
+              {{govukTag({
+                text: "CONFIRMED",
+                classes: "govuk-tag--green"
+                })}}
+              </td>
+              <td class="govuk-table__cell">
+                <a href="remove-authorised-person" class="govuk-link">Remove</a>
+              </td>
+            </tr>
+            
+          </tbody>
+        </table>
+
+       <!--  <table class="govuk-table govuk-!-margin-top-2">
+            
+          <thead class="govuk-table__head">
+
+            <tr class="govuk-table__row">
+              <th class="govuk-table__header" scope="col"> Name
+
+              <th class="govuk-table__header" scope="col"> Authorisation status </th>
+              <th class="govuk-table__header" scope="col">  </th></tr>
+          </thead>
+            <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+            <p class="govuk-body govuk-!-margin-bottom-1 govuk-!-margin-top-1"> Hannah Salt (you)</p>
+            </td>
+            <td class="govuk-table__cell">
+              {{govukTag({
+                text: "CONFIRMED",
+                classes: "govuk-tag--green"
+                })}}
+            </td>
+            <td class="govuk-table__cell">
+              <a href="authorised-persons-details" class="govuk-link">View details</a>
+            </td>
+            </tr>
+
+            </tbody>
+        </table>  -->
+
+
+      <!-- {{ govukSummaryList({
         card: {
           title: {
             text: "Hannah Salt"
@@ -69,7 +157,7 @@
             }
           }
         ]
-      }) }}
+      }) }} -->
 
 
 
