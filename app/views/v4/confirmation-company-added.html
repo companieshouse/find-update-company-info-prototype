@@ -21,7 +21,8 @@
 
         {% set html %}
         <p class="govuk-notification-banner__heading">
-          FLOWERS LIMITED has been added to your account.<br>
+          FLOWERS LIMITED has been added to your account.
+          <a href="company-added" class="govuk-link">View your companies</a>.
           {% endset %}
 
         {{ govukNotificationBanner({
@@ -31,20 +32,7 @@
 
 
        <!--  <span class="govuk-caption-l">FLOWERS LIMITED</span>-->
-        <h1 class="govuk-heading-l">Your companies</h1> 
-  
-        <p class="govuk-body">Companies that have been added to your account can be found in the <a href="company-added" class="govuk-link">your companies tab</a>.</p>
-
-        <p class="govuk-body">You can:</p>
-        <ul class="govuk-list govuk-list--bullet">
-          <li>file for the company online</li>
-          <li>digitally authorise other people to file online for the company</li>
-        </ul>
-
-        {{ govukButton({
-          text: "View your companies",
-          href:"company-added"
-        }) }}
+       
       </div>
   </div>
 </form>
