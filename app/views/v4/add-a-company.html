@@ -21,49 +21,21 @@
       <form action="add-a-company" method="post" novalidate>
 
 
-        {% if errorCompanyNumber == true %}
-
-          {{ govukErrorSummary({
-              titleText: "There is a problem",
-              errorList: errorList
-            }) }}
-
-        {% endif %}
     <h1 class="govuk-heading-l">Enter the details of the company you want to add to your account</h1>
-        {% if errorCompanyNumber == true %}
-
-
-        {{ govukInput({
-          label: {
-            text: "What is the company number?",
-            isPageHeading: true,
-            classes: "govuk-label--xl"
-          },
-          hint: {
-            html: "Enter the details of the company you want to add to your account"
-          },
-          errorMessage: {
-            text: "Enter the company number"
-          },
-          classes: "govuk-input--width-10",
-          id: "company-number",
-          name: "company-number"
-        }) }}
-
-        {% else %}
-
-
-
+  
         {{ govukInput({
         label: {
           text: "What is the company number?"
+        },
+        hint: {
+          html: "The 8-character reference issued by Companies House when the company was set up"
         },
         id: "company-number",
         name: "company-number",
         classes: "govuk-input--width-10"
       }) }}
 
-        {% endif %}
+
 
 
         <details class="govuk-details" data-module="govuk-details">
