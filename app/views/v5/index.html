@@ -1,0 +1,481 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Shortcuts – {{ serviceName }} - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <h1 class="govuk-heading-xl">
+      {{serviceName}}
+      <span class="govuk-caption-xl">Version 5</span>
+    </h1>
+
+    {{ govukWarningText({
+      text: "This prototype is being actively worked on - things might break or change very quickly", iconFallbackText: "Warning" })
+    }}
+  </div>
+</div>
+
+{{ govukButton({
+  text: "Start",
+  href:"prototype-set-up"
+}) }}
+
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    {# ENTRY POINTS AND LINKS TAB #}
+    <div class="govuk-tabs" data-module="govuk-tabs">
+      <h4 class="govuk-tabs__title">Contents</h4>
+      <ul class="govuk-tabs__list">
+        <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+          <a class="govuk-tabs__tab" href="#code"> Entry points and links </a>
+        </li>
+      </ul>
+
+
+      <div class="govuk-tabs__panel" id="code">
+        <h2 class="govuk-heading-m">Select the journey you want to use <strong class="govuk-tag govuk-tag--red">
+          Page not for development
+        </strong></h2>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>
+            <a href="prototype-set-up">Select from the following journey options</a> 
+            
+          </li>
+        </ul>
+
+
+        <h2 class="govuk-heading-m">Sign in options</h2>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>
+            <a href="choose-sign-in">Choose how to sign in to Companies House account</a> 
+          </li>
+        </ul>
+
+        <h2 class="govuk-heading-m">Companies House account sign in</h2>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>
+            <a href="chs-sign-in-email">Companies House account email address</a> 
+          </li>
+          <li>
+            <a href="chs-sign-in-password">Companies House account password </a> 
+          </li>
+        </ul>
+
+
+        <h2 class="govuk-heading-m">Migrating account interrupt pages</h2>
+        <ul class="govuk-list govuk-list--bullet">
+        
+          <li>
+            <a href="start-page">Changing the way you log in to Companies House</a> 
+          </li>
+
+          <li>
+            <a href="sign-in-using-one-login">You have a GOV.UK One Login</a> 
+          </li>
+
+
+
+          
+        </ul>
+
+          <h2 class="govuk-heading-m">GOV.UK One Login journey</h2>
+          <ul class="govuk-list govuk-list--bullet">
+          <li>
+            <a href="create-or-sign-in">Create a GOV.UK One Login or sign in
+            </a>
+          </li>
+          <li>
+            <a href="create-enter-email">Enter your email address
+            </a>
+          </li>
+          <li>
+            <a href="create-check-your-email">Check your email
+            </a>
+          </li>
+          <li>
+            <a href="create-enter-password">Create your password
+            </a>
+          </li>
+          <li>
+            <a href="create-choose-security-type">Choose how to get security
+            </a>
+          </li>
+          <li>
+            <a href="create-enter-mobile-number">Text message - Enter your mobile phone number
+            </a>
+          </li>
+          <li>
+            <a href="create-check-your-phone">Text message - Check your phone
+            </a>
+          </li>
+          <li>
+            <a href="create-enter-mobile-number">Set up an authenticator app
+            </a>
+          </li>
+          <li>
+            <a href="enter-email">Sign in - Enter email address
+            </a>
+          </li>
+          <li>
+            <a href="enter-password">Sign in - Enter password
+            </a>
+          </li>
+          <li>
+            <a href="create-complete">You've created your GOV.UK One login
+            </a>
+          </li>
+          <li>
+            <a href="one-login-sign-in">Enter your email address to sign in to your GOV.UK One Login
+            </a>
+          </li>
+          <li>
+            <a href="one-login-enter-password">  Enter your password
+            </a>
+          </li>
+          <li>
+            <a href="enter-code">Sign in - Check your phone
+            </a>
+          </li>
+          </ul>
+
+          <h2 class="govuk-heading-m">Account details and preferences</h2>
+          <ul class="govuk-list govuk-list--bullet">
+          <li>
+            <a href="name"> How do you want us to display your name?
+            </a>
+          </li>
+          <li>
+            <a href="email-preferences">Email preferences
+            </a>
+          </li>
+          </ul>
+
+          <h2 class="govuk-heading-m">We have saved your Companies House account information</h2>
+          <ul class="govuk-list govuk-list--bullet">
+          <li>
+            <a href="end-linking">Use your GOV.UK One Login details to sign in from now on
+            </a>
+          </li>
+          </ul>
+
+          <h2 class="govuk-heading-m">Manage account settings for CHS with GOV.UK One Login</h2>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>
+              <a href="chs-one-login-settings">Manage account</a> 
+            </li>
+            <li>
+              <a href="name-account">Update display name</a> 
+            </li>
+          </ul>
+          
+          <h2 class="govuk-heading-m">Your companies </h2>
+          <h3 class="govuk-heading-s">Add a company <strong class="govuk-tag">
+            Review updates to flow
+          </strong> 
+          <strong class="govuk-tag govuk-tag--turquoise">
+            Content TBC
+          </strong></h3>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>
+              <a href="your-companies">Not added any companies to the account </a>
+            </li>
+            <li>
+              <a href="add-a-company">Enter the details of the company you want to add to your account</a>
+            </li>
+            <li>
+              <a href="confirm-company-details">Confirm this is the correct company</a>
+            </li>
+            <li>
+              <a href="authentication-code">Enter the company authentication code</a>
+            </li>
+            <li>
+              <a href="confirmation-company-added">A company has been added to the account <strong class="govuk-tag">
+                NEW
+              </strong></a>
+            </li>
+            <li>
+              <a href="company-added">Your companies - company added <strong class="govuk-tag">
+                Review updates
+              </strong> </a>
+            </li>
+          </ul>
+
+
+         
+          <h3 class="govuk-heading-s">Digitally authorise a person to file online for this company <strong class="govuk-tag govuk-tag--turquoise">
+            Content TBC
+          </strong></h3>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>
+              <a href="add-presenter">What is the authorised person's email address?</a>
+            </li>
+            <li>
+              <a href="add-presenter-check-details">Check the authorised person's email address before we send the email</a>
+            </li>
+            <li>
+              <a href="add-presenter-added"> An email request has been sent <strong class="govuk-tag govuk-tag--red">
+                Banner used
+              </strong> </a>
+            </li>
+            </ul>
+
+            <h3 class="govuk-heading-s">Confirm or decline authorised person email request <strong class="govuk-tag govuk-tag--turquoise">
+              Content TBC
+            </strong>
+            </h3>
+            <ul class="govuk-list govuk-list--bullet">
+            <li>
+              <a href="email-confirm-you-are-the-presenter">Email - authorisation to file online for a company</a>
+            </li>
+            <li>
+              <a href="sign-in-auth-person-request">Create or sign in to GOV.UK One Login (journeys not included)</a> 
+            </li>
+            <li>
+              <a href="presenter-request-accept-decline"> 
+                Awaiting confirmation to digitally to be digitally authorised </a>
+            </li>
+            <li>
+              <a href="presenter-request-accepted"> Confirmed - digitally authorised to file <strong class="govuk-tag govuk-tag--red">
+                Banner used
+              </strong> </a> </a>
+            </li>
+            <li>
+              <a href="presenter-request-declined"> Declined - digitally authorised to file <strong class="govuk-tag govuk-tag--red">
+                Banner used
+              </strong> </a> </a>
+            </li>
+          </ul>
+
+          <h3 class="govuk-heading-s">Emails to notify all existing authorised people when: <strong class="govuk-tag govuk-tag--turquoise">
+            Content TBC
+          </strong></h3>
+
+          <ul class="govuk-list">
+            <li>
+              <a href="email-auth-person-invited" class="govuk-link" target="_blank">An authorised person has been invited</a>
+            </li>
+
+            <li>
+              <a href="email-auth-person-added-to-company" class="govuk-link" target="_blank">An authorised person has been added by another authorised person</a>
+            </li>
+
+            <li>
+              <a href="email-auth-person-added" class="govuk-link" target="_blank">A user has added the company using the authentication code </a>
+            </li>
+
+            <li>
+              <a href="email-auth-person-declined" class="govuk-link" target="_blank">A user has declined to be added as an authorised person </a>
+            </li>
+          </ul>
+
+          <h3 class="govuk-heading-s govuk-!-padding-top-3">Notifications shown within the account after sign in <strong class="govuk-tag govuk-tag--turquoise">
+            Content TBC
+          </strong> <strong class="govuk-tag govuk-tag--red">
+            Banner used
+          </strong> </h3>
+
+        <ul class="govuk-list">
+          <li>
+            <a href="email-auth-person-request-already-accepted-declined" class="govuk-link" target="blank">The user has already confirmed or declined the request (opens in new tab)</a>
+          </li>
+          <li>
+            <a href="email-auth-person-request-already-associated" class="govuk-link" target="blank">The user is already associated with this company (opens in new tab)</a>
+          </li>
+
+          <li>
+            <a href="email-auth-person-request-withdrawn-expired" class="govuk-link" target="blank">The request has been withdrawn or is expired (opens in new tab)</a>
+          </li>
+          </ul>
+
+         
+          <h3 class="govuk-heading-s">View details <strong class="govuk-tag govuk-tag--pink">
+            review edit feature
+          </strong></h3>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>
+              <a href="authorised-persons-details">Authorised person's details</a>
+            </li>
+          </ul>
+
+
+
+          <h3 class="govuk-heading-s">Remove an authorised person <strong class="govuk-tag govuk-tag--turquoise">
+            Content TBC
+          </strong> </h3>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>
+              <a href="remove-authorised-person">Remove a persons authorisation to file online for this company</a>
+            </li>
+            <li>
+              <a href="authorised-person-removed">A person is no longer digitally authorised to file online for this company </a> <strong class="govuk-tag govuk-tag--red">
+                Banner used
+              </strong>
+            </li>
+          </ul>
+          
+          <h3 class="govuk-heading-s">Do you want to add this company to your Companies House account? <strong class="govuk-tag govuk-tag--red">
+            Review live service
+          </strong></h3>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>
+              <a href="add-company-to-account">Do you want to add this company to your Companies House account?</a>
+            </li>
+            <li>
+              <a href="">CHECK - Company added confirmation durin the journey or when they come into their account</a>
+            </li>
+          </ul>
+
+          <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+        <h2 class="govuk-heading-m">View and search multiple companies <strong class="govuk-tag govuk-tag--pink">
+          Review live service. Add pagination. Improve search criteria.
+        </strong></h2>
+
+        <ul class="govuk-list">
+          <li>
+            <a class="govuk-link" target="_blank"  href="home-multiple-companies">Search for a company within your account</a>
+          </li>
+          <li>
+            <a class="govuk-link" target="_blank"  href="home-multiple-companies-page-2">Results for searching a company within your account</a>
+          </li>
+        </ul>
+
+        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+        <h2 class="govuk-heading-m">Error pages <strong class="govuk-tag govuk-tag--pink">
+          Review live service
+        </strong></h2>
+        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+          
+          <h2 class="govuk-heading-m">Re-design of Companies House service <strong class="govuk-tag govuk-tag--yellow">
+            Out of scope
+          </strong></h2>
+          <ul class="govuk-list govuk-list--bullet">
+          <li>
+            <a href="home-chs">Redesign of Companies House search the register</a>
+          </li>
+          <li>
+            <a href="filing-history">Filing history</a>
+          </li>
+          <li>
+            <a href="officers">Officers</a>
+          </li>
+          <li>
+            <a href="results">Search results</a>
+          </li>
+        </ul>
+
+        
+
+     
+      <!-- <h2 class="govuk-heading-m">Existing Companies House service</h2>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>
+            <a href="search">Search the register</a>
+          </li>
+          <li>
+            <a href="search-results">Search results</a>
+          </li>
+        </ul>-->
+      </div> 
+
+
+      {# PREVIOUS VERSIONS TAB #}
+      <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="form-versions">
+        <table class="govuk-table version-history">
+          <caption class="govuk-table__caption govuk-heading-l">
+            Previous versions
+          </caption>
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">
+                Version
+              </th>
+              <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">
+                Tested on
+              </th>
+              <th scope="col" class="govuk-table__header govuk-!-width-one-half">
+                Changes
+              </th>
+              <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">
+                Status
+              </th>
+            </tr>
+          </thead>
+
+          <tbody class="govuk-table__body">
+           <!-- <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                <a href="javascript: void(0)">Version X</a>
+              </th>
+              <td class="govuk-table__cell">TBA</td>
+              <td class="govuk-table__cell">
+                <p><a href="#">Feature</a></p>
+                <p></p>
+                <ul class="govuk-list govuk-list--bullet">
+                  <li>Feature description</li>
+                </ul>
+              </td>
+              <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--red">
+                  Not ready for user testing
+                </strong>
+              </td>
+            </tr>
+
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                <a href="">Version X</a>
+              </th>
+              <td class="govuk-table__cell">June 2022</td>
+              <td class="govuk-table__cell">
+                <p><a href="#">Feature</a></p>
+                <p></p>
+                <ul class="govuk-list govuk-list--bullet">
+                  <li>Feature description</li>
+                </ul>
+              </td>
+              <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--green">
+                  Ready for user testing
+                </strong>
+              </td>
+            </tr> -->
+
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                <a href="">Version 1</a>
+              </th>
+              <td class="govuk-table__cell">June 2023</td>
+              <td class="govuk-table__cell">
+                <p><a href="#">Feature</a></p>
+                <p></p>
+                <ul class="govuk-list govuk-list--bullet">
+                  <li>Add feature description</li>
+                </ul>
+              </td>
+
+              <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--green">
+                  In progress 
+                </strong>
+              </td>
+            </tr>
+
+          </tbody>
+
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

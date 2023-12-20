@@ -1,0 +1,43 @@
+{% extends "layouts/layout-chs-signed-out.html" %}
+
+{% block pageTitle %}
+  {{ serviceName }} - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <!-- Note: GOV.UK One Login uses Security as the title for this page -->
+    <h1 class="govuk-heading-xl govuk-!-margin-bottom-9">
+      Your companies
+    </h1>
+
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+
+    <div style="border-style: solid;
+    border-width: thin;
+    border-color: #959393; padding: 2em;"> 
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+          <h1 class="govuk-heading-m">You have not added any companies to your account</h1>
+
+              <p class="govuk-body">Add a company to your account so that you can:</p>
+              <ul class="govuk-list govuk-list--bullet">
+                <li>file for the company online</li>
+                <li>digitally authorise other people to file online for the company</li>
+              </ul>
+
+          {{ govukButton({
+              text: "Add a company",
+              href:"add-a-company"
+          }) }}
+
+        </div>
+      </div>
+      </div>
+    
+    
+
+{% endblock %}

@@ -18,3 +18,6 @@ router.use('/', require('./routes/v3-routes.js'))
 
 router.use('/', require('./routes/v4-routes.js'))
 
+
+router.use('/', require('./routes/v5-routes.js'))
+

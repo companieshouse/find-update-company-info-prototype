@@ -1,0 +1,68 @@
+{% extends "layouts/main.html" %}
+
+
+
+{% block pageTitle %}
+Add your display name  – {{ serviceName }} - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+      <form action="name" method="post" novalidate>
+      <h1 class="govuk-heading-l">How do you want us to display your name? </h1>
+
+
+      <p class="govuk-hint govuk-!-padding-bottom-2">This is optional. It’s up to you how your name is displayed - for example, ‘Jen Smith’ or ‘Jennifer Smith’.  </p>
+
+
+      <div class="govuk-form-group">
+        <h1 class="govuk-label-wrapper">
+         
+        </h1>
+        
+        <input class="govuk-input" id="display-name" name="display-name" type="text" aria-describedby="display-name-hint">
+      </div>
+
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            Where we will display your name
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          <p class="govuk-body">We’ll show this in: </p>
+          
+          <ul class="govuk-list govuk-list--bullet">
+            <li>your account</li>
+            <li>emails we send you about your account</li>
+            <li>communications with people who are authorised to file online for the same companies as you</li>
+          </ul>
+
+          <p class="govuk-body">If you do not provide your name, we’ll show your email address instead. </p>
+          <p class="govuk-body">You can update your name at any time.</p>
+        </div>
+      </details>
+
+      <div class="govuk-button-group">
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+      
+        {{ govukButton({
+          text: "Skip",
+          classes: "govuk-button--secondary",
+          href: "email-preferences"
+        }) }}
+      </div>
+
+    </form>
+    </div>
+  </div>
+{% endblock %}

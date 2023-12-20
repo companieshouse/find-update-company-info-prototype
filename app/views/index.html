@@ -23,6 +23,73 @@
 
     <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
+    <h2 class="govuk-heading-m govuk-!-padding-top-4">
+      Version 5
+    </h2>
+
+
+    
+    {{ govukSummaryList({
+      card: {
+        title: {
+          text: "Migrating CHS accounts to GOV.UK One Login and manage account features"
+        },
+        actions: {
+          items: [
+            {
+              href: "v5/index",
+              text: "View prototype",
+              visuallyHiddenText: "of version 5"
+            }
+          ]
+        }
+      },
+      rows: [
+      {
+        key: {
+          text: "Status"
+        },
+        value: {
+          html: "<strong class='govuk-tag govuk-tag--blue'>
+            In progress 
+          </strong>"
+        }
+      },
+        {
+          key: {
+            text: "Updates to migration flow"
+          },
+          value: {
+            html: ""
+          }
+        },
+        {
+          key: {
+            text: "Updates to Your companies"
+          },
+          value: {
+            html: ""
+          }
+        },
+        {
+          key: {
+            text: "Updates to Manage account"
+          },
+          value: {
+            html: ""
+          }
+        },
+        {
+          key: {
+            text: "User Research"
+          },
+          value: {
+            html: " "
+          }
+        }
+      ]
+    }) }}
+
 
     <h2 class="govuk-heading-m govuk-!-padding-top-4">
       Version 4
@@ -51,8 +118,8 @@
           text: "Status"
         },
         value: {
-          html: "<strong class='govuk-tag govuk-tag--blue'>
-            In progress 
+          html: "<strong class='govuk-tag govuk-tag--green'>
+            User Reserch in progress 
           </strong>"
         }
       },
