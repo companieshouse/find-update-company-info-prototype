@@ -8,11 +8,10 @@
 {% block content %}
 
 <div class="govuk-width-container">
-<div class="govuk-grid-row">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
 
-        <div class="govuk-grid-column-full">
-
-          <h1 class="govuk-heading-xl">Your companies </h1>
+    <h1 class="govuk-heading-xl">Your companies </h1>
 
 
           {{ govukButton({
@@ -21,7 +20,7 @@
           }) }}
 
 
-            <div style=" background-color: #f3f2f1;  border-width: 1px; padding: 2em;">
+            <!-- <div style=" background-color: #f3f2f1;  border-width: 1px; padding: 2em;">
               <div class="govuk-grid-row">
                 <div class="govuk-grid-column-full">
                  <h2 class="govuk-heading-m  govuk-!-padding-top-2 govuk-!-margin-bottom-1">FLOWERS LIMITED </h2>
@@ -31,7 +30,37 @@
                
 
                 </div>
-              </div>
+              </div> -->
+
+
+              <table class="govuk-table">
+                <caption class="govuk-table__caption govuk-table__caption--m visuallyhidden">Dates and amounts</caption>
+                <thead class="govuk-table__head">
+                  <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header">Company name</th>
+                    <th scope="col" class="govuk-table__header">Company number</th>
+                    <th scope="col" class="govuk-table__header">View and manage people digitally <br> authorised to file online for this company</th>
+                  </tr>
+                </thead>
+                <tbody class="govuk-table__body">
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">FLOWERS LIMITED</th>
+                    <td class="govuk-table__cell">18882777</td>
+                    <td class="govuk-table__cell"><a href="manage-authorised-people" class="govuk-link govuk-link--no-visited-state"> Manage digitally authorised people</a></td>
+                  </tr>
+                 <!--  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Next 33 weeks</th>
+                    <td class="govuk-table__cell">£109.80 per week</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Total estimated pay</th>
+                    <td class="govuk-table__cell">£4,282.20</td>
+                  </tr> -->
+                </tbody>
+              </table>
+
+
+
 
 
             
@@ -85,7 +114,7 @@
                     <!-- <p> <a href="add-presenter" class="govuk-link govuk-link--no-visited-state">Digitally authorise a person to file online for this company</a></p> -->
        
 
-                </div>
+                
 
             
 

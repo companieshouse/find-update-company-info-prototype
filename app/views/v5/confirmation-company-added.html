@@ -35,15 +35,15 @@
       <h2 class="govuk-heading-m">You can now </h2>
 
       <p class="govuk-body">
-        We’ve sent your application to Hackney Electoral Register Office.
-      </p>
-      <p class="govuk-body">
-        They will contact you either to confirm your registration, or to ask for more information.
+        Add content 
       </p>
 
-      <p class="govuk-body">
-        <a href="#" class="govuk-link">What did you think of this service?</a> (takes 30 seconds)
-      </p>
+      {{ govukButton({
+        text: "View your companies",
+        href:"company-added"
+      }) }}
+
+    
     </div>
   </div>
 {% endblock %}
