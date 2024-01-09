@@ -14,8 +14,9 @@
     </h1>
 
     {{ govukWarningText({
-      text: "This prototype is being actively worked on - things might break or change very quickly", iconFallbackText: "Warning" })
+      html: "This prototype is being actively worked on so things might break or change very quickly. Some of the pages are dynamic based on the journey you select. Walk through the journey from the start to view accurate page designs. ", iconFallbackText: "Warning" })
     }}
+
   </div>
 </div>
 
@@ -45,11 +46,8 @@
 
       <div class="govuk-tabs__panel" id="CH-sign-in">
 
-        <h2 class="govuk-heading-m">Page shortcuts for all sign in flows</h2>
-        {{ govukWarningText({
-          text: "Some of the pages are dynamic based on the journey you select. Walk through the journey from the start to view accurate page designs.",
-          iconFallbackText: "Warning"
-        }) }}
+        <h2 class="govuk-heading-m">Page shortcuts for sign in to Companies House flows</h2>
+  
 
         <h3 class="govuk-heading-s">Select the journey you want to take<strong class="govuk-tag govuk-tag--red">
           Page not for development
@@ -180,6 +178,27 @@
           </li>
           </ul>
 
+
+          <h3 class="govuk-heading-s">Emails <strong class="govuk-tag govuk-tag--red">
+            Review currrent
+          </strong></h3> 
+          <ul class="govuk-list govuk-list--bullet">
+          <li>
+            <a href="">Account created
+            </a>
+          </li>
+          </ul>
+
+          <h3 class="govuk-heading-s">Forgotten password <strong class="govuk-tag govuk-tag--red">
+            Review currrent
+          </strong></h3> 
+          <ul class="govuk-list govuk-list--bullet">
+          <li>
+            <a href="">Forgotten password
+            </a>
+          </li>
+          </ul>
+
           </div>
 
         <!-- Manage account -->
@@ -196,7 +215,9 @@
               <a href="name-account">Update how we display your name</a> 
             </li>
             <li>
-              <a href="">**FIND and update to new design** Update the type of emails we can send you</a> 
+              <a href="">Update the type of emails we can send you</a> <strong class="govuk-tag">
+                Review design
+              </strong> 
             </li>
           </ul>
 
@@ -213,9 +234,7 @@
 
           
           <h2 class="govuk-heading-m">Your companies </h2>
-          <h3 class="govuk-heading-s">Add a company <strong class="govuk-tag">
-            Review updates to flow
-          </strong> 
+          <h3 class="govuk-heading-s">Add a company 
          </h3>
           <ul class="govuk-list govuk-list--bullet">
             <li>
@@ -249,8 +268,10 @@
           </ul>
 
 
-        <h3 class="govuk-heading-s">Multiple companies <strong class="govuk-tag govuk-tag--pink">
-          Review live service. Add pagination. Improve search criteria. Define max per page.
+        <h3 class="govuk-heading-s">Multiple companies <strong class="govuk-tag">
+          Review design
+        </strong> <strong class="govuk-tag govuk-tag--turquoise">
+          Content TBC
         </strong></h3>
 
         <ul class="govuk-list">
@@ -323,6 +344,16 @@
             <li>
               <a href="email-auth-person-declined" class="govuk-link" target="_blank">A user has declined to be added as an authorised person </a>
             </li>
+            <li>
+              <a href="email-to-ROA-user-added" class="govuk-link" target="_blank">Email to ROA - A user has added as an authorised person <strong class="govuk-tag govuk-tag--turquoise">
+                Content tbc
+              </strong> </a>
+            </li>
+            <li>
+              <a href="email-to-ROA-user-removed" class="govuk-link" target="_blank">Email to ROA - A user has been removed as an authorised person <strong class="govuk-tag govuk-tag--turquoise">
+                Content tbc
+              </strong> </a>
+            </li>
           </ul>
 
           <h3 class="govuk-heading-s govuk-!-padding-top-3">Notifications shown within the account after sign in <strong class="govuk-tag govuk-tag--turquoise">
@@ -381,11 +412,6 @@
           </ul>
 
 
-        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
-
-        <h2 class="govuk-heading-m">Error pages <strong class="govuk-tag govuk-tag--pink">
-          Review live service
-        </strong></h2>
         <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 
           
