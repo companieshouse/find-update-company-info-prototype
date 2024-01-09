@@ -19,10 +19,7 @@
   </div>
 </div>
 
-{{ govukButton({
-  text: "Start",
-  href:"prototype-set-up"
-}) }}
+
 
 
 
@@ -34,15 +31,30 @@
       <h4 class="govuk-tabs__title">Contents</h4>
       <ul class="govuk-tabs__list">
         <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-          <a class="govuk-tabs__tab" href="#code"> Entry points and links </a>
+          <a class="govuk-tabs__tab" href="#CH-sign-in"> Sign in to Companies House </a>
+        </li>
+        <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+          <a class="govuk-tabs__tab" href="#manage-account"> Manage account</a>
+        </li>
+        <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+          <a class="govuk-tabs__tab" href="#your-companies"> Your companies</a>
         </li>
       </ul>
 
+      <!--Sign in to Companies House (account migration approach) -->
 
-      <div class="govuk-tabs__panel" id="code">
-        <h2 class="govuk-heading-m">Select the journey you want to use <strong class="govuk-tag govuk-tag--red">
+      <div class="govuk-tabs__panel" id="CH-sign-in">
+
+        <h2 class="govuk-heading-m">Page shortcuts for all sign in flows</h2>
+        {{ govukWarningText({
+          text: "Some of the pages are dynamic based on the journey you select. Walk through the journey from the start to view accurate page designs.",
+          iconFallbackText: "Warning"
+        }) }}
+
+        <h3 class="govuk-heading-s">Select the journey you want to take<strong class="govuk-tag govuk-tag--red">
           Page not for development
-        </strong></h2>
+        </strong></h3>
+
         <ul class="govuk-list govuk-list--bullet">
           <li>
             <a href="prototype-set-up">Select from the following journey options</a> 
@@ -50,15 +62,21 @@
           </li>
         </ul>
 
+        {{ govukButton({
+          text: "Sign in to Companies House journeys",
+          href:"prototype-set-up"
+        }) }}
 
-        <h2 class="govuk-heading-m">Sign in options</h2>
+
+
+        <h3 class="govuk-heading-s">Choose how to sign in to Companies House account</h3>
         <ul class="govuk-list govuk-list--bullet">
           <li>
             <a href="choose-sign-in">Choose how to sign in to Companies House account</a> 
           </li>
         </ul>
 
-        <h2 class="govuk-heading-m">Companies House account sign in</h2>
+        <h3 class="govuk-heading-s">Companies House account sign in</h3>
         <ul class="govuk-list govuk-list--bullet">
           <li>
             <a href="chs-sign-in-email">Companies House account email address</a> 
@@ -69,7 +87,7 @@
         </ul>
 
 
-        <h2 class="govuk-heading-m">Migrating account interrupt pages</h2>
+        <h3 class="govuk-heading-s">Migrating account interrupt pages</h3>
         <ul class="govuk-list govuk-list--bullet">
         
           <li>
@@ -79,13 +97,10 @@
           <li>
             <a href="sign-in-using-one-login">You have a GOV.UK One Login</a> 
           </li>
-
-
-
-          
+ 
         </ul>
 
-          <h2 class="govuk-heading-m">GOV.UK One Login journey</h2>
+          <h3 class="govuk-heading-s">GOV.UK One Login journey</h3>
           <ul class="govuk-list govuk-list--bullet">
           <li>
             <a href="create-or-sign-in">Create a GOV.UK One Login or sign in
@@ -145,7 +160,7 @@
           </li>
           </ul>
 
-          <h2 class="govuk-heading-m">Account details and preferences</h2>
+          <h3 class="govuk-heading-s">Account display name and email preferences</h3>
           <ul class="govuk-list govuk-list--bullet">
           <li>
             <a href="name"> How do you want us to display your name?
@@ -157,7 +172,7 @@
           </li>
           </ul>
 
-          <h2 class="govuk-heading-m">We have saved your Companies House account information</h2>
+          <h3 class="govuk-heading-s">We have saved your Companies House account information</h3>
           <ul class="govuk-list govuk-list--bullet">
           <li>
             <a href="end-linking">Use your GOV.UK One Login details to sign in from now on
@@ -165,15 +180,37 @@
           </li>
           </ul>
 
-          <h2 class="govuk-heading-m">Manage account settings for CHS with GOV.UK One Login</h2>
+          </div>
+
+        <!-- Manage account -->
+
+        <div class="govuk-tabs__panel" id="manage-account">
+
+        
+          <h2 class="govuk-heading-m">Shortcuts for manage account</h2>
           <ul class="govuk-list govuk-list--bullet">
             <li>
               <a href="chs-one-login-settings">Manage account</a> 
             </li>
             <li>
-              <a href="name-account">Update display name</a> 
+              <a href="name-account">Update how we display your name</a> 
+            </li>
+            <li>
+              <a href="">**FIND and update to new design** Update the type of emails we can send you</a> 
             </li>
           </ul>
+
+          <h2 class="govuk-heading-m">Shortcuts for identity verification flows  <strong class="govuk-tag govuk-tag">
+            Not started
+          </strong> </h2>
+
+        </div>
+
+
+        <!-- Your companies -->
+
+        <div class="govuk-tabs__panel" id="your-companies">
+
           
           <h2 class="govuk-heading-m">Your companies </h2>
           <h3 class="govuk-heading-s">Add a company <strong class="govuk-tag">
@@ -196,16 +233,35 @@
               <a href="authentication-code">Enter the company authentication code</a>
             </li>
             <li>
-              <a href="confirmation-company-added">A company has been added to the account <strong class="govuk-tag">
-                NEW
-              </strong></a>
+              <a href="confirmation-company-added">A company has been added to the account </a><strong class="govuk-tag">
+                Review design
+              </strong> <strong class="govuk-tag govuk-tag--turquoise">
+                Content TBC
+              </strong>
             </li>
             <li>
               <a href="company-added">Your companies - company added <strong class="govuk-tag">
-                Review updates
-              </strong> </a>
+                Review design
+              </strong> </a><strong class="govuk-tag govuk-tag--turquoise">
+                Content TBC
+              </strong>
             </li>
           </ul>
+
+
+        <h3 class="govuk-heading-s">Multiple companies <strong class="govuk-tag govuk-tag--pink">
+          Review live service. Add pagination. Improve search criteria. Define max per page.
+        </strong></h3>
+
+        <ul class="govuk-list">
+          <li>
+            <a class="govuk-link" target="_blank"  href="home-multiple-companies">Search for a company within your account</a>
+          </li>
+          <li>
+            <a class="govuk-link" target="_blank"  href="home-multiple-companies-page-2">Results for searching a company within your account</a>
+          </li>
+        </ul>
+
 
 
          
@@ -324,20 +380,6 @@
             </li>
           </ul>
 
-          <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
-
-        <h2 class="govuk-heading-m">View and search multiple companies <strong class="govuk-tag govuk-tag--pink">
-          Review live service. Add pagination. Improve search criteria.
-        </strong></h2>
-
-        <ul class="govuk-list">
-          <li>
-            <a class="govuk-link" target="_blank"  href="home-multiple-companies">Search for a company within your account</a>
-          </li>
-          <li>
-            <a class="govuk-link" target="_blank"  href="home-multiple-companies-page-2">Results for searching a company within your account</a>
-          </li>
-        </ul>
 
         <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 

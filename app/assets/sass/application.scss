@@ -79,6 +79,12 @@
 
 // Add extra styles here
 
+@media (min-width: 641px) {
+	.searchbutton{
+		margin-top: 80px;
+	}
+}
+
 .app-c-option-select {
     position: relative;
     padding: 0 0 10px;
