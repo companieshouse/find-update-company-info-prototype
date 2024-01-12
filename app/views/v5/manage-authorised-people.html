@@ -69,35 +69,43 @@
                   })}}
               </td>
               <td class="govuk-table__cell">
-                <a href="remove-authorised-person" class="govuk-link">Cancel </a>
+                <a href="manage-authorised-people-email-resent" class="govuk-link">Cancel </a>
               </td>
               <td class="govuk-table__cell">
-                <a href="remove-authorised-person" class="govuk-link">Resend email</a>
+                <a href="manage-authorised-people-email-resent" class="govuk-link">Resend email</a>
               </td>
             </tr>
             <tr class="govuk-table__row">
               <td class="govuk-table__header">	example@gmail.com</td>
               <th scope="row" class="govuk-table__header"></th>
               <td class="govuk-table__cell">	
+                {{govukTag({
+                  html: "AWAITING <br> CONFIRMATION",
+                  classes: "govuk-tag--yellow"
+                  })}}
               </td>
               <td class="govuk-table__cell">
-                <a href="remove-authorised-person" class="govuk-link">Cancel </a>
+                <a href="" class="govuk-link">Cancel </a>
               </td>
               <td class="govuk-table__cell">
-                <a href="remove-authorised-person" class="govuk-link">Resend email</a>
+                <a href="manage-authorised-people-email-resent" class="govuk-link">Resend email</a>
               </td>
             </tr>
             <tr class="govuk-table__row">
               <td class="govuk-table__header">	James-morris@accounting-for-example.com</td>
               <th scope="row" class="govuk-table__header">James Morris </th>
               <td class="govuk-table__cell">	
+                {{govukTag({
+                  html: "AWAITING <br> CONFIRMATION",
+                  classes: "govuk-tag--yellow"
+                  })}}
                 </td>
 
               <td class="govuk-table__cell">
-                <a href="remove-authorised-person" class="govuk-link">Cancel</a>
+                <a href="" class="govuk-link">Cancel</a>
               </td>
               <td class="govuk-table__cell">
-                <a href="remove-authorised-person" class="govuk-link">Resend email</a>
+                <a href="manage-authorised-people-email-resent" class="govuk-link">Resend email</a>
               </td>
             </tr>
 
