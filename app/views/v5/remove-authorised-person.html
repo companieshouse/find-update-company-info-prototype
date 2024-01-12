@@ -21,7 +21,7 @@
 
     <div class="govuk-grid-column-two-thirds">
 
-    <form action="/remove-authorised-person-hannah" method="post" novalidate>
+    <form action="/remove-authorised-person" method="post" novalidate>
 
 
     <span class="govuk-caption-xl" >FLOWERS LIMITED</span>
@@ -62,12 +62,18 @@ If Hannah Salt is appointed as an officer of the company, such as a director or 
     ]
   }) }}
 
+  
+    {{ govukButton({
+      text: "Continue",
+      href:"authentication-code-remove"
+    }) }}
 
-      {{ govukButton({
+
+      <!-- {{ govukButton({
           text: "Remove authorisation",
           classes: "govuk-button--warning",
-          href:"authorised-person-removed"
-      }) }}
+          href:"auth-code-remove"
+      }) }} -->
 
       {{ govukButton({
         text: "Cancel",

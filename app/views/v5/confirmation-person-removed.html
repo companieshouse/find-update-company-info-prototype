@@ -1,0 +1,57 @@
+{% extends "layouts/layout-chs-signed-out.html" %}
+
+{% block pageTitle %}
+  Your companies - Enter the company authentication code - Companies House WebFiling account - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href:"check-company-details"
+  }) }}
+{% endblock %}
+
+
+
+{% block content %}
+
+<form action="confirmation-person-removed" method="post">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+
+        {% set html %}
+        <p class="govuk-notification-banner__heading">
+          Hannah Salt is no longer digitally authorised to file online for FLOWERS LIMITED.
+          {% endset %}
+
+        {{ govukNotificationBanner({
+          html: html,
+          type: 'success'
+        }) }}
+
+
+
+      <h2 class="govuk-heading-m">Add heading here </h2>
+
+      <p class="govuk-body">
+
+        You may wish to <a href="https://www.gov.uk/guidance/company-authentication-codes-for-online-filing#change-or-cancel-your-code" class="govuk-link"> change the authentication code </a> for this company if Hannah Salt still has access to it.
+      </p>
+
+
+
+      {{ govukButton({
+        text: "View your companies",
+        href:"company-added"
+      }) }}
+
+
+    
+    </div>
+  </div>
+{% endblock %}
+
+
+
+
