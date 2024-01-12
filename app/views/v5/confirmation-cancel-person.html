@@ -15,31 +15,27 @@
 
 {% block content %}
 
-<form action="confirmation-person-removed" method="post">
+<form action="confirmation-cancel-person" method="post">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
 
-
         {% set html %}
-        <p class="govuk-notification-banner__heading">
-          An email request has been sent to jill.edwards@example.com to be digitally authorised to file online for FLOWERS LIMITED.
-          {% endset %}
+        <h3 class="govuk-notification-banner__heading">
+          Digital authorisation cancelled
+        </h3>
+        <p class="govuk-body">You have successfully cancelled digital authorisation for <span class='govuk-body govuk-!-font-weight-bold'> jill.edwards@example.com</span> to file online for FLOWERS LIMITED.</p>
+      {% endset %}
 
-        {{ govukNotificationBanner({
-          html: html,
-          type: 'success'
-        }) }}
+      {{ govukNotificationBanner({
+        html: html,
+        type: 'success'
+      }) }}
 
-
-
-      <h2 class="govuk-heading-m">What happens next </h2>
+      <h2 class="govuk-heading-m">You can now </h2>
 
       <p class="govuk-body">
-
-        We have sent an email to jill.edwards@example.com. They must select the link in the email to be digitally authorised to file online for FLOWERS LIMITED.
+        Add content 
       </p>
-
-
 
       {{ govukButton({
         text: "View your companies",
