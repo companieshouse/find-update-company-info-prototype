@@ -18,32 +18,48 @@
 <form action="confirmation-company-added" method="post">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">   
-          <span class='govuk-caption-l'>FLOWERS LIMITED</span>
-          <h1 class="govuk-heading-l">
-          Cancel authorisation to file online for this company
-          </h1>
-
-              <div class="govuk-inset-text">
-                <p class="govuk-body "> hannah.salt@gmail.com</p>
-              </div>
-
-
-              <p class="govuk-body ">Add content here.</p>
+          
 
 
         <div class="govuk-button-group">
 
-        {{ govukButton({
-          text: "Cancel authorisation",
-          href:"confirmation-cancel-person",
-          classes: "govuk-button--warning"
-        }) }}
-      
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="changedName-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                <span class='govuk-caption-l'>FLOWERS LIMITED</span>
+                <h1 class="govuk-fieldset__heading">
+                  Are you sure you want to cancel Hannah Salt's authorisation?
+                </h1>
+              </legend>
+              <div id="changedName-hint" class="govuk-hint">
+                
+              </div>
+              <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="changedName" name="changedName" type="radio" value="yes">
+                  <label class="govuk-label govuk-radios__label" for="changedName">
+                    Yes
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="changedName-2" name="changedName" type="radio" value="no">
+                  <label class="govuk-label govuk-radios__label" for="changedName-2">
+                    No
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
 
-      {{ govukButton({
-        text: "Go back to Your companies",
-        classes: "govuk-button--secondary"
-      }) }}
+          <div class="govuk-button-group">
+            {{ govukButton({
+              text: "Continue",
+              href:"confirmation-cancel-person"
+            }) }}
+          
+            <a class="govuk-link" href="#">Cancel</a>
+          </div>
+
       </div>
 
     
