@@ -56,7 +56,6 @@
       }) }}
       </div>
     </div>
-
     <div class="govuk-grid-row govuk-!-padding-top-3">
       <div class="govuk-grid-column-full">
         <table class="govuk-table">
@@ -73,7 +72,7 @@
           <tbody class="govuk-table__body">
             <tr class="govuk-table__row">
               <td class="govuk-table__header">	hannah.salt@gmail.com</th>
-              <td scope="row" class="govuk-table__cell">Hannah Salt (you)</td>
+              <td scope="row" class="govuk-table__cell"></td>
               <td class="govuk-table__cell">
                 {{govukTag({
                   html: "AWAITING <br> CONFIRMATION",
@@ -92,20 +91,19 @@
               <td scope="row" class="govuk-table__cell">Not provided</td>
               <td class="govuk-table__cell">	
                 {{govukTag({
-                  html: "AWAITING <br> CONFIRMATION",
-                  classes: "govuk-tag--yellow"
+                  text: "CONFIRMED",
+                  classes: "govuk-tag--green"
                   })}}
               </td>
               <td class="govuk-table__cell">
-                <a href="cancel-person" class="govuk-link">Cancel </a>
+                <a href="authentication-code-remove" class="govuk-link">Remove</a>
               </td>
-              <td class="govuk-table__cell">
-                <a href="manage-authorised-people-email-resent" class="govuk-link">Resend email</a>
+              <td class="govuk-table__cell">	
               </td>
             </tr>
             <tr class="govuk-table__row">
               <td class="govuk-table__header">	james-morris@accounting.com</th>
-              <td scope="row" class="govuk-table__cell">James Morris </td>
+              <td scope="row" class="govuk-table__cell"> </td>
               <td class="govuk-table__cell">	
                 {{govukTag({
                   html: "AWAITING <br> CONFIRMATION",
