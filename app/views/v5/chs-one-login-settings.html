@@ -13,6 +13,43 @@
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
+
+    <!-- Name update banner -->
+
+    {% if data['updateNameChangesMade'] == true %}
+
+    {% set html %}
+        <p class="govuk-notification-banner__heading">
+          You've successfully updated your name.
+        </p>
+    {% endset %}
+
+        {{ govukNotificationBanner({
+          html: html,
+          type: 'success'
+        }) }}
+
+    {% elseif data['updateEmailPreferencesChangesMade'] == true %}
+
+
+        {% set html %}
+        <p class="govuk-notification-banner__heading">
+          You've successfully updated your email preferences.
+        </p>
+      {% endset %}
+
+      {{ govukNotificationBanner({
+        html: html,
+        type: 'success'
+      }) }}
+
+
+    {% endif %}
+                  
+
+
+
+
     <!-- Note: GOV.UK One Login uses Security as the title for this page -->
     <h1 class="govuk-heading-xl govuk-!-static-margin-bottom-0">
       Manage account 
@@ -52,8 +89,6 @@
             <dd class="govuk-summary-list__value">
               {% if (data['display-name'] === "") %}
 
-              example@gmail.com
-  
               {% else %}
               
               {{data['display-name']}} 
@@ -135,30 +170,19 @@
       </div>
       <div class="govuk-summary-card__content">
 
-        <p class="govuk-body">We may need to send you essential emails from time to time to help you manage your account.</p>
+        <p class="govuk-body">We may need to send you essential emails from time to time to help you
+          manage your account.</p>
 
-     <!--  <p class="govuk-body">We’d like to send you additional emails to: </p>
-          
-      <ul class="govuk-list govuk-list--bullet">
-        <li>tell you about changes to services or legislation</li>
-        <li>give you information from other government departments which may be important to you</li>
-        <li>help you run your company responsibly, if you're a new or existing 
-          director
-          </li>
-        <li>invite you to take part in research to help us improve our services</li>
-      </ul> -->
         <dl class="govuk-summary-list">
           <div class="govuk-summary-list__row">
-            <div class="">
-              <dt class="govuk-summary-list__key ">
-                Can we send you emails related to Companies House? <p> For example, changes to services or legislation, information from other government departments which may be important to you, or information to help you run your company responsibly if you’re a new or existing director.</p> 
+              <dt class="govuk-summary-list__key govuk-!-width-two-thirds">
+                Can we send you emails related to Companies House? <p class="govuk-hint"> For example, changes to services or legislation, information from other government departments which may be important to you, or information to help you run your company responsibly if you’re a new or existing director.</p> 
               </dt>
-            </div>
-            <dd class="govuk-summary-list__value">
+            <dd class="govuk-summary-list__value" style="text-align: center;">
               Yes
             </dd>
              <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">
+              <a class="govuk-link" href="email-preferences-ch">
                 Change<span class="govuk-visually-hidden"> emails related to Companies House </span>
               </a>
             </dd>
@@ -166,16 +190,15 @@
 
           <div class="govuk-summary-list__row">
             <div class="">
-              <dt class="govuk-summary-list__key ">
-                
-                Emails to invite you to take part in user research <p> This will help us to improve our services. </p>
+              <dt class="govuk-summary-list__key govuk-!-width-two-thirds">
+                Can we send you emails to invite you to take part in user research? <p class="govuk-hint"> This will help us to improve our services. </p>
               </dt>
             </div>
-            <dd class="govuk-summary-list__value">
+            <dd class="govuk-summary-list__value" style="text-align: center;">
               Yes
             </dd>
              <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">
+              <a class="govuk-link" href="email-preferences-ur">
                 Change<span class="govuk-visually-hidden"> emails to manage account</span>
               </a>
             </dd>

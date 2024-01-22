@@ -420,6 +420,58 @@ router.post('/v5/one-login-enter-password', function (req, res) {
     
         res.redirect('confirmation-company-added')
       })
+
+
+      // Manage account
+
+      /*
+       * Manage account page
+       */ 
+         router.post('/v5/chs-one-login-settings', function (req, res) {
+
+          
+
+        })
+
+
+
+
+       /*
+       * Updating name on account
+       */ 
+       router.post('/v5/name-account', function (req, res) {
+
+        req.session.data['updateNameChangesMade'] = true;
+        res.redirect('chs-one-login-settings')
+      })
+
+
+      /*
+       * Updating CH email preferences
+       */ 
+      router.post('/v5/email-preferences-ch', function (req, res) {
+
+        req.session.data['updateNameChangesMade'] = false;
+        req.session.data['updateEmailPreferencesChangesMade'] = true;
+
+      
+        res.redirect('chs-one-login-settings')
+      })
+
+
+      /*
+       * Updating UR email preferences 
+       */ 
+      router.post('/v5/email-preferences-ur', function (req, res) {
+
+        req.session.data['updateNameChangesMade'] = false;
+        req.session.data['updateEmailPreferencesChangesMade'] = true;
+    
+        res.redirect('chs-one-login-settings')
+      })
+
+
+      
   
   router.get('/officers', function (req, res) {
     // Render the confirm company page
