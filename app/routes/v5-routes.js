@@ -65,16 +65,14 @@ router.post('/v5/choose-sign-in', function (req, res) {
         res.redirect('/v5/start-page')
       
       }
-
- 
+  }
   else if (req.session.data['sign-in-using'] === 'OL') {
        
     res.redirect('/v5/create-or-sign-in')
   }
   
- 
-   res.redirect('/v5/chs-sign-in-email')
- }
+  // res.redirect('/v5/chs-sign-in-email')
+ //}
  else if (req.session.data['sign-in-using'] === 'new') {
        
    res.redirect('/v5/create-or-sign-in')
