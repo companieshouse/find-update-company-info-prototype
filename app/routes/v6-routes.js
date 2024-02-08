@@ -45,7 +45,7 @@ router.post('/v6/choose-sign-in', function (req, res) {
   //If they have an existing chs account
  if (req.session.data['sign-in-using'] === 'OL') {
        
-   res.redirect('/v5/create-or-sign-in')
+   res.redirect('/v6/create-or-sign-in')
  }
  else if (req.session.data['sign-in-using'] === 'CHS') {
 
@@ -54,7 +54,7 @@ router.post('/v6/choose-sign-in', function (req, res) {
       */
       if (req.session.data['set-journey'].includes('searcher')) {
 
-        res.redirect('/v5/chs-sign-in-email')
+        res.redirect('/v6/chs-sign-in-email')
 
       }
       /*
@@ -62,21 +62,16 @@ router.post('/v6/choose-sign-in', function (req, res) {
       */
       else if (req.session.data['set-journey'].includes('filer')) {
 
-        res.redirect('/v5/start-page')
+        res.redirect('/v6/start-page')
       
       }
   }
   else if (req.session.data['sign-in-using'] === 'OL') {
        
-    res.redirect('/v5/create-or-sign-in')
+    res.redirect('/v6/create-or-sign-in')
   }
   
-  // res.redirect('/v5/chs-sign-in-email')
- //}
- else if (req.session.data['sign-in-using'] === 'new') {
-       
-   res.redirect('/v5/create-or-sign-in')
- } 
+ 
 
 
 })
