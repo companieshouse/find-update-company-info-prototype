@@ -46,18 +46,18 @@
 
 {% set mainClasses = mainClasses | default("govuk-main-wrapper--auto-spacing") %}
 
-{% if useAutoStoreData %}
+
   {% block footer %}
 
-    <div id="chs-customer-insights">
+ <!--   <div id="chs-customer-insights">
       <a class="govuk-link" href="https://www.research.net/r/S78XJMV" target="_blank" onclick="javascript:_paq.push(['trackEvent', 'Beta', 'Feedback']);">Tell us what you think of this service<span class="govuk-visually-hidden">(link opens a new window)</span></a>
       <a id="feedback-link" class="govuk-link secondary-customer-insights" target="_blank" href="/help/feedback?sourceurl=https://find-and-update.company-information.service.gov.uk/">Is there anything wrong with this page?<span class="govuk-visually-hidden">(link opens a new window)</span></a>
     </div>
     <div class="blue-footer-border"></div>
 
-    {% block footer %}
 
 
+--> 
 <footer class="govuk-footer" role="contentinfo">
     <div class="govuk-width-container">
       <div class="govuk-footer__meta">
@@ -131,7 +131,6 @@
   {% endblock %}
 
 
-{% endif %}
 
 {% block bodyEnd %}
   {% block scripts %}
