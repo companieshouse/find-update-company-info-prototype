@@ -1,6 +1,7 @@
 module.exports = {
 
-  "chs-email":"example@gmail.com"
+  "chs-email":"example@gmail.com",
+  "display-name":"James Morris"
 
 
   
