@@ -5,9 +5,13 @@
 {% block pageTitle %}
   {{ serviceName }} – Prototype
 {% endblock %}
+{% set serviceName %}
+  
+{% endset%}
+
 
 {% block beforeContent %}
-  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
 
 {% endblock %}
 
@@ -52,10 +56,7 @@
         },
         {
           value: "CHS",
-          text: "Sign in to an existing Companies House account",
-          hint: {
-            text: ""
-          }
+          text: "Sign in to an existing Companies House account"
         }
       ]
     }) }}
