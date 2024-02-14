@@ -4,6 +4,13 @@
   Your companies - Companies House WebFiling account - GOV.UK
 {% endblock %}
 
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back to your companies",
+    href:""
+  }) }}
+{% endblock %}
+
 
 {% block content %}
 
