@@ -22,39 +22,38 @@ Add your display name  – {{ serviceName }} - GOV.UK
     
       <div class="govuk-form-group">
       
-        <h1 class="govuk-heading-l">
-          Displaying your name
+        <h1 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--l" for="display-name">
+            How do you want us to display your name?
+          </label>
         </h1>
+        <div id="display-hint" class="govuk-hint">
+          This is optional. It’s up to you how your name is displayed - for example, ‘Jen Smith’ or ‘Jennifer Smith’.
+        </div>
+        <input class="govuk-input" id="display-name" name="display-name" type="text" aria-describedby="display-hint">
       
-        <p class="govuk-body">We can display your name in: </p>
-              
-        <ul class="govuk-list govuk-list--bullet">
-          <li>your account</li>
-          <li>emails we send you about your account</li>
-          <li>communications with people who are authorised to file online for the same companies as you</li>
-        </ul>
+    <br><br>
+<h2 class="govuk-heading-m">Where we will display your name</h2>
 
-        <p class="govuk-body">
-          It’s up to you how your name is displayed - for example, ‘Jen Smith’ or ‘Jennifer Smith’. You can update it at any time.
-         </p>
-
-       
-        <div class="govuk-inset-text">
-          If you do not provide your name, we’ll show your email address instead.
-        </div>
+<p class="govuk-body">We’ll show this in:</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>your account</li>
+  <li>emails we send you about your account</li>
+  <li>communications with people who are authorised to file online for the same companies as you</li>
+</ul>
 
 
-       
-        <form action="/form-handler" method="post" novalidate>
-          <div class="govuk-form-group">
-            <fieldset class="govuk-fieldset">
-              <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-                How do you want us to display your name? (Optional)
-              </legend>
-          
-          <input class="govuk-input" id="display-name" name="display-name" type="text" spellcheck="false" autocomplete="name" aria-describedby="display-hint">
+{{ govukInsetText({
+  text: "If you do not provide your name, we’ll show your email address instead."
+}) }}
 
-        </div>
+<p class="govuk-body">You can update your name at any time.</p>
+
+     
+
+      </div>
+
+    
 
       <div class="govuk-button-group">
         {{ govukButton({
