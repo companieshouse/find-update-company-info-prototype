@@ -334,7 +334,7 @@ router.post('/v6/one-login-enter-password', function (req, res) {
   // Companies House sign in 
   router.post('/v6/chs-sign-in', function (req, res) {
   
-    res.redirect('private-beta')
+    res.redirect('start-page')
   })
 
    // Companies House sign in 
