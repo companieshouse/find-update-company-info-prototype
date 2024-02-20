@@ -1,15 +1,17 @@
-{% extends "layouts/main.html" %}
+{% extends "layouts/layout_unbranded-with-banner.html" %}
+<!-- Overwrite suerfice name -->
+{% set serviceName %}
+  
+{% endset%}
 
 {% block pageTitle %}
-  {{serviceName}} - GOV.UK
+  GOV.UK One Login  – Prototype
 {% endblock %}
-
-
 
 {% block beforeContent %}
-  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
 
 {% endblock %}
+
 
 
 {% block content %}
