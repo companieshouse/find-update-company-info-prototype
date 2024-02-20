@@ -27,20 +27,6 @@
       Your details
     </h1>
 
-    <h2 class="govuk-heading-m govuk-!-static-padding-top-3"><strong class="govuk-tag">Private Beta
-    </strong> <br> Try the new way to sign in to Companies House   </h2>
-
-    <p class="govuk-body">Overview here ... </p>
-
-    {{ govukButton({
-      text: "Take part in Private Beta",
-      classes: "govuk-!-static-margin-bottom-7",
-      href:"start-page"
-    }) }}
-
-
-
-
     <p class="govuk-body">
        <a href="#" class="govuk-link">Change email address</a>
     </p>
@@ -204,11 +190,17 @@
 
     <p class="govuk-body"> <a href="#" class="govuk-link govuk-link--no-visited-state">Manage third party applications</a></p>
 
-    {{ govukButton({
-      text: "Search for a company",
-      classes: "govuk-button--secondary"
-    }) }}
+    <p class="govuk-body"> <a href="#" class="govuk-link govuk-link--no-visited-state">Search for a company</a></p>
 
+    <h2 class="govuk-heading-m">Try the new way to sign in </h2>
+
+    <p class="govuk-body">You've been invited to try the new way to sign in to Companies House. If you'd like to take part, select 'Continue'. </p>
+
+    {{ govukButton({
+      text: "Continue",
+      classes: "govuk-!-static-margin-bottom-7",
+      href:"start-page"
+    }) }}
 
   </div>
 </div>
