@@ -32,7 +32,7 @@ router.post('/v6/prototype-set-up', function (req, res) {
 //upload a document service start page goes directly to sign in page
 router.post('/v6/upload-a-document', function (req, res) {
 
-  res.redirect('choose-sign-in')
+  res.redirect('chs-sign-in')
 })
 
 
@@ -334,7 +334,13 @@ router.post('/v6/one-login-enter-password', function (req, res) {
   // Companies House sign in 
   router.post('/v6/chs-sign-in', function (req, res) {
   
-    res.redirect('chs-home-signed-in')
+    res.redirect('private-beta')
+  })
+
+   // Companies House sign in 
+   router.post('/v6/private-beta', function (req, res) {
+  
+    res.redirect('start-page')
   })
   
   
