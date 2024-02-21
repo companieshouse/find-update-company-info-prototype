@@ -26,37 +26,33 @@
   </div>
 </div>
 
-<div class="govuk-grid-row ">
-  <div class="govuk-grid-column-two-thirds govuk-!-padding-right-0">
-
-      {{ govukInput({
-          label: {
-              text: "Search for a company",
-              classes: "govuk-label--m"
-          },
-          hint: {
-              text: "Enter the company number"
-          },
-          id: "company-search",
-          name: "company-search"
-      }) }}
+<div class="govuk-form-group govuk-!-margin-bottom-0">
+        
+  <label class="govuk-label--m" for="search">
+      Search for a company
+  </label>
+  <div id="search-hint" class="govuk-hint govuk-!-padding-top-1">
+      Enter the company number
   </div>
 
-  <div class ="govuk-grid-column-one-third govuk-!-padding-left-1">
-
-      {{ govukButton({
-          text: "Search",
-          href:"#",
-          classes: "searchbutton govuk-button--secondary"
-      }) }}
-  </div>
+  <input class="govuk-input govuk-input--width-10" id="search" name="search" type="text" value="866">
+  {{ govukButton({
+      text: "Search",
+      href:"#",
+      classes: "searchbutton govuk-button--secondary",
+      href:"home-multiple-companies-page-2"
+  }) }}
 </div>
+
+
+
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
 
     <h2 class="govuk-heading-s">2 matches found for '866'</h2>
 
-    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+ 
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible govuk-!-margin-top-0">
 
 </div>
 </div>
