@@ -24,7 +24,7 @@
     <form action="/remove-authorised-person" method="post" novalidate>
 
 
-    <span class="govuk-caption-xl" >FLOWERS LIMITED</span>
+    <span class="govuk-caption-xl" >FLOWERS LIMITED (18882777)</span>
 
     <h1 class="govuk-heading-xl">Remove Hannah Salt's authorisation to file online for this company</h1>
 
@@ -64,17 +64,19 @@ If Hannah Salt is appointed as an officer of the company, such as a director or 
 
 
 
-      {{ govukButton({
-          text: "Remove authorisation",
-          classes: "govuk-button--warning",
-          href:"confirmation-person-removed"
-      }) }} 
+  <div class="govuk-button-group">
+    {{ govukButton({
+      text: "Remove authorisation",
+      classes: "govuk-button--warning",
+      href:"confirmation-person-removed"
+    }) }}
+  
+    <a class="govuk-link" href="manage-authorised-people">Cancel</a>
+  </div>
 
-      {{ govukButton({
-        text: "Cancel",
-        classes: "govuk-button--secondary"
-      }) }}
 
+
+     
 
 
       </div>
