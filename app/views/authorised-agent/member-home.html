@@ -1,0 +1,280 @@
+{% extends "layouts/layout-signed-out-agent.html" %}
+
+
+
+{% block pageTitle %}
+ Manage members 
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Return to authorised agent services",
+    href:"check-company-details"
+  }) }}
+{% endblock %}
+
+
+{% set serviceName %}
+ 
+{% endset %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+  <div class="govuk-grid-row">
+
+     <div class="govuk-grid-column-full">
+      <span class="govuk-caption-l">MORRIS ACCOUNTING LTD (0122239)<h1 class="govuk-heading-l">Manage members</h1></span>
+
+
+
+           {{ govukButton({
+              text: "Add a new member",
+              href:"add-a-member"
+            }) }}
+
+          <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+
+          <div class="govuk-tabs govuk-!-padding-top-6" data-module="govuk-tabs">
+            <h2 class="govuk-tabs__title">
+              Authorised member roles
+            </h2>
+            <ul class="govuk-tabs__list">
+              <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+                <a class="govuk-tabs__tab" href="#super-admin">
+                  Super admin
+                </a>
+              </li>
+              <li class="govuk-tabs__list-item">
+                <a class="govuk-tabs__tab" href="#admin">
+                  Admin 
+                </a>
+              </li>
+              <li class="govuk-tabs__list-item">
+                <a class="govuk-tabs__tab" href="#standard">
+                  Standard
+                </a>
+              </li>
+            </ul>
+            <div class="govuk-tabs__panel" id="super-admin">
+              <h2 class="govuk-heading-l">Super admin</h2>
+
+              <div class="govuk-inset-text">
+                To change the permissions of a member you'll need to remove the member. Then 'Add a new member' with their new permissions. 
+              </div>
+
+                  <!-- Super admin users -->
+
+                  <table class="govuk-table">
+                   <thead class="govuk-table__head">
+                     <tr class="govuk-table__row">
+                       <th scope="col" class="govuk-table__header">Member details <span> <p class="govuk-body-s">Account name shown if provided</p></span> </th> 
+
+                       <th scope="col" class="govuk-table__header">File for authorised agent</th>
+                       <th scope="col" class="govuk-table__header">Verify someone’s identity</th>
+                       <th scope="col" class="govuk-table__header">Status</th>
+                       <th scope="col" class="govuk-table__header"> <span class="govuk-visually-hidden"> Cancel or remove </span></th>
+                       <th scope="col" class="govuk-table__header"> <span class="govuk-visually-hidden"> Resend email invitation</span></th>
+                     </tr>
+                   </thead>
+                   <tbody class="govuk-table__body">
+
+                    <!-- Member 1 -->
+                     <tr class="govuk-table__row">
+                       <td class="govuk-table__header"> Hannah Salt <br> hannah.salt@gmail.com</th>
+                     
+         
+                       
+                       <td class="govuk-table__cell">
+                        Yes
+                       </td>
+                       <td class="govuk-table__cell">
+                        No
+                       </td>
+                       <td class="govuk-table__cell">
+                        {{govukTag({
+                          html: "AWAITING <br> CONFIRMATION",
+                          classes: "govuk-tag--yellow"
+                          })}}
+                      </td>
+                       <td class="govuk-table__cell">
+                         <a href="authentication-code-cancel" class="govuk-link">Cancel<span class="govuk-visually-hidden"> hannah.salt@gmail.com </span> </a>
+                       </td>
+                       <td class="govuk-table__cell">
+                         <a href="manage-authorised-people-email-resent" class="govuk-link">Resend email<span class="govuk-visually-hidden">to hannah.salt@gmail.com </span> </a>
+                       </td>
+                     </tr>
+
+                     <!-- Member 2 -->
+                     <tr class="govuk-table__row">
+                       <td class="govuk-table__header">indigo@outlook.com</th>
+                       
+                       <td class="govuk-table__cell">	
+                        Yes
+                      </td>
+                      <td class="govuk-table__cell">	
+                        Yes
+                      </td>
+                      <td class="govuk-table__cell">	
+                        {{govukTag({
+                          text: "Confirmed",
+                          classes: "govuk-tag--green"
+                          })}}
+                      </td>
+                       <td class="govuk-table__cell">
+                         <a href="authentication-code-remove" class="govuk-link">Remove <span class="govuk-visually-hidden">indigo@outlook.com </span> </a>
+                       </td>
+                       <td scope="row" class="govuk-table__cell"> </td>
+                       
+                     </tr>
+
+                      <!-- Member 3 -->
+                     <tr class="govuk-table__row">
+                       <td class="govuk-table__header">	james-morris@accounting.com</th>
+     
+                       
+
+                         <td scope="row" class="govuk-table__cell">No </td>
+                         <td scope="row" class="govuk-table__cell"> Yes</td>
+                         <td class="govuk-table__cell">	
+                          {{govukTag({
+                            html: "Awaiting <br> Confirmation",
+                            classes: "govuk-tag--yellow"
+                            })}}
+                          </td>
+         
+                       <td class="govuk-table__cell">
+                         <a href="authentication-code-cancel" class="govuk-link">Cancel <span class="govuk-visually-hidden"> james-morris@accounting.com </span> </a>
+                       </td>
+                       <td class="govuk-table__cell">
+                         <a href="manage-authorised-people-email-resent" class="govuk-link">Resend email <span class="govuk-visually-hidden"> to james-morris@accounting.com  </span> </a>
+                       </td>
+                     </tr>
+
+                      <!-- Member 4 -->
+         
+                     <tr class="govuk-table__row">
+                       <td class="govuk-table__header">	Laura Thomas <br> laurathomas@huntergroup.com</th>
+                  
+                       <td scope="row" class="govuk-table__cell"> Yes </td>
+                       <td scope="row" class="govuk-table__cell">No </td>
+                       <td class="govuk-table__cell">	
+                        {{govukTag({
+                          text: "Confirmed",
+                          classes: "govuk-tag--green"
+                          })}}
+                          </td>
+
+                       <td class="govuk-table__cell">
+                        <a href="authentication-code-remove" class="govuk-link">Remove <span class="govuk-visually-hidden">laurathomas@huntergroup.com </span> </a>
+                      </td>
+                      <td scope="row" class="govuk-table__cell"> </td>
+                     </tr>
+                     
+                   </tbody>
+                 </table>
+        
+
+
+
+            </div>
+
+
+            <!-- Admin users -->
+            <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="admin">
+              <h2 class="govuk-heading-l">Admin</h2>
+              <table class="govuk-table">
+                <thead class="govuk-table__head">
+                  <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header">Case manager</th>
+                    <th scope="col" class="govuk-table__header">Cases opened</th>
+                    <th scope="col" class="govuk-table__header">Cases closed</th>
+                  </tr>
+                </thead>
+                <tbody class="govuk-table__body">
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">David Francis</td>
+                    <td class="govuk-table__cell">24</td>
+                    <td class="govuk-table__cell">18</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">Paul Farmer</td>
+                    <td class="govuk-table__cell">16</td>
+                    <td class="govuk-table__cell">20</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">Rita Patel</td>
+                    <td class="govuk-table__cell">24</td>
+                    <td class="govuk-table__cell">27</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- Standard users -->
+            <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-month">
+              <h2 class="govuk-heading-l">Standard</h2>
+              <table class="govuk-table">
+                <thead class="govuk-table__head">
+                  <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header">Case manager</th>
+                    <th scope="col" class="govuk-table__header">Cases opened</th>
+                    <th scope="col" class="govuk-table__header">Cases closed</th>
+                  </tr>
+                </thead>
+                <tbody class="govuk-table__body">
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">David Francis</td>
+                    <td class="govuk-table__cell">98</td>
+                    <td class="govuk-table__cell">95</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">Paul Farmer</td>
+                    <td class="govuk-table__cell">122</td>
+                    <td class="govuk-table__cell">131</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">Rita Patel</td>
+                    <td class="govuk-table__cell">126</td>
+                    <td class="govuk-table__cell">142</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-year">
+              <h2 class="govuk-heading-l">Past year</h2>
+              <table class="govuk-table">
+                <thead class="govuk-table__head">
+                  <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header">Case manager</th>
+                    <th scope="col" class="govuk-table__header">Cases opened</th>
+                    <th scope="col" class="govuk-table__header">Cases closed</th>
+                  </tr>
+                </thead>
+                <tbody class="govuk-table__body">
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">David Francis</td>
+                    <td class="govuk-table__cell">1380</td>
+                    <td class="govuk-table__cell">1472</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">Paul Farmer</td>
+                    <td class="govuk-table__cell">1129</td>
+                    <td class="govuk-table__cell">1083</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">Rita Patel</td>
+                    <td class="govuk-table__cell">1539</td>
+                    <td class="govuk-table__cell">1265</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+</div>
+</div>
+
+
+{% endblock %}
