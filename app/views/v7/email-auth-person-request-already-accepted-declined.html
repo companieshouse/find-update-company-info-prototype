@@ -1,0 +1,37 @@
+{% extends "layouts/layout_unbranded-with-banner.html" %}
+
+{% block pageTitle %}
+  Activate your Companies House account
+{% endblock %}
+
+{% block header %}
+    {{ govukHeader({ serviceName: "" }) }}
+{% endblock %}
+
+
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <form action="" method="post" novalidate>
+
+    {% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
+
+    {% set html %}
+      <p class="govuk-notification-banner__heading">
+        The email request link no longer works
+      </p>
+      <p class="govuk-body">You have already accepted or declined the invitation to be digitally authorised to file for FLOWERS LIMITED.</p>
+    {% endset %}
+
+    {{ govukNotificationBanner({
+      html: html
+    }) }}
+
+
+</form>
+
+  </div>
+  </div>
+{% endblock %}

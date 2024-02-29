@@ -26,6 +26,49 @@
     <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
     <h2 class="govuk-heading-m govuk-!-padding-top-4">
+      Version 7
+    </h2>
+
+
+    
+    {{ govukSummaryList({
+      card: {
+        title: {
+          text: "Migrating CHS accounts to GOV.UK One Login and manage account features"
+        },
+        actions: {
+          items: [
+            {
+              href: "v7/index",
+              text: "View prototype",
+              visuallyHiddenText: "of version 6"
+            }
+          ]
+        }
+      },
+      rows: [
+      {
+        key: {
+          text: "Status"
+        },
+        value: {
+          html: "<strong class='govuk-tag govuk-tag--blue'>
+            In progress
+          </strong>"
+        }
+      },
+        {
+          key: {
+            text: "Updates to Sign in (Private beta) flow"
+          },
+          value: {
+            html: 'The choose how to sign in page has been removed. The flow follows the envisaged Private Beta flow where a user first signs in to CHS and then taken on the interrupt page and GOV.UK One Login. <br><br> Re design (in progress) Your details page for Private Beta. '
+          }
+        }
+      ]
+    }) }}
+
+    <h2 class="govuk-heading-m govuk-!-padding-top-4">
       Version 6
     </h2>
 
@@ -52,17 +95,17 @@
           text: "Status"
         },
         value: {
-          html: "<strong class='govuk-tag govuk-tag--blue'>
-            In progress 
+          html: "<strong class='govuk-tag govuk-tag--green'>
+            User tested
           </strong>"
         }
       },
         {
           key: {
-            text: "Updates to Your companies"
+            text: "Updates to Sign in (Private beta) flow"
           },
           value: {
-            html: ''
+            html: 'The choose how to sign in page has been removed. The flow follows the envisaged Private Beta flow where a user first signs in to CHS and then taken on the interrupt page and GOV.UK One Login. <br><br> Initial Your details page for Private Beta has been added. '
           }
         }
       ]
@@ -96,8 +139,8 @@
           text: "Status"
         },
         value: {
-          html: "<strong class='govuk-tag govuk-tag--blue'>
-            In progress 
+          html: "<strong class='govuk-tag govuk-tag--green'>
+            User tested 
           </strong>"
         }
       },
@@ -156,7 +199,7 @@
         },
         value: {
           html: "<strong class='govuk-tag govuk-tag--green'>
-            User Reserch in progress 
+            User Tested 
           </strong>"
         }
       },
