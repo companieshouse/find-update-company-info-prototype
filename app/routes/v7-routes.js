@@ -32,7 +32,7 @@ router.post('/v7/prototype-set-up', function (req, res) {
 //upload a document service start page goes directly to sign in page
 router.post('/v7/upload-a-document', function (req, res) {
 
-  res.redirect('start-page')
+  res.redirect('chs-sign-in')
 })
 
 
