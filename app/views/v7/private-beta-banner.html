@@ -12,50 +12,62 @@
 {% block content %}
 
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-full">
+  <div class="govuk-grid-column-two-thirds">
+
+    <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+      <div class="govuk-notification-banner__header">
+        <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+          Important
+        </h2>
+      </div>
+      <div class="govuk-notification-banner__content">
+        <p class="govuk-notification-banner__heading">
+          You've been invited to try the new way to sign in to Companies House. If you'd like to take part, select 'Continue'. 
+          <a class="govuk-notification-banner__link" href="#">Try the new sign in</a>.
+        </p>
+      </div>
+    </div>
 
 
-    <h1 class="govuk-heading-l">You've signed up to the new way...   </h1>
+  <!--  <h1 class="govuk-heading-l">Try the new way to sign in </h1>
 
-    <p class="govuk-body">Overview here </p>
-
-    <h2 class="govuk-heading-m">Link to sign in to Companies House</h2>
-
-    <p class="govuk-body">Save this <a href="#" class="govuk-link">link to sign in to Companies House during the Private beta</a>. </p> 
+    <p class="govuk-body">You've been invited to try the new way to sign in to Companies House. If you'd like to take part, select 'Continue'. </p>
 
   
 
-    <h2 class="govuk-heading-m">I no longer want to be apart of the Private beta  </h2>
+    <div class="govuk-button-group">
+      {{ govukButton({
+        text: "Continue",
+        href:"start-page"
+      }) }}
+
+      {{ govukButton({
+        text: "I'll try later",
+        classes: "govuk-button--secondary",
+        href:"company-lookup"
+      }) }}
+    </div>-->
 
 
-    <p class="govuk-body govuk-!-static-padding-bottom-3">If you want to <a href="#" class="govuk-link">  go back to using your  Companies House account</a>.
+    
+                
+
+    <!-- Note: GOV.UK One Login uses Security as the title for this page -->
+    <h2 class="govuk-heading-m govuk-!-static-margin-bottom-6">
+      Your details
+    </h2>
+
+    <p class="govuk-body">
+       <a href="#" class="govuk-link">Change email address</a>
     </p>
 
-   
+    <p class="govuk-body">
+      <a href="#" class="govuk-link">Change password</a>
+    </p>
 
-
-
-    <div class="govuk-summary-card">
-      <div class="govuk-summary-card__title-wrapper">
-        <h2 class="govuk-summary-card__title">Sign in details </h2>
-      </div>
-      <div class="govuk-summary-card__content">
-        <p class="govuk-body">You use your GOV.UK One Login to sign in to your Companies House account.</p>
-      
     
-        <p class="govuk-body">In your GOV.UK One Login, you can change:</p>
-        <ul class="govuk-list govuk-list--bullet">
-          <li>your email address</li>
-          <li>your password</li>
-          <li>how you get security codes to sign in</li>
-        </ul>
+ 
 
-        <p class="govuk-body">
-          <a href="https://home.account.gov.uk/settings" class="govuk-link" rel="noreferrer noopener" target="_blank">Change your sign in details in your GOV.UK One Login (opens in a new tab) </a>
-        </p>
-    
-      </div>
-    </div>
     
 
  <!--    <p class="govuk-body">You can change your sign in details for this service in your GOV.UK One Login.</p>
