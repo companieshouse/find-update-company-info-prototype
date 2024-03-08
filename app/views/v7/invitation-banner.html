@@ -12,7 +12,7 @@
     <div class="govuk-grid-column-full">
 
 
-      {% set html %}
+    <!-- {% set html %}
         <p class="govuk-notification-banner__heading">
           You've been invited to be digitally authorised to file online for 3 companies. 
           <a class="govuk-notification-banner__link" href="company-invitations">View invitations</a>.
@@ -21,11 +21,17 @@
 
       {{ govukNotificationBanner({
         html: html
-      }) }}
+      }) }} -->
 
 
 
-    <h1 class="govuk-heading-xl">Your companies </h1>
+    <h1 class="govuk-heading-xl govuk-!-static-margin-bottom-1">Your companies </h1>
+
+    <p class="govuk-body govuk-!-static-padding-bottom-5 govuk-!-static-margin-top-2">
+     <a href="company-invitations" class="govuk-link">View invitations to be digitally authorised (0)</a>
+    </p>
+
+
 
 
           {{ govukButton({
