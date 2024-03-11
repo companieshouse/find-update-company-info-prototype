@@ -12,24 +12,32 @@
   <div class="govuk-grid-column-two-thirds">
     <form action="prototype-set-up" method="post" novalidate>
 
-    {{ govukCheckboxes({
+    {{ govukRadios({
       name: "set-journey",
       fieldset: {
         legend: {
           html: "<strong class='govuk-tag'>
             Page for User Research purposes
-          </strong> <br> <br> Select from the following journey options: ",
+          </strong> <br> <br> Choose a journey ",
           isPageHeading: true,
           classes: "govuk-fieldset__legend--l"
         }
       },
       hint: {
-        text: "Select all that apply."
+        text: "Select one option."
       },
       items: [
         {
           value: "filer",
           text: "Upload a document"
+        },
+        {
+          value: "private-beta-not-linked",
+          text: "Private beta - account not linked (not for user research)"
+        },
+        {
+          value: "linked-account",
+          text: "Private beta - account is linked (not for user research)"
         }
       ]
     }) }}

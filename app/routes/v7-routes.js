@@ -17,14 +17,13 @@ router.post('/v7/prototype-set-up', function (req, res) {
        
     res.redirect('/v7/upload-a-document')
   }
-  else if (req.session.data['set-journey'].includes('searcher')) {
+  else if (req.session.data['set-journey'].includes('private-beta-not-linked'))   {
        
-    res.redirect('/v7/chs-home')
+    res.redirect('/v7/chs-sign-in')
   }
-  else{
-
-    res.redirect('/v7/choose-sign-in')
-
+  else if (req.session.data['set-journey'].includes('linked-account'))   {
+       
+    res.redirect('/v7/create-or-sign-in')
   }
 
 })
@@ -43,35 +42,6 @@ router.post('/v7/choose-sign-in', function (req, res) {
    * Filer 
    */
   //If they have an existing chs account
- if (req.session.data['sign-in-using'] === 'OL') {
-       
-   res.redirect('/v6/create-or-sign-in')
- }
- else if (req.session.data['sign-in-using'] === 'CHS') {
-
-       /*
-      * Follow
-      */
-      if (req.session.data['set-journey'].includes('searcher')) {
-
-        res.redirect('/v7/chs-sign-in-email')
-
-      }
-      /*
-      * Filer 
-      */
-      else if (req.session.data['set-journey'].includes('filer')) {
-
-        res.redirect('/v7/start-page')
-      
-      }
-  }
-  else if (req.session.data['sign-in-using'] === 'OL') {
-       
-    res.redirect('/v7/create-or-sign-in')
-  }
-  
- 
 
 
 })
@@ -333,14 +303,19 @@ router.post('/v7/one-login-enter-password', function (req, res) {
   
   // Companies House sign in 
   router.post('/v7/chs-sign-in', function (req, res) {
-  
-    res.redirect('start-page')
-  })
 
-   // Companies House sign in 
-   router.post('/v7/private-beta', function (req, res) {
-  
-    res.redirect('start-page')
+
+    //upload a document - UR 
+    if (req.session.data['set-journey'].includes('filer')) {
+       
+      res.redirect('/v7/start-page')
+    }
+     // Private beta first time logging in 
+    else if (req.session.data['set-journey'].includes('private-beta-not-linked'))   {
+         
+      res.redirect('/v7/private-beta')
+    }
+
   })
   
   
