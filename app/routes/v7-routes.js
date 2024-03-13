@@ -25,6 +25,14 @@ router.post('/v7/prototype-set-up', function (req, res) {
        
     res.redirect('/v7/create-or-sign-in')
   }
+  else if (req.session.data['set-journey'].includes('public-beta-not-linked'))   {
+       
+    res.redirect('/v7/choose-sign-in')
+  }
+  else if (req.session.data['set-journey'].includes('public-beta-linked'))   {
+       
+    res.redirect('/v7/choose-sign-in')
+  }
 
 })
 
@@ -39,9 +47,35 @@ router.post('/v7/upload-a-document', function (req, res) {
 router.post('/v7/choose-sign-in', function (req, res) {
 
   /*
-   * Filer 
+   * GOV.UK One Login
    */
-  //If they have an existing chs account
+  if (req.session.data['sign-in-using'] === 'OL') {
+
+      /*
+      * account not already linked
+      */
+
+      if (req.session.data['set-journey'].includes('public-beta-not-linked')){
+
+        res.redirect('/v7/start-page')
+
+      }
+      else{
+
+        res.redirect('/v7/create-or-sign-in')
+
+      }
+  }
+
+  /*
+   * Companies House account
+   */
+
+  else if (req.session.data['sign-in-using'] === 'CHS') {
+
+    res.redirect('/v7/chs-sign-in-email')
+
+  }
 
 
 })
@@ -51,20 +85,17 @@ router.post('/v7/choose-sign-in', function (req, res) {
 router.post('/v7/chs-sign-in-email', function (req, res) {
 
   //If they have a GOV.UK One Login account
-if (req.session.data['set-journey'].includes('account-linked')) {
+if (req.session.data['set-journey'].includes('public-beta-linked')) {
        
    res.redirect('/v7/sign-in-using-one-login')
  }
- //if they are a filer and want to sign in to CHS 
- else if (req.session.data['set-journey'].includes('filer')) {
-       
-  res.redirect('/v7/start-page')
-}
- //  **TODO** If they are an Admin user .includes @companieshouse.gov.uk we need to handle -> admin && account already migrated 
  else{
-    
-   res.redirect('/v7/chs-sign-in-password')
- } 
+
+  res.redirect('/v7/chs-sign-in-password')
+
+ }
+
+
 
 })
 

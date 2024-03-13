@@ -12,15 +12,40 @@
   <div class="govuk-grid-column-two-thirds">
     <form action="prototype-set-up" method="post" novalidate>
 
+
+
+      <h1 class="govuk-heading-l">Choose a journey <strong class='govuk-tag'>
+        Page for User Research purposes
+      </strong></h1>
+
+
+      {{ govukRadios({
+        name: "set-journey",
+        fieldset: {
+          legend: {
+            html: "User research",
+            isPageHeading: false ,
+            classes: "govuk-fieldset__legend--m"
+          }
+        },
+        hint: {
+          text: "Select one option."
+        },
+        items: [
+          {
+            value: "filer",
+            text: "Upload a document"
+          }
+        ]
+      }) }}
+
     {{ govukRadios({
       name: "set-journey",
       fieldset: {
         legend: {
-          html: "<strong class='govuk-tag'>
-            Page for User Research purposes
-          </strong> <br> <br> Choose a journey ",
-          isPageHeading: true,
-          classes: "govuk-fieldset__legend--l"
+          html: "Private beta",
+          isPageHeading: false,
+          classes: "govuk-fieldset__legend--m"
         }
       },
       hint: {
@@ -28,16 +53,36 @@
       },
       items: [
         {
-          value: "filer",
-          text: "Upload a document"
-        },
-        {
           value: "private-beta-not-linked",
-          text: "Private beta - account not linked (not for user research)"
+          text: "Account has not been linked"
         },
         {
           value: "linked-account",
-          text: "Private beta - account is linked (not for user research)"
+          text: "Account is already linked"
+        }
+      ]
+    }) }}
+
+    {{ govukRadios({
+      name: "set-journey",
+      fieldset: {
+        legend: {
+          html: "Public beta",
+          isPageHeading: false,
+          classes: "govuk-fieldset__legend--m"
+        }
+      },
+      hint: {
+        text: "Select one option."
+      },
+      items: [
+        {
+          value: "public-beta-not-linked",
+          text: "Account has not been linked"
+        },
+        {
+          value: "public-beta-linked",
+          text: "Account is already linked"
         }
       ]
     }) }}
