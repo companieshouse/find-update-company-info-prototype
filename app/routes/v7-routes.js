@@ -143,7 +143,16 @@ router.post('/v7/one-login-enter-password', function (req, res) {
   //sign in
   router.post('/v7/enter-code', function (req, res) {
 
+
+    if (req.session.data['set-journey'] === 'private-beta-not-linked') {
+        
+      res.redirect('/v7/end-linking-private-beta')
+    }
+    else{
+
       res.redirect('name')
+
+    }
 
 
   })
@@ -224,8 +233,14 @@ router.post('/v7/one-login-enter-password', function (req, res) {
   
   //One loginsign create complete
   router.post('/v7/create-complete', function (req, res) {
+    if (req.session.data['set-journey'] === 'private-beta-not-linked') {
+        
+      res.redirect('/v7/end-linking-private-beta')
+    }
+    else{
 
       res.redirect('name')
+    }
 
   })
 

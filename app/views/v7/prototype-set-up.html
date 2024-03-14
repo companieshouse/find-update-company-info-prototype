@@ -54,11 +54,26 @@
       items: [
         {
           value: "private-beta-not-linked",
-          text: "Account has not been linked"
+          text: "Companies House account has not been linked"
         },
         {
           value: "linked-account",
-          text: "Account is already linked"
+          text: "Companies House account is linked to a GOV.UK One Login",
+          hint: {
+            html: '<a href="private-beta-account-linked-banner" class="govuk-link" target="blank">View manage account (opens in a new tab)</a>'
+          }
+        },
+        {
+          value: "linked-account",
+          html: "A different email address has been used for CHS and GOV.UK One login <strong class='govuk-tag'>
+            In progress
+          </strong>"
+        },
+        {
+          value: "linked-account",
+          html: "The user hasn't use the private beta URL to sign in <strong class='govuk-tag'>
+            In progress
+          </strong>"
         }
       ]
     }) }}

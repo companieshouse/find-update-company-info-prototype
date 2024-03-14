@@ -17,7 +17,7 @@
 {% block content %}
 
 <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds ">
+    <div class="govuk-grid-column-two-thirds">
       <form action="end-linking" method="post" novalidate>
 
         {% set html %}
@@ -40,7 +40,12 @@
        </p>
 
        <div class="govuk-inset-text">
-        It can take up to 8 weeks to register a lasting power of attorney if there are no mistakes in the application.
+        
+        <p class="govuk-body">
+          As you are trying out the new way to sign in to Companies House,
+you'll need to save the following link for the next time you sign in: <br><br> <a href="#" class="govuk-link" target="blank">https://find-and-update.company-information.service.gov.uk/shdbfeuhgbuhfbsjhb</a>
+        </p>
+
       </div>
 
 
@@ -48,7 +53,7 @@
        <p class="govuk-body">Now continue to the service you were using.
       </p>
 
-    <button type="Submit" class="govuk-button" data-module="govuk-button">
+    <button type="Submit" class="govuk-button" data-module="govuk-button" href="chs-home-signed-in">
         Continue
     </button>
 
