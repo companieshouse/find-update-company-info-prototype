@@ -19,10 +19,8 @@
 
   <form action="sign-in-details-do-not-match" method="post" novalidate="">
 
-    <strong class="govuk-tag--turquoise">
-      Content TBC
-    </strong>
-    <h1 class="govuk-heading-l">You need to use the same email address </h1> 
+  
+    <h1 class="govuk-heading-l">You need to use your Companies House account email address </h1> 
 
     <!--   <p class="govuk-body"> There is no Companies House account for <span class="govuk-body govuk-!-font-weight-bold"> {{ data['chs-email'] }}</span> </p>
 
@@ -30,10 +28,10 @@
       
     </div> -->
 
-    <p class="govuk-body">You must use the same email address for Companies House account and GOV.UK One login to use this service.</p>
+    <p class="govuk-body">You need to sign in to or create a GOV.UK One Login using the same email address you use to sign in to your Companies House account.</p>
 
     {{ govukButton({
-      text: "Sign in again",
+      text: "Continue",
       href:"create-or-sign-in"
     }) }} 
     
