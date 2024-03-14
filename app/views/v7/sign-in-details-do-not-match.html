@@ -7,7 +7,7 @@
 {% endblock %}
 
 {% block beforeContent %}
-  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+
 
 {% endblock %}
 
@@ -19,8 +19,10 @@
 
   <form action="sign-in-details-do-not-match" method="post" novalidate="">
 
-
-    <h1 class="govuk-heading-l">You need to use Companies House account sign in</h1> 
+    <strong class="govuk-tag--turquoise">
+      Content TBC
+    </strong>
+    <h1 class="govuk-heading-l">You need to use the same email address </h1> 
 
     <!--   <p class="govuk-body"> There is no Companies House account for <span class="govuk-body govuk-!-font-weight-bold"> {{ data['chs-email'] }}</span> </p>
 
@@ -28,10 +30,10 @@
       
     </div> -->
 
-    <p class="govuk-body">You must sign in with Companies House account to use this service.</p>
+    <p class="govuk-body">You must use the same email address for Companies House account and GOV.UK One login to use this service.</p>
 
     {{ govukButton({
-      text: "Continue",
+      text: "Sign in again",
       href:"create-or-sign-in"
     }) }} 
     
