@@ -25,13 +25,13 @@ router.post('/v7/prototype-set-up', function (req, res) {
        
     res.redirect('/v7/create-or-sign-in')
   }
-  else if (req.session.data['set-journey'].includes('public-beta-not-linked'))   {
+  else if (req.session.data['set-journey'].includes('different-email'))   {
        
-    res.redirect('/v7/choose-sign-in')
+    res.redirect('/v7/chs-sign-in')
   }
-  else if (req.session.data['set-journey'].includes('public-beta-linked'))   {
+  else if (req.session.data['set-journey'].includes('wrong-url'))   {
        
-    res.redirect('/v7/choose-sign-in')
+    res.redirect('/v7/chs-sign-in')
   }
 
 })
@@ -148,6 +148,14 @@ router.post('/v7/one-login-enter-password', function (req, res) {
         
       res.redirect('/v7/end-linking-private-beta')
     }
+    else if (req.session.data['set-journey'] === 'different-email') {
+        
+      res.redirect('/v7/sign-in-details-do-not-match')
+    }
+    else if (req.session.data['set-journey'] === 'wrong-url') {
+        
+      res.redirect('/v7/stop-screen-use-url-sign-in')
+    } 
     else{
 
       res.redirect('name')
@@ -236,6 +244,14 @@ router.post('/v7/one-login-enter-password', function (req, res) {
     if (req.session.data['set-journey'] === 'private-beta-not-linked') {
         
       res.redirect('/v7/end-linking-private-beta')
+    }
+    else if (req.session.data['set-journey'] === 'different-email') {
+        
+      res.redirect('/v7/sign-in-details-do-not-match')
+    }
+    else if (req.session.data['set-journey'] === 'wrong-url') {
+        
+      res.redirect('/v7/stop-screen-use-url-sign-in')
     }
     else{
 
@@ -354,6 +370,15 @@ router.post('/v7/one-login-enter-password', function (req, res) {
     //upload a document - UR 
     if (req.session.data['set-journey'].includes('filer')) {
        
+      res.redirect('/v7/start-page')
+    }
+    else if (req.session.data['set-journey'].includes('different-email')) {
+
+      res.redirect('/v7/start-page')
+
+    }
+    else if (req.session.data['set-journey'] === 'wrong-url') {
+        
       res.redirect('/v7/start-page')
     }
      // Private beta first time logging in 
