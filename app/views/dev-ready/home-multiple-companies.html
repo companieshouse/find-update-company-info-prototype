@@ -1,0 +1,195 @@
+{% extends "layouts/layout-chs-signed-out.html" %}
+
+{% block pageTitle %}
+  Your companies
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-width-container">
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    <h1 class="govuk-heading-xl govuk-!-static-margin-bottom-1">Your companies </h1>
+
+    <p class="govuk-body govuk-!-static-padding-bottom-5 govuk-!-static-margin-top-2">
+     <a href="company-invitations" class="govuk-link">View invitations to be digitally authorised (0)</a>
+    </p>
+
+
+
+      {{ govukButton({
+          text: "Add a company",
+          href:"add-a-company"
+      }) }}
+
+
+
+
+
+
+    <div class="govuk-form-group govuk-!-margin-top-2 govuk-!-margin-bottom-0">
+        
+        <label class="govuk-label--m" for="search">
+            Search for a company
+        </label>
+        <div id="search-hint" class="govuk-hint govuk-!-padding-top-1">
+            Enter the company number
+        </div>
+
+        <input class="govuk-input govuk-input--width-10" id="search" name="search" type="text">
+        {{ govukButton({
+            text: "Search",
+            href:"#",
+            classes: "searchbutton govuk-button--secondary",
+            href:"home-multiple-companies-page-2"
+        }) }}
+    </div>
+    
+  </div>
+</div>
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible govuk-!-margin-top-0">
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    <table class="govuk-table">
+      <caption class="govuk-table__caption govuk-table__caption--m visuallyhidden">Your companies</caption>
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Company name</th>
+          <th scope="col" class="govuk-table__header">Company number</th>
+          <th scope="col" class="govuk-table__header">People digitally  authorised to file online</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">ANDROID TECHNOLOGY LTD</th>
+          <td class="govuk-table__cell">10866549</td>
+          <td class="govuk-table__cell"><a href="manage-authorised-people" class="govuk-link govuk-link--no-visited-state">View and manage <span class="govuk-visually-hidden">ANDROID TECHNOLOGY LTD</span> </a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">ARCHITECTS WALES LIMITED</th>
+          <td class="govuk-table__cell">07518663</td>
+          <td class="govuk-table__cell"><a href="manage-authorised-people" class="govuk-link govuk-link--no-visited-state"> View and manage  <span class="govuk-visually-hidden">ARCHITECTS WALES LIMITED</span> </a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">BROWN AND SALTER LIMITED</th>
+          <td class="govuk-table__cell">08449801</td>
+          <td class="govuk-table__cell"><a href="manage-authorised-people" class="govuk-link govuk-link--no-visited-state"> View and manage <span class="govuk-visually-hidden">BROWN AND SALTER LIMITED</span>  </a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">CARNATION (UK) LIMITED</th>
+          <td class="govuk-table__cell">09433214</td>
+          <td class="govuk-table__cell"><a href="manage-authorised-people" class="govuk-link govuk-link--no-visited-state">View and manage <span class="govuk-visually-hidden">CARNATION (UK) LIMITED</span> </a> </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">DRIVING SCHOOL 101 LIMITED</th>
+          <td class="govuk-table__cell">10334492</td>
+          <td class="govuk-table__cell"><a href="manage-authorised-people" class="govuk-link govuk-link--no-visited-state">View and manage <span class="govuk-visually-hidden">DRIVING SCHOOL 101 LIMITED</span> </a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">EXCAVATION HOLDINGS LTD</th>
+          <td class="govuk-table__cell">07491101</td>
+          <td class="govuk-table__cell"><a href="manage-authorised-people" class="govuk-link govuk-link--no-visited-state">View and manage <span class="govuk-visually-hidden">EXCAVATION HOLDINGS LTD</span>  </a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">FIRST AND LAST LIMITED</th>
+          <td class="govuk-table__cell">08333854</td>
+          <td class="govuk-table__cell"><a href="manage-authorised-people" class="govuk-link govuk-link--no-visited-state">View and manage <span class="govuk-visually-hidden">FIRST AND LAST LIMITED</span> </a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">GROW YOUR OWN LIMITED</th>
+          <td class="govuk-table__cell">12977842</td>
+          <td class="govuk-table__cell"><a href="manage-authorised-people" class="govuk-link govuk-link--no-visited-state">View and manage <span class="govuk-visually-hidden">GROW YOUR OWN LIMITED</span> </a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">HARE AND RABBIT LIMITED</th>
+          <td class="govuk-table__cell">06544223</td>
+          <td class="govuk-table__cell"><a href="manage-authorised-people" class="govuk-link govuk-link--no-visited-state">View and manage <span class="govuk-visually-hidden">HARE AND RABBIT LIMITED</span> </a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">JUST IN TIME (LONDON) LTD</th>
+          <td class="govuk-table__cell">03455102</td>
+          <td class="govuk-table__cell"><a href="manage-authorised-people" class="govuk-link govuk-link--no-visited-state">View and manage <span class="govuk-visually-hidden">JUST IN TIME (LONDON) LTD</span> </a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">LEMINGTON INSURANCE LIMITED</th>
+          <td class="govuk-table__cell">09322456</td>
+          <td class="govuk-table__cell"><a href="manage-authorised-people" class="govuk-link govuk-link--no-visited-state">View and manage <span class="govuk-visually-hidden">LEMINGTON INSURANCE LIMITED</span>  </a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">MILESTONE RESEARCH LTD</th>
+          <td class="govuk-table__cell">08099546</td>
+          <td class="govuk-table__cell"><a href="manage-authorised-people" class="govuk-link govuk-link--no-visited-state">View and manage <span class="govuk-visually-hidden">MILESTONE RESEARCH LTD</span>  </a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">NORRIS AND BUTLER PUBS LIMITED</th>
+          <td class="govuk-table__cell">05044331</td>
+          <td class="govuk-table__cell"><a href="manage-authorised-people" class="govuk-link govuk-link--no-visited-state">View and manage <span class="govuk-visually-hidden">NORRIS AND BUTLER PUBS LIMITED</span> </a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">PLANTS AND POTS LTD</th>
+          <td class="govuk-table__cell">09766593</td>
+          <td class="govuk-table__cell"><a href="manage-authorised-people" class="govuk-link govuk-link--no-visited-state">View and manage <span class="govuk-visually-hidden">PLANTS AND POTS LTD</span> </a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">SILICO LIMITED</th>
+          <td class="govuk-table__cell">06002341</td>
+          <td class="govuk-table__cell"><a href="manage-authorised-people" class="govuk-link govuk-link--no-visited-state">View and manage <span class="govuk-visually-hidden">SILICO LIMITED</span> </a></td>
+        </tr>
+       
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+
+
+<div class="govuk-grid-row govuk-!-padding-top-3">
+  <div class="govuk-grid-column-full">
+
+
+    {% from "govuk/components/pagination/macro.njk" import govukPagination %}
+
+    {{ govukPagination({
+     
+      next: {
+        href: "#"
+      },
+      items: [
+        {
+          number: 1,
+          current: true,
+          href: "#"
+        },
+        {
+          number: 2,
+
+          href: "#"
+        },
+        {
+          number: 3,
+          href: "#"
+        }
+      ]
+    }) }}
+    
+
+
+      
+  </div>
+</div>
+
+
+</div>
+</div>
+
+
+{% endblock %}

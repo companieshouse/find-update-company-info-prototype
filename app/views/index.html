@@ -25,6 +25,52 @@
 
     <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
+
+    <h2 class="govuk-heading-m govuk-!-padding-top-4">
+     Dev ready version
+    </h2>
+
+
+    
+    {{ govukSummaryList({
+      card: {
+        title: {
+          html: "Private Beta <br> Migrating CHS accounts to GOV.UK One Login"
+        },
+        actions: {
+          items: [
+            {
+              href: "dev-ready/index",
+              text: "View prototype",
+              visuallyHiddenText: "of dev ready"
+            }
+          ]
+        }
+      },
+      rows: [
+      {
+        key: {
+          text: "Status"
+        },
+        value: {
+          html: "<strong class='govuk-tag govuk-tag--blue'>
+           Completed
+          </strong>"
+        }
+      },
+        {
+          key: {
+            text: "Private Beta flow"
+          },
+          value: {
+            html: 'The index displays the status of the page, whether they are dev-ready, Content TBC or awaiting requirements. '
+          }
+        }
+      ]
+    }) }}
+
+
+
     <h2 class="govuk-heading-m govuk-!-padding-top-4">
       Version 7
     </h2>
@@ -52,8 +98,8 @@
           text: "Status"
         },
         value: {
-          html: "<strong class='govuk-tag govuk-tag--blue'>
-            In progress
+          html: "<strong class='govuk-tag govuk-tag--green'>
+            User tested
           </strong>"
         }
       },
@@ -62,7 +108,7 @@
             text: "Updates to Sign in (Private beta) flow"
           },
           value: {
-            html: 'The choose how to sign in page has been removed. The flow follows the envisaged Private Beta flow where a user first signs in to CHS and then taken on the interrupt page and GOV.UK One Login. <br><br> Re design (in progress) Your details page for Private Beta. '
+            html: 'The choose how to sign in page has been removed. The flow follows the envisaged Private Beta flow where a user first signs in to CHS and then taken on the interrupt page and GOV.UK One Login. <br><br> Re design Your details page for Private Beta. '
           }
         }
       ]
