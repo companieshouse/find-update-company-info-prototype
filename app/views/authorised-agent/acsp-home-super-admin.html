@@ -60,7 +60,7 @@
 
       <div class="govuk-summary-card">
         <div class="govuk-summary-card__title-wrapper">
-          <h2 class="govuk-summary-card__title">Manage members </h2>
+          <h2 class="govuk-summary-card__title">Manage people </h2>
            <ul class="govuk-summary-card__actions">
            <!-- <li class="govuk-summary-card__action"> <a class="govuk-link" href="#">Manage members<span class="govuk-visually-hidden"> of MORRIS ACCOUNTING LTD (0122239)</span></a>
             </li>
@@ -72,11 +72,11 @@
           <dl class="govuk-summary-list">
             <div class="govuk-summary-list__row">
 
-              <p class="govuk-body">Add or remove members who work for the authorised agent.
+              <p class="govuk-body">Add or remove people who work for the authorised agent.
               </p>
 
               <p class="govuk-body">
-                 <a href="member-home" class="govuk-link">Manage authorised agent members</a>
+                 <a href="member-home" class="govuk-link">Add or remove a person</a>
               </p>
               
             </div>
@@ -88,7 +88,7 @@
 
       <div class="govuk-summary-card">
         <div class="govuk-summary-card__title-wrapper">
-          <h2 class="govuk-summary-card__title">Verified someone's identity <strong class="govuk-tag govuk-tag--blue">
+          <h2 class="govuk-summary-card__title">Verify someone's identity <strong class="govuk-tag govuk-tag--blue">
             Coming soon
           </strong> </h2>
           <!-- <ul class="govuk-summary-card__actions">
@@ -107,7 +107,7 @@
               </p>
 
               <p class="govuk-body">
-                 <a href="#" class="govuk-link">Tell Companies House about a person whose identity you have verified</a>
+                 <a href="#" class="govuk-link">Tell Companies House you have verified someone's identity</a>
               </p>
               
             </div>
@@ -119,7 +119,7 @@
 
       <div class="govuk-summary-card">
         <div class="govuk-summary-card__title-wrapper">
-          <h2 class="govuk-summary-card__title">Update authorised agent details </h2>
+          <h2 class="govuk-summary-card__title">Update authorised agent's details </h2>
           <!-- <ul class="govuk-summary-card__actions">
             <li class="govuk-summary-card__action"> <a class="govuk-link" href="#">Delete choice<span class="govuk-visually-hidden"> of University of Gloucestershire (University of Gloucestershire)</span></a>
             </li>
@@ -131,19 +131,13 @@
           <dl class="govuk-summary-list">
             <div class="govuk-summary-list__row">
 
-              <p class="govuk-body">Use this service to tell us about any updates to:
-
-                <ul class="govuk-list govuk-list--bullet">
-                  <li>company or business details</li>
-                  <li>changes to AML supervisory bodies</li>
-                  <li>status</li>
-                </ul>
+              <p class="govuk-body">Use this service to tell us about any changes to the agent's details. You must tell us about any changes to the Anti-Money-Laundering (AML) registration details within 14 days. 
               </p>
 
-              {{ govukWarningText({
-                text: "You can be removed from the authorised agent register and no longer be able to file, if you do not tell Companies House within 14 days of any changes.",
+            <!--  {{ govukWarningText({
+                text: "You must tell us about any changes to the Anti-Money-Laundering (AML) registration details within 14 days. ",
                 iconFallbackText: "Warning"
-              }) }}
+              }) }} -->
 
               <p class="govuk-body">
                  <a href="#" class="govuk-link">Update the authorised agent's details</a>
