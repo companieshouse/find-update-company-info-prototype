@@ -16,7 +16,7 @@
 
      <div class="govuk-grid-column-two-thirds">
        <span class="govuk-caption-l">MORRIS ACCOUNTING LTD (0122239)</span>
-          <h1 class="govuk-heading-l">Add a member</h1> 
+          <h1 class="govuk-heading-l">Add a person</h1> 
 
           {{ govukInput({
             label: {
@@ -53,23 +53,23 @@
             items: [
               {
                 value: "super-admin",
-                text: "Manager",
+                text: "Account owner",
                 hint: {
-                  text: "Can make changes to the authorised agent details, access services for authorised agents and manage its members."
+                  text: "Can make changes to the authorised agent's details, add or remove other account owners and users, and file as an authorised agent. You can choose if you want them to be able to verify people's identity."
                 }
               },
               {
                 value: "admin",
-                text: "Admin",
+                text: "Admin user",
                 hint: {
-                  text: "Can access services for authorised agents and manage its members."
+                  text: "Can add or remove admin and standard users, and file as an authorised agent. You can choose if you want them to verify people's identity. "
                 }
               },
               {
                 value: "standard-user",
                 text: "Standard user",
                 hint: {
-                  text: "Can access services for authorised agents."
+                  text: "Can file as an authorised agent. You can choose if you want them to verify people's identity. "
                 }
               }
             ]
@@ -95,7 +95,7 @@
 
 
           <!-- form companies and registrable partnerships for clients -->
-          {{ govukCheckboxes({
+       <!--   {{ govukCheckboxes({
             name: "service-access",
             fieldset: {
               legend: {
@@ -116,7 +116,28 @@
                 text: "Verify someone’s identity"
               }
             ]
-          }) }}
+          }) }} -->
+
+          {{ govukRadios({
+  name: "service-access",
+  fieldset: {
+    legend: {
+      text: "Do they need to verify people's identity for Companies House?",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--m"
+    }
+  },
+  items: [
+    {
+      value: "yes",
+      text: "Yes"
+    },
+    {
+      value: "no",
+      text: "No"
+    }
+  ]
+}) }}
 
 
 
