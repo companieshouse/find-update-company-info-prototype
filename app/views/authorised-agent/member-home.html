@@ -24,12 +24,12 @@
   <div class="govuk-grid-row">
 
      <div class="govuk-grid-column-full">
-      <span class="govuk-caption-l">MORRIS ACCOUNTING LTD (0122239)<h1 class="govuk-heading-l">Manage members</h1></span>
+      <span class="govuk-caption-l">MORRIS ACCOUNTING LTD<h1 class="govuk-heading-l">Manage people</h1></span>
 
 
 
            {{ govukButton({
-              text: "Add a new member",
+              text: "Add a person",
               href:"add-a-member"
             }) }}
 
@@ -42,27 +42,27 @@
 
           <div class="govuk-tabs govuk-!-padding-top-6" data-module="govuk-tabs">
             <h2 class="govuk-tabs__title">
-              Authorised member roles
+              Authorised user roles
             </h2>
             <ul class="govuk-tabs__list">
               <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
                 <a class="govuk-tabs__tab" href="#super-admin">
-                  Super admin
+                  Account owners
                 </a>
               </li>
               <li class="govuk-tabs__list-item">
                 <a class="govuk-tabs__tab" href="#admin">
-                  Admin 
+                  Admin users
                 </a>
               </li>
               <li class="govuk-tabs__list-item">
                 <a class="govuk-tabs__tab" href="#standard">
-                  Standard
+                  Standard users
                 </a>
               </li>
             </ul>
             <div class="govuk-tabs__panel" id="super-admin">
-              <h2 class="govuk-heading-l">Super admin</h2>
+              <h2 class="govuk-heading-l">Account owners</h2>
 
              
 
@@ -71,7 +71,7 @@
                   <table class="govuk-table">
                    <thead class="govuk-table__head">
                      <tr class="govuk-table__row">
-                       <th scope="col" class="govuk-table__header">Member details <span> <p class="govuk-body-s">Account name shown if provided</p></span> </th> 
+                       <th scope="col" class="govuk-table__header">Account owner details <span> <p class="govuk-body-s">Account name shown if provided</p></span> </th> 
 
                  <!-- UNDER REVIEW       <th scope="col" class="govuk-table__header">File for authorised agent</th> -->
                        <th scope="col" class="govuk-table__header">Verify someone’s identity</th>
