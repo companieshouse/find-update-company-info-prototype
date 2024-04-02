@@ -42,7 +42,7 @@
             spellcheck: false
           }) }}
 
-   
+
           {{ govukRadios({
             name: "role",
             fieldset: {
@@ -56,42 +56,28 @@
                 value: "super-admin",
                 text: "Account owner",
                 hint: {
-                  html: "They will be able to: 
-                  <ul>
-                    <li>make changes to the authorised agent's details</li>
-                    <li>add or remove other account owners and users</li> 
-                    <li>file on behalf of clients</li>
-                    <li>form companies or registrable partnerships on behalf of clients</li>
-                    </ul>"
+                  text: "Can make changes to the authorised agent's details and add or remove other account owners and users. They can file and form companies or registrable partnerships on behalf of clients."
                 }
               },
               {
                 value: "admin",
                 text: "Admin user",
                 hint: {
-                  html: "They will be able to: 
-                  <ul>
-                    <li>add or remove admin and standard users</li> 
-                    <li>file on behalf of clients</li>
-                    <li>form companies or registrable partnerships on behalf of clients</li>
-                    </ul>"
+                  text: "Can add or remove admin and standard users. They can file and form companies or registrable partnerships on behalf of clients. "
                 }
               },
               {
                 value: "standard-user",
                 text: "Standard user",
                 hint: {
-                  html: "They will be able to: 
-                  <ul>
-                    <li>file on behalf of clients</li>
-                    <li>form companies or registrable partnerships on behalf of clients</li>
-                    </ul>                  
-                  "
+                  text: "Can file and form companies or registrable partnerships on behalf of clients. "
                 }
               }
             ]
           }) }}
 
+   
+ 
          <!--- <details class="govuk-details" data-module="govuk-details">
             <summary class="govuk-details__summary">
               <span class="govuk-details__summary-text">

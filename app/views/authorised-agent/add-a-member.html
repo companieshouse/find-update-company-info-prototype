@@ -42,7 +42,8 @@
             spellcheck: false
           }) }}
 
-          {{ govukRadios({
+
+         {{ govukRadios({
             name: "role",
             fieldset: {
               legend: {
@@ -55,26 +56,41 @@
                 value: "super-admin",
                 text: "Account owner",
                 hint: {
-                  text: "Can make changes to the authorised agent's details and add or remove other account owners and users. They can file and form companies or registrable partnerships on behalf of clients."
+                  html: "They will be able to: 
+                  <ul>
+                    <li>make changes to the authorised agent's details</li>
+                    <li>add or remove other account owners and users</li> 
+                    <li>file on behalf of clients</li>
+                    <li>form companies or registrable partnerships on behalf of clients</li>
+                    </ul>"
                 }
               },
               {
                 value: "admin",
                 text: "Admin user",
                 hint: {
-                  text: "Can add or remove admin and standard users. They can file and form companies or registrable partnerships on behalf of clients. "
+                  html: "They will be able to: 
+                  <ul>
+                    <li>add or remove admin and standard users</li> 
+                    <li>file on behalf of clients</li>
+                    <li>form companies or registrable partnerships on behalf of clients</li>
+                    </ul>"
                 }
               },
               {
                 value: "standard-user",
                 text: "Standard user",
                 hint: {
-                  text: "Can file and form companies or registrable partnerships on behalf of clients. "
+                  html: "They will be able to: 
+                  <ul>
+                    <li>file on behalf of clients</li>
+                    <li>form companies or registrable partnerships on behalf of clients</li>
+                    </ul>                  
+                  "
                 }
               }
             ]
           }) }}
-
 
 
 
