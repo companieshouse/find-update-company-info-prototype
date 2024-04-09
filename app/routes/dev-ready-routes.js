@@ -15,7 +15,7 @@ router.post('/dev-ready/prototype-set-up', function (req, res) {
 
   if (req.session.data['set-journey'].includes('filer')) {
        
-    res.redirect('/v7/upload-a-document')
+    res.redirect('/dev-ready/upload-a-document')
   }
   else if (req.session.data['set-journey'].includes('private-beta-not-linked'))   {
        
@@ -141,7 +141,7 @@ router.post('/dev-ready/one-login-enter-password', function (req, res) {
   
   
   //sign in
-  router.post('/v7/enter-code', function (req, res) {
+  router.post('/dev-ready/enter-code', function (req, res) {
 
 
     if (req.session.data['set-journey'] === 'private-beta-not-linked') {

@@ -318,6 +318,12 @@
 
           
         <h2 class="govuk-heading-m">Your companies </h2>
+        {{ govukButton({
+          text: "Your companies",
+          href:"your-companies"
+        }) }}
+
+
         <h3 class="govuk-heading-s">Add a company 
          </h3>
           <ul class="govuk-list govuk-list--bullet">
@@ -379,10 +385,16 @@
             </li>
             </ul>
 
-            <h3 class="govuk-heading-s">Confirm or decline authorised person email request  <strong class="govuk-tag govuk-tag">
-              New - design review needed
-             </strong>
-            </h3>
+            <h3 class="govuk-heading-s">Confirm or decline authorised person email request  </h3>
+
+            {{ govukButton({
+              text: "Email invitiation",
+              href:"email-confirm-you-are-the-presenter"
+            }) }}
+
+
+
+
             <ul class="govuk-list govuk-list--bullet">
             <li>
               <a href="email-confirm-you-are-the-presenter">Email - authorisation to file online for a company</a>
