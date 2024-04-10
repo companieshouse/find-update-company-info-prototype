@@ -41,6 +41,16 @@ router.post('/dev-ready/prototype-set-up', function (req, res) {
        
     res.redirect('/dev-ready/choose-sign-in')
   }
+  else if (req.session.data['set-journey'].includes('public-beta-mandatory-first-time'))   {
+       
+    res.redirect('/dev-ready/start-page')
+  }
+  else if (req.session.data['set-journey'].includes('public-beta-mandatory-return-user'))   {
+       
+    res.redirect('/dev-ready/create-or-sign-in')
+  }
+
+ 
  
 })
 
