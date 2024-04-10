@@ -80,7 +80,9 @@
       name: "set-journey",
       fieldset: {
         legend: {
-          html: "Public beta - GOV.UK One login is optional",
+          html: "Public beta - GOV.UK One login is optional <strong class='govuk-tag'>
+  Flow TBC
+</strong>",
           isPageHeading: false,
           classes: "govuk-fieldset__legend--m"
         }
@@ -91,7 +93,10 @@
       items: [
         {
           value: "public-beta-not-linked",
-          text: "CHS account has not been linked to a GOV.UK one login"
+          text: "CHS account has not been linked to a GOV.UK one login",
+          hint: {
+            text: "Users can choose if they sign in to a Companies House account or sign in/create a GOV.UK One Login."
+          }
         },
         {
           value: "public-beta-already-linked",
@@ -113,7 +118,9 @@
           name: "set-journey",
           fieldset: {
             legend: {
-              html: "Public beta - GOV.UK One login is mandatory",
+              html: "Public beta - GOV.UK One login is mandatory <strong class='govuk-tag'>
+                Flow TBC
+              </strong>",
               isPageHeading: false,
               classes: "govuk-fieldset__legend--m"
             }
@@ -124,11 +131,19 @@
           items: [
             {
               value: "public-beta-mandatory-first-time",
-              text: "First time a users signs in"
+              text: "First time a users signs in",
+              hint: {
+                text: "Users are shown the 'We are changing the way you sign in...' page, and then taken to GOV.UK One Login."
+              }
+
+
             },
             {
               value: "public-beta-mandatory-return-user",
-              text: "Returning users"
+              text: "Returning users",
+              hint: {
+                text: "Users are taken to GOV.UK One Login."
+              }
             }
           
           ]
