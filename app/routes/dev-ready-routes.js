@@ -33,7 +33,12 @@ router.post('/dev-ready/prototype-set-up', function (req, res) {
        
     res.redirect('/dev-ready/chs-sign-in')
   }
+  else if (req.session.data['set-journey'].includes('public-beta-not-linked'))   {
+       
+    res.redirect('/dev-ready/choose-sign-in')
+  }
 
+ 
 })
 
 //upload a document service start page goes directly to sign in page
@@ -51,9 +56,22 @@ router.post('/dev-ready/choose-sign-in', function (req, res) {
    */
   if (req.session.data['sign-in-using'] === 'OL') {
 
+    res.redirect('/dev-ready/create-or-sign-in')
+
+  }
+  else if(req.session.data['sign-in-using'] === 'CHS') {
+
+    res.redirect('/dev-ready/chs-sign-in-email')
+
+  }
+
+
+})
+
+
       /*
-      * account not already linked
-      */
+      * account not already linked -- removed for now
+      
 
       if (req.session.data['set-journey'].includes('public-beta-not-linked')){
 
@@ -64,21 +82,14 @@ router.post('/dev-ready/choose-sign-in', function (req, res) {
 
         res.redirect('dev-ready/create-or-sign-in')
 
-      }
-  }
+      }*/
+  
 
   /*
    * Companies House account
    */
 
-  else if (req.session.data['sign-in-using'] === 'CHS') {
-
-    res.redirect('/dev-ready/chs-sign-in-email')
-
-  }
-
-
-})
+  
 
 
 //new email address page for CHS 
