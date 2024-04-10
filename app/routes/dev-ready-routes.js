@@ -37,7 +37,10 @@ router.post('/dev-ready/prototype-set-up', function (req, res) {
        
     res.redirect('/dev-ready/choose-sign-in')
   }
-
+  else if (req.session.data['set-journey'].includes('public-beta-already-linked'))   {
+       
+    res.redirect('/dev-ready/choose-sign-in')
+  }
  
 })
 
@@ -95,20 +98,31 @@ router.post('/dev-ready/choose-sign-in', function (req, res) {
 //new email address page for CHS 
 router.post('/dev-ready/chs-sign-in-email', function (req, res) {
 
-  //If they have a GOV.UK One Login account
-if (req.session.data['set-journey'].includes('public-beta-linked')) {
-       
-   res.redirect('/dev-ready/sign-in-using-one-login')
- }
- else{
 
   res.redirect('/dev-ready/chs-sign-in-password')
 
- }
-
-
 
 })
+
+//CHS password 
+router.post('/dev-ready/chs-sign-in-password', function (req, res) {
+
+ //If they have a GOV.UK One Login account
+ if (req.session.data['set-journey'].includes('public-beta-already-linked')) {
+       
+  res.redirect('/dev-ready/sign-in-using-one-login')
+
+}
+else{
+
+ res.redirect('/dev-ready/chs-home-signed-in')
+
+}
+
+})
+
+
+ 
 
 
 //start page

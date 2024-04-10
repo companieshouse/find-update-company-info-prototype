@@ -80,7 +80,7 @@
       name: "set-journey",
       fieldset: {
         legend: {
-          html: "Public beta",
+          html: "Public beta - GOV.UK One login is optional",
           isPageHeading: false,
           classes: "govuk-fieldset__legend--m"
         }
@@ -91,7 +91,11 @@
       items: [
         {
           value: "public-beta-not-linked",
-          text: "Account has not been linked"
+          text: "CHS account has not been linked to a GOV.UK one login"
+        },
+        {
+          value: "public-beta-already-linked",
+          text: "Accounts have already been linked"
         }
       
       ]
@@ -102,7 +106,31 @@
           text: "Account is already linked"
         }-->
 
-
+        {{ govukRadios({
+          name: "set-journey",
+          fieldset: {
+            legend: {
+              html: "Public beta - GOV.UK One login is mandatory",
+              isPageHeading: false,
+              classes: "govuk-fieldset__legend--m"
+            }
+          },
+          hint: {
+            text: "Select one option."
+          },
+          items: [
+            {
+              value: "public-beta-mandatory-first-time",
+              text: "First time a users signs in"
+            },
+            {
+              value: "public-beta-mandatory-return-user",
+              text: "Returning users"
+            }
+          
+          ]
+        }) }}
+    
 
 
         
