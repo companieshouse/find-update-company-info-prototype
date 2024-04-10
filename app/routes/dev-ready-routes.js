@@ -69,7 +69,16 @@ router.post('/dev-ready/choose-sign-in', function (req, res) {
    */
   if (req.session.data['sign-in-using'] === 'OL') {
 
-    res.redirect('/dev-ready/create-or-sign-in')
+
+    if (req.session.data['set-journey'].includes('public-beta-not-linked'))   {
+       
+      res.redirect('/dev-ready/start-page')
+    }
+    else{
+
+      res.redirect('/dev-ready/create-or-sign-in')
+
+    }
 
   }
   else if(req.session.data['sign-in-using'] === 'CHS') {
