@@ -28,7 +28,7 @@
     <h1 class="govuk-heading-xl govuk-!-static-margin-bottom-1">Your companies </h1>
 
     <p class="govuk-body govuk-!-static-padding-bottom-5 govuk-!-static-margin-top-2">
-     <a href="company-invitations" class="govuk-link">View invitations to be digitally authorised (0)</a>
+     <a href="company-invitations" class="govuk-link">View invitations to be digitally authorised (1)</a>
     </p>
 
 
@@ -40,6 +40,30 @@
           }) }}
 
         <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+
+
+        <div style="border-style: solid;
+        border-width: thin;
+        border-color: #959393; padding: 2em;"> 
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+              <h1 class="govuk-heading-m">You have not added any companies to your account</h1>
+    
+                  <p class="govuk-body">Add a company to your account so that you can:</p>
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>file for the company online</li>
+                    <li>digitally authorise other people to file online for the company</li>
+                  </ul>
+    
+              {{ govukButton({
+                  text: "Add a company",
+                  href:"add-a-company"
+              }) }}
+    
+            </div>
+          </div>
+          </div>
 
 
 
@@ -55,7 +79,7 @@
                 </div>
               </div> -->
 
-
+<!-- 
               <table class="govuk-table">
                 <caption class="govuk-table__caption govuk-table__caption--m visuallyhidden">Table of companies you are digitally authorised to file for</caption>
                 <thead class="govuk-table__head">
@@ -78,9 +102,9 @@
                   <tr class="govuk-table__row">
                     <th scope="row" class="govuk-table__header">Total estimated pay</th>
                     <td class="govuk-table__cell">£4,282.20</td>
-                  </tr> -->
+                  </tr> 
                 </tbody>
-              </table>
+              </table>-->
 
 
 

@@ -18,6 +18,23 @@
 <form action="manage-authorised-people" method="post">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-full">
+        {% if (data['adding-jill'] == true) %}
+
+
+        {% set html %}
+        <h3 class="govuk-notification-banner__heading">
+          Email sent
+        </h3>
+        <p class="govuk-body">We've sent an email to jill.edwards@example.com inviting them to be digitally authorised to file online for FLOWERS LIMITED.</p>
+      {% endset %}
+
+        {{ govukNotificationBanner({
+          html: html,
+          type: 'success'
+        }) }}
+
+        {% endif %}
+
 
         
         <h1 class="govuk-heading-l">
@@ -59,38 +76,63 @@
             </tr>
           </thead>
           <tbody class="govuk-table__body">
+
+            {% if (data['company-added-1'] == true) %}
+            <!-- Company added to your account -->
             <tr class="govuk-table__row">
               <td class="govuk-table__header">	hannah.salt@gmail.com</th>
-              <td scope="row" class="govuk-table__cell"> <span class="govuk-visually-hidden"> </span></td>
+              <td scope="row" class="govuk-table__cell">Hannah Salt <span class="govuk-visually-hidden"> </span></td>
               <td class="govuk-table__cell">
-                {{govukTag({
-                  html: "AWAITING <br> CONFIRMATION",
-                  classes: "govuk-tag--yellow"
-                  })}}
-              </td>
-              <td class="govuk-table__cell">
-                <a href="authentication-code-cancel" class="govuk-link">Cancel<span class="govuk-visually-hidden"> hannah.salt@gmail.com </span> </a>
-              </td>
-              <td class="govuk-table__cell">
-                <a href="manage-authorised-people-email-resent" class="govuk-link">Resend email<span class="govuk-visually-hidden">to hannah.salt@gmail.com </span> </a>
-              </td>
-            </tr>
-            <tr class="govuk-table__row">
-              <td class="govuk-table__header">indigo@outlook.com</th>
-              <td scope="row" class="govuk-table__cell">Not provided</td>
-              <td class="govuk-table__cell">	
                 {{govukTag({
                   text: "Confirmed",
                   classes: "govuk-tag--green"
                   })}}
               </td>
+
+            
               <td class="govuk-table__cell">
-                <a href="authentication-code-remove" class="govuk-link">Remove <span class="govuk-visually-hidden">indigo@outlook.com </span> </a>
+                <a href="authentication-code-remove" class="govuk-link">Remove <span class="govuk-visually-hidden">indigo@outlook.com </span> </a> 
+                
+               
               </td>
-              <td class="govuk-table__cell">	
+              <td class="govuk-table__cell">
+                
               </td>
             </tr>
+
+            {% endif %}
+
+
+            {% if (data['cancel-person'] == true) %}
+
+            {% endif %}
+
+
+
+
+            {% if (data['adding-jill'] == true) %}
+           
+
+
             <tr class="govuk-table__row">
+              <td class="govuk-table__header">jill.edwards@example.com</th>
+              <td scope="row" class="govuk-table__cell"></td>
+              <td class="govuk-table__cell">	
+                {{govukTag({
+                  html: "Awaiting <br> Confirmation",
+                  classes: "govuk-tag--yellow"
+                  })}}
+              </td>
+              <td class="govuk-table__cell">
+                <a href="authentication-code-cancel" class="govuk-link">Cancel<span class="govuk-visually-hidden"> jill.edwards@example.com</span> </a>
+              </td>
+              <td class="govuk-table__cell">	
+                <a href="manage-authorised-people-email-resent" class="govuk-link">Resend email<span class="govuk-visually-hidden">to jill.edwards@example.com </span> </a>
+              </td>
+            </tr>
+
+            {% endif %}
+           <!--  <tr class="govuk-table__row">
               <td class="govuk-table__header">	james-morris@accounting.com</th>
               <td scope="row" class="govuk-table__cell"> </td>
               <td class="govuk-table__cell">	
@@ -124,6 +166,8 @@
               <td class="govuk-table__cell">	
               </td>
             </tr>
+
+            -->
             
           </tbody>
         </table>
