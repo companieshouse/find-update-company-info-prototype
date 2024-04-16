@@ -18,7 +18,7 @@
        <span class="govuk-caption-l">MORRIS ACCOUNTING LTD (0122239)</span>
           <h1 class="govuk-heading-l">Add a person</h1> 
 
-          {{ govukInput({
+              {{ govukInput({
             label: {
               text: "Full name (optional)"
             },
@@ -56,12 +56,11 @@
                 value: "super-admin",
                 text: "Account owner",
                 hint: {
-                  html: "They will be able to: 
+                  html: "They will be able to make changes to the authorised agent's details. They can add and remove: 
                   <ul>
-                    <li>make changes to the authorised agent's details</li>
-                    <li>add or remove other account owners and users</li> 
-                    <li>file on behalf of clients</li>
-                    <li>form companies or registrable partnerships on behalf of clients</li>
+                    <li>account owners</li>
+                    <li>admin users</li> 
+                    <li>standard users</li>
                     </ul>"
                 }
               },
@@ -69,11 +68,10 @@
                 value: "admin",
                 text: "Admin user",
                 hint: {
-                  html: "They will be able to: 
+                  html: "They will be able to add and remove: 
                   <ul>
-                    <li>add or remove admin and standard users</li> 
-                    <li>file on behalf of clients</li>
-                    <li>form companies or registrable partnerships on behalf of clients</li>
+                    <li>admin users</li> 
+                    <li>standard users</li>
                     </ul>"
                 }
               },
@@ -81,19 +79,16 @@
                 value: "standard-user",
                 text: "Standard user",
                 hint: {
-                  html: "They will be able to: 
-                  <ul>
-                    <li>file on behalf of clients</li>
-                    <li>form companies or registrable partnerships on behalf of clients</li>
-                    </ul>                  
-                  "
+                  html: "They will not be able to add or remove other users."
                 }
               }
             ]
           }) }}
 
 
-
+{{ govukInsetText({
+  text: "From XX DATE, the authorised agent's name will show against any filings made by the people who have been added to this account. "
+}) }}
 
          <!--- <details class="govuk-details" data-module="govuk-details">
             <summary class="govuk-details__summary">
