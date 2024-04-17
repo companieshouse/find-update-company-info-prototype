@@ -40,13 +40,25 @@
           Enter the company number, or part of a company number.
         </div>
 
-        <input class="govuk-input govuk-input--width-10" id="search" name="search" type="text">
+        <div class="govuk-button-group ">
+
+        <input class="govuk-input  govuk-input--width-10" id="search" name="search" type="text">
         {{ govukButton({
             text: "Search",
             href:"#",
-            classes: "searchbutton govuk-button--secondary",
+            classes: "govuk-!-margin-left-2 govuk-button--secondary ",
             href:"home-multiple-companies-page-2"
         }) }}
+
+        
+       
+
+        <a class="govuk-link" href="#">Cancel search</a>
+
+      </div>
+
+
+
     </div>
     
   </div>
