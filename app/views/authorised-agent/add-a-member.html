@@ -54,41 +54,29 @@
             items: [
               {
                 value: "super-admin",
-                text: "Account owner",
-                hint: {
-                  html: "They will be able to make changes to the authorised agent's details. They can add and remove: 
-                  <ul>
-                    <li>account owners</li>
-                    <li>admin users</li> 
-                    <li>standard users</li>
-                    </ul>"
-                }
+                html: "<span class='govuk-body govuk-!-font-weight-bold'> Account owner</span>  <p class='govuk-body govuk-!-static-padding-top-2'> They will be able to make changes to the authorised agent's details. They can add and remove: </p>
+                <ul>
+                  <li>account owners</li>
+                  <li>admin users</li> 
+                  <li>standard users</li>
+                  </ul>"
               },
               {
                 value: "admin",
-                text: "Admin user",
-                hint: {
-                  html: "They will be able to add and remove: 
-                  <ul>
-                    <li>admin users</li> 
-                    <li>standard users</li>
-                    </ul>"
-                }
+                html: "<span class='govuk-!-font-weight-bold govuk-!-padding-bottom-0'>Admin user</span> <p class='govuk-body govuk-!-static-padding-top-2'> They will be able to add and remove: </p>
+                <ul>
+                  <li>admin users</li> 
+                  <li>standard users</li>
+                  </ul>"
               },
               {
                 value: "standard-user",
-                text: "Standard user",
-                hint: {
-                  html: "They will not be able to add or remove other users."
-                }
+                html: "<span class='govuk-!-font-weight-bold govuk-!-padding-bottom-0'> Standard user </span> <p class='govuk-body govuk-!-static-padding-top-2'> They will not be able to add or remove other users.</p>"
               }
             ]
           }) }}
 
 
-{{ govukInsetText({
-  text: "From XX DATE, people who have been added to this account will be able to file as an authorised agent. "
-}) }}
 
 
 
@@ -157,6 +145,9 @@
 }) }}
 
 
+{{ govukInsetText({
+  text: "From XX DATE, people who have been added to this account will be able to file as an authorised agent. "
+}) }}
 
 
 

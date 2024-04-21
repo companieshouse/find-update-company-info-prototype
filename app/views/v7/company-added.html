@@ -52,19 +52,25 @@
                   </tr>
                 </thead>
                 <tbody class="govuk-table__body">
+
+                  <!-- company added - Flowers limited-->
+
+                  {% if (data['company-added-1'] == true) %}
+
                   <tr class="govuk-table__row">
                     <th scope="row" class="govuk-table__header">FLOWERS LIMITED</th>
                     <td class="govuk-table__cell">18882777</td>
                     <td class="govuk-table__cell"><a href="manage-authorised-people" class="govuk-link govuk-link--no-visited-state">View and manage</a></td>
                   </tr>
-                 <!--  <tr class="govuk-table__row">
-                    <th scope="row" class="govuk-table__header">Next 33 weeks</th>
-                    <td class="govuk-table__cell">£109.80 per week</td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th scope="row" class="govuk-table__header">Total estimated pay</th>
-                    <td class="govuk-table__cell">£4,282.20</td>
-                  </tr> -->
+
+                  {% else %}
+
+                  
+                  {% endif %}
+
+                 <!--  -->
+
+
                 </tbody>
               </table>
 

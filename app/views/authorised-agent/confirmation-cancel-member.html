@@ -1,4 +1,4 @@
-{% extends "layouts/layout-chs-signed-out.html" %}
+{% extends "layouts/main.html" %}
 
 {% block pageTitle %}
   Your companies - Enter the company authentication code - Companies House WebFiling account - GOV.UK
@@ -92,98 +92,78 @@
                    <tbody class="govuk-table__body">
 
                     <!-- Member 1 -->
-                     <tr class="govuk-table__row">
-                       <td class="govuk-table__header"> Hannah Salt <br> hannah.salt@gmail.com</th>
-                     
-         
-                       
-                       <td class="govuk-table__cell">
-                        Yes
-                       </td>
-                       <td class="govuk-table__cell">
-                        No
-                       </td>
-                       <td class="govuk-table__cell">
-                        {{govukTag({
-                          html: "Invite sent ",
-                          classes: "govuk-tag--yellow"
-                          })}}
-                      </td>
-                       <td class="govuk-table__cell">
-                         <a href="authentication-code-cancel" class="govuk-link">Cancel<span class="govuk-visually-hidden"> hannah.salt@gmail.com </span> </a>
-                       </td>
-                       <td class="govuk-table__cell">
-                         <a href="manage-authorised-people-email-resent" class="govuk-link">Resend email<span class="govuk-visually-hidden">to hannah.salt@gmail.com </span> </a>
-                       </td>
-                     </tr>
-
-                     <!-- Member 2 -->
-                     <tr class="govuk-table__row">
-                       <td class="govuk-table__header">indigo@outlook.com</th>
-                       
-                       <td class="govuk-table__cell">	
-                        Yes
-                      </td>
-                      <td class="govuk-table__cell">	
-                        Yes
-                      </td>
-                      <td class="govuk-table__cell">	
-                        {{govukTag({
-                          text: "Confirmed",
-                          classes: "govuk-tag--green"
-                          })}}
-                      </td>
-                       <td class="govuk-table__cell">
-                         <a href="authentication-code-remove" class="govuk-link">Remove <span class="govuk-visually-hidden">indigo@outlook.com </span> </a>
-                       </td>
-                       <td scope="row" class="govuk-table__cell"> </td>
-                       
-                     </tr>
-
-                      <!-- Member 3 -->
-                     <tr class="govuk-table__row">
-                       <td class="govuk-table__header">	james-morris@accounting.com</th>
-     
-                       
-
-                         <td scope="row" class="govuk-table__cell">No </td>
-                         <td scope="row" class="govuk-table__cell"> Yes</td>
-                         <td class="govuk-table__cell">	
-                          {{govukTag({
-                            html: "invite sent",
-                            classes: "govuk-tag--yellow"
-                            })}}
-                          </td>
-         
-                       <td class="govuk-table__cell">
-                         <a href="authentication-code-cancel" class="govuk-link">Cancel <span class="govuk-visually-hidden"> james-morris@accounting.com </span> </a>
-                       </td>
-                       <td class="govuk-table__cell">
-                         <a href="manage-authorised-people-email-resent" class="govuk-link">Resend email <span class="govuk-visually-hidden"> to james-morris@accounting.com  </span> </a>
-                       </td>
-                     </tr>
-
-                      <!-- Member 4 -->
-         
-                     <tr class="govuk-table__row">
-                       <td class="govuk-table__header">	Laura Thomas <br> laurathomas@huntergroup.com</th>
-                  
-                       <td scope="row" class="govuk-table__cell"> Yes </td>
-                       <td scope="row" class="govuk-table__cell">No </td>
-                       <td class="govuk-table__cell">	
-                        {{govukTag({
-                          text: "Confirmed",
-                          classes: "govuk-tag--green"
-                          })}}
-                          </td>
-
-                       <td class="govuk-table__cell">
-                        <a href="authentication-code-remove" class="govuk-link">Remove <span class="govuk-visually-hidden">laurathomas@huntergroup.com </span> </a>
+                    <tr class="govuk-table__row">
+                     <td class="govuk-table__header"> James Morris <br> james.morris@gmail.com</th>
+                   
+    
+                     <td class="govuk-table__cell">
+                      Yes
+                     </td>
+                     <td class="govuk-table__cell">	
+                      {{govukTag({
+                        text: "Confirmed",
+                        classes: "govuk-tag--green"
+                        })}}
+                    </td>
+                      <td class="govuk-table__cell">
+                        <a href="authentication-code-remove" class="govuk-link">Remove <span class="govuk-visually-hidden">james.morris@gmail.com</span> </a>
                       </td>
                       <td scope="row" class="govuk-table__cell"> </td>
-                     </tr>
-                     
-                   </tbody>
+                   </tr>
+                 </tbody>
+                </table>
+       
+           </div>
+
+ 
+
+           <!-- Admin users -->
+           <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="admin">
+             <h2 class="govuk-heading-l">Admin</h2>
+             
+             <p class="govuk-body">You have no standard users.</p>
+
+
+           </div>
+
+           <!-- Standard users -->
+           <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="standard">
+             <h2 class="govuk-heading-l">Standard</h2>
+             <table class="govuk-table">
+               <thead class="govuk-table__head">
+                 <tr class="govuk-table__row">
+                   <th scope="col" class="govuk-table__header">Account owner details <span> <p class="govuk-body-s">Account name shown if provided</p></span> </th> 
+
+             <!-- UNDER REVIEW       <th scope="col" class="govuk-table__header">File for authorised agent</th> -->
+                   <th scope="col" class="govuk-table__header">Verify someone’s identity</th>
+                   <th scope="col" class="govuk-table__header">Status</th>
+                   <th scope="col" class="govuk-table__header"> <span class="govuk-visually-hidden"> Cancel or remove </span></th>
+                   <th scope="col" class="govuk-table__header"> <span class="govuk-visually-hidden"> Resend email invitation</span></th>
+                 </tr>
+               </thead>
+               <tbody class="govuk-table__body">
+                 <tr class="govuk-table__row">
+                   <td class="govuk-table__header">  d.jones@example.com</th>
+                 
+  
+                   <td class="govuk-table__cell">
+                    No
+                   </td>
+                   <td class="govuk-table__cell">
+                    {{govukTag({
+                      html: "invite sent",
+                      classes: "govuk-tag--yellow"
+                      })}}
+                  </td>
+                   <td class="govuk-table__cell">
+                     <a href="authentication-code-cancel" class="govuk-link">Cancel<span class="govuk-visually-hidden"> d.jones@example.com </span> </a>
+                   </td>
+                   <td class="govuk-table__cell">
+                     <a href="manage-authorised-people-email-resent" class="govuk-link">Resend email<span class="govuk-visually-hidden">to d.jones@example.com</span> </a>
+                   </td>
+                 </tr>
+               </tbody>
+                    
                  </table>
         
 
