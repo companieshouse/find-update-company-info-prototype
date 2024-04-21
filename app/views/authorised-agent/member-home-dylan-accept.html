@@ -24,31 +24,14 @@
   <div class="govuk-grid-row">
 
 
-    {% set html %}
-    <p class="govuk-notification-banner__heading">
-      d.jones@example.com is no longer a standard user for MORRIS ACCOUNTING LTD.
-      <p class="govuk-body">We’ve sent an email to <strong>d.jones@example.com</strong> and the account owners to let them know.</p>
-
-      {% endset %}
-
-    {{ govukNotificationBanner({
-      html: html,
-      type: 'success'
-    }) }}
-
+  
 
      <div class="govuk-grid-column-full">
-      <span class="govuk-caption-l">MORRIS ACCOUNTING LTD <h1 class="govuk-heading-l">Manage people</h1></span>
+      <span class="govuk-caption-l">MORRIS ACCOUNTING LTD (0122239)<h1 class="govuk-heading-l">Manage people</h1></span>
 
 
 
-           {{ govukButton({
-              text: "Add a person",
-              href:"add-a-member"
-            }) }}
-
-          <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
-
+ 
 
 
           <div class="govuk-tabs govuk-!-padding-top-6" data-module="govuk-tabs">
@@ -87,9 +70,7 @@
                  <!-- UNDER REVIEW       <th scope="col" class="govuk-table__header">File for authorised agent</th> -->
                        <th scope="col" class="govuk-table__header">Verify someone’s identity</th>
                        <th scope="col" class="govuk-table__header">Status</th>
-                       <th scope="col" class="govuk-table__header"> <span class="govuk-visually-hidden"> Cancel or remove </span></th>
-                       <th scope="col" class="govuk-table__header"> <span class="govuk-visually-hidden"> Resend email invitation</span></th>
-                     </tr>
+                       
                    </thead>
                    <tbody class="govuk-table__body">
 
@@ -107,10 +88,7 @@
                          classes: "govuk-tag--green"
                          })}}
                      </td>
-                       <td class="govuk-table__cell">
-                         <a href="authentication-code-remove" class="govuk-link">Remove <span class="govuk-visually-hidden">james.morris@gmail.com</span> </a>
-                       </td>
-                       <td scope="row" class="govuk-table__cell"> </td>
+                      
                     </tr>
                   </tbody>
                  </table>
@@ -122,25 +100,82 @@
             <!-- Admin users -->
             <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="admin">
               <h2 class="govuk-heading-l">Admin</h2>
-              
-              <p class="govuk-body">You have no standard users.</p>
+              <table class="govuk-table">
+                <thead class="govuk-table__head">
+                  <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header">Account owner details <span> <p class="govuk-body-s">Account name shown if provided</p></span> </th> 
+
+              <!-- UNDER REVIEW       <th scope="col" class="govuk-table__header">File for authorised agent</th> -->
+                    <th scope="col" class="govuk-table__header">Verify someone’s identity</th>
+                    <th scope="col" class="govuk-table__header">Status</th>
+                    
+                </thead>
+                <tbody class="govuk-table__body">
+                  
+                       <!-- Member 1 -->
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__header">  k.williams@example.com</th>
+                    
+     
+                      <td class="govuk-table__cell">
+                       Yes
+                      </td>
+                      <td class="govuk-table__cell">
+                       {{govukTag({
+                         html: "invite sent",
+                         classes: "govuk-tag--yellow"
+                         })}}
+                     </td>
+                
+                    </tr>
+                </tbody>
+              </table>
             </div>
 
             <!-- Standard users -->
             <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="standard">
               <h2 class="govuk-heading-l">Standard</h2>
-              
-              <p class="govuk-body">You have no standard users.</p>
-              
+              <table class="govuk-table">
+                <thead class="govuk-table__head">
+                  <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header">Account owner details <span> <p class="govuk-body-s">Account name shown if provided</p></span> </th> 
+
+              <!-- UNDER REVIEW       <th scope="col" class="govuk-table__header">File for authorised agent</th> -->
+                    <th scope="col" class="govuk-table__header">Verify someone’s identity</th>
+                    <th scope="col" class="govuk-table__header">Status</th>
+                    
+                </thead>
+                <tbody class="govuk-table__body">
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__header">  d.jones@example.com</th>
+                  
+   
+                    <td class="govuk-table__cell">
+                     No
+                    </td>
+                    <td class="govuk-table__cell">	
+                      {{govukTag({
+                        text: "Confirmed",
+                        classes: "govuk-tag--green"
+                        })}}
+                    </td>
+                      
+
+                  </tr>
+                </tbody>
+              </table>
             </div>
             
           </div>
+
+  
+
+
+           
+
+
 </div>
-</div>
+
 
 
 {% endblock %}
-
-
-
-

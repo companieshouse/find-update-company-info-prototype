@@ -686,12 +686,16 @@
       <div class="govuk-tabs__panel" id="authorised-agent">
 
         <!-- Home -->
-        <h2 class="govuk-heading-m">Authorised agent  <strong class="govuk-tag govuk-tag--pink">
-          Content TBC
-        </strong></h2>
+        <h2 class="govuk-heading-m">Authorised agent </h2>
 
         <h3 class="govuk-heading-s">Accepted Authorised agent registration email and sign in 
         </h3>
+
+        {{ govukButton({
+          text: "Registration acceptance email",
+          href:"../authorised-agent/email-acsp-registration-accepted-release-1"
+        }) }}
+
          <ul class="govuk-list govuk-list--bullet">
            <li>
              <a href="../authorised-agent/email-acsp-registration-accepted-release-1">Registration acceptance email </a>
@@ -796,9 +800,14 @@
           <h3 class="govuk-heading-s">Confirm or decline authorised member email request
           </h3>
 
+          {{ govukButton({
+            text: "Email - You have been added as a standard for an authorised agent",
+            href:"../authorised-agent/email-confirm-you-are-a-member"
+          }) }}
+
           <ul class="govuk-list govuk-list--bullet">
             <li>
-              <a href="../authorised-agent/email-confirm-you-are-a-member">Email - You have been added as an admin for an authorised agent</a>
+              <a href="../authorised-agent/email-confirm-you-are-a-member">Email - You have been added as a standard user for an authorised agent</a>
             </li>
             <li>
               <a href="../authorised-agent/create-or-sign-in-invite">Create or sign in to GOV.UK One Login (follow the sign in journey)</a> 
@@ -822,11 +831,21 @@
             <li>
               <a href="../authorised-agent/member-invitations-decline"> Decline - becoming a member </a>
             </li>
+            <li>
+              <a href="../authorised-agent/member-home-dylan-accept"> Standard user view of manage people </a>
+            </li>
           </ul>
 
           <!-- Confirm or decline authorised member email request -->
           <h3 class="govuk-heading-s">Remove a member
            </h3>
+
+           
+
+           {{ govukButton({
+            text: "Cancel admin user and then remove standard user",
+            href:"../authorised-agent/member-home-remove-cancel"
+          }) }}
  
            <ul class="govuk-list govuk-list--bullet">
             <li>

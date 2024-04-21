@@ -20,9 +20,9 @@
 
         {% set html %}
         <h3 class="govuk-notification-banner__heading">
-          You've cancelled adding a standard user
+          You've cancelled adding an admin user
         </h3>
-        <p class="govuk-body">You have successfully cancelled the invite to add <span class='govuk-body govuk-!-font-weight-bold'>k.williams@example.com</span> as a standard user for MORRIS ACCOUNTING LTD.</p>
+        <p class="govuk-body">You have successfully cancelled the invite to add <span class='govuk-body govuk-!-font-weight-bold'>k.williams@example.com</span> as an admin user for MORRIS ACCOUNTING LTD.</p>
         <p class="govuk-body">We’ve sent an email to k.williams@example.com and the account owners to let them know.</p>
       {% endset %}
 
@@ -149,18 +149,15 @@
                    <td class="govuk-table__cell">
                     No
                    </td>
-                   <td class="govuk-table__cell">
+                   <td class="govuk-table__cell">	
                     {{govukTag({
-                      html: "invite sent",
-                      classes: "govuk-tag--yellow"
+                      text: "Confirmed",
+                      classes: "govuk-tag--green"
                       })}}
                   </td>
-                   <td class="govuk-table__cell">
-                     <a href="authentication-code-cancel" class="govuk-link">Cancel<span class="govuk-visually-hidden"> d.jones@example.com </span> </a>
-                   </td>
-                   <td class="govuk-table__cell">
-                     <a href="manage-authorised-people-email-resent" class="govuk-link">Resend email<span class="govuk-visually-hidden">to d.jones@example.com</span> </a>
-                   </td>
+                    <td class="govuk-table__cell">
+                      <a href="remove-member" class="govuk-link">Remove <span class="govuk-visually-hidden">james.morris@gmail.com</span> </a>
+                    </td>
                  </tr>
                </tbody>
                     
