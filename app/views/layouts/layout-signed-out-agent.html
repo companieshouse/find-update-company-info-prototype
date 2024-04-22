@@ -1,6 +1,7 @@
 {#- We can't mount GOV.UK Frontend's assets at root as it's done automatically by the extensions framework. -#}
 {%- set assetPath = '/govuk/assets' -%}
 
+
 {% extends "govuk/template.njk" %}
 
 {% from "govuk/components/accordion/macro.njk"           import govukAccordion %}
@@ -33,6 +34,11 @@
 
 {% block head %}
   {% include "includes/head-current.html" %}
+{% endblock %}
+
+{% block scripts %}
+  {{ super() }}
+  <script src="/public/javascripts/jquery-1.11.3.js"></script>
 {% endblock %}
 
 {% block pageTitle %}
