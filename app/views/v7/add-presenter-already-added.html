@@ -1,0 +1,39 @@
+{% extends "layouts/layout-chs-signed-out.html" %}
+
+{% block pageTitle %}
+  Your companies - What is the authorised person's email address? - Companies House WebFiling account - GOV.UK
+{% endblock %}
+
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href:"user-account/company-added"
+  }) }}
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-width-container">
+
+<div class="govuk-grid-row">
+
+
+      <div class="govuk-grid-column-two-thirds">
+
+      <span class="govuk-caption-l">FLOWERS LIMITED (18882777)</span>
+        <h1 class="govuk-heading-l">example@gmail.com has been already added </h1>
+        <p class="govuk-body govuk-!-font-weight-regular">Add content here  </p>
+
+
+
+
+        </div>
+
+    </div>
+</div>
+
+
+
+{% endblock %}

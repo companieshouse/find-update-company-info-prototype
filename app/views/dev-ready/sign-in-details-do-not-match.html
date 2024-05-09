@@ -1,10 +1,15 @@
-{% extends "layouts/main.html" %}
+{% extends "layouts/layout_unbranded-with-banner.html" %}
 <!-- Overwrite suerfice name -->
 
 
 {% block pageTitle %}
   {{ serviceName }} – Prototype
 {% endblock %}
+
+
+{% set serviceName %}
+ 
+{% endset %}
 
 {% block beforeContent %}
 
