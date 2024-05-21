@@ -1,0 +1,53 @@
+{% extends "layouts/layout_unbranded-with-banner.html" %}
+
+{% block pageTitle %}
+  You’ve signed in to your GOV.UK One Login – GOV.UK One Login prototype
+{% endblock %}
+{% set serviceName %}
+  
+{% endset%}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      
+
+      {{ govukRadios({
+        name: "next",
+        fieldset: {
+          legend: {
+            text: "What would you like to do next?",
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--l"
+          }
+        },
+        items: [
+          {
+            value: "england",
+            text: "Search for a company and order a certificate"
+          },
+          {
+            value: "scotland",
+            text: "Apply to strike off and dissolve a company"
+          }
+        ]
+      }) }}
+
+
+      {{ govukButton({
+        text: "Continue"
+      }) }}
+      
+
+
+
+    </div>
+  </div>
+
+{% endblock %}
