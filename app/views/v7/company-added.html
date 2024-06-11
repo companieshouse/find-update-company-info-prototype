@@ -47,26 +47,28 @@
                 <thead class="govuk-table__head">
                   <tr class="govuk-table__row">
                     <th scope="col" class="govuk-table__header">Company name</th>
-                    <th scope="col" class="govuk-table__header">Company number</th>
-                    <th scope="col" class="govuk-table__header">People digitally authorised to file online</th>
+                    <th scope="col" class="govuk-table__header">Company<br> number</th>
+                    <th scope="col" class="govuk-table__header">Status</th>
+                    <th scope="col" class="govuk-table__header">People digitally authorised <br>to file online</th>
+                    <th scope="col" class="govuk-table__header">Remove<br> company</th>
                   </tr>
                 </thead>
                 <tbody class="govuk-table__body">
 
-                  <!-- company added - Flowers limited-->
+                  
 
-                  {% if (data['company-added-1'] == true) %}
 
                   <tr class="govuk-table__row">
                     <th scope="row" class="govuk-table__header">FLOWERS LIMITED</th>
                     <td class="govuk-table__cell">18882777</td>
-                    <td class="govuk-table__cell"><a href="manage-authorised-people" class="govuk-link govuk-link--no-visited-state">View and manage</a></td>
+                    <td class="govuk-table__cell"><strong class="govuk-tag">
+                      Active
+                    </strong></td>
+                    <td class="govuk-table__cell"><a href="manage-authorised-people" class="govuk-link govuk-link--no-visited-state">View and manage<span class="govuk-visually-hidden"> people digitally authorised to file online for FLOWERS LIMITED</span></a></td>
+                    <td class="govuk-table__cell"><a href="manage-authorised-people" class="govuk-link govuk-link--no-visited-state">Remove<span class="govuk-visually-hidden"> FLOWERS LIMITED</span> </a></td>
                   </tr>
 
-                  {% else %}
-
                   
-                  {% endif %}
 
                  <!--  -->
 
