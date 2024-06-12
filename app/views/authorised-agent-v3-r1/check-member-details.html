@@ -1,0 +1,71 @@
+{% extends "layouts/layout-signed-out-agent.html" %}
+
+
+{% block pageTitle %}
+Check the details before we send the email  – {{ serviceName }} – GOV.UK
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-width-container">
+  <div class="govuk-grid-row">
+
+     <div class="govuk-grid-column-two-thirds">
+      <span class="govuk-caption-l">MORRIS ACCOUNTING LTD (0122239)</span>
+          <h1 class="govuk-heading-l">Check the details before we send the email</h1> 
+
+          {{ govukSummaryList({
+            rows: [
+              {
+                key: {
+                  text: "Name"
+                },
+                value: {
+                  text: "Kate Williams"
+                }
+              },
+              {
+                key: {
+                  text: "Email address"
+                },
+                value: {
+                  text: "k.williams@example.com"
+                }
+              },
+              {
+                key: {
+                  text: "Role"
+                },
+                value: {
+                  html: "<strong class='govuk-tag govuk-tag--turquoise'>Admin</strong>"
+                }
+              },
+              {
+                key: {
+                  text: "Can they verify someone's identity?"
+                },
+                value: {
+                  html: "Yes"
+                }
+              }
+            ]
+          }) }}
+
+            {{ govukButton({
+              text: "Confirm and send email",
+              href:"member-home-member-added"
+            }) }}
+          
+            <p class="govuk-body"> <a class="govuk-link" href="account-add-acsp-members">Change details</a> </p>
+
+        
+          
+
+          
+
+</div>
+</div>
+
+
+{% endblock %}

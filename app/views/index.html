@@ -26,6 +26,54 @@
     <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
 
+    <h2 class="govuk-heading-m govuk-!-padding-top-4">Authorised agent
+       </h2>
+          
+      
+      
+          
+          {{ govukSummaryList({
+            card: {
+              title: {
+                html: "Authorised agent"
+              },
+              actions: {
+                items: [
+                  {
+                    
+                  }
+                ]
+              }
+            },
+            rows: [
+            {
+              key: {
+                text: "Version 3 - release 1"
+              },
+              value: {
+                html: "<strong class='govuk-tag govuk-tag--blue'>
+                 In progress
+                </strong> <br>
+                <a href='/authorised-agent-v3-r1/index' class='govuk-link'>Prototype version 3 - release 1</a>
+                "
+              }
+            },
+              {
+                key: {
+                  text: "Version 3 - release 2"
+                },
+                value: {
+                  html: "<strong class='govuk-tag govuk-tag--blue'>
+                    In progress
+                   </strong> <br>
+                   <a href='/authorised-agent-v3-r2/index' class='govuk-link'>Prototype version 3 - release 2</a>"
+                }
+              }
+            ]
+          }) }}
+      
+
+
     <h2 class="govuk-heading-m govuk-!-padding-top-4">Dev ready version
 <br> Private Beta - Migrating CHS accounts to GOV.UK One Login </h2>
     

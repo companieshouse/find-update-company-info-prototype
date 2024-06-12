@@ -1,0 +1,145 @@
+{% extends "layouts/layout-signed-out-agent.html" %}
+
+{% block pageTitle %}
+  Your companies
+{% endblock %}
+
+{% set serviceName %}
+ 
+{% endset %}
+
+
+{% block content %}
+
+<div class="govuk-width-container">
+  <div class="govuk-grid-row">
+
+     <div class="govuk-grid-column-two-thirds">
+       <span class="govuk-caption-l">MORRIS ACCOUNTING LTD (0122239)</span>
+          <h1 class="govuk-heading-l">Add a person</h1> 
+
+              {{ govukInput({
+            label: {
+              text: "Full name (optional)"
+            },
+            id: "full-name",
+            name: "full-name",
+            autocomplete: "name",
+            spellcheck: false
+          }) }}
+
+          {{ govukInput({
+            label: {
+              text: "Email address"
+            },
+            hint: {
+              text: "We’ll send them an email with a link to confirm they want to be added."
+            },
+            id: "email",
+            name: "email",
+            type: "email",
+            autocomplete: "email",
+            spellcheck: false
+          }) }}
+
+
+          {{ govukRadios({
+            name: "role",
+            fieldset: {
+              legend: {
+                text: "What is their role?",
+                classes: "govuk-fieldset__legend--m govuk-!-static-padding-top-3"
+              }
+            },
+            items: [
+              {
+                value: "super-admin",
+                html: "<span class='govuk-body govuk-!-font-weight-bold'> Account owner</span>  <p class='govuk-body govuk-!-static-padding-top-2'> They will be able to make changes to the authorised agent's details. They can add and remove: </p>
+                <ul>
+                  <li>account owners</li>
+                  <li>admin users</li> 
+                  <li>standard users</li>
+                  </ul>"
+              },
+              {
+                value: "admin",
+                html: "<span class='govuk-!-font-weight-bold govuk-!-padding-bottom-0'>Admin user</span> <p class='govuk-body govuk-!-static-padding-top-2'> They will be able to add and remove: </p>
+                <ul>
+                  <li>admin users</li> 
+                  <li>standard users</li>
+                  </ul>"
+              },
+              {
+                value: "standard-user",
+                html: "<span class='govuk-!-font-weight-bold govuk-!-padding-bottom-0'> Standard user </span> <p class='govuk-body govuk-!-static-padding-top-2'> They will not be able to add or remove other users.</p>"
+              }
+            ]
+          }) }}
+
+
+
+{{ govukInsetText({
+  text: "From XX DATE, people who have been added to this account will be able to file as an authorised agent."
+}) }}
+
+         <!--- <details class="govuk-details" data-module="govuk-details">
+            <summary class="govuk-details__summary">
+              <span class="govuk-details__summary-text">
+                What services can members access?
+              </span>
+            </summary>
+            <div class="govuk-details__text">
+              <p>Members of an authorised agent can:</p>
+          
+          <ul class="govuk-list govuk-list--bullet">
+            <li>form companies and registrable partnerships for clients </li>
+            <li>file on behalf of clients </li>
+            <li>verify someone’s identity </li>
+          </ul>
+            <p>They will only be able to add or remove other members if you add them as an admin. </p>
+            </div>
+          </details> -->
+
+
+          <!-- form companies and registrable partnerships for clients -->
+       <!--   {{ govukCheckboxes({
+            name: "service-access",
+            fieldset: {
+              legend: {
+                text: "What services do they need to use?",
+                classes: "govuk-fieldset__legend--m govuk-!-static-padding-top-3"
+              }
+            },
+            hint: {
+              text: "Select all that apply."
+            },
+            items: [
+              {
+                value: "filings",
+                text: "File on behalf of clients"
+              },
+              {
+                value: "farm",
+                text: "Verify someone’s identity"
+              }
+            ]
+          }) }} -->
+
+ 
+
+
+
+           {{ govukButton({
+              text: "Continue",
+              href:"check-member-details-2"
+            }) }}
+
+
+
+
+
+</div>
+</div>
+
+
+{% endblock %}
