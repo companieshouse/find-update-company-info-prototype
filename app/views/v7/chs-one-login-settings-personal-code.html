@@ -89,6 +89,8 @@
             <dd class="govuk-summary-list__value">
               {% if (data['display-name'] === "") %}
 
+              Hannah Salt
+
               {% else %}
               
               {{data['display-name']}} 
@@ -136,9 +138,16 @@
               **************
             </dd>
             <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">
+              <li class="govuk-summary-list__actions-list-item">
+                <a class="govuk-link" href="#">Show<span class="govuk-visually-hidden"> personal code</span></a>
+              </li>
+              <li class="govuk-summary-list__actions-list-item">
+                <a class="govuk-link" href="#">Copy<span class="govuk-visually-hidden"> personal code</span></a>
+              </li>
+
+            <!--  <a class="govuk-link" href="#">
                 Show<span class="govuk-visually-hidden"> Show personal code</span>
-              </a>
+              </a>--> 
             </dd>
           </div> 
         </dl>
