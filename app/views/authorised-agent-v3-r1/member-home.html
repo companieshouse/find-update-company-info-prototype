@@ -29,7 +29,7 @@
 
 
            {{ govukButton({
-              text: "Add a person",
+              text: "Add a user",
               href:"add-a-member"
             }) }}
 
@@ -75,7 +75,7 @@
 
                  <!-- UNDER REVIEW       <th scope="col" class="govuk-table__header">File for authorised agent</th> -->
                        <th scope="col" class="govuk-table__header">Email address</th>
-                       <th scope="col" class="govuk-table__header">Status</th>
+                      <!--  *R2* <th scope="col" class="govuk-table__header">Status</th> -->
                        <th scope="col" class="govuk-table__header"> <span class="govuk-visually-hidden"> Remove </span></th>
                      </tr>
                    </thead>
@@ -89,12 +89,12 @@
                       <td class="govuk-table__cell">
                        james.morris@gmail.com
                       </td>
-                      <td class="govuk-table__cell">	
+                     <!--  *R2*  <td class="govuk-table__cell">	
                        {{govukTag({
                          text: "Added",
                          classes: "govuk-tag--green"
                          })}}
-                     </td>
+                     </td> -->
                        <td class="govuk-table__cell">
                          <a href="" class="govuk-link">Remove <span class="govuk-visually-hidden">james.morris@gmail.com</span> </a>
                        </td>

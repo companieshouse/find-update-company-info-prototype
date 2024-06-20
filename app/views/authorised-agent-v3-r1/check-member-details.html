@@ -5,6 +5,12 @@
 Check the details before we send the email  – {{ serviceName }} – GOV.UK
 {% endblock %}
 
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back"
+  }) }}
+{% endblock %}
+
 
 {% block content %}
 

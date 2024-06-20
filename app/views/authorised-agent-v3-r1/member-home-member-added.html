@@ -39,12 +39,12 @@
 
 
      <div class="govuk-grid-column-full">
-      <span class="govuk-caption-l">MORRIS ACCOUNTING LTD (0122239)<h1 class="govuk-heading-l">Manage people</h1></span>
+      <span class="govuk-caption-l">MORRIS ACCOUNTING LTD (0122239)<h1 class="govuk-heading-l">Manage users</h1></span>
 
 
 
            {{ govukButton({
-              text: "Add a person",
+              text: "Add a user",
               href:"add-a-member-2"
             }) }}
 
@@ -83,30 +83,29 @@
                   <table class="govuk-table">
                    <thead class="govuk-table__head">
                      <tr class="govuk-table__row">
-                       <th scope="col" class="govuk-table__header">User's name</th> 
-
-                 <!-- UNDER REVIEW       <th scope="col" class="govuk-table__header">File for authorised agent</th> -->
-                       <th scope="col" class="govuk-table__header">Email address</th>
-                       <th scope="col" class="govuk-table__header">Status</th>
-                       <th scope="col" class="govuk-table__header"> <span class="govuk-visually-hidden"> Remove </span></th>
+                      <th scope="col" class="govuk-table__header">Email address</th>
+                      <th scope="col" class="govuk-table__header">User's name</th> 
+                   <!-- *R2*    <th scope="col" class="govuk-table__header">Status</th> -->
+                      <th scope="col" class="govuk-table__header"> Remove user <span class="govuk-visually-hidden"> Remove </span></th>
                      </tr>
                    </thead>
                    <tbody class="govuk-table__body">
 
                      <!-- Member 1 -->
                      <tr class="govuk-table__row">
-                      <td class="govuk-table__header"> James Morris </th>
+                      <td class="govuk-table__header">
+                        james.morris@gmail.com </th>
                     
      
                       <td class="govuk-table__cell">
-                       james.morris@gmail.com
+                        James Morris 
                       </td>
-                      <td class="govuk-table__cell">	
+                    <!-- *R2*   <td class="govuk-table__cell">	
                        {{govukTag({
                          text: "Added",
                          classes: "govuk-tag--green"
                          })}}
-                     </td>
+                     </td> -->
                        <td class="govuk-table__cell">
                          <a href="" class="govuk-link">Remove <span class="govuk-visually-hidden">james.morris@gmail.com</span> </a>
                        </td>
@@ -125,30 +124,33 @@
               <table class="govuk-table">
                 <thead class="govuk-table__head">
                   <tr class="govuk-table__row">
-                    <th scope="col" class="govuk-table__header">User's name</th> 
+                    
 
-              <!-- UNDER REVIEW       <th scope="col" class="govuk-table__header">File for authorised agent</th> -->
+  
                     <th scope="col" class="govuk-table__header">Email address</th>
-                    <th scope="col" class="govuk-table__header">Status</th>
-                    <th scope="col" class="govuk-table__header"> <span class="govuk-visually-hidden"> Remove </span></th>
+                    <th scope="col" class="govuk-table__header">User's name</th> 
+                 <!-- *R2*    <th scope="col" class="govuk-table__header">Status</th> -->
+                    <th scope="col" class="govuk-table__header"> Remove user <span class="govuk-visually-hidden"> Remove </span></th>
                   </tr>
                 </thead>
                 <tbody class="govuk-table__body">
                   
                        <!-- Member 1 -->
                     <tr class="govuk-table__row">
-                      <td class="govuk-table__header"></th>
                     
-     
-                      <td class="govuk-table__cell">
+                      <td class="govuk-table__header">
                        k.williams@example.com
                       </td>
                       <td class="govuk-table__cell">
+                        Not provided
+                      </th>
+
+                    <!-- *R2*  <td class="govuk-table__cell">
                        {{govukTag({
                          text: "Added",
                          classes: "govuk-tag--green"
                          })}}
-                     </td>
+                     </td>--> 
                       <td class="govuk-table__cell">
                         <a href="remove-member" class="govuk-link">Remove<span class="govuk-visually-hidden"> hannah.salt@gmail.com </span> </a>
                       </td>

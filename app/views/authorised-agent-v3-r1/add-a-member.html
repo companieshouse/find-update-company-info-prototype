@@ -8,6 +8,12 @@
  
 {% endset %}
 
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Return to manage users"
+  }) }}
+{% endblock %}
+
 
 {% block content %}
 
@@ -16,15 +22,15 @@
 
      <div class="govuk-grid-column-two-thirds">
        <span class="govuk-caption-l">MORRIS ACCOUNTING LTD (0122239)</span>
-          <h1 class="govuk-heading-l">Add a person</h1> 
+          <h1 class="govuk-heading-l">Add a user</h1> 
 
 
 
 <div class="govuk-inset-text">
-  <p>They will need to use their GOV.UK One Login details to sign in. If they have not set up a GOV.UK One Login, they must do this before you add them. <a href="">Create a GOV.UK One Login</a>. </p>
+  <p class="govuk-body">They will need to use their GOV.UK One Login details to sign in. If they have not set up a GOV.UK One Login, they must do this before you add them. <a href="">Create a GOV.UK One Login</a>. </p>
 </div>
 
-          <p>In the future, users who have been added to this account will be able to: </p>
+<p class="govuk-body">In the future, users who have been added to this account will be able to: </p>
           <ul class="govuk-list govuk-list--bullet govuk-!-margin-bottom-6">
             <li>file with Companies House</li>
             <li>form companies and registrable partnerships </li>

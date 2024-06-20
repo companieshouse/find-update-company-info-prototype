@@ -5,6 +5,12 @@
 Check the details before we send the email  – {{ serviceName }} – GOV.UK
 {% endblock %}
 
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back"
+  }) }}
+{% endblock %}
+
 
 {% block content %}
 
@@ -13,7 +19,7 @@ Check the details before we send the email  – {{ serviceName }} – GOV.UK
 
      <div class="govuk-grid-column-two-thirds">
       <span class="govuk-caption-l">MORRIS ACCOUNTING LTD (0122239)</span>
-          <h1 class="govuk-heading-l">Check the details before we send the email</h1> 
+      <h1 class="govuk-heading-l">Check the details before you add the user</h1> 
 
           {{ govukSummaryList({
             rows: [
@@ -40,20 +46,12 @@ Check the details before we send the email  – {{ serviceName }} – GOV.UK
                 value: {
                   html: "<strong class='govuk-tag govuk-tag--yellow'>Standard</strong>"
                 }
-              },
-              {
-                key: {
-                  text: "Can they verify someone's identity?"
-                },
-                value: {
-                  html: "No"
-                }
               }
             ]
           }) }}
 
             {{ govukButton({
-              text: "Confirm and send email",
+              text: "Confirm and add user",
               href:"member-home-member-added-2"
             }) }}
           
