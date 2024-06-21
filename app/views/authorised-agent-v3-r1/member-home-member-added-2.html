@@ -24,11 +24,15 @@
   <div class="govuk-grid-row">
 
 
+
+
+
+
     {% set html %}
     <h3 class="govuk-notification-banner__heading">
-      Email sent
+      User added
     </h3>
-    <p class="govuk-body">We've sent an email to <strong>d.jones@example.com</strong> inviting them to be a standard user for MORRIS ACCOUNTING LTD (0122239).</p>
+    <p class="govuk-body">You have added <strong>d.jones@example.com</strong> as a standard user for MORRIS ACCOUNTING LTD (0122239).</p>
   {% endset %}
 
     {{ govukNotificationBanner({
@@ -82,31 +86,27 @@
                   <table class="govuk-table">
                    <thead class="govuk-table__head">
                      <tr class="govuk-table__row">
-                       <th scope="col" class="govuk-table__header">Account owner details <span> <p class="govuk-body-s">Account name shown if provided</p></span> </th> 
+                       <th scope="col" class="govuk-table__header">Email address</th> 
 
                  <!-- UNDER REVIEW       <th scope="col" class="govuk-table__header">File for authorised agent</th> -->
-                       <th scope="col" class="govuk-table__header">Verify someone’s identity</th>
-                       <th scope="col" class="govuk-table__header">Status</th>
-                       <th scope="col" class="govuk-table__header"> <span class="govuk-visually-hidden"> Cancel or remove </span></th>
-                       <th scope="col" class="govuk-table__header"> <span class="govuk-visually-hidden"> Resend email invitation</span></th>
+                       
+                 
+                       <th scope="col" class="govuk-table__header">User's name</th>
+                       <th scope="col" class="govuk-table__header"> Remove user</th>
+                       
                      </tr>
                    </thead>
                    <tbody class="govuk-table__body">
 
                      <!-- Member 1 -->
                      <tr class="govuk-table__row">
-                      <td class="govuk-table__header"> James Morris <br> james.morris@gmail.com</th>
+                      <td class="govuk-table__header">  james.morris@gmail.com</th>
                     
      
                       <td class="govuk-table__cell">
-                       Yes
+                        James Morris 
                       </td>
-                      <td class="govuk-table__cell">	
-                       {{govukTag({
-                         text: "Confirmed",
-                         classes: "govuk-tag--green"
-                         })}}
-                     </td>
+                     
                        <td class="govuk-table__cell">
                          <a href="" class="govuk-link">Remove <span class="govuk-visually-hidden">james.morris@gmail.com</span> </a>
                        </td>
@@ -121,17 +121,16 @@
 
             <!-- Admin users -->
             <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="admin">
-              <h2 class="govuk-heading-l">Admin</h2>
+              <h2 class="govuk-heading-l">Administrators</h2>
               <table class="govuk-table">
                 <thead class="govuk-table__head">
                   <tr class="govuk-table__row">
-                    <th scope="col" class="govuk-table__header">Account owner details <span> <p class="govuk-body-s">Account name shown if provided</p></span> </th> 
+                    <th scope="col" class="govuk-table__header">Email address </th> 
 
               <!-- UNDER REVIEW       <th scope="col" class="govuk-table__header">File for authorised agent</th> -->
-                    <th scope="col" class="govuk-table__header">Verify someone’s identity</th>
-                    <th scope="col" class="govuk-table__header">Status</th>
-                    <th scope="col" class="govuk-table__header"> <span class="govuk-visually-hidden"> Cancel or remove </span></th>
-                    <th scope="col" class="govuk-table__header"> <span class="govuk-visually-hidden"> Resend email invitation</span></th>
+                    <th scope="col" class="govuk-table__header">User's name</th>
+                    <th scope="col" class="govuk-table__header">Remove user</th>
+                    
                   </tr>
                 </thead>
                 <tbody class="govuk-table__body">
@@ -142,20 +141,13 @@
                     
      
                       <td class="govuk-table__cell">
-                       Yes
+                       Not provided
                       </td>
                       <td class="govuk-table__cell">
-                       {{govukTag({
-                         html: "invite sent",
-                         classes: "govuk-tag--yellow"
-                         })}}
-                     </td>
-                      <td class="govuk-table__cell">
-                        <a href="" class="govuk-link">Cancel<span class="govuk-visually-hidden"> hannah.salt@gmail.com </span> </a>
+                        <a href="" class="govuk-link">Remove <span class="govuk-visually-hidden">k.williams@example.com</span> </a>
                       </td>
-                      <td class="govuk-table__cell">
-                        <a href="" class="govuk-link">Resend email<span class="govuk-visually-hidden">to hannah.salt@gmail.com </span> </a>
-                      </td>
+                      
+                      
                     </tr>
                 </tbody>
               </table>
@@ -163,17 +155,16 @@
 
             <!-- Standard users -->
             <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="standard">
-              <h2 class="govuk-heading-l">Standard</h2>
+              <h2 class="govuk-heading-l">Standard users</h2>
               <table class="govuk-table">
                 <thead class="govuk-table__head">
                   <tr class="govuk-table__row">
-                    <th scope="col" class="govuk-table__header">Account owner details <span> <p class="govuk-body-s">Account name shown if provided</p></span> </th> 
+                    <th scope="col" class="govuk-table__header">Email address</th> 
 
-              <!-- UNDER REVIEW       <th scope="col" class="govuk-table__header">File for authorised agent</th> -->
-                    <th scope="col" class="govuk-table__header">Verify someone’s identity</th>
-                    <th scope="col" class="govuk-table__header">Status</th>
-                    <th scope="col" class="govuk-table__header"> <span class="govuk-visually-hidden"> Cancel or remove </span></th>
-                    <th scope="col" class="govuk-table__header"> <span class="govuk-visually-hidden"> Resend email invitation</span></th>
+              
+                    <th scope="col" class="govuk-table__header">Name</th>
+                    <th scope="col" class="govuk-table__header">Remove user</th>
+                   
                   </tr>
                 </thead>
                 <tbody class="govuk-table__body">
@@ -182,20 +173,14 @@
                   
    
                     <td class="govuk-table__cell">
-                     No
+                     Not provided
                     </td>
+                    
+                    
                     <td class="govuk-table__cell">
-                     {{govukTag({
-                       html: "invite sent",
-                       classes: "govuk-tag--yellow"
-                       })}}
-                   </td>
-                    <td class="govuk-table__cell">
-                      <a href="" class="govuk-link">Cancel<span class="govuk-visually-hidden"> d.jones@example.com </span> </a>
+                      <a href="remove-member" class="govuk-link">Remove <span class="govuk-visually-hidden">d.jones@example.com</span> </a>
                     </td>
-                    <td class="govuk-table__cell">
-                      <a href="" class="govuk-link">Resend email<span class="govuk-visually-hidden">to d.jones@example.com</span> </a>
-                    </td>
+
                   </tr>
                 </tbody>
               </table>
