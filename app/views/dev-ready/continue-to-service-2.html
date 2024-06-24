@@ -17,33 +17,20 @@
     <div class="govuk-grid-column-two-thirds">
 
       
-
-      {{ govukRadios({
-        name: "next",
-        fieldset: {
-          legend: {
-            text: "What would you like to do next?",
-            isPageHeading: true,
-            classes: "govuk-fieldset__legend--l"
-          }
-        },
-        items: [
-          {
-            value: "england",
-            text: "Search for a company to order a certificate"
-          },
-          {
-            value: "scotland",
-            text: "Apply to strike off and dissolve a company"
-          }
-        ]
-      }) }}
+      <h1 class="govuk-heading-l govuk-!-padding-bottom-4">Return to service</h1>
 
 
-      {{ govukButton({
-        text: "Continue"
-      }) }}
-      
+      <p class="govuk-body">Return to the service you were using.</p>
+
+      <button type="submit" class="govuk-button" data-module="govuk-button">
+        Return to service
+      </button>
+
+
+
+
+
+
 
 
 
