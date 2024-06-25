@@ -24,45 +24,41 @@
     <form action="/remove-company" method="post" novalidate>
 
 
-    <span class="govuk-caption-xl" >FLOWERS LIMITED (18882777)</span>
+    
 
-    <h1 class="govuk-heading-xl">Are you sure you want to remove this company?</h1>
+    
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+          <span class="govuk-caption-xl" >FLOWERS LIMITED (18882777)</span>   
+            <h1 class="govuk-heading-xl govuk-!-margin-bottom-2">Are you sure you want to remove this company?</h1>
+        </legend>
+        <div class="govuk-radios" data-module="govuk-radios">
+         
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="remove-company" name="remove-company" type="radio" value="yes">
+            <label class="govuk-label govuk-radios__label" for="remove-company">
+              Yes
+            </label>
+            <div id="remove-company-hint" class="govuk-hint govuk-radios__hint">
+              If you remove this company, you will no longer be able to file online for FLOWERS LIMITED without a current authentication code.
+            </div>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="remove-company-2" name="remove-company" type="radio" value="no">
+            <label class="govuk-label govuk-radios__label" for="remove-company-2">
+              No
+            </label>
+          </div>
+        </div>
+      </fieldset>
+    </div>
 
-    <p class="govuk-body">
-    If you remove this company, you will no longer be able to file online for FLOWERS LIMITED without a current authentication code.</p>
-   
-
-  {{ govukCheckboxes({
-    idPrefix: "waste",
-    name: "waste",
-    fieldset: {
-      legend: {
-        text: "",
-        isPageHeading: true,
-        classes: "govuk-fieldset__legend--l"
-      }
-    },
-
-    items: [
-
-      {
-        value: "mines",
-        text: "I confirm that I have read and understood this information."
-      }
-    ]
-  }) }}
-
-
-
-  <div class="govuk-button-group">
     {{ govukButton({
-      text: "Remove authorisation",
-      classes: "govuk-button--warning",
+      text: "Continue",
       href:"confirmation-company-removed"
     }) }}
   
-    <a class="govuk-link" href="company-added">Cancel</a>
-  </div>
 
 
 
