@@ -26,11 +26,7 @@
   
 
      <div class="govuk-grid-column-full">
-      <span class="govuk-caption-l">MORRIS ACCOUNTING LTD (0122239)<h1 class="govuk-heading-l">View people</h1></span>
-
-
-
- 
+      <span class="govuk-caption-l">MORRIS ACCOUNTING LTD (0122239)<h1 class="govuk-heading-l">Manage users</h1></span>
 
 
           <div class="govuk-tabs govuk-!-padding-top-6" data-module="govuk-tabs">
@@ -45,7 +41,7 @@
               </li>
               <li class="govuk-tabs__list-item">
                 <a class="govuk-tabs__tab" href="#admin">
-                  Admin users
+                  Administrators
                 </a>
               </li>
               <li class="govuk-tabs__list-item">
@@ -62,31 +58,25 @@
                   <!-- Super admin users -->
 
                   <table class="govuk-table">
-                   <thead class="govuk-table__head">
-                     <tr class="govuk-table__row">
-                       <th scope="col" class="govuk-table__header">Account owner details <span> <p class="govuk-body-s">Account name shown if provided</p></span> </th> 
-
-                 <!-- UNDER REVIEW       <th scope="col" class="govuk-table__header">File for authorised agent</th> -->
-                       <th scope="col" class="govuk-table__header">Verify someone’s identity</th>
-                       <th scope="col" class="govuk-table__header">Status</th>
-                       
-                   </thead>
+                    <thead class="govuk-table__head">
+                      <tr class="govuk-table__row">
+   
+                        <th scope="col" class="govuk-table__header">Email address</th>
+                        <th scope="col" class="govuk-table__header">User's name</th> 
+                    
+                      </tr>
+                    </thead>
                    <tbody class="govuk-table__body">
 
                      <!-- Member 1 -->
                      <tr class="govuk-table__row">
-                      <td class="govuk-table__header"> James Morris <br> james.morris@gmail.com</th>
+                      <td class="govuk-table__header"> james.morris@gmail.com</th>
                     
      
                       <td class="govuk-table__cell">
-                       Yes
+                       James Morris
                       </td>
-                      <td class="govuk-table__cell">	
-                       {{govukTag({
-                         text: "Confirmed",
-                         classes: "govuk-tag--green"
-                         })}}
-                     </td>
+  
                       
                     </tr>
                   </tbody>
@@ -98,16 +88,15 @@
 
             <!-- Admin users -->
             <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="admin">
-              <h2 class="govuk-heading-l">Admin</h2>
+              <h2 class="govuk-heading-l">Administrators</h2>
               <table class="govuk-table">
                 <thead class="govuk-table__head">
                   <tr class="govuk-table__row">
-                    <th scope="col" class="govuk-table__header">Account owner details <span> <p class="govuk-body-s">Account name shown if provided</p></span> </th> 
 
-              <!-- UNDER REVIEW       <th scope="col" class="govuk-table__header">File for authorised agent</th> -->
-                    <th scope="col" class="govuk-table__header">Verify someone’s identity</th>
-                    <th scope="col" class="govuk-table__header">Status</th>
-                    
+                    <th scope="col" class="govuk-table__header">Email address</th>
+                    <th scope="col" class="govuk-table__header">User's name</th> 
+                
+                  </tr>
                 </thead>
                 <tbody class="govuk-table__body">
                   
@@ -117,14 +106,9 @@
                     
      
                       <td class="govuk-table__cell">
-                       Yes
+                       Not provided
                       </td>
-                      <td class="govuk-table__cell">
-                       {{govukTag({
-                         html: "invite sent",
-                         classes: "govuk-tag--yellow"
-                         })}}
-                     </td>
+       
                 
                     </tr>
                 </tbody>
@@ -137,12 +121,11 @@
               <table class="govuk-table">
                 <thead class="govuk-table__head">
                   <tr class="govuk-table__row">
-                    <th scope="col" class="govuk-table__header">Account owner details <span> <p class="govuk-body-s">Account name shown if provided</p></span> </th> 
 
-              <!-- UNDER REVIEW       <th scope="col" class="govuk-table__header">File for authorised agent</th> -->
-                    <th scope="col" class="govuk-table__header">Verify someone’s identity</th>
-                    <th scope="col" class="govuk-table__header">Status</th>
-                    
+                    <th scope="col" class="govuk-table__header">Email address</th>
+                    <th scope="col" class="govuk-table__header">User's name</th> 
+                
+                  </tr>
                 </thead>
                 <tbody class="govuk-table__body">
                   <tr class="govuk-table__row">
@@ -150,14 +133,9 @@
                   
    
                     <td class="govuk-table__cell">
-                     No
+                     Not provided
                     </td>
-                    <td class="govuk-table__cell">	
-                      {{govukTag({
-                        text: "Confirmed",
-                        classes: "govuk-tag--green"
-                        })}}
-                    </td>
+
                       
 
                   </tr>
