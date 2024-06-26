@@ -27,26 +27,16 @@
 
 
 <div class="govuk-inset-text">
-  <p class="govuk-body">They will need to use their GOV.UK One Login details to sign in. If they have not set up a GOV.UK One Login, they must do this before you add them. <a href="">Create a GOV.UK One Login</a>. </p>
+  <p class="govuk-body">They'll be able to access the authorised agent account when they sign in to their Companies House account. If they do not have a Companies House account, they must create one before you can add them. </p>
 </div>
 
 <p class="govuk-body">In the future, users who have been added to this account will be able to: </p>
           <ul class="govuk-list govuk-list--bullet govuk-!-margin-bottom-6">
-            <li>file with Companies House</li>
+            <li>file as an authorised agent</li>
             <li>form companies and registrable partnerships </li>
             <li>verify people's identity for Companies House</li>
             </ul>
 
-         <!--  {{ govukInput({
-            label: {
-              text: "Name (optional)"
-            },
-            id: "full-name",
-            name: "full-name",
-            autocomplete: "name",
-            spellcheck: false
-          }) }}
- -->
           {{ govukInput({
             label: {
               text: "Email address"
@@ -76,7 +66,7 @@
                 html: "<span class='govuk-body govuk-!-font-weight-bold'> Account owner</span>  <p class='govuk-body govuk-!-static-padding-top-2'> They will be able to make changes to the authorised agent's details. They can add and remove: </p>
                 <ul>
                   <li>account owners</li>
-                  <li>admin users</li> 
+                  <li>administrators</li> 
                   <li>standard users</li>
                   </ul>"
               },
@@ -84,7 +74,7 @@
                 value: "admin",
                 html: "<span class='govuk-!-font-weight-bold govuk-!-padding-bottom-0'>Administrator</span> <p class='govuk-body govuk-!-static-padding-top-2'> They will be able to add and remove: </p>
                 <ul>
-                  <li>admin users</li> 
+                  <li>administrators</li> 
                   <li>standard users</li>
                   </ul>"
               },
