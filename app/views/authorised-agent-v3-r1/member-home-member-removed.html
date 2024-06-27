@@ -9,7 +9,7 @@
 {% block beforeContent %}
   {{ govukBackLink({
     text: "Return to authorised agent services",
-    href:"check-company-details"
+    href:""
   }) }}
 {% endblock %}
 
@@ -24,14 +24,15 @@
   <div class="govuk-grid-row">
 
 
+    
      <div class="govuk-grid-column-full">
-      <span class="govuk-caption-l">MORRIS ACCOUNTING LTD<h1 class="govuk-heading-l">Manage people</h1></span>
+      <span class="govuk-caption-l">MORRIS ACCOUNTING LTD <h1 class="govuk-heading-l">Manage user</h1></span>
 
 
 
            {{ govukButton({
-              text: "Add a person",
-              href:"add-a-member-2"
+              text: "Add a user",
+              href:"add-a-member"
             }) }}
 
           <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
@@ -69,14 +70,12 @@
                   <table class="govuk-table">
                    <thead class="govuk-table__head">
                      <tr class="govuk-table__row">
-                       <th scope="col" class="govuk-table__header">Email address</th> 
+
 
                  <!-- UNDER REVIEW       <th scope="col" class="govuk-table__header">File for authorised agent</th> -->
-                       
-                 
-                       <th scope="col" class="govuk-table__header">User's name</th>
+                       <th scope="col" class="govuk-table__header">Email address</th>
+                       <th scope="col" class="govuk-table__header">User's name </th> 
                        <th scope="col" class="govuk-table__header"> Remove user</th>
-                       
                      </tr>
                    </thead>
                    <tbody class="govuk-table__body">
@@ -84,16 +83,14 @@
                      <!-- Member 1 -->
                      <tr class="govuk-table__row">
                       <td class="govuk-table__header">  james.morris@gmail.com</th>
-                    
-     
                       <td class="govuk-table__cell">
                         James Morris 
                       </td>
-                     
+
                        <td class="govuk-table__cell">
                          <a href="" class="govuk-link">Remove <span class="govuk-visually-hidden">james.morris@gmail.com</span> </a>
                        </td>
-                       <td scope="row" class="govuk-table__cell"> </td>
+                       
                     </tr>
                   </tbody>
                  </table>
@@ -105,80 +102,53 @@
             <!-- Admin users -->
             <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="admin">
               <h2 class="govuk-heading-l">Administrators</h2>
-              <table class="govuk-table">
+              
+               <!-- Super admin users -->
+
+               <table class="govuk-table">
                 <thead class="govuk-table__head">
                   <tr class="govuk-table__row">
-                    <th scope="col" class="govuk-table__header">Email address </th> 
+
 
               <!-- UNDER REVIEW       <th scope="col" class="govuk-table__header">File for authorised agent</th> -->
-                    <th scope="col" class="govuk-table__header">User's name</th>
-                    <th scope="col" class="govuk-table__header">Remove user</th>
-                    
+                    <th scope="col" class="govuk-table__header">Email address</th>
+                    <th scope="col" class="govuk-table__header">User's name </th> 
+                    <th scope="col" class="govuk-table__header"> Remove user</th>
                   </tr>
                 </thead>
                 <tbody class="govuk-table__body">
-                  
-                       <!-- Member 1 -->
-                    <tr class="govuk-table__row">
-                      <td class="govuk-table__header">  k.williams@example.com</th>
+
+                  <!-- Member 1 -->
+                  <tr class="govuk-table__row">
+                   <td class="govuk-table__header">  k.williams@example.com</th>
+                   <td class="govuk-table__cell">
+                     Not provided
+                   </td>
+
+                    <td class="govuk-table__cell">
+                      <a href="" class="govuk-link">Remove <span class="govuk-visually-hidden"> k.williams@example.com</span> </a>
+                    </td>
                     
-     
-                      <td class="govuk-table__cell">
-                       Not provided
-                      </td>
-                      <td class="govuk-table__cell">
-                        <a href="" class="govuk-link">Remove <span class="govuk-visually-hidden">k.williams@example.com</span> </a>
-                      </td>
-                      
-                      
-                    </tr>
-                </tbody>
+                 </tr>
+               </tbody>
               </table>
             </div>
 
             <!-- Standard users -->
             <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="standard">
               <h2 class="govuk-heading-l">Standard users</h2>
-              <table class="govuk-table">
-                <thead class="govuk-table__head">
-                  <tr class="govuk-table__row">
-                    <th scope="col" class="govuk-table__header">Email address</th> 
-
               
-                    <th scope="col" class="govuk-table__header">User's name</th>
-                    <th scope="col" class="govuk-table__header">Remove user</th>
-                   
-                  </tr>
-                </thead>
-                <tbody class="govuk-table__body">
-                  <tr class="govuk-table__row">
-                    <td class="govuk-table__header">  d.jones@example.com</th>
-                  
-   
-                    <td class="govuk-table__cell">
-                     Not provided
-                    </td>
-                    
-                    
-                    <td class="govuk-table__cell">
-                      <a href="remove-member" class="govuk-link">Remove <span class="govuk-visually-hidden">d.jones@example.com</span> </a>
-                    </td>
-
-                  </tr>
-                </tbody>
-              </table>
+              <p class="govuk-body">You have no standard users.</p>
+              
             </div>
             
           </div>
-
-  
-
-
-           
-
-
+</div>
 </div>
 
 
-
 {% endblock %}
+
+
+
+
