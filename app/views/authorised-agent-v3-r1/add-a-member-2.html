@@ -26,9 +26,6 @@
 
 
 
-<div class="govuk-inset-text">
-  <p class="govuk-body">They'll be able to access the authorised agent account when they sign in to their Companies House account. If they do not have a Companies House account, they must create one before you can add them. </p>
-</div>
 
 <p class="govuk-body">In the future, users who have been added to this account will be able to: </p>
           <ul class="govuk-list govuk-list--bullet govuk-!-margin-bottom-6">
@@ -36,13 +33,13 @@
             <li>verify people's identity for Companies House</li>
             </ul>
 
-
           {{ govukInput({
             label: {
-              text: "Email address"
+              text: "Email address",
+              classes: "govuk-label--m"
             },
             hint: {
-              text: "This must be the email address they use for their Companies House account."
+              html: "This must be the email address they use for their Companies House account. If they do not have a Companies House account, they must create one before you can add them."
             },
             id: "email",
             name: "email",
@@ -50,6 +47,7 @@
             autocomplete: "email",
             spellcheck: false
           }) }}
+
 
 
          {{ govukRadios({
