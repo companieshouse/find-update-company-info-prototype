@@ -40,10 +40,17 @@ https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
      
       <nav role="navigation" class="content mobile-hidden">
         <ul id="navigation" class="mobile-hidden" style="padding-top: 8px;">
-          <li class="authenticated">
+          <li>
            
+            {% if (data['display-name'] === "") %}
+
+            example@gmail.com
+
+            {% else %}
             
             {{data['display-name']}} 
+
+            {% endif %}
 
             
           </li>
