@@ -1,0 +1,198 @@
+{% extends "layouts/main.html" %}
+
+
+
+{% block pageTitle %}
+  {{ serviceName }} - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form action="prototype-set-up" method="post" novalidate>
+
+
+
+      <h1 class="govuk-heading-l">Choose a journey <strong class='govuk-tag'>
+        Page for User Research purposes
+      </strong></h1>
+
+
+      {{ govukRadios({
+        name: "set-journey",
+        fieldset: {
+          legend: {
+            html: "User research",
+            isPageHeading: false ,
+            classes: "govuk-fieldset__legend--m"
+          }
+        },
+        hint: {
+          text: "Select one option."
+        },
+        items: [
+          {
+            value: "filer",
+            text: "Upload a document"
+          }
+        ]
+      }) }}
+
+    {{ govukRadios({
+      name: "set-journey",
+      fieldset: {
+        legend: {
+          html: "Private beta",
+          isPageHeading: false,
+          classes: "govuk-fieldset__legend--m"
+        }
+      },
+      hint: {
+        text: "Select one option."
+      },
+      items: [
+        {
+          value: "private-beta-not-linked",
+          text: "Companies House account has not been linked"
+        },
+        {
+          value: "linked-account",
+          text: "Companies House account is linked to a GOV.UK One Login",
+          hint: {
+            html: '<a href="private-beta-account-linked-banner" class="govuk-link" target="blank">View manage account (opens in a new tab) <strong class="govuk-tag govuk-tag--red">
+              Awaiting requirements
+             </strong>  </a>'
+          }
+        },
+        {
+          value: "different-email",
+          html: "A different email address has been used for CHS and GOV.UK One Login"
+        },
+        {
+          value: "wrong-url",
+          html: "The user hasn't used the private beta URL to sign in"
+        }
+      ]
+    }) }}
+
+    {{ govukRadios({
+      name: "set-journey",
+      fieldset: {
+        legend: {
+          html: "Public beta - GOV.UK One Login is optional <strong class='govuk-tag'>
+  Flow TBC
+</strong>",
+          isPageHeading: false,
+          classes: "govuk-fieldset__legend--m"
+        }
+      },
+      hint: {
+        text: "Select one option."
+      },
+      items: [
+        {
+          value: "public-beta-not-linked",
+          text: "CHS account has not been linked to a GOV.UK One Login",
+          hint: {
+            text: "Users can choose if they sign in to a Companies House account or sign in/create a GOV.UK One Login."
+          }
+        },
+        {
+          value: "public-beta-already-linked",
+          text: "Accounts have already been linked",
+          hint: {
+            text: "If a user signs in to their Companies House account we tell them that we have found a GOV.UK One Login that matches their email address. They need to sign in to GOV.UK One Login."
+          }
+        }
+      
+      ]
+    }) }}
+
+     <!-- {
+          value: "public-beta-linked",
+          text: "Account is already linked"
+        }-->
+
+        {{ govukRadios({
+          name: "set-journey",
+          fieldset: {
+            legend: {
+              html: "Public beta - GOV.UK One login is mandatory <strong class='govuk-tag'>
+                Flow TBC
+              </strong>",
+              isPageHeading: false,
+              classes: "govuk-fieldset__legend--m"
+            }
+          },
+          hint: {
+            text: "Select one option."
+          },
+          items: [
+            {
+              value: "public-beta-mandatory-first-time",
+              text: "First time a user signs in",
+              hint: {
+                text: "Users are shown the 'We are changing the way you sign in...' page, and then taken to GOV.UK One Login."
+              }
+
+
+            },
+            {
+              value: "public-beta-mandatory-return-user",
+              text: "Returning users",
+              hint: {
+                text: "Users are taken to GOV.UK One Login."
+              }
+            }
+          
+          ]
+        }) }}
+    
+
+
+        
+
+    <!-- {{ govukRadios({
+      name: "set-journey",
+      fieldset: {
+        legend: {
+          text: "Select account journey:",
+          classes: "govuk-fieldset__legend--s"
+        }
+      },
+      items: [
+        {
+          value: "account-not-linked",
+          text: "CHS account not linked to a One Login account"
+        },
+        {
+          value: "account-linked",
+          text: "CHS account linked to a One Login account"
+        },
+        {
+          value: "no-one-login-filer",
+          text: "Filer --- User does not have a GOV.UK One login, but they want to file for a company"
+        },
+        {
+          value: "admin-user",
+          text: "Admin user"
+        },
+        {
+          value: "new-user",
+          text: "New user"
+        }
+      ]
+    }) }} -->
+
+
+    {{ govukButton({
+      text: "Start prototype"
+    }) }}
+
+
+
+  </div>
+</div>
+</form>
+{% endblock %}
