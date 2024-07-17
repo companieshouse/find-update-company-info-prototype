@@ -41,12 +41,9 @@ https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
       <nav role="navigation" class="content mobile-hidden">
         <ul id="navigation" class="mobile-hidden" style="padding-top: 8px;">
           <li>
-           
             {% if (data['display-name'] === "") %}
 
-            Reallylongemailaddressexample@gmail.com
-
-            {% else %}
+            example@gmail.com{% else %}
             
             {{data['display-name']}} 
 
@@ -65,7 +62,7 @@ https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
           <li class="basket"><a class="govuk-link govuk-link--no-visited-state" id="user-signout" href="">Basket</a></li>
           
           <!-- Note: GOV.UK One Login uses Security instead of 'Your details' in Webfiling its "Manage account"-->
-          <li class="your-details govuk-!-padding-5"><a class="govuk-link govuk-link--no-visited-state " id="user-signout" href="" >Manage account</a></li>
+          <li class="your-details"><a class="govuk-link govuk-link--no-visited-state" id="user-signout" href="">Manage account</a></li>
         
          
           <li class="authenticated"><a class="govuk-link govuk-link--no-visited-state" id="user-signout" href="">Sign out</a></li>
