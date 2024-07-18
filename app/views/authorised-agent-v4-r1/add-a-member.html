@@ -30,10 +30,10 @@
   <p class="govuk-body">They'll be able to access the authorised agent account when they sign in to their Companies House account. If they do not have a Companies House account, they must create one before you can add them. </p>
 </div>-->
 
-<p class="govuk-body">In the future, users who have been added to this account will be able to: </p>
+<p class="govuk-body">Users who have been added to this account will be able to: </p>
           <ul class="govuk-list govuk-list--bullet govuk-!-margin-bottom-6">
-            <li>file as an authorised agent</li>
-            <li>verify people's identity for Companies House</li>
+                        <li>verify people's identity for Companies House from XX DATE</li>
+            <li>file as an authorised agent from XX DATE</li>
             </ul>
 
           {{ govukInput({
@@ -63,11 +63,10 @@
             items: [
               {
                 value: "super-admin",
-                html: "<span class='govuk-body govuk-!-font-weight-bold'> Account owner</span>  <p class='govuk-body govuk-!-static-padding-top-2'> They will be able to make changes to the authorised agent's details. They can add and remove: </p>
+                html: "<span class='govuk-body govuk-!-font-weight-bold'> Account owner</span>  <p class='govuk-body govuk-!-static-padding-top-2'>They will receive emails with information about the authorised agent account. They can:</p>
                 <ul>
-                  <li>account owners</li>
-                  <li>administrators</li> 
-                  <li>standard users</li>
+                  <li>make changes to the authorised agent's details</li>
+                  <li>add and remove all users</li> 
                   </ul>"
               },
               {
