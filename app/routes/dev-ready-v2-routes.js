@@ -216,8 +216,18 @@ router.post('/dev-ready-v2/one-login-enter-password', function (req, res) {
   
   //One loginsign create - email address
   router.post('/dev-ready-v2/create-enter-email', function (req, res) {
+
+    if (req.session.data['set-journey'] === 'public-beta-already-linked') {
+        
+      res.redirect('/dev-ready-v2/you-have-a-login')
+    }
+    else{
+
   
-    res.redirect('create-check-your-email')
+      res.redirect('create-check-your-email')
+    }
+
+
   })
   
   //One loginsign create - check email 
