@@ -8,12 +8,19 @@ const router = govukPrototypeKit.requests.setupRouter()
 
 // Add your routes here
 
+
+
+
+
 //journey setting
 router.post('/dev-ready-v2/prototype-set-up', function (req, res) {
 
   //if they are filing take the user to Upload a document
 
-  if (req.session.data['set-journey'].includes('filer')) {
+
+  res.redirect('/dev-ready-v2/upload-a-document')
+
+/*   if (req.session.data['set-journey'].includes('filer')) {
        
     res.redirect('/dev-ready-v2/upload-a-document')
   }
@@ -49,16 +56,19 @@ router.post('/dev-ready-v2/prototype-set-up', function (req, res) {
        
     res.redirect('/dev-ready-v2/create-or-sign-in')
   }
-
+ */
  
  
 })
+
 
 //upload a document service start page goes directly to sign in page
 router.post('/dev-ready-v2/upload-a-document', function (req, res) {
 
-  res.redirect('chs-sign-in')
+  res.redirect('/dev-ready-v2/choose-sign-in')
 })
+
+
 
 
 
@@ -83,7 +93,7 @@ router.post('/dev-ready-v2/choose-sign-in', function (req, res) {
   }
   else if(req.session.data['sign-in-using'] === 'CHS') {
 
-    res.redirect('/dev-ready-v2/chs-sign-in-email')
+    res.redirect('/dev-ready-v2/chs-sign-in')
 
   }
 
@@ -115,30 +125,24 @@ router.post('/dev-ready-v2/choose-sign-in', function (req, res) {
 
 
 //new email address page for CHS 
-router.post('/dev-ready-v2/chs-sign-in-email', function (req, res) {
+router.post('/dev-ready-v2/chs-sign-in', function (req, res) {
 
 
-  res.redirect('/dev-ready-v2/chs-sign-in-password')
-
-
-})
-
-//CHS password 
-router.post('/dev-ready-v2/chs-sign-in-password', function (req, res) {
-
- //If they have a GOV.UK One Login account
+  //If they have a GOV.UK One Login account
  if (req.session.data['set-journey'].includes('public-beta-already-linked')) {
        
   res.redirect('/dev-ready-v2/sign-in-using-one-login')
 
+}else{
+
+  res.redirect('/dev-ready-v2/company-lookup')
+
+
 }
-else{
-
- res.redirect('/dev-ready-v2/chs-home-signed-in')
-
-}
-
 })
+
+
+
 
 
  
@@ -188,21 +192,18 @@ router.post('/dev-ready-v2/one-login-enter-password', function (req, res) {
   router.post('/dev-ready-v2/enter-code', function (req, res) {
 
 
-    if (req.session.data['set-journey'] === 'private-beta-not-linked') {
+    if (req.session.data['set-journey'] === 'public-beta-not-linked') {
         
-      res.redirect('/dev-ready-v2/end-linking-private-beta')
+      res.redirect('/dev-ready-v2/email-preferences')
     }
-    else if (req.session.data['set-journey'] === 'different-email') {
+    else if (req.session.data['set-journey'] === 'public-beta-already-linked') {
         
-      res.redirect('/dev-ready-v2/sign-in-details-do-not-match')
+      res.redirect('/dev-ready-v2/company-lookup')
     }
-    else if (req.session.data['set-journey'] === 'wrong-url') {
-        
-      res.redirect('/dev-ready-v2/stop-screen-use-url-sign-in')
-    } 
+    
     else{
 
-      res.redirect('name')
+      res.redirect('email-preferences')
 
     }
 
@@ -285,17 +286,9 @@ router.post('/dev-ready-v2/one-login-enter-password', function (req, res) {
   
   //One loginsign create complete
   router.post('/dev-ready-v2/create-complete', function (req, res) {
-    if (req.session.data['set-journey'] === 'private-beta-not-linked') {
+    if (req.session.data['set-journey'] === 'public-beta-not-linked') {
         
-      res.redirect('/dev-ready-v2/end-linking-private-beta')
-    }
-    else if (req.session.data['set-journey'] === 'different-email') {
-        
-      res.redirect('/dev-ready-v2/sign-in-details-do-not-match')
-    }
-    else if (req.session.data['set-journey'] === 'wrong-url') {
-        
-      res.redirect('/dev-ready-v2/stop-screen-use-url-sign-in')
+      res.redirect('/dev-ready-v2/email-preferences')
     }
     else{
 
@@ -460,7 +453,7 @@ router.post('/dev-ready-v2/one-login-enter-password', function (req, res) {
     }
     else{
 
-      res.redirect('chs-home-signed-in')
+      res.redirect('/dev-ready-v2/company-lookup')
 
     }
         

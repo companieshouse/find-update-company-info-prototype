@@ -17,7 +17,7 @@
       <h1 class="govuk-heading-l">Choose a journey <strong class='govuk-tag'>
         Page for User Research purposes
       </strong></h1>
-
+<!-- 
 
       {{ govukRadios({
         name: "set-journey",
@@ -37,9 +37,9 @@
             text: "Upload a document"
           }
         ]
-      }) }}
+      }) }} -->
 
-    {{ govukRadios({
+   <!--  {{ govukRadios({
       name: "set-journey",
       fieldset: {
         legend: {
@@ -74,15 +74,13 @@
           html: "The user hasn't used the private beta URL to sign in"
         }
       ]
-    }) }}
+    }) }} -->
 
     {{ govukRadios({
       name: "set-journey",
       fieldset: {
         legend: {
-          html: "Public beta - GOV.UK One Login is optional <strong class='govuk-tag'>
-  Flow TBC
-</strong>",
+          html: "Public beta",
           isPageHeading: false,
           classes: "govuk-fieldset__legend--m"
         }
@@ -93,16 +91,16 @@
       items: [
         {
           value: "public-beta-not-linked",
-          text: "CHS account has not been linked to a GOV.UK One Login",
+          text: "User has a Companies House account",
           hint: {
-            text: "Users can choose if they sign in to a Companies House account or sign in/create a GOV.UK One Login."
+            text: ""
           }
         },
         {
           value: "public-beta-already-linked",
-          text: "Accounts have already been linked",
+          text: "User has a GOV.UK One Login which has been linked to an existing Companies House account",
           hint: {
-            text: "If a user signs in to their Companies House account we tell them that we have found a GOV.UK One Login that matches their email address. They need to sign in to GOV.UK One Login."
+            text: ""
           }
         }
       
@@ -114,7 +112,7 @@
           text: "Account is already linked"
         }-->
 
-        {{ govukRadios({
+       <!--  {{ govukRadios({
           name: "set-journey",
           fieldset: {
             legend: {
@@ -148,7 +146,7 @@
           
           ]
         }) }}
-    
+     -->
 
 
         
