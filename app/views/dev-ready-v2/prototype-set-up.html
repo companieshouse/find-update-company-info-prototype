@@ -102,6 +102,7 @@
           hint: {
             text: ""
           }
+        
         }
       
       ]
@@ -112,13 +113,11 @@
           text: "Account is already linked"
         }-->
 
-       <!--  {{ govukRadios({
+       <!--   {{ govukRadios({
           name: "set-journey",
           fieldset: {
             legend: {
-              html: "Public beta - GOV.UK One login is mandatory <strong class='govuk-tag'>
-                Flow TBC
-              </strong>",
+              html: "Public beta - services where GOV.UK One login is mandatory ",
               isPageHeading: false,
               classes: "govuk-fieldset__legend--m"
             }
@@ -129,24 +128,24 @@
           items: [
             {
               value: "public-beta-mandatory-first-time",
-              text: "First time a user signs in",
+              text: "First time a user creates or signs into GOV.UK One Login",
               hint: {
-                text: "Users are shown the 'We are changing the way you sign in...' page, and then taken to GOV.UK One Login."
+                text: ""
               }
 
 
             },
             {
               value: "public-beta-mandatory-return-user",
-              text: "Returning users",
+              text: "Returning user",
               hint: {
-                text: "Users are taken to GOV.UK One Login."
+                text: ""
               }
             }
           
           ]
         }) }}
-     -->
+      -->
 
 
         
