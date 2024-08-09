@@ -524,7 +524,38 @@
    
 
         <!-- Authorised agent services -->
-
+        <h2 class="govuk-heading-m govuk-!-padding-top-4">Version 5 - release 1
+        </h2>
+           
+       
+           {{ govukSummaryList({
+             card: {
+               title: {
+                 html: "Authorised agent"
+               },
+               actions: {
+                 items: [
+                   {
+                     
+                   }
+                 ]
+               }
+             },
+             rows: [
+             {
+               key: {
+                 text: "Version 4 - release 1"
+               },
+               value: {
+                 html: "<strong class='govuk-tag govuk-tag--blue'>
+                  In progress
+                 </strong> <br>
+                 <a href='/authorised-agent-v5-r1/index' class='govuk-link'>Prototype version 5 - release 1</a>
+                 "
+               }
+             }
+             ]
+           }) }}
 
         <h2 class="govuk-heading-m govuk-!-padding-top-4">Version 4 - release 1
         </h2>
