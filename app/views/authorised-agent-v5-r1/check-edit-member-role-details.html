@@ -19,7 +19,7 @@ Check the details before we send the email  – {{ serviceName }} – GOV.UK
 
      <div class="govuk-grid-column-two-thirds">
       <span class="govuk-caption-l">MORRIS ACCOUNTING LTD</span>
-          <h1 class="govuk-heading-l">Check the details</h1> 
+          <h1 class="govuk-heading-l">Confirm the details</h1> 
 
           {{ govukSummaryList({
             rows: [
@@ -28,7 +28,7 @@ Check the details before we send the email  – {{ serviceName }} – GOV.UK
                   text: "Email address"
                 },
                 value: {
-                  text: "k.williams@example.com"
+                  text: "l.williams@example.com"
                 }
               },
               {
@@ -38,12 +38,13 @@ Check the details before we send the email  – {{ serviceName }} – GOV.UK
                 value: {
                   html: "<strong class='govuk-tag govuk-tag--turquoise'>Administrator</strong>"
                 }
+
               }
             ]
           }) }}
 
             {{ govukButton({
-              text: "Confirm and change users role",
+              text: "Confirm user's role",
               href:"confirmation-edit-role-member-updated"
             }) }}
           
