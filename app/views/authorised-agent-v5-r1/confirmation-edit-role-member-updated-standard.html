@@ -20,16 +20,10 @@
       User's role changed
     </h3>
 
-    <!-- FOR ACC OWNERS-->
-    <p class="govuk-body"><strong>l.williams@example.com</strong> is now an account owner for MORRIS ACCOUNTING LTD.</p>
-    
-    <!--  FOR ADMIN
-        <p class="govuk-body"><strong>l.williams@example.com</strong> is now an administrator for MORRIS ACCOUNTING LTD.</p>
-    -->
 
-    <!--  FOR STANDARD
+
         <p class="govuk-body"><strong>l.williams@example.com</strong> is now a standard user for MORRIS ACCOUNTING LTD.</p>
-    -->    
+        
   {% endset %}
 
     {{ govukNotificationBanner({
@@ -44,28 +38,12 @@
 
   <p class="govuk-body"><strong>l.williams@example.com</strong> can access services for the authorised agent when they sign in to their Companies House account. </p>
 
-    <!-- FOR ACC OWNERS-->
-
-  <p class="govuk-body">They can also:</p>
-
-  <ul class="govuk-list govuk-list--bullet">
-    <li>make changes to the authorised agent's details</li>
-    <li>view all users who have been added to this account</li>
-    <li>add and remove all users</li>
-    </ul>
-
-    <!--  FOR ADMIN
-  <p class="govuk-body">They can also view all users who have been added to this account. They can add and remove: </p>
-
-  <ul class="govuk-list govuk-list--bullet">
-    <li>administrators</li>
-    <li>standard users </li>
-    </ul>    -->
 
 
-    <!--  FOR STANDARD USERS
+
+
   <p class="govuk-body">They can also view all users who have been added to this account, but cannot add or remove users. </p>
-  -->
+  
 
 
            {{ govukButton({
