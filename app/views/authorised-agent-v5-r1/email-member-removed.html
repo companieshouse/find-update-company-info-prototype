@@ -1,0 +1,78 @@
+{% extends "layouts/layout-signed-out-agent.html" %}
+
+{% block pageTitle %}
+You have been invited to be a standard user for a Companies House authorised agent
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+   
+      <h1 class="govuk-heading-l">You have been invited to be a standard user for a Companies House authorised agent </h1>
+      
+      <p class="govuk-body">James Morris has requested to add you as a standard user for MORRIS ACCOUNTING LTD.</p>
+      
+      <p> If you accept, you'll be able to:</p>
+
+            <ul class="govuk-list govuk-list--bullet">
+                <li>file as an authorised agent from XX DATE</li>
+                <li>verify someone's identity for Companies House from XX DATE</li>
+            </ul>
+
+      <p>To accept:<br>
+      Sign in to or create your GOV.UK One Login using the link in this email and select ‘accept’.
+      </p>
+    <p>If you need to create a GOV.UK One Login, you must use d.jones@example.com as your email address. You can change this once you’ve created your GOV.UK One Login by going to ‘Manage account’.
+      </p>
+   <p>To decline:<br>
+      Sign in to or create your GOV.UK One Login using the link in this email and select ‘decline’. Or, you can ignore this email.</p>
+    </p>
+
+<div class="govuk-inset-text">
+
+<p>Link to accept or decline:</p>
+<p><a href="create-or-sign-in-invite">https://companieshouse/authorised-person-confirmation-5xbk3ft88</a></p>
+
+<p> The link will expire in 7 days. If you run out of time, an account owner or admin user will need to add you again.
+</p>
+</div>
+
+
+
+
+
+
+<!--<p class="govuk-body">If you do not sign in or create an account within 7 days, we will remove you from the authorised agent account.</p> -->
+      
+     <!-- <ol class="govuk-list govuk-list--number">
+        <li>Select the link in this email.</li>
+        <li>Sign in or create a Companies House account.</li>
+        <li>Accept or decline if you want to be a member of MORRIS ACCOUNTING LTD.</li>
+      </ol>
+
+      <h3 class="govuk-heading-s">Link to accept or decline being a member:</h2>
+      <p class="govuk-body"><a href="acsp-member-invite-confirm" class="govuk-link">https://companieshouse/jshdfjezhgfuysyshdbjshdjhvjhvjhvjhv</a>.</p>
+      
+
+      {{ govukInsetText({
+        text: "This link expires in 7 days. If you run out of time, you will need to ask to be added again.  "
+      }) }}
+
+      <p class="govuk-body">If you were not expecting this email...</p>
+
+     
+      <h3 class="govuk-heading-m">Feedback</h3>
+      <p class="govuk-body">This is a new service. Help us improve it by completing our <a href="" class="govuk-link govuk-link--no-visited-state">quick survey</a>.</p> -->
+
+    </div>
+    </div>
+
+
+  </div>
+</div>
+{% endblock %}
