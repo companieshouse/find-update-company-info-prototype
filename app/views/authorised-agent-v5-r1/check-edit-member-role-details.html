@@ -25,10 +25,10 @@ Check the details before we send the email  – {{ serviceName }} – GOV.UK
             rows: [
               {
                 key: {
-                  text: "Email address"
+                  text: "User"
                 },
                 value: {
-                  text: "l.williams@example.com"
+                  text: "	James Morris"
                 }
               },
               {
@@ -51,8 +51,14 @@ Check the details before we send the email  – {{ serviceName }} – GOV.UK
             ]
           }) }}
 
+
+<div class="govuk-inset-text">
+  We'll send an email to <strong>james.morris@gmail.com</strong> to tell them you've changed their role.
+</div>
+    
+
             {{ govukButton({
-              text: "Confirm user's role",
+              text: "Confirm",
               href:"confirmation-edit-role-member-updated"
             }) }}
           
