@@ -1,0 +1,253 @@
+{% extends "layouts/layout-signed-out-agent.html" %}
+
+
+{% block pageTitle %}
+ Manage members 
+{% endblock %}
+
+{% set serviceName %}
+ 
+{% endset %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+  <div class="govuk-grid-row">
+
+     <div class="govuk-grid-column-two-thirds">
+     <span class="govuk-caption-l govuk-!-padding-bottom-0">MORRIS ACCOUNTING LTD 
+      <h1 class="govuk-heading-l">Authorised agent account</h1> </span>
+
+          <p class="govuk-body govuk-!-margin-bottom-1"><strong>Authorised agent status:</strong> <strong class="govuk-tag govuk-tag--green">
+            Active
+          </strong></p>
+          <p class="govuk-body govuk-!-margin-bottom-1"> <strong>Authorised agent number:</strong> 06254821</p>
+
+          <p class="govuk-body govuk-!-padding-bottom-3"> <strong>Your role: </strong>account owner</p>
+
+
+
+<div class="govuk-summary-card">
+  <div class="govuk-summary-card__title-wrapper">
+    <h2 class="govuk-summary-card__title">
+      Manage account
+    </h2>
+
+  </div>
+  <div class="govuk-summary-card__content">
+    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__action">
+           <a class="govuk-link" href="#"><strong>View, add and remove users</strong></a>
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <p>You can: </p>
+                        <ul class="govuk-list govuk-list--bullet">
+                            <li>view users who have been added to this account</li>
+                            <li>add users if they need to use services for MORRIS ACCOUNTING LTD</li>
+                            <li>remove users</li>
+                          
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+                     <a class="govuk-link" href="#"><strong>Update details</strong></a>
+
+        </dt>
+        <dd class="govuk-summary-list__value">
+          You must tell us about changes to MORRIS ACCOUNTING LTD within 14 days.
+        </dd>
+      </div>
+ <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+                     <a class="govuk-link" href="#"><strong>Close account</strong></a>
+
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Tell us if MORRIS ACCOUNTING LTD is no longer an authorised agent and you need to close the account. 
+        </dd>
+      </div>
+    </dl>
+  </div>
+</div>
+
+
+          <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+
+      <!-- Filing summary  -->
+
+      <!-- Set display name -->
+    
+
+
+      <h2 class="govuk-heading-m govuk-!-static-padding-top-5 govuk-!-static-padding-bottom-2">Authorised agent services
+         </h2>
+  
+
+      <!-- Managing members  -->
+
+<!--
+      <div class="govuk-summary-card">
+        <div class="govuk-summary-card__title-wrapper">
+          <h2 class="govuk-summary-card__title"><a class="govuk-link govuk-link--no-underline govuk-link--no-visited-state" href="member-home">Manage users</h2></a>
+           <ul class="govuk-summary-card__actions">
+           <!-- <li class="govuk-summary-card__action"> <a class="govuk-link" href="#">Manage members<span class="govuk-visually-hidden"> of MORRIS ACCOUNTING LTD (0122239)</span></a>
+            </li>
+            <li class="govuk-summary-card__action"> <a class="govuk-link" href="#">Withdraw<span class="govuk-visually-hidden"> from University of Gloucestershire (University of Gloucestershire)</span></a>
+            </li>
+          </ul>
+        </div>
+        <div class="govuk-summary-card__content">
+          <dl class="govuk-summary-list">
+            <div class="govuk-summary-list__row">
+
+
+           <p class="govuk-body">You can:</p> 
+              <ul class="govuk-list govuk-list--bullet">
+                <li>view users who have been added </li>
+                <li>add users if they need to use services for MORRIS ACCOUNTING LTD</li>
+                <li>remove users</li>
+                </ul>
+
+
+              
+            </div>
+          </dl>
+        </div>
+      </div> -->
+
+      <!-- Verify someone identity -->
+
+      <div class="govuk-summary-card">
+        <div class="govuk-summary-card__title-wrapper">
+
+          <h2 class="govuk-summary-card__title">Tell Companies House you have verified someone's identity </a> <strong class="govuk-tag govuk-tag--blue">
+            Coming soon
+          </strong>  </h2>
+ 
+          <!-- <ul class="govuk-summary-card__actions">
+            <li class="govuk-summary-card__action"> <a class="govuk-link" href="#">Delete choice<span class="govuk-visually-hidden"> of University of Gloucestershire (University of Gloucestershire)</span></a>
+            </li>
+            <li class="govuk-summary-card__action"> <a class="govuk-link" href="#">Withdraw<span class="govuk-visually-hidden"> from University of Gloucestershire (University of Gloucestershire)</span></a>
+            </li>
+          </ul> -->
+        </div>
+        <div class="govuk-summary-card__content">
+          <dl class="govuk-summary-list">
+            <div class="govuk-summary-list__row">
+
+              <p class="govuk-body">From XX DATE, you can use this service to tell us you've verified a person's identity.
+
+              </p>
+
+              <p class="govuk-body">
+                 <a href="https://acsp-verify-identity-prototype.herokuapp.com/v7/start-page" class="govuk-link"></a>
+              </p>
+              
+            </div>
+          </dl>
+        </div>
+      </div>
+
+
+    <div class="govuk-summary-card">
+        <div class="govuk-summary-card__title-wrapper">
+          <h2 class="govuk-summary-card__title"> File as an authorised agent <strong class="govuk-tag govuk-tag--blue">Coming soon
+          </strong> </h2>
+          <!-- <ul class="govuk-summary-card__actions">
+            <li class="govuk-summary-card__action"> <a class="govuk-link" href="#">Delete choice<span class="govuk-visually-hidden"> of University of Gloucestershire (University of Gloucestershire)</span></a>
+            </li>
+            <li class="govuk-summary-card__action"> <a class="govuk-link" href="#">Withdraw<span class="govuk-visually-hidden"> from University of Gloucestershire (University of Gloucestershire)</span></a>
+            </li>
+          </ul> -->
+        </div>
+        <div class="govuk-summary-card__content">
+          <dl class="govuk-summary-list">
+            <div class="govuk-summary-list__row">
+
+              <p class="govuk-body">From XX DATE, you'll be able to file online as MORRIS ACCOUNTING LTD. </p>
+
+
+         <!-- <div class="govuk-inset-text">
+  <p>Authorised agent number: <strong>06254821</strong></p>
+  <p>You will need to use this to file on paper or using software.</p> 
+</div>-->
+
+<!--
+      <p class="govuk-body">To file for a company, you must provide the authentication code, or be digitally authorised to file online.</p> -->
+
+
+     <!-- <p class="govuk-body">
+        Continue to <a href="#" class="govuk-link">WebFiling</a> to file for a company.
+      </p>
+
+      <p class="govuk-body">
+        Continue to <a href="#" class="govuk-link">Companies House service</a> to file or search the register.
+      </p> --> 
+              
+            </div>
+          </dl>
+        </div>
+      </div>
+      <!-- Update authorised agent details 
+
+      <div class="govuk-summary-card">
+        <div class="govuk-summary-card__title-wrapper">
+          <h2 class="govuk-summary-card__title"><a class="govuk-link govuk-link--no-underline govuk-link--no-visited-state" href="https://register-an-acsp-prototype.herokuapp.com/v2-update/start-page">Update the authorised agent's details</h2></a>
+          
+
+
+        </div>
+        <div class="govuk-summary-card__content">
+          <dl class="govuk-summary-list">
+            <div class="govuk-summary-list__row">
+
+              <p class="govuk-body">Tell us about changes to MORRIS ACCOUNTING LTD.
+              </p>
+
+             {{ govukWarningText({
+                text: "You must tell us about any changes within 14 days.",
+                iconFallbackText: "Warning"
+              }) }} 
+
+              
+            </div>
+          </dl>
+        </div>
+        
+      </div>
+
+      
+      
+
+          <div class="govuk-summary-card">
+            <div class="govuk-summary-card__title-wrapper">
+              <h2 class="govuk-summary-card__title"><a class="govuk-link govuk-link--no-underline govuk-link--no-visited-state" href="https://register-an-acsp-prototype.herokuapp.com/v1-close/start-page">Close the authorised agent <strong class="govuk-tag">
+                Content TBC
+              </strong> </h2></a>
+              
+ 
+            </div>
+            <div class="govuk-summary-card__content">
+              <dl class="govuk-summary-list">
+                <div class="govuk-summary-list__row">
+    
+                  <p class="govuk-body">Tell us if MORRIS ACCOUNTING LTD is no longer an authorised agent and you need to close the account.
+                  </p>
+    
+                 {{ govukWarningText({
+                    text: "MORRIS ACCOUNTING LTD will no longer be able to access authorised agent services.",
+                    iconFallbackText: "Warning"
+                  }) }} 
+
+                  
+                </div>
+              </dl>
+            </div>
+            
+          </div>
+    -->
+          
+
+{% endblock %}
