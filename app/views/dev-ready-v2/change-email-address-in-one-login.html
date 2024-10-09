@@ -1,0 +1,52 @@
+{% extends "layouts/main.html" %}
+<!-- Overwrite suerfice name -->
+
+
+{% block pageTitle %}
+  {{ serviceName }} – Prototype
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-two-thirds ">
+
+  <form action="change-email-address-in-one-login" method="post" novalidate="">
+
+
+
+    <h1 class="govuk-heading-l">
+      You need to change your email address to '{{ data['chs-email'] }}' in GOV.UK One Login
+    </h1>
+
+    <p class="govuk-body">
+      To change your email address you need to:
+    </p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>go to the security tab in your GOV.UK One Login account</li>
+      <li>change the email address to '{{ data['chs-email'] }}' </li>
+      <li>find Companies House in the list of services</li>
+    </ul>
+
+
+    <div class="govuk-button-group">
+      {{ govukButton({
+        text: "Go to GOV.UK One login"
+      }) }}  
+    
+      <a class="govuk-link" href="#">I would prefer to use 'accounting-books@example.com' </a>
+    </div>
+
+  
+  </form>
+
+</div>
+</div>
+
+{% endblock %}

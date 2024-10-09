@@ -1,0 +1,69 @@
+{% extends "layouts/main.html" %}
+<!-- Overwrite suerfice name -->
+
+
+{% block pageTitle %}
+  {{ serviceName }} – Prototype
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-two-thirds ">
+
+  <form action="one-login-email-address-updated" method="post" novalidate="">
+
+
+    {{ govukRadios({
+      name: "changeOfEmail",
+      fieldset: {
+        legend: {
+          text: "   Do you want to use 'accounting-books@example.com' email address with Companies House?",
+          isPageHeading: true,
+          classes: "govuk-fieldset__legend--l"
+        }
+      },
+      hint: {
+        text: "Your GOV.UK One Login email address has been updated since you last used Companies House."
+      },
+      items: [
+        {
+          value: "yes",
+          text: "Yes",
+          hint: {
+            text: "Use 'accounting-books@example.com' email address"
+          }
+        },
+        {
+          value: "no",
+          text: "No",
+          hint: {
+            html: "Use my previous email address 'example@gmail.com' "
+          }
+        }
+      ]
+    }) }}
+
+    
+
+  
+    {{ govukButton({
+      text: "Continue"
+    }) }}   
+  
+  <!-- <p class="govuk-body"><a href="#" class="govuk-link">Register</a></p>
+  
+  <p class="govuk-body"><a href="#" class="govuk-link">I've forgotten my password</a></p> -->
+  
+  </form>
+
+            </div>
+          </div>
+
+{% endblock %}
