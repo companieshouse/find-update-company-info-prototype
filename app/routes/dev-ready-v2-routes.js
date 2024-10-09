@@ -102,7 +102,7 @@ else if (req.session.data['set-journey'].includes('public-11'))   {
 
     if (req.session.data['set-journey'].includes('public-2'))   {
             
-       
+       //do nothing
     }
     else{
 
@@ -292,7 +292,13 @@ router.post('/dev-ready-v2/one-login-enter-password', function (req, res) {
     else if (req.session.data['set-journey'].includes('public-2'))   {
       
       res.redirect('/dev-ready-v2/company-lookup') 
-      
+
+    }
+    else if (req.session.data['set-journey'].includes('public-3-4'))      
+    {
+            
+      res.redirect('/dev-ready-v2/one-login-email-address-updated') 
+       
     }
 
 
@@ -402,12 +408,41 @@ router.post('/dev-ready-v2/one-login-enter-password', function (req, res) {
         
       res.redirect('/dev-ready-v2/company-lookup')
     }
+    else if (req.session.data['set-journey'] === 'public-3-4') {
+        
+      res.redirect('/dev-ready-v2/one-login-email-address-updated')
+    }
     else{
 
       res.redirect('name')
     }
 
   })
+
+
+/*
+* You've created your GOV.UK One Login
+*/
+  
+router.post('/dev-ready-v2/one-login-email-address-updated', function (req, res) {
+ 
+
+    if (req.session.data['changeOfEmail'] === 'yes') {
+          
+      res.redirect('chs-email-address-updated')
+    }
+    else if (req.session.data['changeOfEmail'] === 'no') {
+          
+      res.redirect('change-email-address-in-one-login')
+
+    }
+
+
+})
+
+
+
+
 
     
   //One loginsign create complete
