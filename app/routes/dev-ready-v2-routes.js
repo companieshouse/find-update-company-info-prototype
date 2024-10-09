@@ -104,6 +104,14 @@ else if (req.session.data['set-journey'].includes('public-11'))   {
             
        //do nothing
     }
+    else if (req.session.data['set-journey'].includes('public-7'))   {
+            
+      //do nothing
+   }
+   else if (req.session.data['set-journey'].includes('public-8'))   {
+            
+    //do nothing
+ }
     else{
 
       res.redirect('/dev-ready-v2/create-or-sign-in')
@@ -133,43 +141,20 @@ router.post('/dev-ready-v2/chs-sign-in', function (req, res) {
       
       res.redirect('/dev-ready-v2/sign-in-using-one-login')
     }
-    else if (req.session.data['set-journey'].includes('public-3'))   {
-      
-      res.redirect('/dev-ready-v2/start-page')
-    }
-    else if (req.session.data['set-journey'].includes('public-4'))   {
-      
-      res.redirect('/dev-ready-v2/start-page')
-    }
-    else if (req.session.data['set-journey'].includes('public-5'))   {
-      
-      res.redirect('/dev-ready-v2/start-page')
-    }
 
-    else if (req.session.data['set-journey'].includes('public-6'))   {
-      
-      res.redirect('/dev-ready-v2/start-page')
-    }
     else if (req.session.data['set-journey'].includes('public-7'))   {
       
-      res.redirect('/dev-ready-v2/start-page')
+      res.redirect('/dev-ready-v2/company-lookup')
     }
     else if (req.session.data['set-journey'].includes('public-8'))   {
       
-      res.redirect('/dev-ready-v2/start-page')
+      res.redirect('/dev-ready-v2/your-details-public-beta')
     }
-    else if (req.session.data['set-journey'].includes('public-9'))   {
-      
-      res.redirect('/dev-ready-v2/start-page')
-    }
-    else if (req.session.data['set-journey'].includes('public-10'))   {
-      
-      res.redirect('/dev-ready-v2/start-page')
-    }
-    else if (req.session.data['set-journey'].includes('public-11'))   {
-      
-      res.redirect('/dev-ready-v2/start-page')
-    } 
+
+
+    
+  //    res.redirect('/dev-ready-v2/start-page')
+   
 
 
 })
@@ -300,6 +285,12 @@ router.post('/dev-ready-v2/one-login-enter-password', function (req, res) {
       res.redirect('/dev-ready-v2/one-login-email-address-updated') 
        
     }
+    else if (req.session.data['set-journey'].includes('public-8'))      
+      {
+              
+        res.redirect('/dev-ready-v2/end-linking') 
+         
+      }
 
 
   })
@@ -412,11 +403,12 @@ router.post('/dev-ready-v2/one-login-enter-password', function (req, res) {
         
       res.redirect('/dev-ready-v2/one-login-email-address-updated')
     }
-    else{
-
-      res.redirect('name')
+    else if (req.session.data['set-journey'] === 'public-8') {
+        
+      res.redirect('/dev-ready-v2/end-linking')
     }
-
+    
+    
   })
 
 
