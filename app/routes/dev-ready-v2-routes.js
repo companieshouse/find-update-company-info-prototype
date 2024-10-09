@@ -150,6 +150,10 @@ router.post('/dev-ready-v2/chs-sign-in', function (req, res) {
       
       res.redirect('/dev-ready-v2/your-details-public-beta')
     }
+    else if (req.session.data['set-journey'].includes('public-9'))   {
+      
+      res.redirect('/dev-ready-v2/your-details-public-beta')
+    }
 
 
     
@@ -286,11 +290,18 @@ router.post('/dev-ready-v2/one-login-enter-password', function (req, res) {
        
     }
     else if (req.session.data['set-journey'].includes('public-8'))      
-      {
+    {
               
         res.redirect('/dev-ready-v2/end-linking') 
          
+    }
+    else if (req.session.data['set-journey'].includes('public-9'))      
+      {
+                
+          res.redirect('/dev-ready-v2/email-address-do-not-match') 
+           
       }
+  
 
 
   })
@@ -407,6 +418,11 @@ router.post('/dev-ready-v2/one-login-enter-password', function (req, res) {
         
       res.redirect('/dev-ready-v2/end-linking')
     }
+    else if (req.session.data['set-journey'] === 'public-9') {
+        
+      res.redirect('/dev-ready-v2/email-address-do-not-match')
+    }
+    
     
     
   })

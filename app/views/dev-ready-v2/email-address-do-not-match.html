@@ -1,0 +1,80 @@
+{% extends "layouts/layout_unbranded-with-banner.html" %}
+<!-- Overwrite suerfice name -->
+
+
+{% block pageTitle %}
+  {{ serviceName }} – Prototype
+{% endblock %}
+
+
+{% set serviceName %}
+ 
+{% endset %}
+
+{% block beforeContent %}
+
+
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-two-thirds ">
+
+  <form action="email-address-do-not-match" method="post" novalidate="">
+
+  
+    <h1 class="govuk-heading-l">You need to use your Companies House account email address </h1> 
+
+    
+      <p class="govuk-body">You need to sign in to or create a GOV.UK One Login using the same email address you use to sign in to your Companies House account.</p>
+
+      <div class="govuk-inset-text">
+        <p class="govuk-body">Companies House email address is: <br> 
+          <span class="govuk-body govuk-!-font-weight-bold"> {{ data['chs-email'] }} </span></p>
+          </div>
+    
+
+      
+
+
+
+
+<!--       {{ govukRadios({
+        name: "email-does-not-match",
+        fieldset: {
+          legend: {
+            text: "Choose an option: ",
+            isPageHeading: false,
+            classes: "govuk-fieldset__legend--m"
+          }
+        },
+        items: [
+          {
+            value: "sameas-chs",
+            text: "Create or sign in to a GOV.UK One Login with   'example@gmail.com'"
+          },
+          {
+            value: "no",
+            text: "I have a GOV.UK One Login, but it not using the email addres 'example@gmail.com'"
+          }
+        ]
+      }) }} -->
+
+
+
+     {{ govukButton({
+      text: "Continue"
+    }) }}  
+    
+   <p class="govuk-body"><a href="email-address-do-not-match-2" class="govuk-link">I want to use a GOV.UK One Login that has a different email address</a></p>
+  
+  
+  
+  </form>
+
+            </div>
+          </div>
+
+{% endblock %}

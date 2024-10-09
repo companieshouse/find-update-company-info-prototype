@@ -19,8 +19,19 @@
 
   <form action="one-login-email-address-updated" method="post" novalidate="">
 
+    <h1 class="govuk-heading-l">We've noticed you have updated your email address with GOV.UK One Login</h1>
 
-    {{ govukRadios({
+
+    <p> If your happy for Companies House to update your email address to <span class="govuk-body govuk-!-font-weight-bold">'account-books@example.com'</span>, select continue. </p>
+
+
+
+
+
+
+
+
+  <!--   {{ govukRadios({
       name: "changeOfEmail",
       fieldset: {
         legend: {
@@ -48,18 +59,18 @@
           }
         }
       ]
-    }) }}
+    }) }} -->
 
     
 
   
     {{ govukButton({
       text: "Continue"
-    }) }}   
+    }) }}  
+    
+    
+    <p class="govuk-body"><a href="change-email-address-in-one-login" class="govuk-link">Change email address to something else in GOV.UK One Login</a></p>
   
-  <!-- <p class="govuk-body"><a href="#" class="govuk-link">Register</a></p>
-  
-  <p class="govuk-body"><a href="#" class="govuk-link">I've forgotten my password</a></p> -->
   
   </form>
 
