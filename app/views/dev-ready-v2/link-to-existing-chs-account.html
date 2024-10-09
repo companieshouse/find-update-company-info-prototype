@@ -1,0 +1,85 @@
+{% extends "layouts/layout_unbranded-with-banner.html" %}
+<!-- Overwrite suerfice name -->
+
+
+{% block pageTitle %}
+  {{ serviceName }} – Prototype
+{% endblock %}
+
+
+{% set serviceName %}
+ 
+{% endset %}
+
+{% block beforeContent %}
+
+
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-two-thirds ">
+
+  <form action="link-to-existing-chs-account" method="post" novalidate="">
+
+  
+    <h1 class="govuk-heading-l">We have noticed you have a Companies House account with this email address </h1> 
+
+   <!-- <div class="govuk-inset-text">
+      <p class="govuk-body">Companies House email address is: <br> 
+        <span class="govuk-body govuk-!-font-weight-bold"> {{ data['chs-email'] }} </span></p>
+        </div> -->
+  
+    
+      <p class="govuk-body">To save the information from your Companies House account to the GOV.UK One Login, you need to: </p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>sign in to your existing Companies House account</li>
+        <li>go to 'Your details' at the top right of the screen</li>
+        <li>select, try the new way to sign in</li>
+        <li>sign in to the GOV.UK One Login</li>
+      </ul>
+
+
+
+
+
+<!--       {{ govukRadios({
+        name: "email-does-not-match",
+        fieldset: {
+          legend: {
+            text: "Choose an option: ",
+            isPageHeading: false,
+            classes: "govuk-fieldset__legend--m"
+          }
+        },
+        items: [
+          {
+            value: "sameas-chs",
+            text: "Create or sign in to a GOV.UK One Login with   'example@gmail.com'"
+          },
+          {
+            value: "no",
+            text: "I have a GOV.UK One Login, but it not using the email addres 'example@gmail.com'"
+          }
+        ]
+      }) }} -->
+
+
+
+     {{ govukButton({
+      text: "Continue"
+    }) }}  
+    
+   <p class="govuk-body"><a href="email-address-do-not-match-2" class="govuk-link">I don't want to save my Companies House information to my GOV.UK One Login</a></p>
+  
+  
+  
+  </form>
+
+            </div>
+          </div>
+
+{% endblock %}

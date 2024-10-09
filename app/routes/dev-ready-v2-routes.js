@@ -84,6 +84,10 @@ else if (req.session.data['set-journey'].includes('public-11'))   {
             
        
       }
+      if (req.session.data['set-journey'].includes('public-11'))   {
+            
+       
+      }
       else{
 
         res.redirect('/dev-ready-v2/chs-sign-in')
@@ -301,6 +305,12 @@ router.post('/dev-ready-v2/one-login-enter-password', function (req, res) {
           res.redirect('/dev-ready-v2/email-address-do-not-match') 
            
       }
+      else if (req.session.data['set-journey'].includes('public-11')){
+        
+        res.redirect('/dev-ready-v2/link-to-existing-chs-account')
+      
+      }
+      
   
 
 
@@ -421,6 +431,11 @@ router.post('/dev-ready-v2/one-login-enter-password', function (req, res) {
     else if (req.session.data['set-journey'] === 'public-9') {
         
       res.redirect('/dev-ready-v2/email-address-do-not-match')
+    }
+    else if (req.session.data['set-journey'] === 'public-11') {
+        
+      res.redirect('/dev-ready-v2/link-to-existing-chs-account')
+    
     }
     
     
