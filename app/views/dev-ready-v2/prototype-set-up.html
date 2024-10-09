@@ -14,9 +14,7 @@
 
 
 
-      <h1 class="govuk-heading-l">Choose a journey <strong class='govuk-tag'>
-        Page for User Research purposes
-      </strong></h1>
+      <h1 class="govuk-heading-l">Choose a public Beta journey<strong class='govuk-tag govuk-tag--red'>Not for development</strong></h1>
 <!-- 
 
       {{ govukRadios({
@@ -76,7 +74,7 @@
       ]
     }) }} -->
 
-    {{ govukRadios({
+<!--     {{ govukRadios({
       name: "set-journey",
       fieldset: {
         legend: {
@@ -106,7 +104,124 @@
         }
       
       ]
+    }) }} -->
+
+
+    {{ govukRadios({
+      name: "set-journey",
+      fieldset: {
+        legend: {
+          html: "Linked accounts",
+          isPageHeading: false,
+          classes: "govuk-fieldset__legend--m"
+        }
+      },
+      hint: {
+        text: "Select one option."
+      },
+      items: [
+        {
+          value: "public-1",
+          html: "Public beta 1 - Happy path <strong class='govuk-tag govuk-tag--grey'>
+            Ready for review
+           </strong>",
+          hint: {
+            text: "A user that has a Companies House account that is not linked to a GOV.UK One Login"
+          }
+        },
+        {
+          value: "public-2",
+          html: "Public beta 2 <strong class='govuk-tag govuk-tag--grey'>Ready for review </strong>",
+          hint: {
+            text: "A user signs into CHS, but their account is already linked to a GOV.UK One Login"
+          }
+        },
+        {
+          value: "public-3-4",
+          text: "Public beta 3 and 4",
+          hint: {
+            text: "A user has changed their GOV.UK One Login email address. The user can either change their email address in GOV.UK One Login, or update their CHS account to match."
+          }
+        
+        },
+        {
+          value: "public-5",
+          html: "Public beta 5 <strong class='govuk-tag govuk-tag--blue'>Spike</strong>",
+          hint: {
+            html: "A user has changed their GOV.UK One Login email address to one that matches a CHS email address which is linked to a different sub-ID."
+          }
+        
+        },
+        {
+          value: "public-6",
+          html: "Public beta 6 <strong class='govuk-tag govuk-tag--blue'>Spike</strong>",
+          hint: {
+            html: "A user signs out of CHS, but their session remains opens with GOV.UK One Login"
+          }
+        
+        }
+      
+      ]
     }) }}
+
+
+
+    {{ govukRadios({
+      name: "set-journey",
+      fieldset: {
+        legend: {
+          html: "Unlinked accounts",
+          isPageHeading: false,
+          classes: "govuk-fieldset__legend--m"
+        }
+      },
+      hint: {
+        text: "Select one option."
+      },
+      items: [
+        {
+          value: "public-7",
+          html: "Public beta 7 ",
+          hint: {
+            text: "A user signs in via CHS"
+          }
+        },
+        {
+          value: "public-8",
+          text: "Public beta 8",
+          hint: {
+            text: "A user signs in via CHS, and links their account to GOV.UK One Login"
+          }
+        },
+        {
+          value: "public-9",
+          html: "Public beta 9 <strong class='govuk-tag govuk-tag--blue'>Review flow</strong>",
+          hint: {
+            html: "A user signs in via CHS, but links their account to a GOV.UK One Login that is already linked to a different CHS account.  "
+          }
+        
+        },
+        {
+          value: "public-10",
+          html: "Public beta 10 <strong class='govuk-tag govuk-tag--blue'>Review flow</strong>",
+          hint: {
+            html: "A user signs in via CHS, but their GOV.UK One login is linked to a new CHS account"
+          }
+        
+        },
+        {
+          value: "public-11",
+          html: "Public beta 11",
+          hint: {
+            html: "A user has not linked their CHS account, but signs into GOV.UK One Login"
+          }
+        
+        }
+      
+      ]
+    }) }}
+
+
 
      <!-- {
           value: "public-beta-linked",

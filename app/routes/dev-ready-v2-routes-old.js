@@ -6,103 +6,83 @@
 const govukPrototypeKit = require('govuk-prototype-kit')
 const router = govukPrototypeKit.requests.setupRouter()
 
+// Add your routes here
 
-/*
-* Choose a public Beta journey
-*/
+
+
+
+
+//journey setting
 router.post('/dev-ready-v2/prototype-set-up', function (req, res) {
 
-  res.redirect('/dev-ready-v2/choose-sign-in')
+  //if they are filing take the user to Upload a document
 
+
+  res.redirect('/dev-ready-v2/upload-a-document')
+
+/*   if (req.session.data['set-journey'].includes('filer')) {
+       
+    res.redirect('/dev-ready-v2/upload-a-document')
+  }
+  else if (req.session.data['set-journey'].includes('private-beta-not-linked'))   {
+       
+    res.redirect('/dev-ready-v2/chs-sign-in')
+  }
+  else if (req.session.data['set-journey'].includes('linked-account'))   {
+       
+    res.redirect('/dev-ready-v2/create-or-sign-in')
+  }
+  else if (req.session.data['set-journey'].includes('different-email'))   {
+       
+    res.redirect('/dev-ready-v2/chs-sign-in')
+  }
+  else if (req.session.data['set-journey'].includes('wrong-url'))   {
+       
+    res.redirect('/dev-ready-v2/chs-sign-in')
+  }
+  else if (req.session.data['set-journey'].includes('public-beta-not-linked'))   {
+       
+    res.redirect('/dev-ready-v2/choose-sign-in')
+  }
+  else if (req.session.data['set-journey'].includes('public-beta-already-linked'))   {
+       
+    res.redirect('/dev-ready-v2/choose-sign-in')
+  }
+  else if (req.session.data['set-journey'].includes('public-beta-mandatory-first-time'))   {
+       
+    res.redirect('/dev-ready-v2/start-page')
+  }
+  else if (req.session.data['set-journey'].includes('public-beta-mandatory-return-user'))   {
+       
+    res.redirect('/dev-ready-v2/create-or-sign-in')
+  }
+ */
+ 
+ 
+})
+
+
+//upload a document service start page goes directly to sign in page
+router.post('/dev-ready-v2/upload-a-document', function (req, res) {
+
+  res.redirect('/dev-ready-v2/choose-sign-in')
 })
 
 
 
 
-/* if (req.session.data['set-journey'].includes('public-1'))   {
-        
-  res.redirect('/dev-ready-v2/start-page')
-}
-else if (req.session.data['set-journey'].includes('public-2'))   {
-  
-  res.redirect('/dev-ready-v2/start-page')
-}
-else if (req.session.data['set-journey'].includes('public-3'))   {
-  
-  res.redirect('/dev-ready-v2/start-page')
-}
-else if (req.session.data['set-journey'].includes('public-4'))   {
-  
-  res.redirect('/dev-ready-v2/start-page')
-}
-else if (req.session.data['set-journey'].includes('public-5'))   {
-  
-  res.redirect('/dev-ready-v2/start-page')
-}
 
-else if (req.session.data['set-journey'].includes('public-6'))   {
-  
-  res.redirect('/dev-ready-v2/start-page')
-}
-else if (req.session.data['set-journey'].includes('public-7'))   {
-  
-  res.redirect('/dev-ready-v2/start-page')
-}
-else if (req.session.data['set-journey'].includes('public-8'))   {
-  
-  res.redirect('/dev-ready-v2/start-page')
-}
-else if (req.session.data['set-journey'].includes('public-9'))   {
-  
-  res.redirect('/dev-ready-v2/start-page')
-}
-else if (req.session.data['set-journey'].includes('public-10'))   {
-  
-  res.redirect('/dev-ready-v2/start-page')
-}
-else if (req.session.data['set-journey'].includes('public-11'))   {
-  
-  res.redirect('/dev-ready-v2/start-page')
-} */
-
-
-
-
-
-/*
- * How do you want to sign in?
- */
- router.post('/dev-ready-v2/choose-sign-in', function (req, res) {
-
-  /*
-   * Existing Companies House account
-   */
-    if(req.session.data['sign-in-using'] === 'CHS') {
-
-
-      if (req.session.data['set-journey'].includes('public-1'))   {
-            
-       
-      }
-      else{
-
-        res.redirect('/dev-ready-v2/chs-sign-in')
-
-      }
-
-
-
-    }
+router.post('/dev-ready-v2/choose-sign-in', function (req, res) {
 
   /*
    * GOV.UK One Login
    */
-  else if (req.session.data['sign-in-using'] === 'OL') {
+  if (req.session.data['sign-in-using'] === 'OL') {
 
 
-    if (req.session.data['set-journey'].includes('public-2'))   {
-            
+    if (req.session.data['set-journey'].includes('public-beta-not-linked'))   {
        
+      res.redirect('/dev-ready-v2/start-page')
     }
     else{
 
@@ -110,135 +90,62 @@ else if (req.session.data['set-journey'].includes('public-11'))   {
 
     }
 
+  }
+  else if(req.session.data['sign-in-using'] === 'CHS') {
+
+    res.redirect('/dev-ready-v2/chs-sign-in')
+
+  }
+
+
+})
+
+
+      /*
+      * account not already linked -- removed for now
+      
+
+      if (req.session.data['set-journey'].includes('public-beta-not-linked')){
+
+        res.redirect('/dev-ready/start-page')
+
+      }
+      else{
+
+        res.redirect('dev-ready/create-or-sign-in')
+
+      }*/
+  
+
+  /*
+   * Companies House account
+   */
 
   
 
-  }
 
-})
-
-/*
- * Sign in to Companies House
- */
-
+//new email address page for CHS 
 router.post('/dev-ready-v2/chs-sign-in', function (req, res) {
 
 
-    if (req.session.data['set-journey'].includes('public-1'))   {
-            
-      //not used
+  //If they have a GOV.UK One Login account
+ if (req.session.data['set-journey'].includes('public-beta-already-linked')) {
+       
+  res.redirect('/dev-ready-v2/sign-in-using-one-login')
 
-    }
-    else if (req.session.data['set-journey'].includes('public-2'))   {
-      
-      res.redirect('/dev-ready-v2/sign-in-using-one-login')
-    }
-    else if (req.session.data['set-journey'].includes('public-3'))   {
-      
-      res.redirect('/dev-ready-v2/start-page')
-    }
-    else if (req.session.data['set-journey'].includes('public-4'))   {
-      
-      res.redirect('/dev-ready-v2/start-page')
-    }
-    else if (req.session.data['set-journey'].includes('public-5'))   {
-      
-      res.redirect('/dev-ready-v2/start-page')
-    }
+}else{
 
-    else if (req.session.data['set-journey'].includes('public-6'))   {
-      
-      res.redirect('/dev-ready-v2/start-page')
-    }
-    else if (req.session.data['set-journey'].includes('public-7'))   {
-      
-      res.redirect('/dev-ready-v2/start-page')
-    }
-    else if (req.session.data['set-journey'].includes('public-8'))   {
-      
-      res.redirect('/dev-ready-v2/start-page')
-    }
-    else if (req.session.data['set-journey'].includes('public-9'))   {
-      
-      res.redirect('/dev-ready-v2/start-page')
-    }
-    else if (req.session.data['set-journey'].includes('public-10'))   {
-      
-      res.redirect('/dev-ready-v2/start-page')
-    }
-    else if (req.session.data['set-journey'].includes('public-11'))   {
-      
-      res.redirect('/dev-ready-v2/start-page')
-    } 
+  res.redirect('/dev-ready-v2/company-lookup')
 
 
-})
-
-/*
- * Create a GOV.UK One Login or sign in
- */
-
-router.post('/dev-ready-v2/create-or-sign-in', function (req, res) {
-
-  if (req.session.data['set-journey'].includes('public-1'))   {
-          
-    res.redirect('/dev-ready-v2/start-page')
-  }
-  else if (req.session.data['set-journey'].includes('public-2'))   {
-    
-    res.redirect('/dev-ready-v2/start-page')
-  }
-  else if (req.session.data['set-journey'].includes('public-3'))   {
-    
-    res.redirect('/dev-ready-v2/start-page')
-  }
-  else if (req.session.data['set-journey'].includes('public-4'))   {
-    
-    res.redirect('/dev-ready-v2/start-page')
-  }
-  else if (req.session.data['set-journey'].includes('public-5'))   {
-    
-    res.redirect('/dev-ready-v2/start-page')
-  }
-
-  else if (req.session.data['set-journey'].includes('public-6'))   {
-    
-    res.redirect('/dev-ready-v2/start-page')
-  }
-  else if (req.session.data['set-journey'].includes('public-7'))   {
-    
-    res.redirect('/dev-ready-v2/start-page')
-  }
-  else if (req.session.data['set-journey'].includes('public-8'))   {
-    
-    res.redirect('/dev-ready-v2/start-page')
-  }
-  else if (req.session.data['set-journey'].includes('public-9'))   {
-    
-    res.redirect('/dev-ready-v2/start-page')
-  }
-  else if (req.session.data['set-journey'].includes('public-10'))   {
-    
-    res.redirect('/dev-ready-v2/start-page')
-  }
-  else if (req.session.data['set-journey'].includes('public-11'))   {
-    
-    res.redirect('/dev-ready-v2/start-page')
-  } 
-
-
+}
 })
 
 
 
 
 
-
-
-
-
-
-
+ 
 
 
 //start page
@@ -285,14 +192,19 @@ router.post('/dev-ready-v2/one-login-enter-password', function (req, res) {
   router.post('/dev-ready-v2/enter-code', function (req, res) {
 
 
-    if (req.session.data['set-journey'].includes('public-1'))   {
-          
+    if (req.session.data['set-journey'] === 'public-beta-not-linked') {
+        
+      res.redirect('/dev-ready-v2/email-preferences')
+    }
+    else if (req.session.data['set-journey'] === 'public-beta-already-linked') {
+        
       res.redirect('/dev-ready-v2/company-lookup')
     }
-    else if (req.session.data['set-journey'].includes('public-2'))   {
-      
-      res.redirect('/dev-ready-v2/company-lookup') 
-      
+    
+    else{
+
+      res.redirect('email-preferences')
+
     }
 
 
@@ -360,20 +272,11 @@ router.post('/dev-ready-v2/one-login-enter-password', function (req, res) {
     res.redirect('create-check-your-phone')
   })
   
-  /*
-   * Create journey - Check your phone
-   */
+  //One loginsign enter mobile number
   router.post('/dev-ready-v2/create-check-your-phone', function (req, res) {
-
   
     res.redirect('create-complete')
   })
-
-
-
-
-
-
   
   
   
@@ -389,18 +292,13 @@ router.post('/dev-ready-v2/one-login-enter-password', function (req, res) {
   //One loginsign create - check your email 
   
   
-/*
-* You've created your GOV.UK One Login
-*/
+
   
+  //One loginsign create complete
   router.post('/dev-ready-v2/create-complete', function (req, res) {
-    if (req.session.data['set-journey'] === 'public-1') {
+    if (req.session.data['set-journey'] === 'public-beta-not-linked') {
         
-      res.redirect('/dev-ready-v2/company-lookup')
-    }
-    else if (req.session.data['set-journey'] === 'public-2') {
-        
-      res.redirect('/dev-ready-v2/company-lookup')
+      res.redirect('/dev-ready-v2/email-preferences')
     }
     else{
 
