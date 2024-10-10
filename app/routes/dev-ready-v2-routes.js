@@ -136,7 +136,7 @@ else if (req.session.data['set-journey'].includes('public-11'))   {
 router.post('/dev-ready-v2/chs-sign-in', function (req, res) {
 
 
-    if (req.session.data['set-journey'].includes('public-1'))   {
+    if(req.session.data['set-journey'].includes('public-1'))   {
             
       //not used
 
