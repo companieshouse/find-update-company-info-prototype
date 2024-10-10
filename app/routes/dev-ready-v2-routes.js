@@ -136,7 +136,7 @@ else if (req.session.data['set-journey'].includes('public-11'))   {
 router.post('/dev-ready-v2/chs-sign-in', function (req, res) {
 
 
-    if (req.session.data['set-journey'].includes('public-1'))   {
+    if(req.session.data['set-journey'].includes('public-1'))   {
             
       //not used
 
@@ -570,7 +570,7 @@ router.post('/dev-ready-v2/one-login-email-address-updated', function (req, res)
     
   })
   
-  // Companies House sign in 
+/*   // Companies House sign in 
   router.post('/dev-ready-v2/chs-sign-in', function (req, res) {
 
 
@@ -595,7 +595,7 @@ router.post('/dev-ready-v2/one-login-email-address-updated', function (req, res)
     }
 
   })
-  
+   */
   
   //Save your Companies House information
   router.post('/dev-ready-v2/link-accounts', function (req, res) {
