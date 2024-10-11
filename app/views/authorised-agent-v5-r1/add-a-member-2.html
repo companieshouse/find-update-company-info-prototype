@@ -61,14 +61,13 @@
                 html: "<span class='govuk-body govuk-!-font-weight-bold'> Account owner</span>  <p class='govuk-body govuk-!-static-padding-top-2'>They'll be able to:</p>
                 <ul>
                   <li>update the authorised agent's details</li>
-                  <li>view all users who have been added to this account</li>
                   <li>add and remove all users</li> 
                   <li>close the account</li>
                   </ul>"
               },
               {
                 value: "admin",
-                html: "<span class='govuk-!-font-weight-bold govuk-!-padding-bottom-0'>Administrator</span> <p class='govuk-body govuk-!-static-padding-top-2'> They'll be able to view all users who have been added to this account, and can add and remove:</p>
+                html: "<span class='govuk-!-font-weight-bold govuk-!-padding-bottom-0'>Administrator</span> <p class='govuk-body govuk-!-static-padding-top-2'> They'll be able to add and remove:</p>
                 <ul>
                   <li>administrators</li> 
                   <li>standard users</li>
@@ -76,7 +75,7 @@
               },
               {
                 value: "standard-user",
-                html: "<span class='govuk-!-font-weight-bold govuk-!-padding-bottom-0'> Standard user </span> <p class='govuk-body govuk-!-static-padding-top-2'> They'll be able to view all users who have been added to this account. They will not be able to add or remove users. </p>"
+                html: "<span class='govuk-!-font-weight-bold govuk-!-padding-bottom-0'> Standard user </span> <p class='govuk-body govuk-!-static-padding-top-2'> They will not be able to add or remove users. </p>"
               }
             ]
           }) }}
@@ -85,6 +84,7 @@
 <div class="govuk-inset-text">
 <p class="govuk-body">All users who are added to this account will be able to: </p>
           <ul class="govuk-list govuk-list--bullet govuk-!-margin-bottom-6">
+            <li>view users who have been added to this account</li>
                         <li>verify people's identity for Companies House from XX DATE</li>
             <li>file as an authorised agent from XX DATE</li>
             </ul>
