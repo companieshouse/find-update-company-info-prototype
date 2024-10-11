@@ -25,25 +25,22 @@
   <form action="link-to-existing-chs-account" method="post" novalidate="">
 
   
-    <h1 class="govuk-heading-l">We have noticed you have a Companies House account with this email address </h1> 
+    <h1 class="govuk-heading-l">We need to connect your Companies House account to your GOV.UK One Login</h1> 
 
    <!-- <div class="govuk-inset-text">
       <p class="govuk-body">Companies House email address is: <br> 
         <span class="govuk-body govuk-!-font-weight-bold"> {{ data['chs-email'] }} </span></p>
         </div> -->
   
-    
-      <p class="govuk-body">To save the information from your Companies House account to the GOV.UK One Login, you need to: </p>
-
-      <ul class="govuk-list govuk-list--bullet">
-        <li>sign in to your existing Companies House account</li>
-        <li>go to 'Your details' at the top right of the screen</li>
-        <li>select, try the new way to sign in</li>
-        <li>sign in to the GOV.UK One Login</li>
-      </ul>
-
-
-
+        <p class="govuk-body">This will ensure all your information is saved and stored correctly.</p>
+  
+        <p class="govuk-body">How to connect your account to GOV.UK One Login: </p>
+        <ol class="govuk-list govuk-list--number">
+          <li><a href="../dev-ready-v2/chs-sign-in" class="govuk-link--no-visited-state" rel="noreferrer noopener" target="_blank">Sign in to your Companies House account (opens in new tab)</a>.</li>
+          <li>Select 'Manage account'.</li>
+          <li>Select 'Continue' and sign in to your GOV.UK One Login.</li>
+        </ol>
+      
 
 
 <!--       {{ govukRadios({
@@ -69,11 +66,9 @@
 
 
 
-     {{ govukButton({
-      text: "Continue"
-    }) }}  
+  
     
-   <p class="govuk-body"><a href="email-address-do-not-match-2" class="govuk-link">I don't want to save my Companies House information to my GOV.UK One Login</a></p>
+
   
   
   
