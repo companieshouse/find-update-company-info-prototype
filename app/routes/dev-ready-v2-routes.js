@@ -79,12 +79,11 @@ else if (req.session.data['set-journey'].includes('public-11'))   {
    */
     if(req.session.data['sign-in-using'] === 'CHS') {
 
-
-      if (req.session.data['set-journey'].includes('public-1'))   {
+      if (req.session.data['set-journey'].includes('public-11'))   {
             
        
       }
-      if (req.session.data['set-journey'].includes('public-11'))   {
+      else if (req.session.data['set-journey'].includes('public-1'))   {
             
        
       }
@@ -277,8 +276,13 @@ router.post('/dev-ready-v2/one-login-enter-password', function (req, res) {
   //sign in
   router.post('/dev-ready-v2/enter-code', function (req, res) {
 
-
-    if (req.session.data['set-journey'].includes('public-1'))   {
+    if (req.session.data['set-journey'].includes('public-11'))      
+    {
+                    
+            res.redirect('/dev-ready-v2/link-to-existing-chs-account') 
+               
+    }
+    else if (req.session.data['set-journey'].includes('public-1'))   {
           
       res.redirect('/dev-ready-v2/company-lookup')
     }
@@ -296,20 +300,22 @@ router.post('/dev-ready-v2/one-login-enter-password', function (req, res) {
     else if (req.session.data['set-journey'].includes('public-8'))      
     {
               
-        res.redirect('/dev-ready-v2/end-linking') 
+      res.redirect('/dev-ready-v2/end-linking') 
          
     }
     else if (req.session.data['set-journey'].includes('public-9'))      
-      {
+    {
                 
-          res.redirect('/dev-ready-v2/email-address-do-not-match') 
+        res.redirect('/dev-ready-v2/email-address-do-not-match') 
            
-      }
-      else if (req.session.data['set-journey'].includes('public-11')){
-        
-        res.redirect('/dev-ready-v2/link-to-existing-chs-account')
-      
-      }
+    }
+    else if (req.session.data['set-journey'].includes('public-11'))      
+    {
+                  
+          res.redirect('/dev-ready-v2/link-to-existing-chs-account') 
+             
+    }
+    
       
   
 
