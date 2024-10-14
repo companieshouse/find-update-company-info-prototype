@@ -7,7 +7,6 @@
 
 
 {% block beforeContent %}
-<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
 
 {% endblock %}
 
@@ -19,6 +18,10 @@
 
   <form action="choose-sign-in" method="post" novalidate="">
 
+    <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+
+
+    
     {% set html %}
     <p class="govuk-notification-banner__heading">
       We are introducing GOV.UK One Login, which is the new way to sign in to some of our services.
