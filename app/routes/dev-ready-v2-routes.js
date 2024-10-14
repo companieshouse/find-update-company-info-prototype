@@ -455,8 +455,9 @@ router.post('/dev-ready-v2/one-login-enter-password', function (req, res) {
   
 router.post('/dev-ready-v2/one-login-email-address-updated', function (req, res) {
  
+  res.redirect('/dev-ready-v2/company-lookup')
 
-    if (req.session.data['changeOfEmail'] === 'yes') {
+   /*  if (req.session.data['changeOfEmail'] === 'yes') {
           
       res.redirect('chs-email-address-updated')
     }
@@ -464,7 +465,7 @@ router.post('/dev-ready-v2/one-login-email-address-updated', function (req, res)
           
       res.redirect('change-email-address-in-one-login')
 
-    }
+    } */
 
 
 })
