@@ -21,7 +21,6 @@
     </h3>
     <p class="govuk-body">You have added <strong>l.williams@example.com</strong> as an administrator for MORRIS ACCOUNTING LTD.</p>
 
-    <p>We've sent them an email to tell them you've added them.</p>
   {% endset %}
 
     {{ govukNotificationBanner({
@@ -32,17 +31,35 @@
 
 
        <span class="govuk-caption-l">MORRIS ACCOUNTING LTD</span>
-          <h1 class="govuk-heading-l">What an administrator can do</h1> 
+          <h1 class="govuk-heading-l">What happens next</h1> 
 
 
+    <p>We've sent an email to tell them you've added them as an administrator.</p>
+    <p>They'll be able to access the authorised agent account and services when they sign in. </p>
+
+
+
+<details class="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      What an administrator can do
+    </span>
+  </summary>
+  <div class="govuk-details__text">
 
   <p class="govuk-body">An administrator can access services for the authorised agent.</p>
+
 
     <p>They can also view all users who have been added to this account. They can add and remove:</p>
     <ul class="govuk-list govuk-list--bullet">
       <li>administrators</li>
       <li>standard users</li>
     </ul>
+      </div>
+</details>
+
+
+
 
 
 
