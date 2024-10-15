@@ -306,7 +306,7 @@ router.post('/dev-ready-v2/one-login-enter-password', function (req, res) {
     else if (req.session.data['set-journey'].includes('public-9'))      
     {
                 
-        res.redirect('/dev-ready-v2/email-address-do-not-match') 
+        res.redirect('/dev-ready-v2/email-address-do-not-match-2') 
            
     }
     else if (req.session.data['set-journey'].includes('public-11'))      
@@ -316,9 +316,6 @@ router.post('/dev-ready-v2/one-login-enter-password', function (req, res) {
              
     }
     
-      
-  
-
 
   })
   
@@ -436,7 +433,7 @@ router.post('/dev-ready-v2/one-login-enter-password', function (req, res) {
     }
     else if (req.session.data['set-journey'] === 'public-9') {
         
-      res.redirect('/dev-ready-v2/email-address-do-not-match')
+      res.redirect('/dev-ready-v2/email-address-do-not-match-2')
     }
     else if (req.session.data['set-journey'] === 'public-11') {
         
