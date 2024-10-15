@@ -10,7 +10,7 @@
 {% endblock %}
 
 {% block beforeContent %}
-  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+
 
 {% endblock %}
 
@@ -22,8 +22,10 @@
 
   <form action="sign-in-using-one-login" method="post" novalidate="">
 
+    <a class="govuk-back-link govuk-!-static-margin-top-0" href="javascript:window.history.back()">Back</a>
 
-    <h1 class="govuk-heading-l">You have a GOV.UK One Login</h1> 
+
+    <h1 class="govuk-heading-l govuk-!-padding-top-5">You have a GOV.UK One Login</h1> 
 
     <p class="govuk-body">There's already a GOV.UK One Login using <br> <span class="govuk-body govuk-!-font-weight-bold"> {{ data['chs-email'] }}</span></p>
 

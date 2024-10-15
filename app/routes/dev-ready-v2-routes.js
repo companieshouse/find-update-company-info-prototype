@@ -12,7 +12,15 @@ const router = govukPrototypeKit.requests.setupRouter()
 */
 router.post('/dev-ready-v2/prototype-set-up', function (req, res) {
 
-  res.redirect('/dev-ready-v2/choose-sign-in')
+  if (req.session.data['set-journey'].includes('public-8'))   {
+        
+    res.redirect('/dev-ready-v2/chs-home')
+  }
+  else{
+
+    res.redirect('/dev-ready-v2/choose-sign-in')
+
+  }
 
 })
 
@@ -154,7 +162,7 @@ router.post('/dev-ready-v2/chs-sign-in', function (req, res) {
     }
     else if (req.session.data['set-journey'].includes('public-8'))   {
       
-      res.redirect('/dev-ready-v2/your-details-public-beta')
+      res.redirect('/dev-ready-v2/chs-home-signed-in')
     }
     else if (req.session.data['set-journey'].includes('public-9'))   {
       
@@ -544,91 +552,22 @@ router.post('/dev-ready-v2/one-login-email-address-updated', function (req, res)
   })
   
   
-   /*
-    * Saving CHS account information
-    */
-  
-  // Do you have an existing Companies House account?
-  router.post('/dev-ready-v2/existing-account', function (req, res) {
-  
-    //If they have an existing chs account
-    if (req.session.data['existing-chs-account'] === 'yes') {
-          
-        res.redirect('chs-sign-in')
-    }
-    // Otherwise take them to a stop screen
-    else if ((req.session.data['existing-chs-account'] === 'no') && (req.session.data['existing-webfiling-account'] === 'no'))  {
-          
-      res.redirect('chs-home-signed-in')
-  }
-    
-    //** if no CHS and No Webfiling take them directly to service */
-    
-    
-    
-    else{
-  
-        res.redirect('end-linking')
-    }
-    
-  })
-  
-/*   // Companies House sign in 
-  router.post('/dev-ready-v2/chs-sign-in', function (req, res) {
 
-
-    //upload a document - UR 
-    if (req.session.data['set-journey'].includes('filer')) {
-       
-      res.redirect('/dev-ready-v2/start-page')
-    }
-    else if (req.session.data['set-journey'].includes('different-email')) {
-
-      res.redirect('/dev-ready-v2/start-page')
-
-    }
-    else if (req.session.data['set-journey'] === 'wrong-url') {
-        
-      res.redirect('/dev-ready-v2/start-page')
-    }
-     // Private beta first time logging in 
-    else if (req.session.data['set-journey'].includes('private-beta-not-linked'))   {
-         
-      res.redirect('/dev-ready/private-beta')
-    }
-
-  })
-   */
-  
-  //Save your Companies House information
-  router.post('/dev-ready-v2/link-accounts', function (req, res) {
-  
-    //Save information from their account
-    if (req.session.data['link-chs-account'] === 'yes') {
-        
-      res.redirect('end-linking') 
-  }
-  //do not save things on their account
-  else{
-  
-      res.redirect('end-linking')
-  }
-  
-  })
   
      // Companies House sign in 
   router.post('/dev-ready-v2/end-linking', function (req, res) {
 
 
-    if (req.session.data['set-journey'].includes('filer')) {
-       
-      res.redirect('/dev-ready-v2/company-lookup')
+    if (req.session.data['set-journey'] === 'public-8') {
+        
+      res.redirect('/dev-ready-v2/chs-one-login-settings')
     }
     else{
 
       res.redirect('/dev-ready-v2/company-lookup')
-
     }
+
+    
         
 
   
