@@ -134,8 +134,11 @@ else if (req.session.data['set-journey'].includes('public-11'))   {
 
 router.post('/dev-ready-v2/chs-sign-in', function (req, res) {
 
-
-    if(req.session.data['set-journey'].includes('public-1'))   {
+    if (req.session.data['set-journey'].includes('public-11'))   {
+      
+      res.redirect('/dev-ready-v2/your-details-public-beta')
+    }
+    else if(req.session.data['set-journey'].includes('public-1'))   {
             
       //not used
 
@@ -157,6 +160,7 @@ router.post('/dev-ready-v2/chs-sign-in', function (req, res) {
       
       res.redirect('/dev-ready-v2/your-details-public-beta')
     }
+
 
 
     
@@ -276,11 +280,11 @@ router.post('/dev-ready-v2/one-login-enter-password', function (req, res) {
   //sign in
   router.post('/dev-ready-v2/enter-code', function (req, res) {
 
-    if (req.session.data['set-journey'].includes('public-11'))      
+    if (req.session.data['set-journey'].includes('public-11')) 
     {
-                    
-            res.redirect('/dev-ready-v2/link-to-existing-chs-account') 
-               
+
+      res.redirect('/dev-ready-v2/link-to-existing-chs-account') 
+      
     }
     else if (req.session.data['set-journey'].includes('public-1'))   {
           
@@ -309,12 +313,7 @@ router.post('/dev-ready-v2/one-login-enter-password', function (req, res) {
         res.redirect('/dev-ready-v2/email-address-do-not-match-2') 
            
     }
-    else if (req.session.data['set-journey'].includes('public-11'))      
-    {
-                  
-          res.redirect('/dev-ready-v2/link-to-existing-chs-account') 
-             
-    }
+
     
 
   })
