@@ -30,10 +30,12 @@ We are changing the way you sign in to some of our services – {{ serviceName }
      
      <p class="govuk-body">A GOV.UK One Login will allow you to access many government services using the same email address and password.</p>
 
+     {{ govukWarningText({
+      text: "You must sign in to or create a GOV.UK One Login using the same email address that you use for your Companies House account.",
+      iconFallbackText: "Warning"
+    }) }}
 
-      <h2 class="govuk-heading-m">You must use the same email address</h2>
-
-      <p class="govuk-body">You must sign in to or create a GOV.UK One Login using the same email address that you use for your Companies House account. This will enable us to connect your account to your GOV.UK One Login. All your existing information will be saved.</p>
+      <p class="govuk-body"> This will enable us to connect your account to your GOV.UK One Login. All your existing information will be saved.</p>
 
       <details class="govuk-details" data-module="govuk-details">
         <summary class="govuk-details__summary">
@@ -42,10 +44,11 @@ We are changing the way you sign in to some of our services – {{ serviceName }
           </span>
         </summary>
         <div class="govuk-details__text">
-          <p class="govuk-body">If you want all your existing information to be saved, you can choose one of the following options:</p>
-          <ul class="govuk-list govuk-list--bullet">
-            <li><a href="#" class="govuk-link">change your Companies House account email address</a> to match your GOV.UK One Login email address</li>
-            <li><a href="#" class="govuk-link" rel="noreferrer noopener" target="_blank">sign in to GOV.UK One Login and change your email address (opens in new tab)</a> to match your Companies House account email address</li>
+          <p class="govuk-body">If you want connect your Companies House account to a GOV.UK One Login that uses a different email address, you have 2 options:</p>
+          <h3 class="govuk-heading-s">Option 1</h3>
+          <p class="govuk-body"><a href="#" class="govuk-link">Change your Companies House account email address</a> to match your GOV.UK One Login email address.</p>
+          <h3 class="govuk-heading-s">Option 2</h3>
+          <p class="govuk-body"><a href="#" class="govuk-link" rel="noreferrer noopener" target="_blank">Sign in to GOV.UK One Login and change your email address (opens in new tab)</a> to match your Companies House account email address.</p>
           </ul>
         </div>
       </details>
@@ -58,7 +61,10 @@ We are changing the way you sign in to some of our services – {{ serviceName }
           </span>
         </summary>
         <div class="govuk-details__text">
-          <p class="govuk-body">TBC</p>
+          <p class="govuk-body">If other people have access to this Companies House account, only one person can connect their GOV.UK One Login to it and save any existing information.
+          </p>
+          <p class="govuk-body">Anyone else who shares access to this account will need to create their own GOV.UK One Login.
+          </p>
         </div>
       </details>
 
