@@ -16,49 +16,24 @@
 
     <!-- Name update banner -->
 
-    {% if data['updateNameChangesMade'] == true %}
 
-    {% set html %}
-        <p class="govuk-notification-banner__heading">
-          You've updated your name.
-        </p>
-    {% endset %}
-
-        {{ govukNotificationBanner({
-          html: html,
-          type: 'success'
-        }) }}
-
-    {% elseif data['updateEmailPreferencesChangesMade'] == true %}
-
-
-        {% set html %}
-        <p class="govuk-notification-banner__heading">
-          You've updated your email preferences.
-        </p>
-      {% endset %}
-
-      {{ govukNotificationBanner({
-        html: html,
-        type: 'success'
-      }) }}
-
-
-    {% endif %}
                   
-
-
-
-
     <!-- Note: GOV.UK One Login uses Security as the title for this page -->
     <h1 class="govuk-heading-xl govuk-!-static-margin-bottom-0">
       Manage account 
     </h1>
     <br>
-    <div id="passport-issued-hint" class="govuk-hint">
+    <div id="manage-account-hint" class="govuk-hint">
       Make changes to your details and account settings.
     </div>
     <br>
+
+
+    <p class='govuk-body'>  Your're signed in as<span class='govuk-body govuk-!-font-weight-bold'>     email1@email.com </span></p>
+
+
+
+
 
     
 
@@ -76,7 +51,7 @@
       <a href="#" class="govuk-link" rel="noreferrer noopener" target="_blank">Go to your GOV.UK One Login to change your sign in details (opens in a new tab) </a>
     </p> -->
 
-    <div class="govuk-summary-card">
+   <!--  <div class="govuk-summary-card">
       <div class="govuk-summary-card__title-wrapper">
         <h2 class="govuk-summary-card__title">Your details </h2>
       </div>
@@ -107,7 +82,7 @@
 
       </div>
     </div>
-
+ -->
   <!--  IDV commenting out for User Research purposes 
     
     <div class="govuk-summary-card">
@@ -165,7 +140,7 @@
       </div>
     </div>
 
-    <div class="govuk-summary-card">
+   <!--  <div class="govuk-summary-card">
       <div class="govuk-summary-card__title-wrapper">
         <h2 class="govuk-summary-card__title">Email preferences</h2>
       </div>
@@ -206,7 +181,7 @@
         </dl>
       </div>
     </div>
-
+ -->
 
 
     <p class="govuk-body govuk-!-margin-top-8 govuk-!-margin-bottom-8"> <a href="#" class="govuk-link govuk-link--no-visited-state">Manage third party applications</a></p>
