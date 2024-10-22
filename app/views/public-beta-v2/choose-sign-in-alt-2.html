@@ -32,12 +32,16 @@
     html: html
   }) }}
 
-  <h1 class="govuk-heading-l">How do you want to sign in?</h1>
+  <h1 class="govuk-heading-l">Sign in to Companies House</h1>
 
-  <h2 class="govuk-heading-s">Sign in to an existing Companies House account</h2> 
+
 
   {{ govukInput({
     label: {
+      text: "Sign in to an existing Companies House account",
+      classes:"govuk-label--s"
+    },
+    hint: {
       text: "Companies House account email address"
     },
     id: "chs-email",
@@ -70,12 +74,31 @@
 
 
 
-  <p> Or </p>
+  {{ govukButton({
+    text: "Continue"
+  }) }}   
 
 
-  <h2 class="govuk-heading-s">Sign in with GOV.UK One Login</h2> 
 
-  {{ govukRadios({
+
+
+
+
+
+  <h2 class="govuk-heading-s govuk-!-padding-top-2">Sign in with GOV.UK One Login, or create sign in details</h2> 
+
+
+ <!--   <p class="govuk-body">
+     <a href="#" class="govuk-link">Sign in with GOV.UK One Login</a>
+  </p> -->
+
+  {{ govukButton({
+    text: "Sign in with GOV.UK One Login",
+    classes: "govuk-button--secondary"
+  }) }}   
+
+
+<!--   {{ govukRadios({
     name: "sign-in-using",
     fieldset: {
       legend: {
@@ -99,17 +122,12 @@
       }
     ]
   }) }}
+  -->
 
 
 
 
 
-
-
-
-  {{ govukButton({
-    text: "Continue"
-  }) }}   
 
 
 
