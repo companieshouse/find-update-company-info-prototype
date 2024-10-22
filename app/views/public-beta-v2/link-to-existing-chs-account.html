@@ -1,0 +1,75 @@
+{% extends "layouts/layout_unbranded-with-banner.html" %}
+<!-- Overwrite suerfice name -->
+
+
+{% block pageTitle %}
+  {{ serviceName }} – Prototype
+{% endblock %}
+
+
+{% set serviceName %}
+ 
+{% endset %}
+
+{% block beforeContent %}
+
+
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-two-thirds ">
+
+  <form action="link-to-existing-chs-account" method="post" novalidate="">
+
+  
+    <h1 class="govuk-heading-l">We need to connect your Companies House account to your GOV.UK One Login</h1> 
+
+   <!-- <div class="govuk-inset-text">
+      <p class="govuk-body">Companies House email address is: <br> 
+        <span class="govuk-body govuk-!-font-weight-bold"> {{ data['chs-email'] }} </span></p>
+        </div> -->
+  
+        <p class="govuk-body">This is so you can use GOV.UK One Login to sign in, and will make your Companies House account more secure. All your existing information will be saved. </p>
+  
+        <p class="govuk-body">How to connect your account to GOV.UK One Login: </p>
+        <ol class="govuk-list govuk-list--number">
+          <li><a href="../dev-ready-v2/chs-sign-in" class="govuk-link--no-visited-state" rel="noreferrer noopener" target="_blank">Sign in to your Companies House account (opens in new tab)</a>.</li>
+          <li>Select 'Manage account'.</li>
+          <li>Select continue and sign in to your GOV.UK One Login.</li>
+        </ol>
+      
+
+  </form>
+
+</div>
+</div>
+
+
+
+
+
+<!--       {{ govukRadios({
+        name: "email-does-not-match",
+        fieldset: {
+          legend: {
+            text: "Choose an option: ",
+            isPageHeading: false,
+            classes: "govuk-fieldset__legend--m"
+          }
+        },
+        items: [
+          {
+            value: "sameas-chs",
+            text: "Create or sign in to a GOV.UK One Login with   'example@gmail.com'"
+          },
+          {
+            value: "no",
+            text: "I have a GOV.UK One Login, but it not using the email addres 'example@gmail.com'"
+          }
+        ]
+      }) }} -->
+
+      {% endblock %}

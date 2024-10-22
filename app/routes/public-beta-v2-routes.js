@@ -10,15 +10,15 @@ const router = govukPrototypeKit.requests.setupRouter()
 /*
 * Choose a public Beta journey
 */
-router.post('/dev-ready-v2/prototype-set-up', function (req, res) {
+router.post('/public-beta-v2/prototype-set-up', function (req, res) {
 
   if (req.session.data['set-journey'].includes('public-8'))   {
         
-    res.redirect('/dev-ready-v2/chs-home')
+    res.redirect('/public-beta-v2/chs-home')
   }
   else{
 
-    res.redirect('/dev-ready-v2/choose-sign-in')
+    res.redirect('/public-beta-v2/choose-sign-in')
 
   }
 
@@ -80,7 +80,7 @@ else if (req.session.data['set-journey'].includes('public-11'))   {
 /*
  * How do you want to sign in?
  */
- router.post('/dev-ready-v2/choose-sign-in', function (req, res) {
+ router.post('/public-beta-v2/choose-sign-in', function (req, res) {
 
   /*
    * Existing Companies House account
@@ -101,7 +101,7 @@ else if (req.session.data['set-journey'].includes('public-11'))   {
       }
       else{
 
-        res.redirect('/dev-ready-v2/chs-sign-in')
+        res.redirect('/public-beta-v2/chs-sign-in')
 
       }
 
@@ -129,7 +129,7 @@ else if (req.session.data['set-journey'].includes('public-11'))   {
  }
     else{
 
-      res.redirect('/dev-ready-v2/create-or-sign-in')
+      res.redirect('/public-beta-v2/create-or-sign-in')
 
     }
 
@@ -144,11 +144,11 @@ else if (req.session.data['set-journey'].includes('public-11'))   {
  * Sign in to Companies House
  */
 
-router.post('/dev-ready-v2/chs-sign-in', function (req, res) {
+router.post('/public-beta-v2/chs-sign-in', function (req, res) {
 
     if (req.session.data['set-journey'].includes('public-11'))   {
       
-      res.redirect('/dev-ready-v2/your-details-public-beta')
+      res.redirect('/public-beta-v2/your-details-public-beta')
     }
     else if(req.session.data['set-journey'].includes('public-1'))   {
             
@@ -157,20 +157,20 @@ router.post('/dev-ready-v2/chs-sign-in', function (req, res) {
     }
     else if (req.session.data['set-journey'].includes('public-2'))   {
       
-      res.redirect('/dev-ready-v2/sign-in-using-one-login')
+      res.redirect('/public-beta-v2/sign-in-using-one-login')
     }
 
     else if (req.session.data['set-journey'].includes('public-7'))   {
       
-      res.redirect('/dev-ready-v2/company-lookup')
+      res.redirect('/public-beta-v2/company-lookup')
     }
     else if (req.session.data['set-journey'].includes('public-8'))   {
       
-      res.redirect('/dev-ready-v2/chs-home-signed-in')
+      res.redirect('/public-beta-v2/chs-home-signed-in')
     }
     else if (req.session.data['set-journey'].includes('public-9'))   {
       
-      res.redirect('/dev-ready-v2/your-details-public-beta')
+      res.redirect('/public-beta-v2/your-details-public-beta')
     }
 
 
@@ -186,52 +186,52 @@ router.post('/dev-ready-v2/chs-sign-in', function (req, res) {
  * Create a GOV.UK One Login or sign in
  */
 
-router.post('/dev-ready-v2/create-or-sign-in', function (req, res) {
+router.post('/public-beta-v2/create-or-sign-in', function (req, res) {
 
   if (req.session.data['set-journey'].includes('public-1'))   {
           
-    res.redirect('/dev-ready-v2/start-page')
+    res.redirect('/public-beta-v2/start-page')
   }
   else if (req.session.data['set-journey'].includes('public-2'))   {
     
-    res.redirect('/dev-ready-v2/start-page')
+    res.redirect('/public-beta-v2/start-page')
   }
   else if (req.session.data['set-journey'].includes('public-3'))   {
     
-    res.redirect('/dev-ready-v2/start-page')
+    res.redirect('/public-beta-v2/start-page')
   }
   else if (req.session.data['set-journey'].includes('public-4'))   {
     
-    res.redirect('/dev-ready-v2/start-page')
+    res.redirect('/public-beta-v2/start-page')
   }
   else if (req.session.data['set-journey'].includes('public-5'))   {
     
-    res.redirect('/dev-ready-v2/start-page')
+    res.redirect('/public-beta-v2/start-page')
   }
 
   else if (req.session.data['set-journey'].includes('public-6'))   {
     
-    res.redirect('/dev-ready-v2/start-page')
+    res.redirect('/public-beta-v2/start-page')
   }
   else if (req.session.data['set-journey'].includes('public-7'))   {
     
-    res.redirect('/dev-ready-v2/start-page')
+    res.redirect('/public-beta-v2/start-page')
   }
   else if (req.session.data['set-journey'].includes('public-8'))   {
     
-    res.redirect('/dev-ready-v2/start-page')
+    res.redirect('/public-beta-v2/start-page')
   }
   else if (req.session.data['set-journey'].includes('public-9'))   {
     
-    res.redirect('/dev-ready-v2/start-page')
+    res.redirect('/public-beta-v2/start-page')
   }
   else if (req.session.data['set-journey'].includes('public-10'))   {
     
-    res.redirect('/dev-ready-v2/start-page')
+    res.redirect('/public-beta-v2/start-page')
   }
   else if (req.session.data['set-journey'].includes('public-11'))   {
     
-    res.redirect('/dev-ready-v2/start-page')
+    res.redirect('/public-beta-v2/start-page')
   } 
 
 
@@ -250,7 +250,7 @@ router.post('/dev-ready-v2/create-or-sign-in', function (req, res) {
 
 
 //start page
-router.post('/dev-ready-v2/enter-email-address', function (req, res) {
+router.post('/public-beta-v2/enter-email-address', function (req, res) {
 
    //If they have an existing chs account
    if (req.session.data['set-journey'] === 'existing-CHS') {
@@ -259,7 +259,7 @@ router.post('/dev-ready-v2/enter-email-address', function (req, res) {
   }
   else if (req.session.data['set-journey'] === 'filing') {
         
-    res.redirect('/dev-ready-v2/start-page')
+    res.redirect('/public-beta-v2/start-page')
   }
   else if (req.session.data['set-journey'] === 'new-user') {
         
@@ -275,7 +275,7 @@ router.post('/dev-ready-v2/enter-email-address', function (req, res) {
 
 
 //start page
-router.post('/dev-ready-v2/start-page', function (req, res) {
+router.post('/public-beta-v2/start-page', function (req, res) {
 
   res.redirect('create-or-sign-in')
 })
@@ -283,52 +283,52 @@ router.post('/dev-ready-v2/start-page', function (req, res) {
 
 
 //One login sign in
-router.post('/dev-ready-v2/one-login-enter-password', function (req, res) {
+router.post('/public-beta-v2/one-login-enter-password', function (req, res) {
 
     res.redirect('enter-code')
   })
   
   
   //sign in
-  router.post('/dev-ready-v2/enter-code', function (req, res) {
+  router.post('/public-beta-v2/enter-code', function (req, res) {
 
     if (req.session.data['set-journey'].includes('public-11')) 
     {
 
-      res.redirect('/dev-ready-v2/link-to-existing-chs-account') 
+      res.redirect('/public-beta-v2/link-to-existing-chs-account') 
       
     }
     else if (req.session.data['set-journey'].includes('public-1'))   {
           
-      res.redirect('/dev-ready-v2/company-lookup')
+      res.redirect('/public-beta-v2/company-lookup')
     }
     else if (req.session.data['set-journey'].includes('public-2'))   {
       
-      res.redirect('/dev-ready-v2/company-lookup') 
+      res.redirect('/public-beta-v2/company-lookup') 
 
     }
     else if (req.session.data['set-journey'].includes('public-3-4'))      
     {
             
-      res.redirect('/dev-ready-v2/one-login-email-address-updated') 
+      res.redirect('/public-beta-v2/one-login-email-address-updated') 
        
     }
     else if (req.session.data['set-journey'].includes('public-5'))      
     {
               
-      res.redirect('/dev-ready-v2/one-login-email-matches-different-chs-account') 
+      res.redirect('/public-beta-v2/one-login-email-matches-different-chs-account') 
          
     }
     else if (req.session.data['set-journey'].includes('public-8'))      
     {
               
-      res.redirect('/dev-ready-v2/end-linking') 
+      res.redirect('/public-beta-v2/end-linking') 
          
     }
     else if (req.session.data['set-journey'].includes('public-9'))      
     {
                 
-        res.redirect('/dev-ready-v2/email-address-do-not-match-2') 
+        res.redirect('/public-beta-v2/email-address-do-not-match-2') 
            
     }
 
@@ -341,11 +341,11 @@ router.post('/dev-ready-v2/one-login-enter-password', function (req, res) {
   
   
   //One loginsign create - email address
-  router.post('/dev-ready-v2/create-enter-email', function (req, res) {
+  router.post('/public-beta-v2/create-enter-email', function (req, res) {
 
     if (req.session.data['set-journey'] === 'public-beta-already-linked') {
         
-      res.redirect('/dev-ready-v2/you-have-a-login')
+      res.redirect('/public-beta-v2/you-have-a-login')
     }
     else{
 
@@ -357,20 +357,20 @@ router.post('/dev-ready-v2/one-login-enter-password', function (req, res) {
   })
   
   //One loginsign create - check email 
-  router.post('/dev-ready-v2/create-check-your-email', function (req, res) {
+  router.post('/public-beta-v2/create-check-your-email', function (req, res) {
   
     res.redirect('create-enter-password')
   })
   
   
   //One loginsign create - check email 
-  router.post('/dev-ready-v2/create-enter-password', function (req, res) {
+  router.post('/public-beta-v2/create-enter-password', function (req, res) {
   
     res.redirect('create-choose-security-type')
   })
   
   //One loginsign create - check email 
-  router.post('/dev-ready-v2/create-choose-security-type', function (req, res) {
+  router.post('/public-beta-v2/create-choose-security-type', function (req, res) {
   
      //If they have an existing chs account
      if (req.session.data['choose-security-type'] === 'text-message-on-sign-in') {
@@ -386,14 +386,14 @@ router.post('/dev-ready-v2/one-login-enter-password', function (req, res) {
   })
   
   //One loginsign set up auth app
-  router.post('/dev-ready-v2/create-set-up-auth-app', function (req, res) {
+  router.post('/public-beta-v2/create-set-up-auth-app', function (req, res) {
   
     res.redirect('create-complete')
   })
   
   
   //One loginsign enter mobile number
-  router.post('/dev-ready-v2/create-enter-mobile-number', function (req, res) {
+  router.post('/public-beta-v2/create-enter-mobile-number', function (req, res) {
   
     res.redirect('create-check-your-phone')
   })
@@ -401,7 +401,7 @@ router.post('/dev-ready-v2/one-login-enter-password', function (req, res) {
   /*
    * Create journey - Check your phone
    */
-  router.post('/dev-ready-v2/create-check-your-phone', function (req, res) {
+  router.post('/public-beta-v2/create-check-your-phone', function (req, res) {
 
   
     res.redirect('create-complete')
@@ -417,7 +417,7 @@ router.post('/dev-ready-v2/one-login-enter-password', function (req, res) {
   
   
   //One loginsign enter mobile number
-  router.post('/dev-ready-v2/create-enter-mobile-number', function (req, res) {
+  router.post('/public-beta-v2/create-enter-mobile-number', function (req, res) {
   
     res.redirect('create-check-your-phone')
   })
@@ -431,30 +431,30 @@ router.post('/dev-ready-v2/one-login-enter-password', function (req, res) {
 * You've created your GOV.UK One Login
 */
   
-  router.post('/dev-ready-v2/create-complete', function (req, res) {
+  router.post('/public-beta-v2/create-complete', function (req, res) {
     if (req.session.data['set-journey'] === 'public-1') {
         
-      res.redirect('/dev-ready-v2/company-lookup')
+      res.redirect('/public-beta-v2/company-lookup')
     }
     else if (req.session.data['set-journey'] === 'public-2') {
         
-      res.redirect('/dev-ready-v2/company-lookup')
+      res.redirect('/public-beta-v2/company-lookup')
     }
     else if (req.session.data['set-journey'] === 'public-3-4') {
         
-      res.redirect('/dev-ready-v2/one-login-email-address-updated')
+      res.redirect('/public-beta-v2/one-login-email-address-updated')
     }
     else if (req.session.data['set-journey'] === 'public-8') {
         
-      res.redirect('/dev-ready-v2/end-linking')
+      res.redirect('/public-beta-v2/end-linking')
     }
     else if (req.session.data['set-journey'] === 'public-9') {
         
-      res.redirect('/dev-ready-v2/email-address-do-not-match-2')
+      res.redirect('/public-beta-v2/email-address-do-not-match-2')
     }
     else if (req.session.data['set-journey'] === 'public-11') {
         
-      res.redirect('/dev-ready-v2/link-to-existing-chs-account')
+      res.redirect('/public-beta-v2/link-to-existing-chs-account')
     
     }
     
@@ -467,9 +467,9 @@ router.post('/dev-ready-v2/one-login-enter-password', function (req, res) {
 * You've created your GOV.UK One Login
 */
   
-router.post('/dev-ready-v2/one-login-email-address-updated', function (req, res) {
+router.post('/public-beta-v2/one-login-email-address-updated', function (req, res) {
  
-  res.redirect('/dev-ready-v2/company-lookup')
+  res.redirect('/public-beta-v2/company-lookup')
 
    /*  if (req.session.data['changeOfEmail'] === 'yes') {
           
@@ -490,14 +490,14 @@ router.post('/dev-ready-v2/one-login-email-address-updated', function (req, res)
 
     
   //One loginsign create complete
-  router.post('/dev-ready-v2/name', function (req, res) {
+  router.post('/public-beta-v2/name', function (req, res) {
 
     res.redirect('email-preferences')
 
 })
 
   //One loginsign create complete
-  router.post('/dev-ready-v2/email-preferences', function (req, res) {
+  router.post('/public-beta-v2/email-preferences', function (req, res) {
 
         
     res.redirect('end-linking')
@@ -513,7 +513,7 @@ router.post('/dev-ready-v2/one-login-email-address-updated', function (req, res)
     */
   
   // Do you have an existing webfiling Companies House account?
-  router.post('/dev-ready-v2/existing-webfiling-account', function (req, res) {
+  router.post('/public-beta-v2/existing-webfiling-account', function (req, res) {
   
     //If they have an existing webfiling account
     if (req.session.data['existing-webfiling-account'] === 'yes') {
@@ -532,21 +532,21 @@ router.post('/dev-ready-v2/one-login-email-address-updated', function (req, res)
   })
   
   // WebFiling sign in 
-  router.post('/dev-ready-v2/webfiling-sign-in', function (req, res) {
+  router.post('/public-beta-v2/webfiling-sign-in', function (req, res) {
   
     res.redirect('webfiling-mfa')
   
   })
 
    // MFA for WebFiling sign in 
-   router.post('/dev-ready-v2/webfiling-mfa', function (req, res) {
+   router.post('/public-beta-v2/webfiling-mfa', function (req, res) {
   
     res.redirect('existing-account')
   
   })
   
   //Save your Companies House information
-  router.post('/dev-ready-v2/link-webfiling-accounts', function (req, res) {
+  router.post('/public-beta-v2/link-webfiling-accounts', function (req, res) {
   
     //Save information from their account
     if (req.session.data['link-webfiling-account'] === 'yes') {
@@ -565,16 +565,16 @@ router.post('/dev-ready-v2/one-login-email-address-updated', function (req, res)
 
   
      // Companies House sign in 
-  router.post('/dev-ready-v2/end-linking', function (req, res) {
+  router.post('/public-beta-v2/end-linking', function (req, res) {
 
 
     if (req.session.data['set-journey'] === 'public-8') {
         
-      res.redirect('/dev-ready-v2/chs-one-login-settings')
+      res.redirect('/public-beta-v2/chs-one-login-settings')
     }
     else{
 
-      res.redirect('/dev-ready-v2/company-lookup')
+      res.redirect('/public-beta-v2/company-lookup')
     }
 
     
@@ -603,7 +603,7 @@ router.post('/dev-ready-v2/one-login-email-address-updated', function (req, res)
     /*
     * Add a company
     */
-    router.post('/dev-ready-v2/add-a-company', function (req, res) {
+    router.post('/public-beta-v2/add-a-company', function (req, res) {
   
       res.redirect('confirm-company-details')
     })
@@ -612,7 +612,7 @@ router.post('/dev-ready-v2/one-login-email-address-updated', function (req, res)
     /*
      * Confirm company details
     */
-    router.post('/dev-ready-v2/confirm-company-details', function (req, res) {
+    router.post('/public-beta-v2/confirm-company-details', function (req, res) {
   
       res.redirect('authentication-code')
     })
@@ -620,7 +620,7 @@ router.post('/dev-ready-v2/one-login-email-address-updated', function (req, res)
       /*
        * authentication code 
        */ 
-      router.post('/dev-ready-v2/authentication-code', function (req, res) {
+      router.post('/public-beta-v2/authentication-code', function (req, res) {
     
         res.redirect('confirmation-company-added')
       })
@@ -631,7 +631,7 @@ router.post('/dev-ready-v2/one-login-email-address-updated', function (req, res)
       /*
        * Manage account page
        */ 
-         router.post('/dev-ready-v2/chs-one-login-settings', function (req, res) {
+         router.post('/public-beta-v2/chs-one-login-settings', function (req, res) {
 
           
 
@@ -643,7 +643,7 @@ router.post('/dev-ready-v2/one-login-email-address-updated', function (req, res)
        /*
        * Updating name on account
        */ 
-       router.post('/dev-ready-v2/name-account', function (req, res) {
+       router.post('/public-beta-v2/name-account', function (req, res) {
 
         req.session.data['updateNameChangesMade'] = true;
         res.redirect('chs-one-login-settings')
@@ -653,7 +653,7 @@ router.post('/dev-ready-v2/one-login-email-address-updated', function (req, res)
       /*
        * Updating CH email preferences
        */ 
-      router.post('/dev-ready-v2/email-preferences-ch', function (req, res) {
+      router.post('/public-beta-v2/email-preferences-ch', function (req, res) {
 
         req.session.data['updateNameChangesMade'] = false;
         req.session.data['updateEmailPreferencesChangesMade'] = true;
@@ -666,7 +666,7 @@ router.post('/dev-ready-v2/one-login-email-address-updated', function (req, res)
       /*
        * Updating UR email preferences 
        */ 
-      router.post('/dev-ready-v2/email-preferences-ur', function (req, res) {
+      router.post('/public-beta-v2/email-preferences-ur', function (req, res) {
 
         req.session.data['updateNameChangesMade'] = false;
         req.session.data['updateEmailPreferencesChangesMade'] = true;

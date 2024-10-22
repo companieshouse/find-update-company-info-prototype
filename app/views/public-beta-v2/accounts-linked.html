@@ -1,0 +1,33 @@
+{% extends "layout-signed-out.html" %}
+
+{% block pageTitle %}
+  {{serviceName}} - GOV.UK
+{% endblock %}
+
+
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds ">
+
+      <h1 class="govuk-heading-l">We have saved your Companies House information</h1>
+      
+      <p class="govuk-body">When you sign in to Companies House from now on, use the email address and password you provided to create your GOV.UK One Login.</p>
+      <a href="existing-webfiling-account">
+          <button type="Submit" class="govuk-button" data-module="govuk-button">
+              Continue
+          </button>
+      </a>
+
+
+    </div>
+</div>
+
+{% endblock %}

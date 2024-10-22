@@ -1,0 +1,64 @@
+{% extends "layouts/layout_unbranded-with-banner.html" %}
+<!-- Overwrite suerfice name -->
+{% set serviceName %}
+  
+{% endset%}
+
+{% block pageTitle %}
+  GOV.UK One Login  – Prototype
+{% endblock %}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form action="end-linking" method="post" novalidate>
+
+        {% set html %}
+          <h3 class="govuk-notification-banner__heading">
+            We have saved your information.
+          </h3>
+
+        {% endset %}
+
+        {{ govukNotificationBanner({
+          html: html,
+          type: "success"
+        }) }}
+
+    <h1 class="govuk-heading-l">Use your GOV.UK One Login details next time you sign in</h1>
+    
+    <p class="govuk-body">To access your Companies House account in the future, sign in using your GOV.UK One Login email address and password.</p>
+
+  <!--   <p class="govuk-body">If your email address is for a shared inbox, you may want to update your sign in details with an email address only you can access. You can do this in the ‘Your details’ section when you sign in to Companies House.
+       </p> -->
+
+       <div class="govuk-inset-text">
+        <h2 class="govuk-heading-s">Save this link before you continue</h2> 
+        <p class="govuk-body">
+          As you are trying out the new way to sign in to Companies House,
+you'll need to save the following link for the next time you sign in: <br><br> https://find-and-update.company-information.service.gov.uk/shdbfeuhgbuhfbsjhb
+        </p>
+
+      </div>
+
+
+    <!--
+       <p class="govuk-body">Now continue to the service you were using.
+      </p>-->
+
+    <button type="Submit" class="govuk-button" data-module="govuk-button" href="chs-home-signed-in">
+        Continue
+    </button>
+
+    </form>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,132 @@
+{% extends "layout/layout-signed-in.html" %}
+
+{% block pageTitle %}
+Home – {{serviceName}} – GOV.UK
+{% endblock %}
+
+
+{% block beforeContent %}
+
+{% endblock %}
+
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+     <!--  {% set html %}
+        <p class="govuk-notification-banner__heading">Maintenance: Find and update service updates on Wednesday April 18 at 05:00am     <a class="govuk-notification-banner__link" href="#">View details</a>.</p>
+      {% endset %}
+      {{ govukNotificationBanner({
+        html: html
+      }) }}
+
+      {% set html %}
+      <h2 class="govuk-heading-s govuk-!-margin-bottom-1">For information</h2>
+      <p class="govuk-body-s govuk-!-margin-bottom-6">The <a class="govuk-link" href="https://www.gov.uk/government/news/automatic-filing-extensions-granted-by-the-corporate-insolvency-and-governance-act-due-to-come-to-an-end">automatic filing extensions</a> granted by the Corporate Insolvency and Governance Act has ended for filing deadlines that occur after 5 April 2021. Eligible companies can still <a href="https://find-and-update.company-information.service.gov.uk/extensions" class="govuk-link">apply for an accounts filing deadline</a> extension if their deadline is after 5 April.</p> 
+      {% endset %}
+      {{ govukNotificationBanner({
+        html: html
+      }) }}-->
+        
+      <h1 class="govuk-heading-l">
+         Search the Companies House register 
+      </h1>
+      <div class="govuk-form-group govuk-!-margin-bottom-5">
+        <form action="/results" method="post">
+          <label class="govuk-label" for="weight">Enter a company name, company number or officer name. </label>
+          <div class="govuk-input__wrapper ">
+          <input class="govuk-input" id="weight" name="weight" type="text" spellcheck="false">
+          <div class="govuk-input__suffix" style="background: #1d70b8;border: 2px solid #1d70b8" aria-hidden="true">
+            <button  style="background: none;border: none;" class="govuk-link">
+            <svg class="gem-c-search__icon" width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+            <svg class="gem-c-search__icon" width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+            <circle cx="12.0161" cy="11.0161" r="8.51613" stroke="#fff" stroke-width="3"></circle>
+            <line x1="17.8668" y1="17.3587" x2="26.4475" y2="25.9393" stroke="#fff" stroke-width="3"></line>
+            </svg>
+            </button>
+          </div>
+          </div>
+        </form>
+      </div>
+      <div class="govuk-!-margin-bottom-9">
+        <a href="#" class="govuk-link govuk-link--no-visited-state govuk-!-padding-top-5">Advanced company search</a>
+      </div>
+      
+    </div>
+  </div>
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h2 class="govuk-heading-m">Filing services</h2>
+  
+  
+  
+      <div class="govuk-summary-card">
+        <div class="govuk-summary-card__title-wrapper">
+          <h2 class="govuk-summary-card__title">Find and update company information</h2>
+        </div>
+        <div class="govuk-summary-card__content">
+  
+          <p class="govuk-body">When you search for a company or officer, you can:</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>
+              <a class="govuk-link" href="#">file abridged or full accounts</a>
+            </li>
+            <li>
+              <a class="govuk-link" href="#">follow a company</a>
+            </li>
+            <li>view company data and document images</li>
+            <li>order certificates and certified documents</li>
+          </ul>
+        </div>
+      </div>
+      <div class="govuk-summary-card">
+        <div class="govuk-summary-card__title-wrapper">
+          <h2 class="govuk-summary-card__title">WebFiling</h2>
+        </div>
+        <div class="govuk-summary-card__content">
+          <p class="govuk-body">You can:</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>file some types of annual accounts</li>
+            <li>file your company's confirmation statement</li>
+            <li>update director, secretary or PSC information</li>
+            <li>sign up to get email reminders</li>
+          </ul>
+          <a class="govuk-link" href="#">Go to WebFiling</a>
+        </div>
+      </div>
+  
+  
+  
+      </div>
+      </div>
+
+
+  
+
+ 
+
+      <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+        <h2 class="govuk-heading-m">Topics</h2>
+        <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-third-from-desktop govuk-topic-block">
+          <h3 class="govuk-heading-s"><a href="https://www.gov.uk/set-up-limited-company" class="govuk-link">Set up a limited company</a></h3>
+          <p class="govuk-body">How to set up a limited company, appoint directors and shareholders or guarantors, and register for tax.</p>
+        </div>
+        <div class="govuk-grid-column-one-third-from-desktop govuk-topic-block">
+          <h3 class="govuk-heading-s"><a href="https://www.gov.uk/running-a-limited-company/company-and-accounting-records" class="govuk-link">Running a limited company: your responsibilities </a></h3>
+          <p class="govuk-body">How to maintain a company, update directors and shareholders or guarantors, and file your accounts.</p>
+        </div>
+        <div class="govuk-grid-column-one-third-from-desktop govuk-topic-block">
+          <h3 class="govuk-heading-s"><a href="https://www.gov.uk/closing-a-limited-company" class="govuk-link">Closing a limited company</a></h3>
+          <p class="govuk-body">How to dissolve a company and what you must do before applying to strike off a company from the register.</p>
+        </div>
+      </div>
+      </div>
+    </div>
+ 
+
+
+{% endblock %}
