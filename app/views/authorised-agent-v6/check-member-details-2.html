@@ -1,0 +1,68 @@
+{% extends "layouts/layout-signed-out-agent.html" %}
+
+
+{% block pageTitle %}
+Check the details before we send the email  – {{ serviceName }} – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back"
+  }) }}
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-width-container">
+  <div class="govuk-grid-row">
+
+     <div class="govuk-grid-column-two-thirds">
+      <span class="govuk-caption-l">MORRIS ACCOUNTING LTD</span>
+      <h1 class="govuk-heading-l">Check the details</h1> 
+
+          {{ govukSummaryList({
+            rows: [
+              
+              {
+                key: {
+                  text: "Email address"
+                },
+                value: {
+                  text: "d.jones@example.com"
+                }
+              },
+              {
+                key: {
+                  text: "Role"
+                },
+                value: {
+                  text: "Standard user"
+                }
+              }
+            ]
+          }) }}
+
+
+    
+<div class="govuk-inset-text">
+  We'll send an email to <strong>d.jones@example.com</strong> to tell them you've added them.
+</div>
+
+            {{ govukButton({
+              text: "Confirm and add user",
+              href:"confirmation-member-added-2"
+            }) }}
+          
+            <p class="govuk-body"> <a class="govuk-link" href="add-a-member-2">Change details</a> </p>
+
+        
+          
+
+          
+
+</div>
+</div>
+
+
+{% endblock %}

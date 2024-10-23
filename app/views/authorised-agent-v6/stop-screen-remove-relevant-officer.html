@@ -1,0 +1,65 @@
+{% extends "layouts/layout-signed-out-agent.html" %}
+{% block pageTitle %}
+You cannot use this service
+  -
+  {{serviceName}}
+  - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href:""
+  }) }}
+{% endblock %}
+
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+    <span class="govuk-caption-xl" >MORRIS ACCOUNTING LTD</span>
+
+      
+      <h1 class="govuk-heading-l">You need to add an account owner before you can remove yourself </h1>
+     <!-- {{ govukButton({
+        text: "Appoint new director",
+        href: "add/name?type=add"
+      }) }} -->
+
+
+       <p class="govuk-body">You cannot remove yourself from the account because the authorised agent must have at least one account owner.</p>
+
+
+
+  <details class="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      Why the authorised agent must have an account owner
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+       <p>This is because account owners are the only users who can <a href="">update the account details</a>. They’ll need to do this if any of the details we hold about the business change. </p>
+
+              <p>The authorised agent is legally required to tell us about any changes within 14 days.  </p>
+      
+              <p>Account owners are also the only users who can:</p>
+                 <ul class="govuk-list govuk-list--bullet govuk-!-margin-bottom-6">
+                    <li>close the authorised agent account, if the business is no longer an authorised agent</li>
+                    <li>add and remove other account owners</li>
+                  </ul>
+       
+       
+  </div>
+</details>
+
+
+
+       <button type="submit" class="govuk-button govuk-!-margin-top-3" data-module="govuk-button">
+        Go to manage users
+      </button>
+
+
+      
+    </div>
+  </div>
+{% endblock %}
