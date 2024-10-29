@@ -78,65 +78,47 @@ else if (req.session.data['set-journey'].includes('public-11'))   {
 
 
 /*
- * How do you want to sign in?
+ * Sign in to Companies House - ** NEW V2 **
  */
  router.post('/public-beta-v2/choose-sign-in', function (req, res) {
 
-  /*
-   * Existing Companies House account
-   */
-    if(req.session.data['sign-in-using'] === 'CHS') {
-
+      /*
+      * Existing Companies House account
+      */
       if (req.session.data['set-journey'].includes('public-11'))   {
             
        //do nothing 
       }
+      /*
+       * Do nothing - a GOV.UK One Login journey
+       */
       else if (req.session.data['set-journey'].includes('public-1'))   {
             
-       // do nothing
+
+
+      }
+      /*
+       * You already have a GOV.UK One Login 
+       */ 
+      else if (req.session.data['set-journey'].includes('public-2'))   {
+            
+        
+        res.redirect('/public-beta-v2/sign-in-using-one-login')
+
+      }
+      /*
+       * Do nothing - a GOV.UK One Login journey
+       */
+      else if (req.session.data['set-journey'].includes('public-3'))   {
+            
+       
       }
       else if (req.session.data['set-journey'].includes('public-5'))   {
             
        // do nothing
       }
-      else{
+      
 
-        res.redirect('/public-beta-v2/chs-sign-in')
-
-      }
-
-
-
-    }
-
-  /*
-   * GOV.UK One Login
-   */
-  else if (req.session.data['sign-in-using'] === 'OL') {
-
-
-    if (req.session.data['set-journey'].includes('public-2'))   {
-            
-       //do nothing
-    }
-    else if (req.session.data['set-journey'].includes('public-7'))   {
-            
-      //do nothing
-   }
-   else if (req.session.data['set-journey'].includes('public-8'))   {
-            
-    //do nothing
- }
-    else{
-
-      res.redirect('/public-beta-v2/create-or-sign-in')
-
-    }
-
-
-  
-
-  }
 
 })
 
@@ -155,10 +137,8 @@ router.post('/public-beta-v2/chs-sign-in', function (req, res) {
       //not used
 
     }
-    else if (req.session.data['set-journey'].includes('public-2'))   {
-      
-      res.redirect('/public-beta-v2/sign-in-using-one-login')
-    }
+
+  
 
     else if (req.session.data['set-journey'].includes('public-7'))   {
       
@@ -248,29 +228,6 @@ router.post('/public-beta-v2/create-or-sign-in', function (req, res) {
 
 
 
-
-//start page
-router.post('/public-beta-v2/enter-email-address', function (req, res) {
-
-   //If they have an existing chs account
-   if (req.session.data['set-journey'] === 'existing-CHS') {
-          
-    res.redirect('chs-sign-in')
-  }
-  else if (req.session.data['set-journey'] === 'filing') {
-        
-    res.redirect('/public-beta-v2/start-page')
-  }
-  else if (req.session.data['set-journey'] === 'new-user') {
-        
-    res.redirect('create-or-sign-in')
-  } 
-  else if (req.session.data['set-journey'] === 'admin-user') {
-        
-    res.redirect('chs-sign-in')
-  }
-
-})
 
 
 
