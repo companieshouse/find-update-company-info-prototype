@@ -20,15 +20,11 @@
   </div>
 </div>
 
-<h2 class="govuk-heading-m">Choose a journey <strong class="govuk-tag govuk-tag--red">
+<h2 class="govuk-heading-m">Choose a public beta journey <strong class="govuk-tag govuk-tag--red">
   Page not for development
 </strong></h2>
 
-<ul class="govuk-list govuk-list--bullet">
-  <li>
-    <a href="prototype-set-up">Select from the following journey options</a> 
-  </li>
-</ul>
+
 
 {{ govukButton({
   text: "Choose a journey",
@@ -39,7 +35,7 @@
 
 <ul class="govuk-list govuk-list--bullet govuk-!-padding-bottom-5">
   <li>
-<a href="" target="blank">Private beta flow
+<a href="https://app.mural.co/t/companieshouse8589/m/companieshouse8589/1729777270540/e18c56dec0f7ec8e8245005a472738c1ab082d54?sender=u056c70d2fe5016c384874180" target="blank">Public beta version 2 flows in Mural
 </a> </li>
 
 </ul>
@@ -69,69 +65,119 @@
         <h2 class="govuk-heading-m">Public beta sign in </h2>
 
 
-        <h3 class="govuk-heading-s">Choose sign in</h3>
+        <!-- CHS sign in -->
+        <h3 class="govuk-heading-s">Companies House sign in </h3>
 
         <ul class="govuk-list govuk-list--bullet">
           <li>
-            <a href="choose-sign-in">How do you want to sign in?</a> <strong class="govuk-tag govuk-tag--turquoise">
-              Content TBC
-             </strong> 
-          </li>
-        </ul>
-          <!-- <li>
-            <a href="choose-sign-in-v2.html">Choose how to sign in to Companies House account - v2 </a> <strong class="govuk-tag govuk-tag--turquoise">
+            <a href="choose-sign-in">Sign in to Companies House</a> <strong class="govuk-tag govuk-tag--turquoise">
               Content TBC
              </strong> 
           </li>
           <li>
-            <a href="choose-sign-in-v3.html">Choose how to sign in to Companies House account - v3 </a> <strong class="govuk-tag govuk-tag--turquoise">
+            <a href="chs-sign-in-password">What is your Companies House account password?</a> <strong class="govuk-tag govuk-tag--turquoise">
               Content TBC
              </strong> 
-          </li> -->
+          </li>
+        </ul>
 
-          <h3 class="govuk-heading-s">CHS - Existing Companies House account sign in</h3>
+
+
+ 
+
+          <h3 class="govuk-heading-s">A linked user tries to sign in using CHS - Public beta 2</h3>
 
           <ul class="govuk-list govuk-list--bullet">
             <li>
-              <a href="chs-sign-in">Sign in to Companies House</a> 
-            </li>
-            </ul>
-
-          <p>Interrupt page after Companies House account sign in:</p>
-          <ul class="govuk-list govuk-list--bullet">
-          
-            <li>
-              <a href="sign-in-using-one-login">We found a GOV.UK One Login that matches your email address</a> <strong class="govuk-tag govuk-tag--turquoise">
+              <a href="sign-in-using-one-login">You have a GOV.UK One Login</a> <strong class="govuk-tag govuk-tag--turquoise">
                 Content TBC
-               </strong> 
+               </strong>
             </li>
-            </ul>
+          </ul>
+       
+          <h3 class="govuk-heading-s">A linked user has changed their One Login email address - Public beta 3</h3>
 
-          <!-- <li>
-            <a href="chs-sign-in-password">Companies House account password </a> <strong class="govuk-tag govuk-tag--turquoise">
-              Content TBC
-             </strong> 
-          </li>
-          <li>
-            <a href="chs-sign-in-password-error-message">Companies House account password (with example error summary and message) </a> <strong class="govuk-tag govuk-tag--turquoise">
-              Content TBC
-             </strong> 
-          </li>
- -->
-          
+          <ul class="govuk-list govuk-list--bullet">
+            <li>
+              <a href="one-login-email-address-updated">You updated your email address with GOV.UK One Login since you last signed in</a> <strong class="govuk-tag govuk-tag--turquoise">
+                Content TBC
+               </strong>
+            </li>
+          </ul>
+
         </ul>
 
-        <h3 class="govuk-heading-s">Start page for migrating account</h3>
+        <h3 class="govuk-heading-s">A linked user has changed their One Login email address to one which matches a different CHS account - Public beta 5</h3>
         <ul class="govuk-list govuk-list--bullet">
         <li>
-          <a href="start-page">We are changing the way you sign in to some of our services
-          </a> <strong class="govuk-tag govuk-tag">
-            dev-ready
-          </strong> 
+          <a href="one-login-email-matches-different-chs-account">Your GOV.UK One Login email address matches a different Companies House account email address
+          </a> <strong class="govuk-tag govuk-tag--turquoise">
+            Content TBC
+           </strong>
         </li>
+      </ul>
 
+      <h3 class="govuk-heading-s">An un-linked user signs in via CHS and links their CHS account to a On - Public beta 8</h3>
+      <ul class="govuk-list govuk-list--bullet">
+      <li>
+        <a href="your-details-public-beta">Manage account - Connect this account to GOV.UK One Login
+        </a> <strong class="govuk-tag govuk-tag--turquoise">
+          Content TBC
+         </strong>
+      </li>
+
+      <li>
+        <a href="start-page">We're taking you to GOV.UK One Login
+        </a> <strong class="govuk-tag govuk-tag--turquoise">
+          Content TBC
+         </strong>
+      </li>
+
+      <li>
+        <a href="end-linking">Sign in with GOV.UK One Login next time
+        </a> <strong class="govuk-tag govuk-tag--turquoise">
+          Content TBC
+         </strong>
+      </li>
+
+      <li>
+        <a href="chs-one-login-settings">Manage account - GOV.UK One Login
+        </a> <strong class="govuk-tag govuk-tag--turquoise">
+          Content TBC
+         </strong>
+      </li>
+
+
+    </ul>
+
+    <h3 class="govuk-heading-s">An un-linked user has used a different email address at One Login during the linking journey - Public beta 9</h3>
+      <ul class="govuk-list govuk-list--bullet">
+      <li>
+        <a href="email-address-do-not-match-2">Email address does not match
+        </a> <strong class="govuk-tag govuk-tag--turquoise">
+          Content TBC
+         </strong>
+      </li>
 </ul>
-        <h3 class="govuk-heading-s">GOV.UK One login <strong class="govuk-tag govuk-tag--grey">
+
+      <h3 class="govuk-heading-s">An un-linked user has not linked their account, but selects to sign in via One Login on the CHS sign in screen - Public beta 11</h3>
+      <ul class="govuk-list govuk-list--bullet">
+      <li>
+        <a href="link-to-existing-chs-account">Enter your Companies House account password
+        </a> <strong class="govuk-tag govuk-tag--turquoise">
+          Content TBC
+         </strong>
+      </li>
+      <li>
+        <a href="end-linking-public-11">You have connected your GOV.UK One Login to this Companies House account. Sign in with GOV.UK One Login next time. 
+        </a> <strong class="govuk-tag govuk-tag--turquoise">
+          Content TBC
+         </strong>
+      </li>
+
+     </ul> 
+      
+      <h3 class="govuk-heading-s">GOV.UK One login <strong class="govuk-tag govuk-tag--grey">
           Not for development
          </strong> </h3> 
 
@@ -178,9 +224,7 @@
 
         </ul>
 
-        <p>GOV.UK One login sign in <strong class="govuk-tag govuk-tag--grey">
-          Not for development
-         </strong></p>
+        <p>GOV.UK One login sign in </p>
         <ul class="govuk-list govuk-list--bullet">
           <li>
             <a href="one-login-sign-in">Enter your email address to sign in to your GOV.UK One Login
@@ -197,7 +241,7 @@
 
         </ul>
 
-
+<!--
 
         <h3 class="govuk-heading-s">Account display name and email preferences</h3>
         <ul class="govuk-list govuk-list--bullet">
@@ -254,7 +298,7 @@
 
 
     </ul> 
-
+  -->
 
           <h3 class="govuk-heading-s">Stop screens <strong class="govuk-tag govuk-tag">
             In progress
