@@ -462,7 +462,7 @@ router.post('/public-beta-v2/one-login-email-address-updated', function (req, re
   // Connecting accounts after the user enters their CHS password
   router.post('/public-beta-v2/link-to-existing-chs-account', function (req, res) {
 
-    res.redirect('end-linking')
+    res.redirect('end-linking-public-11')
 
 })
 
