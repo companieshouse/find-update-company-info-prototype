@@ -117,6 +117,32 @@ else if (req.session.data['set-journey'].includes('public-11'))   {
             
        // do nothing
       }
+
+      /*
+       * CHS sign in - password
+       */
+        else if (req.session.data['set-journey'].includes('public-7'))   {
+
+          res.redirect('/public-beta-v2/chs-sign-in-password')
+       
+        }
+      /*
+       * CHS sign in - password
+       */
+        else if (req.session.data['set-journey'].includes('public-8'))   {
+
+          res.redirect('/public-beta-v2/chs-sign-in-password')
+       
+        }
+        /*
+       * CHS sign in - password
+       */
+        else if (req.session.data['set-journey'].includes('public-9'))   {
+
+          res.redirect('/public-beta-v2/chs-sign-in-password')
+       
+        }
+        
       
 
 
@@ -126,23 +152,15 @@ else if (req.session.data['set-journey'].includes('public-11'))   {
  * Sign in to Companies House
  */
 
-router.post('/public-beta-v2/chs-sign-in', function (req, res) {
+router.post('/public-beta-v2/chs-sign-in-password', function (req, res) {
 
     if (req.session.data['set-journey'].includes('public-11'))   {
       
       res.redirect('/public-beta-v2/your-details-public-beta')
     }
-    else if(req.session.data['set-journey'].includes('public-1'))   {
-            
-      //not used
-
-    }
-
-  
-
     else if (req.session.data['set-journey'].includes('public-7'))   {
       
-      res.redirect('/public-beta-v2/company-lookup')
+      res.redirect('/public-beta-v2/chs-home-signed-in')
     }
     else if (req.session.data['set-journey'].includes('public-8'))   {
       
@@ -150,7 +168,7 @@ router.post('/public-beta-v2/chs-sign-in', function (req, res) {
     }
     else if (req.session.data['set-journey'].includes('public-9'))   {
       
-      res.redirect('/public-beta-v2/your-details-public-beta')
+      res.redirect('/public-beta-v2/chs-home-signed-in')
     }
 
 
@@ -440,8 +458,13 @@ router.post('/public-beta-v2/one-login-email-address-updated', function (req, re
 
 
 })
+    
+  // Connecting accounts after the user enters their CHS password
+  router.post('/public-beta-v2/link-to-existing-chs-account', function (req, res) {
 
+    res.redirect('end-linking')
 
+})
 
 
 
