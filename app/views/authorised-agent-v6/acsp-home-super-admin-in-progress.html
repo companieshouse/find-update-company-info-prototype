@@ -18,14 +18,16 @@
      <span class="govuk-caption-l govuk-!-padding-bottom-0">MORRIS ACCOUNTING LTD 
       <h1 class="govuk-heading-l">Authorised agent account </h1> </span>
 
+<!--<p class="govuk-body govuk-!-margin-bottom-1">This is also known as an Authorised Corporate Service Provider (ACSP).</p> -->
           <p class="govuk-body govuk-!-margin-bottom-1"><strong>Authorised agent status:</strong> <strong class="govuk-tag govuk-tag--green">
             Active
           </strong></p>
           <p class="govuk-body govuk-!-margin-bottom-1"> <strong>Authorised agent number:</strong> 06254821</p>
 
-          <p class="govuk-body govuk-!-padding-bottom-2"> <strong>Your role: </strong>account owner</p>
+          <p class="govuk-body govuk-!-margin-bottom-1"> <strong>Your role: </strong>account owner</p>
 
 
+         <p class="govuk-body govuk-!-padding-bottom-2">Authorised agents are also known as Authorised Corporate Service Providers (ACSPs).</p>
 
 
       <!-- Agent services  -->
@@ -38,7 +40,7 @@
           <p class="govuk-body">You can:</p> 
           <ul class="govuk-list govuk-list--bullet">
             <li>view users who have been added </li>
-            <li>add users if they need to use services for MORRIS ACCOUNTING LTD</li>
+            <li>add new users if they need to use services for the authorised agent</li>
             <li>remove users</li>
             </ul>
 
@@ -46,8 +48,11 @@
          <!-- Update details of the agent  -->
         <div class="govuk-grid-column-one-third">
           <h2 class="govuk-heading-m"><a class="govuk-link govuk-link--no-underline govuk-link--no-visited-state" href="https://register-an-acsp-prototype.herokuapp.com/v2-update/start-page">Update the authorised agent's details</a></h2>
-          <p class="govuk-body">Tell us about changes to MORRIS ACCOUNTING LTD.
-          </p>
+          <p class="govuk-body">Tell us about changes to the:  </p>
+                    <ul class="govuk-list govuk-list--bullet">
+                      <li>business details</li>
+                      <li>Anti-Money Laundering (AML) registration details for this business</li>
+                      </ul>
 
          {{ govukWarningText({
             text: "You must tell us about any changes within 14 days.",
@@ -58,13 +63,10 @@
         <!-- Close the agent  -->
         <div class="govuk-grid-column-one-third ">
           <h2 class="govuk-heading-m"><a class="govuk-link govuk-link--no-underline govuk-link--no-visited-state" href="https://register-an-acsp-prototype.herokuapp.com/v1-close/start-page">Close the authorised agent</a></h2>
-          <p class="govuk-body">Tell us if MORRIS ACCOUNTING LTD is no longer an authorised agent and you need to close the account.
+          <p class="govuk-body">Tell us if MORRIS ACCOUNTING LTD is no longer an authorised agent and you need to close this account.
           </p>
 
-         {{ govukWarningText({
-            text: "MORRIS ACCOUNTING LTD will no longer be able to access authorised agent services.",
-            iconFallbackText: "Warning"
-          }) }} 
+
         </div>
        
     </div>
@@ -83,7 +85,7 @@
   <div class="govuk-summary-card">
     <div class="govuk-summary-card__title-wrapper">
 
-      <h2 class="govuk-summary-card__title">Tell Companies House you have verified someone's identity </a> <strong class="govuk-tag govuk-tag--blue">
+      <h2 class="govuk-summary-card__title">Tell Companies House you have verified someone's identity </a> <br><strong class="govuk-tag govuk-tag--blue">
         Coming soon
       </strong>  </h2>
 
@@ -92,9 +94,7 @@
       <dl class="govuk-summary-list">
         <div class="govuk-summary-list__row">
 
-          <p class="govuk-body">From XX DATE, you can use this service to tell us you've verified a person's identity.
-
-          </p>
+          <p class="govuk-body">In future, you'll be able to tell us you've verified a person's identity.          </p>
 
           <p class="govuk-body">
              <a href="https://acsp-verify-identity-prototype.herokuapp.com/v7/start-page" class="govuk-link"></a>
@@ -108,7 +108,7 @@
 
 <div class="govuk-summary-card">
     <div class="govuk-summary-card__title-wrapper">
-      <h2 class="govuk-summary-card__title"> File as an authorised agent <strong class="govuk-tag govuk-tag--blue">Coming soon
+      <h2 class="govuk-summary-card__title"> File as an authorised agent <br><strong class="govuk-tag govuk-tag--blue">Coming soon
       </strong> </h2>
       <!-- <ul class="govuk-summary-card__actions">
         <li class="govuk-summary-card__action"> <a class="govuk-link" href="#">Delete choice<span class="govuk-visually-hidden"> of University of Gloucestershire (University of Gloucestershire)</span></a>
@@ -121,7 +121,7 @@
       <dl class="govuk-summary-list">
         <div class="govuk-summary-list__row">
 
-          <p class="govuk-body">From XX DATE, you'll be able to file online as MORRIS ACCOUNTING LTD. </p>
+          <p class="govuk-body">In future, you'll be able to file online as MORRIS ACCOUNTING LTD. </p>
 
 
 
