@@ -16,6 +16,10 @@ router.post('/public-beta-v2/prototype-set-up', function (req, res) {
         
     res.redirect('/public-beta-v2/chs-home')
   }
+  else if (req.session.data['set-journey'].includes('public-9'))   {
+        
+    res.redirect('/public-beta-v2/chs-home')
+  }
   else{
 
     res.redirect('/public-beta-v2/choose-sign-in')

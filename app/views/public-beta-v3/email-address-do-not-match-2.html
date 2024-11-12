@@ -1,0 +1,53 @@
+{% extends "layouts/layout_unbranded-with-banner.html" %}
+<!-- Overwrite suerfice name -->
+
+
+{% block pageTitle %}
+  {{ serviceName }} – Prototype
+{% endblock %}
+
+
+{% set serviceName %}
+ 
+{% endset %}
+
+{% block beforeContent %}
+
+
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-two-thirds ">
+
+  <form action="email-address-do-not-match-2" method="post" novalidate="">
+
+  
+    <h1 class="govuk-heading-l">Email address does not match</h1> 
+
+
+    <p class="govuk-body">The email address you entered for GOV.UK One Login is <strong>email222@example.com</strong>.</p> 
+      
+    <p class="govuk-body">This does not match your Companies House account email address, which is <strong>email111@example.com</strong>.</p>
+
+    <p class="govuk-body">To connect your account with GOV.UK One Login, you must use the same email address for both.</p> 
+  
+    
+    <p class="govuk-body">
+      <a href="your-details-public-beta" class="govuk-link">Go back to 'Manage account'</a>
+    </p> 
+
+
+  
+  <!-- <p class="govuk-body"><a href="#" class="govuk-link">Register</a></p>
+  
+  <p class="govuk-body"><a href="#" class="govuk-link">I've forgotten my password</a></p> -->
+  
+  </form>
+
+            </div>
+          </div>
+
+{% endblock %}
