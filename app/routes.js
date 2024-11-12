@@ -32,3 +32,5 @@ router.use('/', require('./routes/dev-ready-v2-routes.js'))
 
 
 router.use('/', require('./routes/public-beta-v2-routes.js'))
+
+router.use('/', require('./routes/public-beta-v3-routes.js'))

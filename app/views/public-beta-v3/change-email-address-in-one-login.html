@@ -1,0 +1,55 @@
+{% extends "layouts/main.html" %}
+<!-- Overwrite suerfice name -->
+
+
+{% block pageTitle %}
+  {{ serviceName }} – Prototype
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-two-thirds ">
+
+  <form action="change-email-address-in-one-login" method="post" novalidate="">
+
+
+
+    <h1 class="govuk-heading-l">
+      You'll need to change your email address in GOV.UK One Login
+    </h1>
+
+    <p class="govuk-body">
+      If you do not want Companies House to update your sign in email address to <span class="govuk-body govuk-!-font-weight-bold">emailaddress2@example.com</span>, you'll need to change it in GOV.UK One Login.
+    </p>
+
+    <ol class="govuk-list govuk-list--number">
+      <li>Sign in to your GOV.UK One Login.</li>
+      <li>Select 'Security'.</li>
+      <li>Change your email address.</li>
+      <li>Return to your Companies House account and sign in.</li>
+    </ol>
+
+
+    <div class="govuk-button-group">
+      {{ govukButton({
+        text: "Sign in to GOV.UK One Login",
+        href:"create-or-sign-in"
+      }) }}  
+    
+     
+    </div>
+
+  
+  </form>
+
+</div>
+</div>
+
+{% endblock %}
