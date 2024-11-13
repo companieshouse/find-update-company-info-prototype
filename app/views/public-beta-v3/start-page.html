@@ -28,73 +28,73 @@ We are changing the way you sign in to some of our services – {{ serviceName }
         <a href="#" class="govuk-back-link govuk-!-padding-top-0">Back</a>
       <h1 class="govuk-heading-xl">We're taking you to GOV.UK One Login</h1>
      
-     <p class="govuk-body">GOV.UK One Login will allow you to access many government services using the same email address and password.</p>
+      <p class="govuk-body">GOV.UK One Login will allow you to access many government services using the same email address and password.</p>
 
-     {{ govukWarningText({
-      text: "You must sign in to or create a GOV.UK One Login using the same email address that you use for your Companies House account.",
-      iconFallbackText: "Warning"
-    }) }}
-
-      <p class="govuk-body"> This will enable us to connect your account to your GOV.UK One Login. All your existing account information will be saved.</p>
-
-      <details class="govuk-details" data-module="govuk-details">
-        <summary class="govuk-details__summary">
-          <span class="govuk-details__summary-text">
-           I already have a GOV.UK One Login that uses a different email address
-          </span>
-        </summary>
-        <div class="govuk-details__text">
-          <p class="govuk-body">If you want to connect your Companies House account to a GOV.UK One Login that uses a different email address, you have 2 options:</p>
-          <h3 class="govuk-heading-s">Option 1</h3>
-          <p class="govuk-body"><a href="#" class="govuk-link">Change your Companies House account email address</a> to match your GOV.UK One Login email address. Then go back to the ‘Manage account’ section and select continue.</p>
-          <h3 class="govuk-heading-s">Option 2</h3>
-          <p class="govuk-body"><a href="#" class="govuk-link" rel="noreferrer noopener" target="_blank">Sign in to GOV.UK One Login and change your email address (opens in new tab)</a> to match your Companies House account email address. Then go back to the ‘Manage account’ section and select continue.</p>
-          </ul>
-        </div>
-      </details>
-
-      <details class="govuk-details" data-module="govuk-details">
-        <summary class="govuk-details__summary">
-          <span class="govuk-details__summary-text">
-        
-       I share access to this account with other people
-          </span>
-        </summary>
-        <div class="govuk-details__text">
-          <p class="govuk-body">Only one person can connect this Companies House account to their GOV.UK One Login.
-          </p>
-          <p class="govuk-body">Anyone else who shares access to this account will need to create their own GOV.UK One Login. They will no longer be able to access the information in this account.
-          </p>
-        </div>
-      </details>
-
-      <!--
-      <details class="govuk-details" data-module="govuk-details">
-        <summary class="govuk-details__summary">
-          <span class="govuk-details__summary-text">
-           What is a Companies House account?
-          </span>
-        </summary>
-        <div class="govuk-details__text">
-          <p class="govuk-body">This is the account you can use to sign in to:</p>
-          <ul class="govuk-list govuk-list--bullet">
-            <li>the Companies House register - sometimes known as 'Companies House service' or 'Find and update company information'</li>
-            <li>some of our online services - for example, 'Register your company' or 'Upload a document to Companies House'</li>
-          </ul>
-          <p class="govuk-body">A Companies House account is not the same as WebFiling.</p>
-        </div>
-      </details>
-      -->
-
-   
-      {{ govukButton({
-        text: "Continue",
-        classes: "govuk-!-margin-top-4 govuk-!-margin-bottom-8"
-      }) }}
-
-    </form>
-  </div>
-</div>
-
-</div>
-{% endblock %}
+      {{ govukWarningText({
+       text: "You must sign in to or create a GOV.UK One Login using email111@example.com, which is your Companies House account email address.",
+       iconFallbackText: "Warning"
+     }) }}
+ 
+       <p class="govuk-body"> This will enable us to connect your account to your GOV.UK One Login, and save all your existing account information.</p>
+ 
+       <details class="govuk-details" data-module="govuk-details">
+         <summary class="govuk-details__summary">
+           <span class="govuk-details__summary-text">
+            What to do if you already have a GOV.UK One Login that uses a different email address
+           </span>
+         </summary>
+         <div class="govuk-details__text">
+           <p class="govuk-body">If you want to connect this Companies House account to a GOV.UK One Login that uses a different email address, you have 2 options:</p>
+           <h3 class="govuk-heading-s">Option 1</h3>
+           <p class="govuk-body"><a href="#" class="govuk-link">Change your Companies House account email address</a> to match your GOV.UK One Login email address. Then go back to the ‘Manage account’ section and select continue.</p>
+           <h3 class="govuk-heading-s">Option 2</h3>
+           <p class="govuk-body"><a href="#" class="govuk-link" rel="noreferrer noopener" target="_blank">Sign in to GOV.UK One Login and change the email address to email111@example.com (opens in new tab)</a>, which is your Companies House account email address. Then go back to the ‘Manage account’ section and select continue.</p>
+           </ul>
+         </div>
+       </details>
+ 
+       <details class="govuk-details" data-module="govuk-details">
+         <summary class="govuk-details__summary">
+           <span class="govuk-details__summary-text">
+         
+        What to do if you share access to this Companies House account with other people
+           </span>
+         </summary>
+         <div class="govuk-details__text">
+           <p class="govuk-body">Only one person can connect this account to their GOV.UK One Login.</p>
+           <p class="govuk-body"> This account uses the email address <strong>email111@example.com</strong>.
+         Anyone else who shares access to this account will need to create their own GOV.UK One Login, using a different email address. They will no longer be able to access the information in this account.
+           </p>
+         </div>
+       </details>
+ 
+       <!--
+       <details class="govuk-details" data-module="govuk-details">
+         <summary class="govuk-details__summary">
+           <span class="govuk-details__summary-text">
+            What is a Companies House account?
+           </span>
+         </summary>
+         <div class="govuk-details__text">
+           <p class="govuk-body">This is the account you can use to sign in to:</p>
+           <ul class="govuk-list govuk-list--bullet">
+             <li>the Companies House register - sometimes known as 'Companies House service' or 'Find and update company information'</li>
+             <li>some of our online services - for example, 'Register your company' or 'Upload a document to Companies House'</li>
+           </ul>
+           <p class="govuk-body">A Companies House account is not the same as WebFiling.</p>
+         </div>
+       </details>
+       -->
+ 
+    
+       {{ govukButton({
+         text: "Go to GOV.UK One Login",
+         classes: "govuk-!-margin-top-4 govuk-!-margin-bottom-8"
+       }) }}
+ 
+     </form>
+   </div>
+ </div>
+ 
+ </div>
+ {% endblock %}
