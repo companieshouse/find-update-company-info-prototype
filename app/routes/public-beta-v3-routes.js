@@ -127,7 +127,7 @@ else if (req.session.data['set-journey'].includes('public-11'))   {
        */
         else if (req.session.data['set-journey'].includes('public-7'))   {
 
-          res.redirect('/public-beta-v2/chs-sign-in-password')
+          res.redirect('/public-beta-v3/chs-sign-in-password')
        
         }
       /*
@@ -156,7 +156,7 @@ else if (req.session.data['set-journey'].includes('public-11'))   {
  * Sign in to Companies House
  */
 
-router.post('/public-beta-v2/chs-sign-in-password', function (req, res) {
+router.post('/public-beta-v3/chs-sign-in-password', function (req, res) {
 
     if (req.session.data['set-journey'].includes('public-11'))   {
       
