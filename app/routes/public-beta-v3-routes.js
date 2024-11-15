@@ -493,14 +493,14 @@ router.post('/public-beta-v3/one-login-email-address-updated', function (req, re
   router.post('/public-beta-v3/email-address-do-not-match', function (req, res) {
 
      //If they have an existing webfiling account
-     if (req.session.data['man'] === 'yes') {
+     if (req.session.data['email-does-not-match'] === 'yes') {
         
       res.redirect('change-email-address')
-  }
-  else if (req.session.data['email-does-not-match'] === 'no') {
-        
-    res.redirect('security-one-login')
-  }
+      }
+      else if (req.session.data['email-does-not-match'] === 'no') {
+            
+        res.redirect('security-one-login')
+      }
 
   
 })
