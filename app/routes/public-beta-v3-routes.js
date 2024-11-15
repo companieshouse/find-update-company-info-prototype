@@ -307,7 +307,7 @@ router.post('/public-beta-v3/one-login-enter-password', function (req, res) {
     else if (req.session.data['set-journey'].includes('public-9'))      
     {
                 
-        res.redirect('/public-beta-v3/email-address-do-not-match-2') 
+        res.redirect('/public-beta-v3/email-address-do-not-match') 
            
     }
 
@@ -429,7 +429,7 @@ router.post('/public-beta-v3/one-login-enter-password', function (req, res) {
     }
     else if (req.session.data['set-journey'] === 'public-9') {
         
-      res.redirect('/public-beta-v3/email-address-do-not-match-2')
+      res.redirect('/public-beta-v3/email-address-do-not-match')
     }
     else if (req.session.data['set-journey'] === 'public-11') {
         
@@ -489,7 +489,21 @@ router.post('/public-beta-v3/one-login-email-address-updated', function (req, re
   
 })
 
+  //One loginsign create complete
+  router.post('/public-beta-v3/email-address-do-not-match', function (req, res) {
 
+     //If they have an existing webfiling account
+     if (req.session.data['man'] === 'yes') {
+        
+      res.redirect('change-email-address')
+  }
+  else if (req.session.data['email-does-not-match'] === 'no') {
+        
+    res.redirect('security-one-login')
+  }
+
+  
+})
   
   
   /*
