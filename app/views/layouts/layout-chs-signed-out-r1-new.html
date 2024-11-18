@@ -70,14 +70,18 @@
       <nav role="navigation" class="content mobile-hidden">
         <ul id="navigation" class="mobile-hidden" style="padding-top: 8px;">
           <li class="authenticated">
-            {% if (data['chs-email'] === "") %}
+        
+    
 
-            email111@example.com 
+    
+            {% if (data['chs-email-new'] === "") %}
 
+            email111@example.com
+    
+           
             {% else %}
 
-            {{data['chs-email']}} 
-
+            {{data['chs-email-new']}} 
             {% endif %}
             
           </li>

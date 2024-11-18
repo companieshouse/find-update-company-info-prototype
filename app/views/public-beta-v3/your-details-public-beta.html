@@ -68,11 +68,9 @@ Find and update company information
 
     <p class="govuk-body">GOV.UK One Login is the new way to sign in, and will make your Companies House account more secure. </p>
 
-    <p class="govuk-body">You must use {% if (data['chs-email-2'] === "") %}
+    <p class="govuk-body">You must use 
 
-      <strong>  {{data['email-address-2']}} </strong>
-
-      {% elseif (data['chs-email'] !== "") %}
+      {% if (data['chs-email'] !== "") %}
 
       <strong> {{data['chs-email']}} </strong>
 

@@ -1,4 +1,4 @@
-{% extends "layouts/layout-chs-signed-out.html" %}
+{% extends "layouts/layout-chs-signed-out-r1.html" %}
 
 {% block pageTitle %}
   Manage account - Companies House - GOV.UK
@@ -29,7 +29,15 @@
    
 
 
-    <p class='govuk-body govuk-!-padding-bottom-2'>  You're signed in as<span class='govuk-body govuk-!-font-weight-bold'> email111@example.com</span></p>
+    <p class='govuk-body govuk-!-padding-bottom-2'>  You're signed in as<span class='govuk-body govuk-!-font-weight-bold'>  {% if (data['chs-email'] !== "") %}
+
+      <strong> {{data['chs-email']}} </strong>
+
+      {% else %}
+
+      <strong> email111@example.com </strong>
+
+      {% endif %} </span></p>
 
 
 
