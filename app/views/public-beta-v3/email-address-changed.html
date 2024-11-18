@@ -26,13 +26,13 @@
   <h1 class="govuk-heading-l">Email address changed</h1>
 
   <p class="govuk-body">Your email address has been changed to<br>
-    {% if (data['chs-email-new'] !== "") %}
+    {% if (data['chs-email-new'] === "") %}
             
-                  <strong> {{data['chs-email-new']}} </strong>
+    <strong> emailnew@example.com </strong> 
             
                   {% else %}
             
-                  <strong> emailnew@example.com </strong>
+                  <strong> {{data['chs-email-new']}} </strong>
             
                   {% endif %}
     </p>
