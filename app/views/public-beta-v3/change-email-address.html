@@ -1,4 +1,4 @@
-{% extends "layouts/layout-chs-signed-out.html" %}
+{% extends "layouts/layout-chs-signed-out-r1.html" %}
 
 {% block pageTitle %}
   Manage account - Companies House - GOV.UK
@@ -25,15 +25,24 @@
 
   <h1 class="govuk-heading-l">Change email address</h1>
 
-  <p class="govuk-body">Current email address is <br><strong> email111@example.com</strong> </p>
+  <p class="govuk-body">Current email address is <br>{% if (data['chs-email'] !== "") %}
+        
+    <strong> {{data['chs-email']}} </strong>
+
+    {% else %}
+
+    <strong> email111@example.com </strong>
+
+    {% endif %}
+</p>
 
   {{ govukInput({
     label: {
       text: "Enter new email address",
       classes:"govuk-!-font-weight-bold"
     },
-    id: "chs-email",
-    name: "chs-email",
+    id: "chs-email-new",
+    name: "chs-email-new",
     type: "email",
     autocomplete: "email",
     spellcheck: false
@@ -44,8 +53,8 @@
       text: "Re-enter new email address",
       classes:"govuk-!-font-weight-bold"
     },
-    id: "chs-email",
-    name: "chs-email",
+    id: "chs-email-new-2",
+    name: "chs-email-new-2",
     type: "email",
     autocomplete: "email",
     spellcheck: false

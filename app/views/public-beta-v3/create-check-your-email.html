@@ -24,13 +24,13 @@
         <div class="govuk-inset-text">
           We have sent an email to: 
           
-          {% if (data['email'] === "")%}
+          {% if (data['one-login-email'] === "")%}
 
             <strong>email111@example.com</strong>
           
           {% else %}
 
-            <strong>{{ data['email'] }}</strong>
+            <strong>{{ data['one-login-email'] }}</strong>
           
           {% endif %}
           

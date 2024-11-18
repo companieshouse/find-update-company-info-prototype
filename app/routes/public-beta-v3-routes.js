@@ -673,6 +673,26 @@ router.post('/public-beta-v3/one-login-email-address-updated', function (req, re
       })
 
 
+
+      /*
+       * CHS - change email address
+       */ 
+      router.post('/public-beta-v3/change-email-address', function (req, res) {
+
+        res.redirect('email-address-changed')
+      })
+
+
+
+      /*
+       * CHS - change email address
+       */ 
+           router.post('/public-beta-v3/one-login-sign-in', function (req, res) {
+
+            res.redirect('one-login-enter-password')
+          })
+    
+    
       
   
   router.get('/officers', function (req, res) {

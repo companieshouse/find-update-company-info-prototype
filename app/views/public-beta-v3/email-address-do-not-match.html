@@ -37,7 +37,15 @@
 
       <p class="govuk-body">The email address you entered for GOV.UK One Login is <strong>email222@example.com</strong>.</p> 
       
-      <p class="govuk-body">This does not match your Companies House account email address, which is <strong>email111@example.com</strong>.</p>
+      <p class="govuk-body">This does not match your Companies House account email address, which is {% if (data['chs-email'] !== "") %}
+        
+        <strong> {{data['chs-email']}} </strong>
+  
+        {% else %}
+  
+        <strong> email111@example.com </strong>
+  
+        {% endif %}.</p>
 
 
     </div>
@@ -45,40 +53,59 @@
     <p class="govuk-body">To connect your Companies House account to your GOV.UK One Login, you must use the same email address for both.</p> 
     <!-- <p class="govuk-body">If you want to connect this Companies House account to a GOV.UK One Login that uses a different email address, you have 2 options:</p> -->
 
-      {{ govukRadios({
-        name: "email-does-not-match",
-        fieldset: {
-          legend: {
-            text: "What do you want to do? ",
-            isPageHeading: false,
-            classes: "govuk-fieldset__legend--m govuk-!-static-padding-top-4"
-          }
-        },
-        items: [
 
-        {
-          value: "yes",
-          classes: "govuk-!-static-padding-top-5",
-          html: "Change your Companies House account email address to <strong>email222@example.com</strong>",
-       
-          hint: { 
-            text: ""
-          }
-          
-        },
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset" aria-describedby="email-do-not-match-hint">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+          <h2 class="govuk-fieldset__heading">
+            What do you want to do?
+          </h2>
+        </legend>
+  
+        <div class="govuk-radios" data-module="govuk-radios">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="email-do-not-match" name="email-do-not-match" type="radio" value="yes" aria-describedby="email-do-not-match-item-hint">
+            <label class="govuk-label govuk-radios__label" for="email-do-not-match">
+              Change your Companies House account email address to
 
-          {
-            value: "no",
-            html: "Change your GOV.UK One Login email address to <strong> email111@example.com</strong>",
-            hint: { 
-              text: "You'll need to sign in to your GOV.UK One Login and select 'Security'"
-            }
-          }
-         
-          
-          
-        ]
-      }) }}
+              {% if (data['one-login-email'] !== "") %}
+        
+              <strong> {{data['one-login-email']}} </strong>
+        
+              {% else %}
+        
+              <strong> email222@example.com </strong>
+        
+              {% endif %}
+        
+  
+            </label>
+            
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="email-do-not-match-2" name="email-do-not-match" type="radio" value="no" aria-describedby="email-do-not-match-2-item-hint">
+            <label class="govuk-label govuk-radios__label" for="email-do-not-match-2">
+              Change your GOV.UK One Login email address to 
+              {% if (data['chs-email'] !== "") %}
+        
+              <strong> {{data['chs-email']}} </strong>
+        
+              {% else %}
+        
+              <strong> email111@example.com </strong>
+        
+              {% endif %}
+            </label>
+            <div id="email-do-not-match-2-item-hint" class="govuk-hint govuk-radios__hint">
+              You'll need to sign in to your GOV.UK One Login and select 'Security'
+            </div>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+
+
+
 
 <p>Once you've changed one of these email addresses, go back to 'Manage account' and select continue to connect your account to your GOV.UK One Login.</p>
 
