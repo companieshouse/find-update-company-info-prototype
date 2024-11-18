@@ -105,7 +105,15 @@ GOV.UK One Login
                   Email address
                 </dt>
                 <dd class="govuk-summary-list__value">
-                  email111@example.com
+                  {% if (data['one-login-email'] === "") %}
+        
+                  <strong> email222@example.com </strong> 
+                  {% else %}
+            
+                  <strong> {{data['one-login-email']}} </strong>
+            
+                  {% endif %}
+            
                 </dd>
                 <dd class="govuk-summary-list__actions">
                   <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> email111@example.com</span></a>
