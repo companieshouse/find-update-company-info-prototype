@@ -20,11 +20,21 @@
     <div class="govuk-grid-column-two-thirds ">
       <form action="end-linking" method="post" novalidate>
 
-        {% set html %}
-          
+        <div class="govuk-notification-banner govuk-notification-banner--success" role="alert" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+          <div class="govuk-notification-banner__header">
+            <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+              Success
+            </h2>
+          </div>
+          <div class="govuk-notification-banner__content">
+            <h3 class="govuk-notification-banner__heading">
+              Your GOV.UK One Login is now connected to this account
+            </h3>
+          <p>You have connected your GOV.UK One Login to this Companies House account. We have saved your existing account information.</p>
+          </div>
+        </div>
 
-        {% endset %}
-
+     
      
 
     <h1 class="govuk-heading-l">Sign in with GOV.UK One Login next time</h1>
