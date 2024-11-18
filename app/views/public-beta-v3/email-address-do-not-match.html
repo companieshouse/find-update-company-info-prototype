@@ -35,7 +35,15 @@
  -->
 
 
-      <p class="govuk-body">The email address you entered for GOV.UK One Login is <strong>email222@example.com</strong>.</p> 
+      <p class="govuk-body">The email address you entered for GOV.UK One Login is {% if (data['one-login-email'] !== "") %}
+        
+        <strong> {{data['one-login-email']}}</strong>.
+  
+        {% else %}
+  
+        <strong> email222@example.com</strong>.
+  
+        {% endif %}</p> 
       
       <p class="govuk-body">This does not match your Companies House account email address, which is {% if (data['chs-email'] !== "") %}
         
@@ -78,13 +86,11 @@
         
               {% endif %}
          
-
-  
             </label>
             
           </div>
           <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="email-do-not-match-2" name="email-do-not-match" type="radio" value="no" aria-describedby="email-do-not-match-2-item-hint">
+            <input class="govuk-radios__input" id="email-do-not-match" name="email-do-not-match" type="radio" value="no" aria-describedby="email-do-not-match-2-item-hint">
             <label class="govuk-label govuk-radios__label" for="email-do-not-match-2">
               Change your GOV.UK One Login email address to 
               {% if (data['chs-email'] !== "") %}
