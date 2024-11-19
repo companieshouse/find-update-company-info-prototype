@@ -80,6 +80,7 @@ GOV.UK One Login
 </div>
 </div>
 
+<a href="#" class="govuk-back-link">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -90,127 +91,35 @@ GOV.UK One Login
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <form action="security-one-login" method="post" novalidate>
+      <form action="security-one-login-password" method="post" novalidate>
  
-  
 
-        <h1 class="govuk-heading-l">Security</h1>
+        <h1 class="govuk-heading-l">Enter your new email address</h1>
 
-        <div class="govuk-summary-card">
-          <div class="govuk-summary-card__title-wrapper">
-            <h2 class="govuk-summary-card__title">
-              Your sign in details
-            </h2>
+       
+
+        <div class="govuk-form-group govuk-password-input" data-module="govuk-password-input">
+          <label class="govuk-label" for="password-input">
+            Email address
+          </label>
+          <div class="govuk-input__wrapper govuk-password-input__wrapper">
+            <input class="govuk-input govuk-password-input__input govuk-js-password-input-input" id="password-input" name="password" type="password" spellcheck="false" autocomplete="current-password" autocapitalize="none">
+            
           </div>
-          <div class="govuk-summary-card__content">
-            <dl class="govuk-summary-list">
-              <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">
-                  Email address
-                </dt>
-                <dd class="govuk-summary-list__value">
-                  {% if (data['one-login-email'] === "") %}
+        </div>
+
+     
+       
+
+    {{ govukButton({
+      text: "Continue",
+      href:"security-one-login-check-email"
+    }) }}
+
+    <p class="govuk-body"> <a href="" class="govuk-link" rel="noreferrer noopener">I do not want to change my email address</a></p>
+
+
         
-                  <strong> email222@example.com </strong> 
-                  {% else %}
-            
-                  <strong> {{data['one-login-email']}} </strong>
-            
-                  {% endif %}
-            
-                </dd>
-                <dd class="govuk-summary-list__actions">
-                  <a class="govuk-link" href="security-one-login-password">Change<span class="govuk-visually-hidden"> email111@example.com</span></a>
-                </dd>
-              </div>
-
-              <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">
-                 Password
-                </dt>
-                <dd class="govuk-summary-list__value">
-                  •	•	•	•	•	•	•	•	•	•
-                </dd>
-                <dd class="govuk-summary-list__actions">
-                  <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> </span></a>
-                </dd>
-              </div>
-
-              </dl>
-          </div>
-          </div>
-
-          <div class="govuk-summary-card">
-            <div class="govuk-summary-card__title-wrapper">
-              <h2 class="govuk-summary-card__title">
-                How you get security codes
-              </h2>
-            </div>
-            <div class="govuk-summary-card__content">
-              <p> We use security codes to make sure it’s you when you sign in.</p>
-              <dl class="govuk-summary-list">
-                <div class="govuk-summary-list__row">
-                  <dt class="govuk-summary-list__key">
-                    Text message
-                  </dt>
-                  <dd class="govuk-summary-list__value">
-                    Phone number ending with 0406
-                  </dd>
-                  <dd class="govuk-summary-list__actions">
-                    <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> </span></a>
-                  </dd>
-                </div>
-  
-              
-  
-                </dl>
-            </div>
-            </div>
-
-            <div class="govuk-summary-card">
-              <div class="govuk-summary-card__title-wrapper">
-                <h2 class="govuk-summary-card__title">
-                  Activity history
-                </h2>
-              </div>
-              <div class="govuk-summary-card__content">
-                <p> See what you've visited with your GOV.UK One Login and when.
-
-                </p>
-                <a href="#" class="govuk-link">See your activity history</a>
-
-
-      
-    
-                
-    
-                  </dl>
-              </div>
-              </div>
-
-              <div class="govuk-summary-card">
-                <div class="govuk-summary-card__title-wrapper">
-                  <h2 class="govuk-summary-card__title">
-                    Delete your GOV.UK One Login
-                  </h2>
-                </div>
-                <div class="govuk-summary-card__content">
-                  <p> This will permanently delete your GOV.UK One Login. You’ll no longer be able to sign in to the services you’ve used with it.
-
-
-  
-                  </p>
-                  <a href="#" class="govuk-link">Delete your GOV.UK One Login</a>
-  
-  
-        
-      
-                  
-      
-                    </dl>
-                </div>
-                </div>
-
           </form>
 
 

@@ -57,8 +57,8 @@ GOV.UK One Login
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
 
-        <a href="your-services-one-login" class="account-menu-link govuk-link govuk-link--no-visited-state account-menu__item">Your services</a>
-        <a href="" class="account-menu-link govuk-link govuk-link--no-visited-state account-menu__item--current">Security</a>
+        <a href="" class="account-menu-link govuk-link govuk-link--no-visited-state account-menu__item--current">Your services</a>
+        <a href="security-one-login" class="account-menu-link govuk-link govuk-link--no-visited-state account-menu__item">Security</a>
         <a href="" class="account-menu-link govuk-link govuk-link--no-visited-state account-menu__item">Sign out</a>
       </div>
     </div>
@@ -90,126 +90,93 @@ GOV.UK One Login
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <form action="security-one-login" method="post" novalidate>
+      <form action="your-services-one-login" method="post" novalidate>
  
-  
+        <h1 class="govuk-heading-l">Your services</h1>
 
-        <h1 class="govuk-heading-l">Security</h1>
-
-        <div class="govuk-summary-card">
-          <div class="govuk-summary-card__title-wrapper">
-            <h2 class="govuk-summary-card__title">
-              Your sign in details
-            </h2>
-          </div>
-          <div class="govuk-summary-card__content">
-            <dl class="govuk-summary-list">
-              <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">
-                  Email address
-                </dt>
-                <dd class="govuk-summary-list__value">
-                  {% if (data['one-login-email'] === "") %}
+        <p>You're signed in as {% if (data['one-login-email'] === "") %}
         
-                  <strong> email222@example.com </strong> 
-                  {% else %}
-            
-                  <strong> {{data['one-login-email']}} </strong>
-            
-                  {% endif %}
-            
-                </dd>
-                <dd class="govuk-summary-list__actions">
-                  <a class="govuk-link" href="security-one-login-password">Change<span class="govuk-visually-hidden"> email111@example.com</span></a>
-                </dd>
-              </div>
+          <strong> email222@example.com </strong> 
+          {% else %}
+    
+          <strong> {{data['one-login-email']}} </strong>
+    
+          {% endif %}</p>
 
-              <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">
-                 Password
-                </dt>
-                <dd class="govuk-summary-list__value">
-                  •	•	•	•	•	•	•	•	•	•
-                </dd>
-                <dd class="govuk-summary-list__actions">
-                  <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> </span></a>
-                </dd>
-              </div>
+          <h2 class="govuk-heading-m">Your accounts</h2>
 
-              </dl>
-          </div>
-          </div>
 
           <div class="govuk-summary-card">
             <div class="govuk-summary-card__title-wrapper">
-              <h2 class="govuk-summary-card__title">
-                How you get security codes
-              </h2>
+              <h3 class="govuk-summary-card__title">
+                Ofqual subject matter specialist account
+              </h3>
             </div>
             <div class="govuk-summary-card__content">
-              <p> We use security codes to make sure it’s you when you sign in.</p>
-              <dl class="govuk-summary-list">
-                <div class="govuk-summary-list__row">
-                  <dt class="govuk-summary-list__key">
-                    Text message
-                  </dt>
-                  <dd class="govuk-summary-list__value">
-                    Phone number ending with 0406
-                  </dd>
-                  <dd class="govuk-summary-list__actions">
-                    <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> </span></a>
-                  </dd>
-                </div>
-  
-              
-  
-                </dl>
+              <p class="govuk-body">Apply to give specialist advice to Ofqual.
+              </p>
+              <p><a href="#" class="govuk-link">Go to your Ofqual subject matter specialist account</a> </p>
+
+              <p class="govuk-hint">Last used: 18 September 2023
+              </p>
+
+
+
+              </dl>
             </div>
             </div>
 
             <div class="govuk-summary-card">
               <div class="govuk-summary-card__title-wrapper">
-                <h2 class="govuk-summary-card__title">
-                  Activity history
-                </h2>
+                <h3 class="govuk-summary-card__title">
+                  GOV.UK email subscriptions
+                </h3>
               </div>
               <div class="govuk-summary-card__content">
-                <p> See what you've visited with your GOV.UK One Login and when.
-
+                <p class="govuk-body">See and manage the updates you get about GOV.UK pages you’re interested in.
                 </p>
-                <a href="#" class="govuk-link">See your activity history</a>
+                <p><a href="#" class="govuk-link">Go to your GOV.UK email subscriptions</a> </p>
+  
+                <p class="govuk-hint">Last used: 9 November 2023
+                </p>
+  
+  
+  
+                </dl>
+              </div>
+              </div>
+  
 
 
-      
-    
+
+
+        <div class="govuk-summary-card">
+          <div class="govuk-summary-card__title-wrapper">
+            <h3 class="govuk-summary-card__title">
+              Services you can use with GOV.UK One Login
+            </h3>
+          </div>
+          <div class="govuk-summary-card__content">
+            <dl class="govuk-summary-list">
+              <div class="govuk-summary-list__row">
                 
-    
-                  </dl>
+                
+                <p> GOV.UK One Login is new. At the moment you can only use it to access some government services.</p>
+
+<p> In the future, you'll be able to use GOV.UK One Login to access all services on GOV.UK.</p>
+
+<p> <a class="govuk-link" href="#"> See the services you can use with GOV.UK One Login</a>.</p>
+            
+                
+                
               </div>
-              </div>
 
-              <div class="govuk-summary-card">
-                <div class="govuk-summary-card__title-wrapper">
-                  <h2 class="govuk-summary-card__title">
-                    Delete your GOV.UK One Login
-                  </h2>
-                </div>
-                <div class="govuk-summary-card__content">
-                  <p> This will permanently delete your GOV.UK One Login. You’ll no longer be able to sign in to the services you’ve used with it.
+              
+              </dl>
+          </div>
+          </div>
 
 
-  
-                  </p>
-                  <a href="#" class="govuk-link">Delete your GOV.UK One Login</a>
-  
-  
-        
-      
-                  
-      
-                    </dl>
-                </div>
-                </div>
 
           </form>
 

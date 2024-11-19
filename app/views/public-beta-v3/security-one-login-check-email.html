@@ -36,6 +36,7 @@
 
 {% endblock %}
 
+
 {% block pageTitle %}
 One Login
 {% endblock %}
@@ -80,6 +81,8 @@ GOV.UK One Login
 </div>
 </div>
 
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+
 {% endblock %}
 
 {% block content %}
@@ -94,123 +97,52 @@ GOV.UK One Login
  
   
 
-        <h1 class="govuk-heading-l">Security</h1>
-
-        <div class="govuk-summary-card">
-          <div class="govuk-summary-card__title-wrapper">
-            <h2 class="govuk-summary-card__title">
-              Your sign in details
-            </h2>
-          </div>
-          <div class="govuk-summary-card__content">
-            <dl class="govuk-summary-list">
-              <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">
-                  Email address
-                </dt>
-                <dd class="govuk-summary-list__value">
-                  {% if (data['one-login-email'] === "") %}
-        
-                  <strong> email222@example.com </strong> 
-                  {% else %}
+        <h1 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--l" for="email">
+            Check your email
+          </label>
+          </h1>
+          <div class="govuk-inset-text">
+            We have sent an email to: 
             
-                  <strong> {{data['one-login-email']}} </strong>
+            {% if (data['one-login-email'] === "")%}
+  
+              <strong>email111@example.com</strong>
             
-                  {% endif %}
+            {% else %}
+  
+              <strong>{{ data['one-login-email'] }}</strong>
             
-                </dd>
-                <dd class="govuk-summary-list__actions">
-                  <a class="govuk-link" href="security-one-login-password">Change<span class="govuk-visually-hidden"> email111@example.com</span></a>
-                </dd>
-              </div>
-
-              <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">
-                 Password
-                </dt>
-                <dd class="govuk-summary-list__value">
-                  •	•	•	•	•	•	•	•	•	•
-                </dd>
-                <dd class="govuk-summary-list__actions">
-                  <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> </span></a>
-                </dd>
-              </div>
-
-              </dl>
+            {% endif %}
+            
+            
           </div>
-          </div>
-
-          <div class="govuk-summary-card">
-            <div class="govuk-summary-card__title-wrapper">
-              <h2 class="govuk-summary-card__title">
-                How you get security codes
-              </h2>
-            </div>
-            <div class="govuk-summary-card__content">
-              <p> We use security codes to make sure it’s you when you sign in.</p>
-              <dl class="govuk-summary-list">
-                <div class="govuk-summary-list__row">
-                  <dt class="govuk-summary-list__key">
-                    Text message
-                  </dt>
-                  <dd class="govuk-summary-list__value">
-                    Phone number ending with 0406
-                  </dd>
-                  <dd class="govuk-summary-list__actions">
-                    <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> </span></a>
-                  </dd>
-                </div>
+         
+          <p class="govuk-body">This email contains a 6 digit security code. </p>
   
-              
+          <p class="govuk-body">Your email might take a few minutes to arrive. If you do not get an email, check your spam folder. </p>
   
-                </dl>
-            </div>
-            </div>
-
-            <div class="govuk-summary-card">
-              <div class="govuk-summary-card__title-wrapper">
-                <h2 class="govuk-summary-card__title">
-                  Activity history
-                </h2>
-              </div>
-              <div class="govuk-summary-card__content">
-                <p> See what you've visited with your GOV.UK One Login and when.
-
-                </p>
-                <a href="#" class="govuk-link">See your activity history</a>
-
-
+          <p class="govuk-body">The code will expire after 15 minutes.</p>
+  
+          {{ govukInput({
+            label: {
+              text: "Enter the 6 digit security code"
+            },
+            classes: "govuk-input--width-10",
+            id: "width-3",
+            name: "width-3"
+          }) }}
+  
       
-    
-                
-    
-                  </dl>
-              </div>
-              </div>
-
-              <div class="govuk-summary-card">
-                <div class="govuk-summary-card__title-wrapper">
-                  <h2 class="govuk-summary-card__title">
-                    Delete your GOV.UK One Login
-                  </h2>
-                </div>
-                <div class="govuk-summary-card__content">
-                  <p> This will permanently delete your GOV.UK One Login. You’ll no longer be able to sign in to the services you’ve used with it.
-
-
+          {{ govukButton({
+            text: "Continue",
+            href:"security-one-login-email-changed"
+          }) }}
+          {{ govukDetails({
+            summaryText: "Problems with the code?",
+            html: '<p class="govuk-body">We can <a href="#" class="govuk-link">send the code again</a> or you can <a href="#" class="govuk-link">use a different email address</a>.</p>'
+          }) }}
   
-                  </p>
-                  <a href="#" class="govuk-link">Delete your GOV.UK One Login</a>
-  
-  
-        
-      
-                  
-      
-                    </dl>
-                </div>
-                </div>
-
           </form>
 
 
