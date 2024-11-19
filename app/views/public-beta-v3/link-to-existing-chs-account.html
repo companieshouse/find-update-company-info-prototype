@@ -32,13 +32,13 @@
         <span class="govuk-body govuk-!-font-weight-bold"> {{ data['chs-email'] }} </span></p>
         </div> -->
   
-        <p class="govuk-body">You only need to do this once. It will enable us to connect your GOV.UK One Login to your Companies House account that uses the email address{% if (data['chs-email'] !== "") %}
+        <p class="govuk-body">You only need to do this once. It will enable us to connect your GOV.UK One Login to your Companies House account that uses the email address{% if (data['chs-email'] === "") %}
                   
-                        <strong>{{data['chs-email']}}</strong>.
+          <strong>email111@example.com</strong>.
                   
                         {% else %}
                   
-                        <strong>email111@example.com</strong>.
+                        <strong>{{data['chs-email']}}</strong>.
                   
                         {% endif %}We will save all your existing account information.</p>
 
