@@ -90,7 +90,7 @@ GOV.UK One Login
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <form action="security-one-login" method="post" novalidate>
+      <form action="security-one-login-email-changed" method="post" novalidate>
  
         <div class="govuk-panel govuk-panel--confirmation">
           <h1 class="govuk-panel__title">
@@ -101,18 +101,32 @@ GOV.UK One Login
          
        
 
-        <p> Your email address has been changed to emailnew@example.com</p>
+        <p> Your email address has been changed to {% if (data['one-login-email'] === "")%}
+  
+          <strong>email111@example.com</strong>
+        
+        {% else %}
+
+          <strong>{{ data['one-login-email'] }}</strong>
+        
+        {% endif %} </p>
 
        
         {{ govukButton({
           text: "Back to security",
           href:"security-one-login"
         }) }}
-        
+
+
+
+
+
+
+       
 
           </form>
-
-
+          
+         
     </div>
   </div>
 

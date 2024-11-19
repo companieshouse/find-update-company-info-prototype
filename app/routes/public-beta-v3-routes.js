@@ -693,6 +693,42 @@ router.post('/public-beta-v3/one-login-email-address-updated', function (req, re
           })
     
     
+      /*
+       * CHS - change email address - 9
+       */ 
+           router.post('/public-beta-v3/one-login-sign-in-9', function (req, res) {
+
+            res.redirect('one-login-enter-password-9')
+          })
+    
+           /*
+       * CHS - change password - 9
+       */ 
+           router.post('/public-beta-v3/one-login-enter-password-9', function (req, res) {
+
+            res.redirect('enter-code-9')
+          })
+
+             /*
+       * CHS - change password - 9
+       */ 
+             router.post('/public-beta-v3/enter-code-9', function (req, res) {
+
+              res.redirect('your-services-one-login')
+            })
+  
+   /*
+       * One login change email address 
+       */ 
+   router.post('/public-beta-v3/security-one-login-email', function (req, res) {
+
+    res.redirect('security-one-login-check-email')
+  })
+
+
+            
+
+
       
   
   router.get('/officers', function (req, res) {

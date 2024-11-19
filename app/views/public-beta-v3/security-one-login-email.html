@@ -91,29 +91,25 @@ GOV.UK One Login
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <form action="security-one-login-password" method="post" novalidate>
+      <form action="security-one-login-email" method="post" novalidate>
  
 
         <h1 class="govuk-heading-l">Enter your new email address</h1>
 
        
 
-        <div class="govuk-form-group govuk-password-input" data-module="govuk-password-input">
-          <label class="govuk-label" for="password-input">
-            Email address
-          </label>
-          <div class="govuk-input__wrapper govuk-password-input__wrapper">
-            <input class="govuk-input govuk-password-input__input govuk-js-password-input-input" id="password-input" name="password" type="password" spellcheck="false" autocomplete="current-password" autocapitalize="none">
-            
-          </div>
-        </div>
-
-     
+        
+        {{ govukInput({
+          label: {
+            text: "Email address"
+          },
+          id: "one-login-email",
+          name: "one-login-email"
+        }) }}
        
 
     {{ govukButton({
-      text: "Continue",
-      href:"security-one-login-check-email"
+      text: "Continue"
     }) }}
 
     <p class="govuk-body"> <a href="" class="govuk-link" rel="noreferrer noopener">I do not want to change my email address</a></p>
