@@ -25,13 +25,13 @@
 
   <h1 class="govuk-heading-l">Change email address</h1>
 
-  <p class="govuk-body">Current email address is <br>{% if (data['chs-email'] !== "") %}
+  <p class="govuk-body">Current email address is <br>{% if (data['chs-email'] === "") %}
         
-    <strong> {{data['chs-email']}} </strong>
+    <strong> email111@example.com </strong> 
 
     {% else %}
 
-    <strong> email111@example.com </strong>
+    <strong> {{data['chs-email']}} </strong>
 
     {% endif %}
 </p>
