@@ -34,7 +34,7 @@
   
         <p class="govuk-body">You only need to do this once. It will enable us to connect your GOV.UK One Login to your Companies House account that uses the email address {% if (data['one-login-email'] === "")%}
 
-          <strong>email111@example.com</strong>
+          <strong>email111@example.com</strong>.
         
         {% else %}
 
@@ -65,6 +65,8 @@
          {{ govukButton({
            text: "Continue"
          }) }}   
+
+         <p class="govuk-body">to the digital service <br> you were using</p>
          
          <!--<p class="govuk-body"><a href="#" class="govuk-link">Register</a></p>-->
          
