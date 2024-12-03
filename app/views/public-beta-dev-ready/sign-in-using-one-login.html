@@ -25,14 +25,29 @@
     <a class="govuk-back-link govuk-!-static-margin-top-0" href="javascript:window.history.back()">Back</a>
 
 
-    <h1 class="govuk-heading-l govuk-!-padding-top-5">You have a GOV.UK One Login</h1> 
-
-    <p class="govuk-body">There's already a GOV.UK One Login using <br> <span class="govuk-body govuk-!-font-weight-bold"> {{ data['chs-email'] }}</span></p>
+    <h1 class="govuk-heading-l govuk-!-padding-top-5">There's already a GOV.UK One Login using {{ data['chs-email'] }}</h1> 
 
     <p class="govuk-body">You need to sign in to GOV.UK One Login to use this service.</p>
+    <details class="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          If you were not expecting this
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        A GOV.UK One Login has been created and connected to this Companies House account using <strong>{{ data['chs-email'] }}</strong>. This could have been you, or someone who can also access this account. If other people have access, you may want to contact them to check if this is what’s happened.
+      </div>
+      <div class="govuk-details__text">
+        Only one person can connect a Companies House account to a GOV.UK  
+    One Login. You’ll need to create your own GOV.UK One Login using a  
+    different email address if someone else has already created one using  
+    <strong>{{ data['chs-email'] }}</strong>.
+      </div>
+    </details>
+
 
     {{ govukButton({
-      text: "Continue",
+      text: "Continue to GOV.UK One Login",
       href:"create-or-sign-in"
     }) }}   
   
