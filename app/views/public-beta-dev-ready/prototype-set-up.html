@@ -126,7 +126,7 @@
             Ready for review
            </strong>",
           hint: {
-            text: "A user that does not have Companies House account."
+            text: "A linked users sign in."
           }
         },
         {
@@ -203,6 +203,33 @@
       
       ]
     }) }}
+
+
+    {{ govukRadios({
+      name: "set-journey",
+      fieldset: {
+        legend: {
+          html: "Unlinked accounts",
+          isPageHeading: false,
+          classes: "govuk-fieldset__legend--m"
+        }
+      },
+      hint: {
+        text: "Select one option."
+      },
+      items: [
+        {
+          value: "public-14",
+          html: "Public beta 14 - new user <strong class='govuk-tag govuk-tag--yellow'>Ready for review </strong>",
+          hint: {
+            text: "A user signs in or creates a GOV.UK One Login. This email address does not currently have a CHS account."
+          }
+        }
+      
+      
+      ]
+    }) }}
+
 
 
 
