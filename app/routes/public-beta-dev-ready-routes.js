@@ -417,7 +417,13 @@ router.post('/public-beta-dev-ready/one-login-enter-password', function (req, re
 */
   
   router.post('/public-beta-dev-ready/create-complete', function (req, res) {
-    if (req.session.data['set-journey'] === 'public-1') {
+    
+    if (req.session.data['set-journey'] === 'public-14') {
+        
+      res.redirect('/public-beta-dev-ready/end-linking-no-banner')
+    
+    }
+    else if (req.session.data['set-journey'] === 'public-1') {
         
       res.redirect('/public-beta-dev-ready/company-lookup')
     }
@@ -442,11 +448,7 @@ router.post('/public-beta-dev-ready/one-login-enter-password', function (req, re
       res.redirect('/public-beta-dev-ready/link-to-existing-chs-account')
     
     }
-    else if (req.session.data['set-journey'] === 'public-14') {
-        
-      res.redirect('/public-beta-dev-ready/link-to-existing-chs-account')
-    
-    }
+ 
     
     
     
