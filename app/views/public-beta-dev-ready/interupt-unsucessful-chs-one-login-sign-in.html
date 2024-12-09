@@ -1,0 +1,50 @@
+{% extends "layouts/layout_unbranded-with-banner.html" %}
+<!-- Overwrite suerfice name -->
+
+
+{% block pageTitle %}
+  {{ serviceName }} – Prototype
+{% endblock %}
+
+
+{% set serviceName %}
+ 
+{% endset %}
+
+{% block beforeContent %}
+
+
+{% endblock %}
+
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      
+      <h1 class="govuk-heading-l">This Companies House account has been locked</h1>
+      
+          <p class="govuk-body">You'll need to wait 5 minutes, then try the sign in again. </p>
+
+
+          <p class="govuk-body">
+            <a href="#" class="govuk-link">I've forgotten my password </a>
+         </p>
+
+
+
+     
+              {{ govukButton({
+                classes:"govuk-!-margin-top-5",
+                href:"sign-in",
+                text: "Go to Companies House sign in"
+              }) }}
+
+             
+
+
+    </div>
+  </div>
+
+{% endblock %}
