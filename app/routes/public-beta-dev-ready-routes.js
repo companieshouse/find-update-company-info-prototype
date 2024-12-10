@@ -102,6 +102,14 @@ else if (req.session.data['set-journey'].includes('public-11'))   {
 
       }
       /*
+       * Do nothing - a GOV.UK One Login journey
+       */
+      else if (req.session.data['set-journey'].includes('public-15'))   {
+            
+
+
+      }
+      /*
        * You already have a GOV.UK One Login 
        */ 
       else if (req.session.data['set-journey'].includes('public-2'))   {
@@ -283,6 +291,12 @@ router.post('/public-beta-dev-ready/one-login-enter-password', function (req, re
       res.redirect('/public-beta-dev-ready/end-linking-no-banner') 
         
     }
+    else if (req.session.data['set-journey'].includes('public-15')) 
+    {
+    
+      res.redirect('/public-beta-dev-ready/link-to-existing-chs-account') 
+          
+    }
     else if (req.session.data['set-journey'].includes('public-1'))   {
           
       res.redirect('/public-beta-dev-ready/company-lookup')
@@ -423,6 +437,10 @@ router.post('/public-beta-dev-ready/one-login-enter-password', function (req, re
       res.redirect('/public-beta-dev-ready/end-linking-no-banner')
     
     }
+    else if (req.session.data['set-journey'] === 'public-15') {
+        
+      res.redirect('/public-beta-dev-ready/interupt-unsuccessful-chs-one-login-sign-in')
+    }
     else if (req.session.data['set-journey'] === 'public-1') {
         
       res.redirect('/public-beta-dev-ready/company-lookup')
@@ -478,6 +496,18 @@ router.post('/public-beta-dev-ready/one-login-email-address-updated', function (
     
   // Connecting accounts after the user enters their CHS password
   router.post('/public-beta-dev-ready/link-to-existing-chs-account', function (req, res) {
+
+
+    if (req.session.data['set-journey'] === 'public-15') {
+        
+      res.redirect('/public-beta-dev-ready/interupt-unsuccessful-chs-one-login-sign-in')
+    
+    }
+    else if (req.session.data['set-journey'] === 'public-11') {
+        
+      res.redirect('/public-beta-dev-ready/company-number')
+    
+    }
 
 
 
