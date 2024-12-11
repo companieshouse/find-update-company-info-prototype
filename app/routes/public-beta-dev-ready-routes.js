@@ -505,7 +505,7 @@ router.post('/public-beta-dev-ready/one-login-email-address-updated', function (
     }
     else if (req.session.data['set-journey'] === 'public-11') {
         
-      res.redirect('/public-beta-dev-ready/company-number')
+      res.redirect('/public-beta-dev-ready/company-lookup')
     
     }
 
