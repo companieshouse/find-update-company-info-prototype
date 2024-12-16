@@ -21,41 +21,19 @@
 
     <h1 class="govuk-heading-l">You've updated your email address with GOV.UK One Login since you last signed in</h1>
 
-    <p>Since the last time you signed in, you’ve updated your GOV.UK One Login email address from <strong>email1@example.com</strong> to <strong>email2@example.com</strong>.</p>
+    <p>Since the last time you signed in, you’ve updated your GOV.UK One Login email address from <strong>email@example.com</strong> to {% if (data['one-login-email'] === "")%}
+
+      <strong>email@example.com</strong>.
+    
+    {% else %}
+
+      <strong>{{ data['one-login-email'] }}</strong>.
+    
+    {% endif %}</p>
 
     <p> We’ve updated your Companies House account details with your new email address. </p>
 
 
-
-  <!--   {{ govukRadios({
-      name: "changeOfEmail",
-      fieldset: {
-        legend: {
-          text: "   Do you want to use 'accounting-books@example.com' email address with Companies House?",
-          isPageHeading: true,
-          classes: "govuk-fieldset__legend--l"
-        }
-      },
-      hint: {
-        text: "Your GOV.UK One Login email address has been updated since you last used Companies House."
-      },
-      items: [
-        {
-          value: "yes",
-          text: "Yes",
-          hint: {
-            text: "Use 'accounting-books@example.com' email address"
-          }
-        },
-        {
-          value: "no",
-          text: "No",
-          hint: {
-            html: "Use my previous email address 'example@gmail.com' "
-          }
-        }
-      ]
-    }) }} -->
 
     
 
