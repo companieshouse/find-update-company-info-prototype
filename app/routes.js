@@ -36,3 +36,7 @@ router.use('/', require('./routes/public-beta-v2-routes.js'))
 router.use('/', require('./routes/public-beta-v3-routes.js'))
 
  router.use('/', require('./routes/public-beta-dev-ready-routes.js'))
+
+
+
+ router.use('/', require('./routes/public-beta-dev-ready-backlog-routes.js'))

@@ -45,6 +45,52 @@
       <div class="govuk-tabs__panel" id="account">
         <h2 class="govuk-heading-l">Migrating CHS accounts to GOV.UK One Login</h2>
 
+
+        <h2 class="govuk-heading-m govuk-!-padding-top-4">Public beta - Dev ready backlog
+        </h2>
+            
+
+           
+        {{ govukSummaryList({
+          card: {
+            title: {
+              html: 'Public Beta 
+               Dev ready backlog <br>  Migrating CHS accounts to GOV.UK One Login'
+            },
+            actions: {
+              items: [
+                {
+                  href: "public-beta-dev-ready-backlog/index",
+                  text: "View prototype",
+                  visuallyHiddenText: "of public beta"
+                }
+              ]
+            }
+          },
+          rows: [
+          {
+            key: {
+              text: "Status"
+            },
+            value: {
+              html: "<strong class='govuk-tag govuk-tag--blue'>
+               In progress
+              </strong>"
+            }
+          },
+            {
+              key: {
+                text: ""
+              },
+              value: {
+                html: ''
+              }
+            }
+          ]
+        }) }}
+
+
+
          <h2 class="govuk-heading-m govuk-!-padding-top-4">Public beta - Dev ready
         </h2>
             
@@ -53,7 +99,8 @@
         {{ govukSummaryList({
           card: {
             title: {
-              html: "Public Beta <br> Migrating CHS accounts to GOV.UK One Login"
+              html: 'Public Beta 
+                Dev ready <br>  Migrating CHS accounts to GOV.UK One Login'
             },
             actions: {
               items: [
@@ -71,9 +118,9 @@
               text: "Status"
             },
             value: {
-              html: "<strong class='govuk-tag govuk-tag--blue'>
-               In progress
-              </strong>"
+              html: "<strong class='govuk-tag govuk-tag--green'>
+                User tested
+               </strong>"
             }
           },
             {
@@ -114,7 +161,7 @@
                 },
                 value: {
                   html: "<strong class='govuk-tag govuk-tag--green'>
-                   Currently being user tested
+                   User tested
                   </strong>"
                 }
               },

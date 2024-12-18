@@ -1,0 +1,53 @@
+{% extends "layouts/main.html" %}
+<!-- Overwrite suerfice name -->
+
+
+{% block pageTitle %}
+  {{ serviceName }} – Prototype
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-two-thirds ">
+
+  <form action="one-login-email-address-updated" method="post" novalidate="">
+
+    <h1 class="govuk-heading-l">You've updated your email address with GOV.UK One Login since you last signed in</h1>
+
+    <p>Since the last time you signed in, you’ve updated your GOV.UK One Login email address from <strong>email@example.com</strong> to {% if (data['one-login-email'] === "")%}
+
+      <strong>email@example.com</strong>.
+    
+    {% else %}
+
+      <strong>{{ data['one-login-email'] }}</strong>.
+    
+    {% endif %}</p>
+
+    <p> We’ve updated your Companies House account details with your new email address. </p>
+
+
+
+    
+
+  
+    {{ govukButton({
+      text: "Continue"
+    }) }}  
+    
+    
+  
+  
+  </form>
+
+            </div>
+          </div>
+
+{% endblock %}

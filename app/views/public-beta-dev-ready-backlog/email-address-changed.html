@@ -1,0 +1,50 @@
+{% extends "layouts/layout-chs-signed-out-r1-new.html" %}
+
+{% block pageTitle %}
+  Manage account - Companies House - GOV.UK
+{% endblock %}
+
+{% set serviceName %}
+  
+{% endset%}
+
+
+{% block beforeContent %}
+
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-two-thirds ">
+
+  <form action="email-address-changed" method="post" novalidate="">
+
+
+
+  <h1 class="govuk-heading-l">Email address changed</h1>
+
+  <p class="govuk-body">Your email address has been changed to<br>
+    {% if (data['chs-email-new'] === "") %}
+            
+    <strong> emailnew@example.com </strong> 
+            
+                  {% else %}
+            
+                  <strong> {{data['chs-email-new']}} </strong>
+            
+                  {% endif %}
+    </p>
+
+  <p class="govuk-body"> An email has been sent to your old and new email address to confirm this change.</p>
+
+  <a href="#" class="govuk-link">Go to company search</a>
+</p>
+
+  </form>
+
+            </div>
+          </div>
+
+{% endblock %}
