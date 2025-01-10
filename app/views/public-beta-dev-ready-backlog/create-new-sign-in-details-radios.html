@@ -1,0 +1,55 @@
+{% extends "layouts/layout_unbranded-with-banner.html" %}
+
+
+{% set serviceName %}
+  
+{% endset%}
+
+
+{% block beforeContent %}
+
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds ">
+
+  <form action="create-new-sign-in-details" method="post" novalidate="">
+
+    <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+
+   
+
+  <h1 class="govuk-heading-l">Create new sign in details  <strong class="govuk-tag">
+    Content TBC
+  </strong></h1>
+
+
+  <p class="govuk-body"> GOV.UK One Login is the new way to sign in, and will make your Companies House account more secure. GOV.UK One Login will allow you to access many government services using the same email address and password. 
+  </p> <!-- <a href="" class="govuk-link">Create a GOV.UK One Login sign in details</a>.  -->
+
+  <button type="submit" class="govuk-button" data-module="govuk-button">
+    Create a GOV.UK One Login
+  </button>
+
+
+
+<p class="govuk-body">For now ...<a href="create-or-sign-in" class="govuk-link">create an existing Companies House account</a>...</p> 
+
+
+
+
+
+
+
+
+
+
+  </form>
+
+  </div>
+</div>
+
+{% endblock %}
