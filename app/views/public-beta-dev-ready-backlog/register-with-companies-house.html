@@ -25,45 +25,24 @@
   <h1 class="govuk-heading-l">Register with Companies House</h1>
 
   
+  <div class="govuk-form-group">
+    <label class="govuk-label govuk-!-font-weight-bold" for="email-address-1">
+      Enter email address
+    </label>
+    <input class="govuk-input" id="email-address-1" name="emailAddress1" type="email">
+  </div>
 
-    {{ govukInput({
-      label: {
-        text: "Enter email address"
-      },
-      id: "email",
-      name: "email",
-      type: "email",
-      autocomplete: "email",
-      spellcheck: false
-    }) }}
-
-
-    {{ govukInput({
-      label: {
-        text: "Enter email address"
-      },
-      id: "email",
-      name: "email",
-      type: "email",
-      autocomplete: "email",
-      spellcheck: false
-    }) }}
-
-
+  <div class="govuk-form-group">
+    <label class="govuk-label govuk-!-font-weight-bold" for="email-address-2">
+      Re-enter email address
+    </label>
+    <input class="govuk-input" id="email-address-2" name="emailAddress2" type="email">
+  </div>
 
   {{ govukButton({
     text: "Send registration email",
     href:""
   }) }}
-
-
-
-
-
-
-
-
-
 
 
   </form>
