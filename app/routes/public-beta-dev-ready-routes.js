@@ -779,7 +779,7 @@ router.post('/public-beta-dev-ready/one-login-email-address-updated', function (
     router.post('/public-beta-dev-ready/your-details-public-beta-acsp', function (req, res) {
 
 
-      req.session.data['set-journey'] = 'public-8';
+      req.session.data['set-journey'] = "public-8";
 
 
       res.redirect('your-details-public-beta')
