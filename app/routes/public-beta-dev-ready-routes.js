@@ -615,7 +615,8 @@ router.post('/public-beta-dev-ready/one-login-email-address-updated', function (
     }
     else{
 
-      res.redirect('/public-beta-dev-ready/company-lookup')
+      res.redirect('/public-beta-dev-ready/chs-one-login-settings')
+      
     }
 
     
