@@ -777,13 +777,13 @@ router.post('/public-beta-dev-ready/one-login-email-address-updated', function (
     /*
        * One login change email address 
        */ 
-    router.get('/public-beta-dev-ready/your-details-public-beta-acsp', function (req, res) {
+    router.get('/public-beta-dev-ready/start-page-acsp', function (req, res) {
 
 
       req.session.data['set-journey'] = 'public-8';
 
 
-      res.redirect('your-details-public-beta')
+      res.redirect('start-page')
 
     })
   
