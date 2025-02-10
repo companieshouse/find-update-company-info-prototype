@@ -1,0 +1,60 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  {{serviceName}} - GOV.UK
+{% endblock %}
+
+
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+    <form action="link-accounts" method="post" novalidate>
+      
+      <h1 class="govuk-heading-l">Save your Companies House account information</h1>
+      
+      <p class="govuk-body">You may have information stored in your original Companies House account, such as:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>a record of your filing history</li>
+        <li>companies you follow</li>
+      </ul>
+
+   
+
+              {{ govukRadios({
+                name: "link-chs-account",
+                fieldset: {
+                  legend: {
+                    text: "Do you want us to save your Companies House account information to your GOV.UK One Login?",
+                    isPageHeading: false,
+                    classes: "govuk-fieldset__legend--m govuk-!-padding-top-4 govuk-!-padding-bottom-2"
+                  }
+                },
+                items: [
+                  {
+                    value: "yes",
+                    text: "Yes"
+                  },
+                  {
+                    value: "no",
+                    text: "No",
+                    hint: {
+                      text: "You will lose this information if you select ‘no’. This cannot be undone."
+                    }
+                  }
+                ]
+              }) }}
+
+              {{ govukButton({
+                text: "Continue"
+              }) }}
+    </form>
+    </div>
+  </div>
+
+{% endblock %}
