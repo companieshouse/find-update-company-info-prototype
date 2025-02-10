@@ -500,7 +500,7 @@ router.post('/public-beta-dev-ready-backlog/one-login-email-address-updated', fu
 
     if (req.session.data['set-journey'] === 'public-15') {
         
-      res.redirect('/public-beta-dev-ready-backlog/interupt-unsuccessful-chs-one-login-sign-in')
+      res.redirect('/public-beta-dev-ready-backlog/link-to-existing-chs-account-error1')
     
     }
     else if (req.session.data['set-journey'] === 'public-11') {
