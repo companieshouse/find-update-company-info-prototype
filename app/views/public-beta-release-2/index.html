@@ -1,0 +1,376 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Shortcuts – {{ serviceName }} - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <h1 class="govuk-heading-xl">
+      {{serviceName}}
+      <span class="govuk-caption-xl">Public beta - Release 2</span>
+    </h1>
+
+    {{ govukWarningText({
+      html: "This prototype is being actively worked on so things might break or change very quickly. Some of the pages are dynamic based on the journey you select. Walk through the journey from the start to view accurate page designs.", iconFallbackText: "Warning" })
+    }}
+
+  </div>
+</div>
+
+<h2 class="govuk-heading-m">Choose a public beta journey <strong class="govuk-tag govuk-tag--red">
+  Page not for development
+</strong></h2>
+
+
+
+{{ govukButton({
+  text: "Choose a journey",
+  href:"prototype-set-up"
+}) }}
+
+<h2 class="govuk-heading-m">Public beta release 2 flows</h2>
+
+<ul class="govuk-list govuk-!-padding-bottom-5">
+  <li>
+<a href="https://app.mural.co/t/companieshouse8589/m/companieshouse8589/1738311422090/e463e65b7a473186f6c620e715b33fe0a0bcc13a?sender=u056c70d2fe5016c384874180" target="blank">Mural flows for release 1 and 2
+</a> </li>
+
+</ul>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    {# ENTRY POINTS AND LINKS TAB #}
+    <div class="govuk-tabs" data-module="govuk-tabs">
+      <h4 class="govuk-tabs__title">Contents</h4>
+      <ul class="govuk-tabs__list">
+        <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+          <a class="govuk-tabs__tab" href="#CH-sign-in"> Sign in to Companies House </a>
+        </li>
+       <!--  <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+          <a class="govuk-tabs__tab" href="#manage-account"> Manage account</a>
+        </li> -->
+      </ul>
+
+      <!--Sign in to Companies House (account migration approach) -->
+
+      <div class="govuk-tabs__panel" id="CH-sign-in">
+
+
+       
+
+        <h2 class="govuk-heading-m">Public beta sign in </h2>
+
+
+        <!-- CHS sign in -->
+        <h3 class="govuk-heading-s">Companies House sign in </h3>
+
+        <ul class="govuk-list govuk-list--bullet">
+          <li>
+            <a href="choose-sign-in">Sign in to Companies House</a> <strong class="govuk-tag govuk-tag--green">
+              Dev-ready
+             </strong> 
+          </li>
+          <li>
+            <a href="choose-sign-in-error">Sign in to Companies House - error page</a> <strong class='govuk-tag govuk-tag--green'>Dev ready </strong> <strong class="govuk-tag govuk-tag--red">
+              Error page
+             </strong>
+          </li>
+          <li>
+            <a href="chs-sign-in-password">What is your Companies House account password?</a> <strong class="govuk-tag govuk-tag--green">
+              Dev-ready
+             </strong> 
+          </li>
+          <li>
+            <a href="chs-sign-in-password-error-message">What is your Companies House account password? - error message</a><strong class='govuk-tag govuk-tag--green'>Dev ready </strong> <strong class="govuk-tag govuk-tag--red">
+              Error page
+             </strong>
+          </li>
+        </ul>
+
+
+
+ 
+
+          <h3 class="govuk-heading-s">A linked user tries to sign in using CHS - Public beta 2</h3>
+
+          <ul class="govuk-list govuk-list--bullet">
+            <li>
+              <a href="sign-in-using-one-login">You have a GOV.UK One Login</a> <strong class="govuk-tag govuk-tag--green">
+                Dev-ready
+               </strong> 
+            </li>
+          </ul>
+       
+          <h3 class="govuk-heading-s">A linked user has changed their One Login email address - Public beta 3</h3>
+
+          <ul class="govuk-list govuk-list--bullet">
+            <li>
+              <a href="one-login-email-address-updated">You updated your email address with GOV.UK One Login since you last signed in</a> <strong class="govuk-tag govuk-tag--green">
+                Dev-ready
+               </strong> 
+            </li>
+          </ul>
+
+        </ul>
+
+        <h3 class="govuk-heading-s">A linked user has changed their One Login email address to one which matches a different CHS account - Public beta 5</h3>
+        <ul class="govuk-list govuk-list--bullet">
+        <li>
+          <a href="one-login-email-matches-different-chs-account">Your GOV.UK One Login email address matches a different Companies House account email address
+          </a> <strong class="govuk-tag govuk-tag--green">
+            Dev-ready
+           </strong> 
+        </li>
+      </ul>
+
+      <h3 class="govuk-heading-s">An un-linked user signs in via CHS and links their CHS account to a On - Public beta 8</h3>
+      <ul class="govuk-list govuk-list--bullet">
+      <li>
+        <a href="your-details-public-beta">Manage account - Connect this account to GOV.UK One Login
+        </a> <strong class="govuk-tag govuk-tag--green">
+          Dev-ready
+         </strong> 
+      </li>
+
+      <li>
+        <a href="start-page">We're taking you to GOV.UK One Login
+        </a> <strong class="govuk-tag govuk-tag--green">
+          Dev-ready
+         </strong> 
+      </li>
+
+      <li>
+        <a href="end-linking">Sign in with GOV.UK One Login next time
+        </a> <strong class="govuk-tag govuk-tag--green">
+          Dev-ready
+         </strong> 
+      </li>
+
+      <li>
+        <a href="chs-one-login-settings">Manage account - GOV.UK One Login
+        </a> <strong class="govuk-tag govuk-tag--green">
+          Dev-ready
+         </strong> 
+      </li>
+
+
+    </ul>
+
+    <h3 class="govuk-heading-s">An un-linked user has used a different email address at One Login during the linking journey - Public beta 9</h3>
+      <ul class="govuk-list govuk-list--bullet">
+      <li>
+        <a href="email-address-do-not-match">Email address does not match
+        </a> <strong class="govuk-tag govuk-tag--green">
+          Dev-ready
+         </strong> 
+      </li>
+</ul>
+
+      <h3 class="govuk-heading-s">An un-linked user has not linked their account, but selects to sign in via One Login on the CHS sign in screen - Public beta 11</h3>
+      <ul class="govuk-list govuk-list--bullet">
+      <li>
+        <a href="link-to-existing-chs-account">Enter your Companies House account password
+        </a> <strong class="govuk-tag govuk-tag--green">
+          Dev-ready
+         </strong> 
+      </li>
+      <li>
+        <a href="link-to-existing-chs-account-error">Enter your Companies House account password - error
+        </a> <strong class='govuk-tag govuk-tag--green'>Dev ready </strong>
+         <strong class="govuk-tag govuk-tag--red">
+          Error page
+         </strong>
+      </li>
+      <li>
+        <a href="end-linking-public-11">You have connected your GOV.UK One Login to this Companies House account. Sign in with GOV.UK One Login next time. 
+        </a> <strong class="govuk-tag govuk-tag--green">
+          Dev-ready
+         </strong> 
+      </li>
+
+     </ul> 
+      
+      <h3 class="govuk-heading-s">GOV.UK One login <strong class="govuk-tag govuk-tag--grey">
+          Not for development
+         </strong> </h3> 
+
+
+         <p> Create a GOV.UK One Login</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+          <li>
+            <a href="create-or-sign-in">Create a GOV.UK One Login or sign in
+            </a>
+          </li>
+          <li>
+            <a href="create-enter-email">Enter your email address
+            </a>
+          </li>
+          <li>
+            <a href="create-check-your-email">Check your email
+            </a>
+          </li>
+          <li>
+            <a href="create-enter-password">Create your password
+            </a>
+          </li>
+          <li>
+            <a href="create-choose-security-type">Choose how to get security
+            </a>
+          </li>
+          <li>
+            <a href="create-enter-mobile-number">Text message - Enter your mobile phone number
+            </a>
+          </li>
+          <li>
+            <a href="create-check-your-phone">Text message - Check your phone
+            </a>
+          </li>
+          <li>
+            <a href="create-enter-mobile-number">Set up an authenticator app
+            </a>
+          </li>
+          <li>
+            <a href="create-complete">You've created your GOV.UK One login
+            </a>
+          </li>
+
+        </ul>
+
+        <p>GOV.UK One login sign in </p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>
+            <a href="one-login-sign-in">Enter your email address to sign in to your GOV.UK One Login
+            </a>
+          </li>
+          <li>
+            <a href="one-login-enter-password"> Enter your password to sign in to your GOV.UK One Login
+            </a>
+          </li>
+          <li>
+            <a href="enter-code">Check your phone</a>
+          </li>
+        </ul>
+
+        </ul>
+
+<!--
+
+        <h3 class="govuk-heading-s">Account display name and email preferences</h3>
+        <ul class="govuk-list govuk-list--bullet">
+        <li>
+          <a href="name"> How do you want us to display your name? <strong class="govuk-tag govuk-tag">
+            Removed from scope
+           </strong> 
+          </a>
+        </li>
+        <li>
+          <a href="email-preferences">Email preferences <strong class="govuk-tag govuk-tag">
+            dev-ready
+           </strong> 
+          </a>
+        </li>
+        </ul>
+
+        <h3 class="govuk-heading-s">End of sign in journey</h3>
+
+
+        <p> GOV.UK One Login is linked to an existing Companies House account</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+        <li>
+          <a href="end-linking">Use your GOV.UK One Login details to sign in from now on <strong class="govuk-tag govuk-tag--red">
+            Awaiting requirements
+           </strong> 
+          </a>
+        </li>
+        </ul>
+        
+
+        <p> GOV.UK One Login is not linked to an existing Companies House account</p>
+
+<p> * Check this scenario *</p>
+
+
+
+ <ul class="govuk-list govuk-list--bullet">
+
+      <li>
+        <a href="continue-to-service">Continue to service - What would you like to do next?</a> <strong class="govuk-tag govuk-tag--red">
+          Is this needed????
+         </strong> 
+      </li>
+      <li>
+        <a href="continue-to-service-2">You've signed in successfully - Continue to service</a> <strong class="govuk-tag govuk-tag--red">
+          Is this needed????
+         </strong> 
+      </li>
+
+        
+         
+
+
+    </ul> 
+  -->
+
+          <h3 class="govuk-heading-s">Stop screens</h3> 
+          <ul class="govuk-list govuk-list--bullet">
+            <li>
+              <a href="stop-screen-sign-in">GOV.UK One Login unavailable
+              </a>  <strong class="govuk-tag govuk-tag--turquoise">
+                Content TBC
+               </strong>
+            </li>
+
+            <li>
+              <a href="stop-screen-problem-with-service">Sorry, there is a problem with the service
+              </a><strong class="govuk-tag govuk-tag--turquoise">
+                Content TBC
+               </strong>
+            </li>
+            
+    
+          </ul>
+
+          </div>
+
+        <!-- Manage account -->
+
+      <!--   <div class="govuk-tabs__panel" id="manage-account">
+
+        
+          <h2 class="govuk-heading-m">Shortcuts for manage account</h2>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>
+              <a href="chs-one-login-settings">Manage account</a> 
+            </li>
+            <li>
+              <a href="name-account">Update how we display your name</a> 
+            </li>
+            <li>
+              <a href="email-preferences-ch">Can we send you emails related to Companies House?</a>
+            </li>
+            <li>
+              <a href="email-preferences-ur">Can we send you emails to invite you to take part in user research?</a>
+            </li>
+          </ul>
+
+          <h2 class="govuk-heading-m">Shortcuts for identity verification flows  <strong class="govuk-tag govuk-tag">
+            Not started
+          </strong> </h2>
+
+        </div>
+-->
+
+
+
+
+    </div>
+  </div>
+</div>
+
+{% endblock %}

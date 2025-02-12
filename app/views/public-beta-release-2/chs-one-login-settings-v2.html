@@ -1,0 +1,120 @@
+{% extends "layouts/layout-chs-signed-out.html" %}
+
+
+{% block pageTitle %}
+  {{ serviceName }} - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <!-- Note: GOV.UK One Login uses Security as the title for this page -->
+    <h1 class="govuk-heading-xl govuk-!-margin-bottom-9">
+      Your details
+    </h1>
+    
+    <p class="govuk-body govuk-!-static-padding-bottom-5">Make changes to your details and account settings.</p>
+   
+    <h2 class="govuk-heading-m">Your sign in details</h2>
+    {{ govukSummaryList({
+      rows: [
+        {
+          key: {
+            text: "Email"
+          },
+          value: {
+            html: "nathan@example.com"
+          },
+          actions: {
+            items: [
+              {
+                href: "#",
+                text: "Change",
+                visuallyHiddenText: "correspondence address"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            text: "Password"
+          },
+          value: {
+            html: "**************"
+          },
+          actions: {
+            items: [
+              {
+                href: "#",
+                text: "Change",
+                visuallyHiddenText: "Update your password"
+              }
+            ]
+          }
+        }
+      ]
+    }) }}
+
+
+
+
+    <h2 class="govuk-heading-m govuk-!-static-padding-top-5">How you get security codes</h2>
+
+    <p class="govuk-body">Make changes to your details and account settings.</p>
+
+
+   
+    {{ govukSummaryList({
+      rows: [
+      {
+        key: {
+          text: "Text message"
+        },
+        value: {
+          text: "Phone number ending with 8663"
+        },
+        actions: {
+          items: [
+            {
+              href: "#",
+              text: "Change",
+              visuallyHiddenText: "Update your mobile number"
+            }
+          ]
+        }
+      }
+      ]
+    }) }}
+
+   
+    <h2 class="govuk-heading-m govuk-!-static-padding-top-5">Delete your GOV.UK One Login</h2>
+
+    <p class="govuk-body">This will permanently delete your GOV.UK One Login. You’ll no longer be able to access the services you’ve used with it.</p>
+    
+  
+    {{ govukButton({
+  text: "Delete your GOV.UK One Login",
+  classes: "govuk-button--warning"
+}) }}
+
+
+    <p class="govuk-body govuk-!-margin-top-8 govuk-!-margin-bottom-8"> <a href="#" class="govuk-link govuk-link--no-visited-state">Third party applications</a></p>
+
+    {{ govukButton({
+      text: "Go to search for a company",
+      classes: "govuk-button--secondary"
+    }) }}
+
+
+
+
+
+
+
+
+
+  </div>
+</div>
+
+{% endblock %}

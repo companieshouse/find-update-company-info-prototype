@@ -1,0 +1,113 @@
+{% extends "layouts/layout_unbranded-with-banner.html" %}
+<!-- Overwrite suerfice name -->
+
+
+{% block pageTitle %}
+  {{ serviceName }} – Prototype
+{% endblock %}
+
+
+{% set serviceName %}
+ 
+{% endset %}
+
+{% block beforeContent %}
+
+
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-two-thirds ">
+
+  <form action="email-address-do-not-match" method="post" novalidate="">
+
+  
+    <h1 class="govuk-heading-l">Email address does not match</h1> 
+
+   
+    <div class="govuk-inset-text">
+
+
+      <p class="govuk-body">The GOV.UK One Login <strong>email222@example.com</strong>, does not match your Companies House account email address, which is <strong>email111@example.com</strong>.</p>
+    </div>
+
+    <p class="govuk-body">To connect your account with GOV.UK One Login, you must use the same email address for both.</p> 
+    <!-- <p class="govuk-body">If you want to connect this Companies House account to a GOV.UK One Login that uses a different email address, you have 2 options:</p> -->
+
+
+{% set emailHtml %}
+{{ govukInput({
+  id: "contact-by-email",
+  name: "contactByEmail",
+  type: "email",
+  autocomplete: "email",
+  spellcheck: false,
+  classes: "govuk-!-width-one-third",
+  label: {
+    text: "Email address"
+  }
+}) }}
+{% endset -%}
+
+    {{ govukRadios({
+      name: "contact",
+      fieldset: {
+        legend: {
+          text: "Which email address do you want to use with Companies House?",
+          classes: "govuk-fieldset__legend--m"
+        }
+      },
+      hint: {
+        text: "Select one option"
+      },
+      items: [
+        {
+          value: "email",
+          html: "<strong>email222@example.com</strong> ",
+          hint: { 
+            text: "Change your Companies House account email address to match your GOV.UK One Login email address. Then go back to the 'Manage account' section and select continue."
+          },
+          conditional: {
+            html: emailHtml
+          }
+         
+        },
+
+        {
+          value: "text",
+          html: "<strong>email111@example.com</strong>",
+          hint: { 
+            text: "Sign in to GOV.UK One Login and change the email address to email111@example.com, which is your Companies House account email address. Then go back to the 'Manage account' section and select continue."
+          }
+   
+        }
+      ]
+    }) }}
+
+
+
+ 
+
+     {{ govukButton({
+      text: "Continue"
+    }) }}  
+    
+   <!--  <p class="govuk-body">
+      <a href="" class="govuk-link">Try another email address</a>
+    </p> ---->
+
+
+  
+  <!-- <p class="govuk-body"><a href="#" class="govuk-link">Register</a></p>
+  
+  <p class="govuk-body"><a href="#" class="govuk-link">I've forgotten my password</a></p> -->
+  
+  </form>
+
+            </div>
+          </div>
+
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Returning you to [service] – GOV.UK One Login prototype
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        Returning you to [service]
+      </h1>
+
+      
+      <p>Please wait</p>
+
+      <br><br>
+
+      <p><a href="end-journey.html">Continue</a></p>
+      <p>(In the live journey, the user will be automatically redirected when the checks are done.)</p>
+
+    </div>
+  </div>
+
+{% endblock %}

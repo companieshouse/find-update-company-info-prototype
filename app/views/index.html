@@ -46,10 +46,51 @@
         <h2 class="govuk-heading-l">Migrating CHS accounts to GOV.UK One Login</h2>
 
 
-        <h2 class="govuk-heading-m govuk-!-padding-top-4">Public beta - Dev ready backlog
+        <h2 class="govuk-heading-m govuk-!-padding-top-4">Public beta - Release 2
         </h2>
             
 
+             
+        {{ govukSummaryList({
+          card: {
+            title: {
+              html: 'Public Beta 
+               Release 2 <br>  Migrating CHS accounts to GOV.UK One Login'
+            },
+            actions: {
+              items: [
+                {
+                  href: "public-beta-release-2/index",
+                  text: "View prototype",
+                  visuallyHiddenText: "of public beta"
+                }
+              ]
+            }
+          },
+          rows: [
+          {
+            key: {
+              text: "Status"
+            },
+            value: {
+              html: "<strong class='govuk-tag govuk-tag--blue'>
+               In progress
+              </strong>"
+            }
+          },
+            {
+              key: {
+                text: ""
+              },
+              value: {
+                html: ''
+              }
+            }
+          ]
+        }) }}
+
+        <h2 class="govuk-heading-m govuk-!-padding-top-4">Public beta - Dev ready backlog
+        </h2>
            
         {{ govukSummaryList({
           card: {
@@ -74,7 +115,7 @@
             },
             value: {
               html: "<strong class='govuk-tag govuk-tag--blue'>
-               In progress
+               Completed
               </strong>"
             }
           },
