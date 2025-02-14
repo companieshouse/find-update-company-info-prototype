@@ -28,24 +28,23 @@ Add your display name  – {{ serviceName }} - GOV.UK
       
         <h1 class="govuk-label-wrapper">
           <label class="govuk-label govuk-label--l" for="display-name">
-            You can't sign in at the moment
+            You cannot sign in at the moment
           </label>
         </h1>
       
+        <p class="govuk-body">This is because you entered the wrong password too many times the last time you tried to sign in. This is to keep your Companies House account secure.</p>
 
+        <h2 class="govuk-heading-m">What you can do</h2>
 
-        <p class="govuk-body">You have ....</p>
+        <p class="govuk-body">You can:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li><a href="#" class="govuk-link">reset your password</a></li>
+          <li>wait 5 minutes, then go back to the service you were trying to use and start again</li>
+        </ul>
 
-     
 
       </div>
-
-    
-
-      <div class="govuk-button-group">
-        {{ govukButton({
-          text: "Continue"
-        }) }}
+     
       
       </div>
 
