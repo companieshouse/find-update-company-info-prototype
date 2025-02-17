@@ -20,6 +20,11 @@ router.post('/public-beta-dev-ready-backlog/prototype-set-up', function (req, re
         
     res.redirect('/public-beta-dev-ready-backlog/chs-home')
   }
+
+  else if (req.session.data['set-journey'].includes('public-15'))   {
+        
+    res.redirect('/public-beta-dev-ready-backlog/link-to-existing-chs-account')
+  }
   else{
 
     res.redirect('/public-beta-dev-ready-backlog/choose-sign-in')
@@ -769,6 +774,16 @@ router.post('/public-beta-dev-ready-backlog/one-login-email-address-updated', fu
   })
 
 
+
+     /*
+       * Company look up return to tasks
+       */ 
+     router.post('/public-beta-dev-ready-backlog/company-lookup', function (req, res) {
+
+      res.redirect('prototype-set-up-UR')
+    })
+  
+  
             
 
 
