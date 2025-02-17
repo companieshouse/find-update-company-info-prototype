@@ -8,44 +8,16 @@
   <div class="govuk-grid-column-two-thirds">
 
 
-    <form action="prototype-set-up" method="post" novalidate>
+    <form action="index" method="post" novalidate>
 
-    {{ govukRadios({
-      name: "set-journey",
-      fieldset: {
-        legend: {
-          html: "Choose a task:",
-          isPageHeading: true,
-          classes: "govuk-fieldset__legend--l"
-        }
-      },
-      hint: {
-        text: "Select one option."
-      },
-      items: [
-        {
-          value: "public-14",
-          html: "Task 1"
-        },
-        {
-          value: "public-11",
-          html: "Task 2"
-        },
-        {
-          value: "public-15",
-          html: "Task 3"
-        },
-        {
-          value: "public-8",
-          html: "Task 4"
-        }
-      
-      ]
-    }) }}
+      <h1 class="govuk-heading-xl">Prototype for user research</h1>
+     
+ 
 
 
     {{ govukButton({
-      text: "Start task"
+      text: "Start tasks",
+      href:"/public-beta-dev-ready-backlog/prototype-set-up"
     }) }}
 
 

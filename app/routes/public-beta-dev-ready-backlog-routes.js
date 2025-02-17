@@ -780,7 +780,7 @@ router.post('/public-beta-dev-ready-backlog/one-login-email-address-updated', fu
        */ 
      router.post('/public-beta-dev-ready-backlog/company-lookup', function (req, res) {
 
-      res.redirect('prototype-set-up-UR')
+      res.redirect('prototype-set-up')
     })
   
   
