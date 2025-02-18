@@ -22,17 +22,17 @@
 
  
 
-      <h1 class="govuk-heading-l">Enter your Companies House password</h1>
+      <h1 class="govuk-heading-l">You need to enter your password again</h1>
 
 
 
-      <p class="govuk-body">You have been logged out. Enter the password for {% if (data['one-login-email'] === "")%}
+      <p class="govuk-body">For security reasons, you’ve been signed out. To continue with the service you were using, you need to enter your password again for  {% if (data['one-login-email'] === "")%}
 
         <strong>email111@example.com</strong>.
       
       {% else %}
 
-        <strong>{{ data['one-login-email'] }}</strong> to continue to the digital service you were using.
+        <strong>{{ data['one-login-email'] }}</strong>.
       
       {% endif %}
                 
@@ -51,15 +51,14 @@
 
         <p class="govuk-body"><a href="#" class="govuk-link">I've forgotten my password</a></p>
          
-        
+        <p class="govuk-body"><a href="#" class="govuk-link">Sign in with a different email address </a></p>
 
 
          {{ govukButton({
            text: "Continue"
          }) }}   
 
-         
-         <p class="govuk-body"><a href="#" class="govuk-link">I want to sign in to a different Companies House account </a></p>
+        
 
 
     </form>
