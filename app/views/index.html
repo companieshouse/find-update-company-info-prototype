@@ -37,6 +37,11 @@
           </a>
         </li>
         <li class="govuk-tabs__list-item">
+          <a class="govuk-tabs__tab" href="#your-companies">
+            Your companies
+          </a>
+        </li>
+        <li class="govuk-tabs__list-item">
           <a class="govuk-tabs__tab" href="#agent">
             Authorised agent account
           </a>
@@ -46,8 +51,8 @@
         <h2 class="govuk-heading-l">Migrating CHS accounts to GOV.UK One Login</h2>
 
 
-        <h2 class="govuk-heading-m govuk-!-padding-top-4">Public beta - Release 2
-        </h2>
+        <h3 class="govuk-heading-m govuk-!-padding-top-4">Public beta - Release 2
+        </h3>
             
 
              
@@ -739,6 +744,84 @@
 
 
       </div>
+
+
+
+
+      <div class="govuk-tabs__panel" id="your-companies">
+
+        <h2 class="govuk-heading-m govuk-!-padding-top-4">
+          Your companies on Companies House account (CHS)
+        </h2>
+
+
+        {{ govukSummaryList({
+          card: {
+            title: {
+              html: "Your companies with re-authentication"
+            },
+            actions: {
+              items: [
+                {
+                  
+                }
+              ]
+            }
+          },
+          rows: [
+          {
+            key: {
+              text: "Version 8"
+            },
+            value: {
+              html: "<strong class='govuk-tag govuk-tag--blue'>
+               In progress
+              </strong> <br><br>
+              <a href='/v8-your-companies' class='govuk-link'>Your companies prototype</a>
+              "
+            }
+          }
+          ]
+        }) }}
+        
+        
+        
+
+        <!-- (based on CHS version 7) -->
+
+        {{ govukSummaryList({
+          card: {
+            title: {
+              html: "Your companies"
+            },
+            actions: {
+              items: [
+                {
+                  
+                }
+              ]
+            }
+          },
+          rows: [
+          {
+            key: {
+              text: "Dev ready - based on version 7"
+            },
+            value: {
+              html: "<strong class='govuk-tag govuk-tag--blue'>
+               Completed
+              </strong> <br><br>
+              <a href='/v7-your-companies' class='govuk-link'>Your companies prototype</a>
+              "
+            }
+          }
+          ]
+        }) }}
+            
+
+
+      </div>
+
 
 
       <div class="govuk-tabs__panel" id="agent">

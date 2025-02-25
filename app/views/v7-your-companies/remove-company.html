@@ -1,0 +1,76 @@
+{% extends "layouts/layout-chs-signed-out.html" %}
+
+{% block pageTitle %}
+  Your companies
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href:""
+  }) }}
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-width-container">
+
+
+<div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+    <form action="/remove-company" method="post" novalidate>
+
+
+    
+
+    
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+          <span class="govuk-caption-xl" >FLOWERS LIMITED (18882777)</span>   
+            <h1 class="govuk-heading-xl govuk-!-margin-bottom-2">Are you sure you want to remove this company?</h1>
+        </legend>
+        <div class="govuk-radios" data-module="govuk-radios">
+         
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="remove-company" name="remove-company" type="radio" value="yes">
+            <label class="govuk-label govuk-radios__label" for="remove-company">
+              Yes
+            </label>
+            <div id="remove-company-hint" class="govuk-hint govuk-radios__hint">
+              If you remove this company, you will no longer be able to file online for FLOWERS LIMITED without a current authentication code.
+            </div>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="remove-company-2" name="remove-company" type="radio" value="no">
+            <label class="govuk-label govuk-radios__label" for="remove-company-2">
+              No
+            </label>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+
+    {{ govukButton({
+      text: "Continue",
+      href:"confirmation-company-removed"
+    }) }}
+  
+
+
+
+     
+
+
+      </div>
+    </div>
+  </form>
+</div>
+</div>
+</div>
+
+
+{% endblock %}
