@@ -777,7 +777,7 @@
               html: "<strong class='govuk-tag govuk-tag--blue'>
                In progress
               </strong> <br><br>
-              <a href='/v8-your-companies' class='govuk-link'>Your companies prototype</a>
+              <a href='/v8-your-companies/' class='govuk-link'>Your companies prototype</a>
               "
             }
           }
@@ -811,7 +811,7 @@
               html: "<strong class='govuk-tag govuk-tag--blue'>
                Completed
               </strong> <br><br>
-              <a href='/v7-your-companies' class='govuk-link'>Your companies prototype</a>
+              <a href='/v7-your-companies/' class='govuk-link'>Your companies prototype</a>
               "
             }
           }
@@ -826,6 +826,45 @@
 
       <div class="govuk-tabs__panel" id="agent">
         <h2 class="govuk-heading-l">Authorised agent account services </h2>
+
+
+
+            <!-- Authorised agent services -->
+            <h2 class="govuk-heading-m govuk-!-padding-top-4">Version 7
+            </h2>
+               
+           
+               {{ govukSummaryList({
+                 card: {
+                   title: {
+                     html: "Authorised agent"
+                   },
+                   actions: {
+                     items: [
+                       {
+                         
+                       }
+                     ]
+                   }
+                 },
+                 rows: [
+                 {
+                   key: {
+                     text: "Version 7"
+                   },
+                   value: {
+                     html: "<strong class='govuk-tag govuk-tag--blue'>
+                      In progress
+                     </strong> <br><br>
+                     Review design of dashboard based on feedback from the accesibility audit. <br>
+                     <a href='/authorised-agent-v7/index' class='govuk-link'>Prototype version 7</a>
+                     "
+                   }
+                 }
+                 ]
+               }) }}
+    
+    
 
          <!-- Authorised agent services -->
          <h2 class="govuk-heading-m govuk-!-padding-top-4">Version 6
@@ -852,7 +891,7 @@
                },
                value: {
                  html: "<strong class='govuk-tag govuk-tag--blue'>
-                  In progress
+                  User testing in progress
                  </strong> <br>
                  <a href='/authorised-agent-v6/index' class='govuk-link'>Prototype version 6</a>
                  "

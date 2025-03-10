@@ -44,3 +44,6 @@ router.use('/', require('./routes/public-beta-v3-routes.js'))
  router.use('/', require('./routes/public-beta-release-2-routes.js'))
 
 router.use('/', require('./routes/v7-your-companies-routes.js'))
+
+
+router.use('/', require('./routes/v8-your-companies-routes.js'))
