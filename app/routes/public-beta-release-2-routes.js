@@ -26,7 +26,7 @@ router.post('/public-beta-release-2/prototype-set-up', function (req, res) {
   }
   else if (req.session.data['set-journey'].includes('oneLogin-2'))   {
         
-    res.redirect('')
+    res.redirect('/public-beta-release-2/start-page-email-shown')
   }
   else{
 
@@ -275,6 +275,19 @@ router.post('/public-beta-release-2/start-page', function (req, res) {
   res.redirect('create-or-sign-in')
 })
 
+
+//start page - service not signed in
+router.post('/public-beta-release-2/start-page-no-email', function (req, res) {
+
+  res.redirect('create-or-sign-in')
+})
+
+
+//start page - service signed in already to CHS
+router.post('/public-beta-release-2/start-page-email-shown', function (req, res) {
+
+  res.redirect('create-or-sign-in')
+})
 
 
 //One login sign in
