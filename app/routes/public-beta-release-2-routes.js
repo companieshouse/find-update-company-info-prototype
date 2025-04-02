@@ -20,6 +20,14 @@ router.post('/public-beta-release-2/prototype-set-up', function (req, res) {
         
     res.redirect('/public-beta-release-2/chs-home')
   }
+  else if (req.session.data['set-journey'].includes('oneLogin-1'))   {
+        
+    res.redirect('/public-beta-release-2/start-page-no-email')
+  }
+  else if (req.session.data['set-journey'].includes('oneLogin-2'))   {
+        
+    res.redirect('/public-beta-release-2/start-page')
+  }
   else{
 
     res.redirect('/public-beta-release-2/choose-sign-in')

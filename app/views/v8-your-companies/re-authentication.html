@@ -1,0 +1,74 @@
+{% extends "layouts/layout_unbranded-with-banner.html" %}
+
+
+
+{% block pageTitle %}
+  Start page – {{ serviceName }} - GOV.UK
+{% endblock %}
+
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+      <form action="start-page" method="post" novalidate>
+      <h1 class="govuk-heading-l">You are no longer digitally authorised to file for companies that were saved to your account</h1>
+
+
+      <p class="govuk-body">You may have saved companies to your account so you no longer need to enter the authenication code when filing for a company. However, Companies House requires users to re-enter the authentication code to file for a company, or be digitally authorised by another person, before they file for the company. </p>
+
+      <div class="govuk-warning-text">
+        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+        <strong class="govuk-warning-text__text">
+          <span class="govuk-visually-hidden">Warning</span>
+          You will need to enter the authenication code or become digitally authorised in order to file for a company.
+        </strong>
+      </div>
+
+
+      <h2 class="govuk-heading-m">Enter the authentication code when you file</h1>
+
+      <p class="govuk-body">You can save a company to your account when you next file for a company.</p>
+     
+
+      <h2 class="govuk-heading-m">Review the list of Your companies in your account</h2>
+
+
+      <p class="govuk-body">If you file for multiple companies, you may want to review the list of companies within your account. You can:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>your filing history</li>
+        <li>companies you follow</li>
+      </ul>
+
+
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+           What is a Companies House account?
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          <p class="govuk-body">This is the account you can use to sign in to:</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>the Companies House register - sometimes known as 'Companies House service' or 'Find and update company information'</li>
+            <li>some of our online services - for example, 'Register your company' or 'Upload a document to Companies House'</li>
+          </ul>
+          <p class="govuk-body">A Companies House account is not the same as WebFiling.</p>
+        </div>
+      </details>
+
+   
+      {{ govukButton({
+        text: "Continue",
+        classes: "govuk-!-margin-top-4 govuk-!-margin-bottom-8"
+      }) }}
+
+    </form>
+    </div>
+  </div>
+{% endblock %}

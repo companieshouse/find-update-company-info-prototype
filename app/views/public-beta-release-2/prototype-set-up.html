@@ -237,6 +237,40 @@
 
 
 
+    {{ govukRadios({
+      name: "set-journey",
+      fieldset: {
+        legend: {
+          html: "Services that require GOV.UK One Login",
+          isPageHeading: false,
+          classes: "govuk-fieldset__legend--m"
+        }
+      },
+      hint: {
+        text: "Select one option."
+      },
+      items: [
+        {
+          value: "oneLogin-1",
+          html: "A user is not signed in.  <strong class='govuk-tag govuk-tag--red'>New </strong>",
+          hint: {
+            text: "The user is shown the standard interrupt page (containing no email address) and they are taken directly to GOV.UK One Login."
+          }
+        },
+        {
+          value: "oneLogin-2",
+          html: "A user is already signed in to their Companies House account.   <strong class='govuk-tag govuk-tag--red'>New </strong>",
+          hint: {
+            text: "The user is shown the interrupt page which contains their email address and they are taken directly to GOV.UK One Login."
+          }
+        }
+      
+      
+      ]
+    }) }}
+
+
+
 
      <!-- {
           value: "public-beta-linked",
