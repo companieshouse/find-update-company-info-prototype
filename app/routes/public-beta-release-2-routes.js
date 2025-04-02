@@ -26,7 +26,7 @@ router.post('/public-beta-release-2/prototype-set-up', function (req, res) {
   }
   else if (req.session.data['set-journey'].includes('oneLogin-2'))   {
         
-    res.redirect('/public-beta-release-2/start-page')
+    res.redirect('')
   }
   else{
 
