@@ -6,8 +6,8 @@
 
 {% block beforeContent %}
   {{ govukBackLink({
-    text: "Back to your companies",
-    href:""
+    text: "Go back to 'Your companies'",
+    href:"company-added"
   }) }}
 {% endblock %}
 
@@ -15,10 +15,9 @@
 
 {% block content %}
 
-<form action="manage-authorised-people-no-longer-authorised" method="post">
+<form action="confirmation-person-added-re-authorised" method="post">
     <div class="govuk-grid-row">
-      <div class="govuk-grid-column-full">
-        {% if (data['adding-jill'] == true) %}
+      <div class="govuk-grid-column-two-thirds">
 
 
         {% set html %}
@@ -33,10 +32,6 @@
           type: 'success'
         }) }}
 
-        {% endif %}
-
-
-        
         <h1 class="govuk-heading-l">
           <span class="govuk-caption-l"> FLOWERS LIMITED (18882777)</span> People digitally authorised to file online for this company 
       </h1>
@@ -61,6 +56,8 @@
       }) }}
       </div>
     </div>
+
+
 
     <div class="govuk-grid-row govuk-!-padding-top-3">
       <div class="govuk-grid-column-full">
@@ -107,12 +104,12 @@
               <td scope="row" class="govuk-table__cell"></td>
               <td class="govuk-table__cell">	
                 {{govukTag({
-                  html: "Not authorised",
-                  classes: "govuk-tag--red"
+                  html: "Confirmed",
+                  classes: "govuk-tag--green"
                   })}}
               </td>
               <td class="govuk-table__cell">
-                <a href="add-presenter-check-details-become-authorised" class="govuk-link">Confirm and add user<span class="govuk-visually-hidden"> jill.edwards@example.com</span> </a>
+                
               </td>
               <td class="govuk-table__cell">	
                 <a href="manage-authorised-people-email-resent" class="govuk-link">Remove <span class="govuk-visually-hidden"> jill.edwards@example.com digital authorisation</span> </a>
@@ -127,8 +124,12 @@
 
 
 
-      </div>
+    
+    </div>
   </div>
-</form>
-
+  </form>
 {% endblock %}
+
+
+
+
