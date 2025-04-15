@@ -827,6 +827,45 @@
       <div class="govuk-tabs__panel" id="agent">
         <h2 class="govuk-heading-l">Authorised agent account services </h2>
 
+                    <!-- Authorised agent services -->
+                    <h2 class="govuk-heading-m govuk-!-padding-top-4">Version 8
+                    </h2>
+                       
+                   
+                       {{ govukSummaryList({
+                         card: {
+                           title: {
+                             html: "Authorised agent"
+                           },
+                           actions: {
+                             items: [
+                               {
+                                 
+                               }
+                             ]
+                           }
+                         },
+                         rows: [
+                         {
+                           key: {
+                             text: "Version 8"
+                           },
+                           value: {
+                             html: "<strong class='govuk-tag govuk-tag--blue'>
+                              In progress
+                             </strong> <br><br>
+                             Review the design of manage users invitation flow, where a new user have been added by a member of an Authorised agent (ACSP). <br>
+                             <a href='/authorised-agent-v8/index' class='govuk-link'>Prototype version 8</a>
+                             "
+                           }
+                         }
+                         ]
+                       }) }}
+
+
+
+
+
 
 
             <!-- Authorised agent services -->
@@ -854,7 +893,7 @@
                    },
                    value: {
                      html: "<strong class='govuk-tag govuk-tag--blue'>
-                      In progress
+                      Completed
                      </strong> <br><br>
                      Review design of dashboard based on feedback from the accesibility audit. <br>
                      <a href='/authorised-agent-v7/index' class='govuk-link'>Prototype version 7</a>
