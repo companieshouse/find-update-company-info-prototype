@@ -9,7 +9,7 @@ Home - Companies House account - GOV.UK
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
    
-      
+      <form action="member-invite-confirm" method="post" novalidate>
       {{ govukRadios({
         name: "confirm-decline-invite",
         fieldset: {
@@ -33,10 +33,10 @@ Home - Companies House account - GOV.UK
 
       {{ govukButton({
         text: "Continue",
-        href: "member-invitations-accept"
+        href:"member-invitations-accept"
       }) }}
 
-
+</form>
 
   </div>
 </div>
