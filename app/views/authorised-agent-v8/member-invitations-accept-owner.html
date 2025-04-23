@@ -18,7 +18,7 @@
 
         {% set html %}
         <p class="govuk-notification-banner__heading">
-          You have been added as a standard user for MORRIS ACCOUNTING LTD.
+          You have been added as an account owner for MORRIS ACCOUNTING LTD.
           {% endset %}
 
         {{ govukNotificationBanner({
@@ -31,8 +31,14 @@
 
         <p class="govuk-body">You can now access the account and use services for the authorised agent. </p>
 
-        <p class="govuk-body govuk-!-padding-bottom-3">You've been added as a standard user, which means you'll be able to view other users who have been added to the account, but you cannot add or remove them. </p>
 
+        <p class="govuk-body ">You've been added as an account owner, which means you'll be able to:</p>
+        <ul class="govuk-list govuk-list--bullet govuk-!-padding-bottom-3">
+          <li>view, add and remove other users</li>
+          <li>update the authorised agent's details</li>
+          <li>close the account</li>
+          </ul>
+          
     
         <button type="submit" class="govuk-button" data-module="govuk-button">
           Go to the authorised agent account
