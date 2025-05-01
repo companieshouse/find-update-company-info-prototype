@@ -1,0 +1,40 @@
+{% extends "layouts/layout-signed-out-agent.html" %}
+{% block pageTitle %}
+You cannot use this service
+  -
+  {{serviceName}}
+  - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href:""
+  }) }}
+{% endblock %}
+
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+      <h1 class="govuk-heading-l">You have been added as a member to Morris accounting </h1>
+     <!-- {{ govukButton({
+        text: "Appoint new director",
+        href: "add/name?type=add"
+      }) }} -->
+       <p class="govuk-body">What this means...  </p>
+
+
+        {{ govukButton({
+          text: "Continue and view agent account",
+          href:"account-details-confirm"
+        }) }}
+
+
+
+      
+    </div>
+  </div>
+{% endblock %}
