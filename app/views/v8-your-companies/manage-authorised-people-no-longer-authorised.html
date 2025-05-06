@@ -47,10 +47,10 @@
           <div class="govuk-notification-banner__content">
 
             <h3 class="govuk-notification-banner__heading">
-              Digitally authorised to file for a company
+              Digital authorisation
             </h3>
             <p class="govuk-body">
-              You can confirm and add people, so they can become digitally authorised to file online for a company. 
+              For security reasons, as you now sign in to your Companies House account using GOV.UK One Login, you'll need to confirm the people who are digitally authorised to file online are still authorised. 
 
             </p>
           </div>
@@ -92,7 +92,7 @@
             <tr class="govuk-table__row">
               <th scope="col" class="govuk-table__header">Email address</th>
               <th scope="col" class="govuk-table__header">Name</th>
-              <th scope="col" class="govuk-table__header">Status</th>
+              <th scope="col" class="govuk-table__header">Authorisation status</th>
               <th scope="col" class="govuk-table__header"> <span class="govuk-visually-hidden"> Cancel or remove </span></th>
               <th scope="col" class="govuk-table__header"> <span class="govuk-visually-hidden"> Resend email invitation</span></th>
             </tr>
@@ -106,7 +106,7 @@
               <td scope="row" class="govuk-table__cell">Hannah Salt <span class="govuk-visually-hidden"> </span></td>
               <td class="govuk-table__cell">
                 {{govukTag({
-                  text: "Confirmed",
+                  text: "Digitally authorised",
                   classes: "govuk-tag--green"
                   })}}
               </td>
@@ -129,12 +129,12 @@
               <td scope="row" class="govuk-table__cell"></td>
               <td class="govuk-table__cell">	
                 {{govukTag({
-                  html: "Not authorised",
+                  html: "Not digitally authorised",
                   classes: "govuk-tag--red"
                   })}}
               </td>
               <td class="govuk-table__cell">
-                <a href="add-presenter-check-details-become-authorised" class="govuk-link">Confirm and add person<span class="govuk-visually-hidden"> jill.edwards@example.com</span> </a>
+                <a href="add-presenter-check-details-become-authorised" class="govuk-link">Authorise to file online<span class="govuk-visually-hidden"> jill.edwards@example.com</span> </a>
               </td>
               <td class="govuk-table__cell">	
                 <a href="manage-authorised-people-email-resent" class="govuk-link">Remove <span class="govuk-visually-hidden"> jill.edwards@example.com digital authorisation</span> </a>
