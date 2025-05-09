@@ -67,9 +67,9 @@
             <tr class="govuk-table__row">
               <th scope="col" class="govuk-table__header">Email address</th>
               <th scope="col" class="govuk-table__header">Name</th>
-              <th scope="col" class="govuk-table__header">Status</th>
+              <th scope="col" class="govuk-table__header">Authorisation status</th>
               <th scope="col" class="govuk-table__header"> <span class="govuk-visually-hidden"> Cancel or remove </span></th>
-              <th scope="col" class="govuk-table__header"> <span class="govuk-visually-hidden"> Resend email invitation</span></th>
+              <th scope="col" class="govuk-table__header">Remove digital <br>authorisation</th>
             </tr>
           </thead>
           <tbody class="govuk-table__body">
@@ -81,7 +81,7 @@
               <td scope="row" class="govuk-table__cell">Hannah Salt <span class="govuk-visually-hidden"> </span></td>
               <td class="govuk-table__cell">
                 {{govukTag({
-                  text: "Confirmed",
+                  text: "Digitally authorised",
                   classes: "govuk-tag--green"
                   })}}
               </td>
@@ -104,7 +104,7 @@
               <td scope="row" class="govuk-table__cell"></td>
               <td class="govuk-table__cell">	
                 {{govukTag({
-                  html: "Confirmed",
+                  html: "Digitally authorised",
                   classes: "govuk-tag--green"
                   })}}
               </td>
