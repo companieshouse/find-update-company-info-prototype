@@ -18,8 +18,11 @@
 
       {% set html %}
         <p class="govuk-notification-banner__heading">
-          You are digitally authorised to file for FLOWERS LIMITED.
-      
+          Digital authorisation renewed
+          <p class="govuk-body">You are digitally authorised to file for FLOWERS LIMITED.</p>
+        </div>
+      </div>
+
           {% endset %}
 
         {{ govukNotificationBanner({
@@ -29,6 +32,8 @@
 <!-- 
         <h1 class="govuk-heading-l">You are digitally authorised to file for FLOWERS LIMITED</h1> -->
 
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
 
         <p class="govuk-body">You can now: </p>
         <ul class="govuk-list govuk-list--bullet">
