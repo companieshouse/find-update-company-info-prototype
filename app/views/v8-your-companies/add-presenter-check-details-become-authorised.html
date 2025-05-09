@@ -22,7 +22,9 @@
       <div class="govuk-grid-column-two-thirds">
       <form action="add-presenter-check-details-become-authorised" method="post" novalidate>
 
-      <span class="govuk-caption-l">FLOWERS LIMITED (918882777)</span> <h1 class="govuk-heading-l">Check the details are correct before you digitally authorise this person</h1> </span>
+      <span class="govuk-caption-l">FLOWERS LIMITED (918882777)</span> <h1 class="govuk-heading-l">Check the details are correct</h1> </span>
+
+      <p>We'll send an email asking if they want to be digitally authorised for this company.</p>
 
       {{ govukSummaryList({
         classes: 'govuk-!-margin-bottom-9',
@@ -67,7 +69,7 @@
 
 
       {{ govukButton({
-          text: "Confirm and authorise",
+          text: "Confirm and send email",
           href:"confirmation-person-added-re-authorised"
       }) }}
 
