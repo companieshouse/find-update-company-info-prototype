@@ -1,17 +1,17 @@
-{% extends "layouts/layout-chs-signed-out.html" %}
+{% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-  Your companies - Enter the company authentication code - Companies House WebFiling account - GOV.UK
+Enter the company authentication code - GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
-  {{ govukBackLink({
-    text: "Back",
-    href:"check-company-details"
-  }) }}
+
 {% endblock %}
 
 
+{% set serviceName %}
+ 
+{% endset %}
 
 {% block content %}
 
@@ -20,49 +20,25 @@
 <div class="govuk-grid-row">
 
 <div class="govuk-grid-column-two-thirds">
-    <form action="authentication-code" method="post">
+    <form action="authentication-code-2" method="post">
 
-              {% if errorAuthenticationCode == true %}
-
-                {{ govukErrorSummary({
-                    titleText: "There is a problem",
-                    errorList: errorList
-                  }) }}
-
-              {% endif %}
 
 
               {% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
 
-              {% if errorAuthenticationCode == true %}
+              <span class='govuk-caption-l'>FLOWERS LIMITED (18882777)</span>
+              <div class="govuk-form-group">
+                <h1 class="govuk-label-wrapper">
+                  <label class="govuk-label govuk-label--l" for="event-name">
+                    Enter the company authentication code
+                  </label>
+                </h1>
+                <div id="event-name-hint" class="govuk-hint">
+                  This is a 6 character code issued by us to each company. The code is used to authorise online filings.
+                </div>
+                <input class="govuk-input govuk-input--width-10" id="event-name" name="eventName" type="text" aria-describedby="event-name-hint">
+              </div>
 
-              {{ govukInput({
-                label: {
-                  html: "<span class='govuk-caption-l'>FLOWERS LIMITED (18882777)</span>
-               Enter the company authentication code",
-                  classes: "govuk-label--l",
-                  isPageHeading: true
-                },
-                classes: "govuk-input--width-10",
-                id: "authentication-code",
-                name: "authentication-code"
-              }) }}
-
-               {% else %}
-
-               {{ govukInput({
-                label: {
-                  html: "<span class='govuk-caption-l'>FLOWERS LIMITED (18882777)</span> Enter the company authentication code",
-                  classes: "govuk-label--l",
-                  isPageHeading: true
-                },
-
-                classes: "govuk-input--width-10",
-                id: "authentication-code",
-                name: "authentication-code"
-              }) }}
-
-              {% endif %}
 
 
 
