@@ -31,20 +31,12 @@
         rows: [
           {
             key: {
-              text: ""
+              text: "Name"
             },
             value: {
-              text: ""
-            },
-            actions: {
-              items: [
-                {
-                  href: "#",
-                  text: "",
-                  visuallyHiddenText: ""
-                }
-              ]
+              text: "Not provided"
             }
+            
           },
           {
             key: {
@@ -52,28 +44,21 @@
             },
             value: {
               text: "jill.edwards@example.com"
-            },
-            actions: {
-              items: [
-                {
-                  href: "#",
-                  text: "Change",
-                  visuallyHiddenText: "name"
-                }
-              ]
             }
           }
         ]
       }) }}
 
 
-
+      <div class="govuk-button-group">
       {{ govukButton({
           text: "Confirm and send email",
           href:"confirmation-person-added-re-authorised"
       }) }}
 
+      <a class="govuk-link" href="#">Cancel</a>
 
+    </div>
     </form>
   </div>
 
