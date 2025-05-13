@@ -19,41 +19,43 @@
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">   
           
+        <span class="govuk-caption-l">FLOWERS LIMITED (18882777)</span>
+        <h1 class="govuk-heading-l">Confirm you do not want to renew digital authorisation for Hannah Salt</h1>
 
 
-        <div class="govuk-button-group">
+        <p class="govuk-body">This means that Hannah Salt will not be digitially authorised to file online for FLOWERS LIMITED. We'll email Hannah Salt to let them know they are not digitally authorised.</p>
 
-          <div class="govuk-form-group">
-            <fieldset class="govuk-fieldset" aria-describedby="changedName-hint">
-              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                <span class='govuk-caption-l'>FLOWERS LIMITED</span>
-                <h1 class="govuk-fieldset__heading">
-                  Are you sure you want to cancel authorisation for jill.edwards@example.com?
-                </h1>
-              </legend>
-              <div id="changedName-hint" class="govuk-hint">
-                
+        <div class="govuk-warning-text">
+          <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+          <strong class="govuk-warning-text__text">
+            <span class="govuk-visually-hidden">Warning</span>
+            Hannah Salt will still 
+          </strong>
+        </div>
+
+        <p class="govuk-body">If Hannah ... </p>
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+            <legend class="govuk-fieldset__legend">
+              
+            </legend>
+            
+            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                <label class="govuk-label govuk-checkboxes__label" for="waste">
+                  I confirm that I have read
+                </label>
               </div>
-              <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="changedName" name="changedName" type="radio" value="yes">
-                  <label class="govuk-label govuk-radios__label" for="changedName">
-                    Yes
-                  </label>
-                </div>
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="changedName-2" name="changedName" type="radio" value="no">
-                  <label class="govuk-label govuk-radios__label" for="changedName-2">
-                    No
-                  </label>
-                </div>
-              </div>
-            </fieldset>
-          </div>
+            </div>
+          </fieldset>
+        </div>
 
+            
           <div class="govuk-button-group">
             {{ govukButton({
-              text: "Continue",
+              text: "Do not renew",
               href:"confirmation-cancel-person-after-migration"
             }) }}
           
