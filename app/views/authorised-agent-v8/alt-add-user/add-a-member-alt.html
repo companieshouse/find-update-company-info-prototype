@@ -1,0 +1,82 @@
+{% extends "layouts/layout-signed-out-agent.html" %}
+
+{% block pageTitle %}
+  Your companies
+{% endblock %}
+
+{% set serviceName %}
+ 
+{% endset %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Return to manage users"
+  }) }}
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-width-container">
+  <div class="govuk-grid-row">
+
+     <div class="govuk-grid-column-two-thirds">
+       <span class="govuk-caption-l">MORRIS ACCOUNTING LTD</span>
+          <h1 class="govuk-heading-l">Add a user</h1> 
+
+<p>Before you add a user, check that they have a Companies House account. If they do not, they will need to create one first. </p>
+
+
+<details class="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      How to check if someone has a Companies House account
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+   <p>Ask them if they already have sign in details for the Companies House register. This is sometimes known as 'Find and update company information', or the 'Companies House service. </p>
+   <p>It would be the same details they use for some of our online services, such as 'Register your company' or 'Upload a document to Companies House'. </p>
+   <p>A Companies House account is different to WebFiling, which is the service to submit certain filings digitally, such as dormant accounts. </p>
+  </div>
+</details>
+
+
+
+<!--<div class="govuk-inset-text">
+  <p class="govuk-body">They'll be able to access the authorised agent account when they sign in to their Companies House account. If they do not have a Companies House account, they must create one before you can add them. </p>
+</div>-->
+
+
+          {{ govukInput({
+            label: {
+              text: "What is their email address?",
+              classes: "govuk-label--m"
+            },
+            hint: {
+              html: "It must be the one they use to sign in to their Companies House account. "
+            },
+            id: "email",
+            name: "email",
+            type: "email",
+            autocomplete: "email",
+            spellcheck: false
+          }) }}
+
+
+
+
+
+           {{ govukButton({
+              text: "Continue",
+              href:"choose-role"
+            }) }}
+
+
+
+
+
+</div>
+</div>
+
+
+{% endblock %}
