@@ -1,0 +1,61 @@
+{% extends "layouts/layout-chs-signed-out.html" %}
+
+{% block pageTitle %}
+  Your companies
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href:""
+  }) }}
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-width-container">
+
+
+<div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+    <form action="/remove-company-no-longer-authorised" method="post" novalidate>
+      <span class="govuk-caption-xl" >FLOWERS LIMITED (18882777)</span>   
+      <h1 class="govuk-heading-l">Are you sure you want to cancel your digitally authorisation for this company?</h1>
+    
+    
+         
+       
+      <p class="govuk-body govuk-!-padding-bottom-3">If you remove this company, you will no longer be able to file online for FLOWERS LIMITED without a current authentication code.</p>
+           
+
+
+    <div class="govuk-button-group">
+      {{ govukButton({
+        text: "Continue",
+        href:"confirmation-company-not-digitally-authorised-removed"
+      }) }}
+    
+    
+      <a class="govuk-link" href="#">Cancel</a>
+    </div>
+
+
+
+
+
+
+     
+
+
+      </div>
+    </div>
+  </form>
+</div>
+</div>
+</div>
+
+
+{% endblock %}
