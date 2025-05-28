@@ -39,6 +39,10 @@ Enter the company authentication code - GOV.UK
                 <input class="govuk-input govuk-input--width-10" id="event-name" name="eventName" type="text" aria-describedby="event-name-hint">
               </div>
 
+{{ govukDetails({
+                summaryText: "I do not have an authentication code",
+                html: '<p class="govuk-body">You can <a href="https://www.gov.uk/guidance/company-authentication-codes-for-online-filing" class="govuk-link"> request the authentication code</a> to be sent by post.</p>'
+              }) }}
 
               {{ govukButton({
                 text: "Continue",
@@ -48,10 +52,7 @@ Enter the company authentication code - GOV.UK
 
 
 
-              {{ govukDetails({
-                summaryText: "I do not have an authentication code",
-                html: '<p class="govuk-body">You can <a href="https://www.gov.uk/guidance/company-authentication-codes-for-online-filing" class="govuk-link"> request the authentication code</a> to be sent by post.</p>'
-              }) }}
+              
 
 
 
