@@ -23,18 +23,20 @@
 
     <form action="/remove-company-no-longer-authorised" method="post" novalidate>
       <span class="govuk-caption-l" >ANDROID TECHNOLOGY LTD (10866549)</span>   
-      <h1 class="govuk-heading-l">Are you sure you do not want to renew your digital authorisation for this company?</h1>
+      <h1 class="govuk-heading-l">Confirm you do not want to renew your digital authorisation for this company</h1>
     
     
          
        
       <p class="govuk-body govuk-!-padding-bottom-3">If you do not renew your digital authorisation, you will not be able to file online for this company without a current authentication code.</p>
+
+      <p>We will remove this company from the list of companies you’ve saved in your account.</p>
            
 
 
     <div class="govuk-button-group">
       {{ govukButton({
-        text: "Do not renew",
+        text: "Confirm",
         href:"confirmation-company-not-digitally-authorised-removed"
       }) }}
     
