@@ -1,0 +1,40 @@
+{% extends "layouts/layout_unbranded-with-banner.html" %}
+
+{% block pageTitle %}
+
+{% endblock %}
+
+{% block header %}
+    {{ govukHeader({ serviceName: "" }) }}
+{% endblock %}
+
+
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form action="" method="post" novalidate>
+
+    <h1 class="govuk-heading-l">Companies House: <br>Hannah Salt's authorisation removed to file online for FLOWERS LIMITED</h1>
+
+<p class="govuk-body">Hannah Salt's digital authorisation to file online for FLOWERS LIMITED has been removed by Jill Edwards. This means they will no longer be able to file online for this company without a current authentication code.</p>
+
+{{ govukInsetText({
+  text: "Hannah Salt will still be able to file online for this comapny if they have access to the current authentication code. An authorised person may wish to change it."
+}) }}
+
+<p class="govuk-body">We've emailed Hannah Salt to let them know they are no longer digitally authorised to file online for this company. We’ve also sent an email to the company’s registered email address and to any other people who are authorised to let them know.</p>
+
+<p class="govuk-body">If Hannah Salt is appointed as an officer of the company, such as a director or secretary, removing their digital authorisation to file online does not remove their appointment.</p>
+
+<p class="govuk-body">If you were not expecting Hannah Salt's authorisation to be removed, you must resolve this within the company. Companies House cannot give or remove digital authorisation.</p>
+
+
+
+
+</form>
+
+  </div>
+  </div>
+{% endblock %}
