@@ -70,7 +70,7 @@
 {{ govukSummaryList({
   card: {
     title: {
-      html: 'ANDROID TECHNOLOGY WITH A REALLY LONG NAME LIMITED'
+      html: 'BETA TECHNOLOGY WITH A REALLY LONG NAME LIMITED'
     },
     actions: {
       items: [
@@ -112,7 +112,92 @@
 {{ govukSummaryList({
   card: {
     title: {
-      text: "ARCHITECTS WALES WITH A REALLY LONG NAME LIMITED"
+      text: "DESIGN WALES WITH A REALLY LONG NAME LIMITED"
+    },
+    actions: {
+      items: [
+        {
+          href: "#",
+          text: "View and manage people",
+          visuallyHiddenText: ""
+        },
+        {
+          href: "",
+          text: "Remove",
+          visuallyHiddenText: ""
+        }
+      ]
+    }
+  },
+  rows: [
+    {
+      key: {
+        text: "Company number"
+      },
+      value: {
+        html: "07518663"
+      }
+    },
+    {
+      key: {
+        text: "Authorisation status"
+      },
+      value: {
+        html: "<strong class='govuk-tag govuk-tag'>
+               Digitally authorised 
+               </strong>"
+      }
+    }
+  ]
+}) }}
+
+
+{{ govukSummaryList({
+  card: {
+    title: {
+      html: 'PAPER TEST COMPANY LTD'
+    },
+    actions: {
+      items: [
+        {
+          href: "#",
+          text: "Restore digital authorisation",
+          visuallyHiddenText: ""
+        },
+        {
+          href: "#",
+          text: "Remove and do not restore",
+          visuallyHiddenText: ""
+        }
+      ]
+    }
+  },
+  rows: [
+    {
+      key: {
+        text: "Company number"
+      },
+      value: {
+        html: "10866549"
+      }
+    },
+    {
+      key: {
+        text: "Authorisation status"
+      },
+      value: {
+        html: "<strong class='govuk-tag govuk-tag--red'>
+                Not digitally authorised 
+               </strong>"
+      }
+    }
+  ]
+}) }}
+
+{{ govukSummaryList({
+  card: {
+    title: {
+      text: "SHORT NAME LIMITED"
     },
     actions: {
       items: [
