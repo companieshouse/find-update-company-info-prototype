@@ -71,7 +71,7 @@
 {{ govukSummaryList({
   card: {
     title: {
-      html: 'BETA TECHNOLOGY WITH A REALLY LONG NAME LIMITED'
+      html: 'BETA TECHNOLOGY LIMITED'
     },
     actions: {
       items: [
@@ -110,33 +110,15 @@
           }
         ]
       }
-    },
-     {
-      key: {
-        text: "Digitally authorised people"
-      },
-      value: {
-        html: "You have 7 digitally authorised people"
-      },
-      actions: {
-        items: [
-          {
-            href: "#",
-            text: "Manage",
-            visuallyHiddenText: "digital authorisation"
-          }
-        ]
-      }
-     
     }
-      ]
+    ]
 
 }) }}
 
 {{ govukSummaryList({
   card: {
     title: {
-      text: "DESIGN WALES WITH A REALLY LONG NAME LIMITED"
+      text: "ANDROID TECHNOLOGY UK LIMITED"
     },
     actions: {
       items: [
@@ -191,15 +173,10 @@
 {{ govukSummaryList({
   card: {
     title: {
-      html: 'PAPER444444444'
+      html: 'DESIGN WALES WITH A REALLY LONG NAME LIMITED'
     },
     actions: {
       items: [
-        {
-          href: "#",
-          text: "Restore digital authorisation",
-          visuallyHiddenText: ""
-        },
         {
           href: "#",
           text: "Remove",
@@ -214,59 +191,26 @@
         text: "Company number"
       },
       value: {
-        html: "10866549"
+        html: "07709663"
       }
     },
     {
       key: {
-        text: "Authorisation status"
+        text: "Digital authorisation status"
       },
       value: {
         html: "<strong class='govuk-tag govuk-tag--red'>
-                Not digitally authorised 
+                Not authorised 
                </strong>"
-      }
-    }
-  ]
-}) }}
-
-{{ govukSummaryList({
-  card: {
-    title: {
-      text: "SHORT NAME LIMITED"
-    },
-    actions: {
-      items: [
-        {
-          href: "#",
-          text: "View and manage people",
-          visuallyHiddenText: ""
-        },
-        {
-          href: "",
-          text: "Remove",
-          visuallyHiddenText: ""
-        }
-      ]
-    }
-  },
-  rows: [
-    {
-      key: {
-        text: "Company number"
       },
-      value: {
-        html: "07518663"
-      }
-    },
-    {
-      key: {
-        text: "Authorisation status"
-      },
-      value: {
-        html: "<strong class='govuk-tag govuk-tag'>
-               Digitally authorised 
-               </strong>"
+      actions: {
+        items: [
+          {
+            href: "#",
+            text: "Restore",
+            visuallyHiddenText: "digital authorisation"
+          }
+        ]
       }
     }
   ]
