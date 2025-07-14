@@ -39,17 +39,22 @@ Enter the company authentication code - GOV.UK
                 <input class="govuk-input govuk-input--width-10" id="event-name" name="eventName" type="text" aria-describedby="event-name-hint">
               </div>
 
-
+<details class="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      I do not have an authentication code
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+   <p class="govuk-body">You'll need to <a href="https://www.gov.uk/guidance/company-authentication-codes-for-online-filing" class="govuk-link" rel="noreferrer noopener" target="_blank">request the authentication code (opens in new tab)</a>. It is sent in the post.</p>
+  </div>
+</details>
 
 
               {{ govukButton({
                 text: "Continue"
               }) }}
 
-              {{ govukDetails({
-                summaryText: "Help with authentication code",
-                html: 'This is a 6 character code issued by us to each company. The code is used to authorise online filings.<br><br> <p class="govuk-body"><a href="request-an-authentication-code" class="govuk-link">I do not have an authentication code</a></p>'
-              }) }}
 
 
 
