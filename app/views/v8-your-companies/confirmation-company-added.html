@@ -17,16 +17,18 @@
       <div class="govuk-grid-column-two-thirds">
 
         {% set html %}
+        
         <p class="govuk-notification-banner__heading">
-          We've added FLOWERS LIMITED to your account.
-          <a href="company-added" class="govuk-link">View your companies</a>.
+         You have added FLOWERS LIMITED.
+  
           {% endset %}
 
         {{ govukNotificationBanner({
           html: html,
           type: 'success'
         }) }}
-
+ <span class="govuk-caption-l">FLOWERS LIMITED (18882777)</span>
+ <h1 class="govuk-heading-l">What happens now you've added this company</h1>
 
         <p class="govuk-body">You can now: </p>
         <ul class="govuk-list govuk-list--bullet">
@@ -49,7 +51,10 @@
           for this company."
         }) }}
 
-     
+        {{ govukButton({
+            text: "Go to your companies",
+            href:"#"
+          }) }}
 
     
     </div>
