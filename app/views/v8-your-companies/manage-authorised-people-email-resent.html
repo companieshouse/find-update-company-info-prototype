@@ -59,161 +59,105 @@
       </div>
     </div>
 
-    <div class="govuk-grid-row govuk-!-padding-top-3">
+   <div class="govuk-grid-row govuk-!-padding-top-3">
       <div class="govuk-grid-column-full">
         <table class="govuk-table">
-           <caption class="govuk-table__caption govuk-table__caption--m">Digitally authorised to file </caption>
+           <caption class="govuk-table__caption govuk-table__caption--m">Details of authorised people</caption>
           <thead class="govuk-table__head">
             <tr class="govuk-table__row">
               <th scope="col" class="govuk-table__header">Email address</th>
               <th scope="col" class="govuk-table__header">Name</th>
-              <th scope="col" class="govuk-table__header">Status</th>
-              <th scope="col" class="govuk-table__header"></th>
-              <th scope="col" class="govuk-table__header"></th>
-            </tr>
+              <th scope="col" class="govuk-table__header">Digital authorisation status</th>
+              <th scope="col" class="govuk-table__header">Remove or cancel  </th>
+          </tr>
           </thead>
           <tbody class="govuk-table__body">
-            <tr class="govuk-table__row">
-              <td class="govuk-table__header">	hannah.salt@gmail.com</td>
-              <th scope="row" class="govuk-table__cell">Hannah Salt (you)</th>
-              <td class="govuk-table__cell">
-                {{govukTag({
-                  html: "AWAITING <br> CONFIRMATION",
-                  classes: "govuk-tag--yellow"
-                  })}}
-              </td>
-              <td class="govuk-table__cell">
-                <a href="cancel-person" class="govuk-link">Cancel </a>
-              </td>
-              <td class="govuk-table__cell">
-                <a href="manage-authorised-people-email-resent" class="govuk-link">Resend email</a>
-              </td>
-            </tr>
-            <tr class="govuk-table__row">
-              <td class="govuk-table__header">	example@gmail.com</td>
-              <th scope="row" class="govuk-table__header"></th>
-              <td class="govuk-table__cell">	
-                {{govukTag({
-                  html: "AWAITING <br> CONFIRMATION",
-                  classes: "govuk-tag--yellow"
-                  })}}
-              </td>
-              <td class="govuk-table__cell">
-                <a href="cancel-person" class="govuk-link">Cancel </a>
-              </td>
-              <td class="govuk-table__cell">
-                <a href="manage-authorised-people-email-resent" class="govuk-link">Resend email</a>
-              </td>
-            </tr>
-            <tr class="govuk-table__row">
-              <td class="govuk-table__header">	James-morris@accounting-for-example.com</td>
-              <th scope="row" class="govuk-table__header">James Morris </th>
-              <td class="govuk-table__cell">	
-                {{govukTag({
-                  html: "AWAITING <br> CONFIRMATION",
-                  classes: "govuk-tag--yellow"
-                  })}}
-                </td>
 
-              <td class="govuk-table__cell">
-                <a href="cancel-person" class="govuk-link">Cancel</a>
-              </td>
-              <td class="govuk-table__cell">
-                <a href="manage-authorised-people-email-resent" class="govuk-link">Resend email</a>
-              </td>
-            </tr>
 
+            <!-- Company added to your account -->
             <tr class="govuk-table__row">
-              <td class="govuk-table__header">	James-morris@accounting-for-example.com</td>
-              <th scope="row" class="govuk-table__header">James Morris </th>
-              <td class="govuk-table__cell">	
-              {{govukTag({
-                text: "CONFIRMED",
-                classes: "govuk-tag--green"
-                })}}
-                </td>
+              <td class="govuk-table__cell">	hannah.salt@gmail.com</th>
+              <td scope="row" class="govuk-table__cell">Hannah Salt <span class="govuk-visually-hidden"> </span></td>
+              <td class="govuk-table__cell">
+                {{govukTag({
+                  text: "Authorised",
+                  classes: "govuk-tag--green"
+                  })}}
+              </td>
               
               <td class="govuk-table__cell">
-                <a href="authentication-code-remove" class="govuk-link">Remove</a>
+                <a href="authentication-code-remove" class="govuk-link">Remove <span class="govuk-visually-hidden">indigo@outlook.com </span> </a> 
               </td>
+              <td class="govuk-table__cell">
+                
+              </td>
+            </tr>
+
+    
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">jill.edwards@example.com</th>
+              <td scope="row" class="govuk-table__cell">Not provided</td>
               <td class="govuk-table__cell">	
+
+                <ul class="govuk-list govuk-list--spaced">
+                  <li>
+                    {{govukTag({
+                    html: "Awaiting confirmation",
+                    classes: "govuk-tag--yellow"
+                    })}}
+                  </li>
+                   <li>
+                    <a href="" class="govuk-link">Resend email<span class="govuk-visually-hidden"> jill.edwards@example.com</span> </a>
+                   </li>
+                 <p>
+
+              </td>
+          
+            
+              <td class="govuk-table__cell">
+                <ul class="govuk-list">
+                  <li>
+                    <a href="manage-authorised-people-email-resent" class="govuk-link">Cancel <span class="govuk-visually-hidden"> ben.edwards@example.com digital authorisation</span> </a>
+            
+               
+                </li>
               </td>
             </tr>
-            
-          </tbody>
-        </table>
 
-          </tbody>
-        </table>
-
-
-       <!--  <table class="govuk-table govuk-!-margin-top-2">
-            
-          <thead class="govuk-table__head">
-
+        
+             
             <tr class="govuk-table__row">
-              <th class="govuk-table__header" scope="col"> Name
+              <td class="govuk-table__cell">ben.edwards@example.com</th>
+              <td scope="row" class="govuk-table__cell">Not provided</td>
+              <td class="govuk-table__cell">	
 
-              <th class="govuk-table__header" scope="col"> Authorisation status </th>
-              <th class="govuk-table__header" scope="col">  </th></tr>
-          </thead>
-            <tbody class="govuk-table__body">
-            <tr class="govuk-table__row">
-            <td class="govuk-table__cell">
-            <p class="govuk-body govuk-!-margin-bottom-1 govuk-!-margin-top-1"> Hannah Salt (you)</p>
-            </td>
-            <td class="govuk-table__cell">
-              {{govukTag({
-                text: "CONFIRMED",
-                classes: "govuk-tag--green"
-                })}}
-            </td>
-            <td class="govuk-table__cell">
-              <a href="authorised-persons-details" class="govuk-link">View details</a>
-            </td>
+                <ul class="govuk-list govuk-list--spaced">
+                  <li>
+                  {{govukTag({
+                    html: "Awaiting confirmation",
+                    classes: "govuk-tag--yellow"
+                    })}}
+                  </li>
+                  <li>
+                     <a href="manage-authorised-people-email-resent" class="govuk-link">Resend email<span class="govuk-visually-hidden">to ben.edwards@example.com</span> </a>
+                  </li>
+              </td>
+     
+              <td class="govuk-table__cell">
+                <ul class="govuk-list">
+                  <li>
+                    <a href="manage-authorised-people-email-resent" class="govuk-link">Cancel <span class="govuk-visually-hidden"> ben.edwards@example.com digital authorisation</span> </a>
+            
+               
+                </li>
+              </td>
+
             </tr>
 
-            </tbody>
-        </table>  -->
-
-
-      <!-- {{ govukSummaryList({
-        card: {
-          title: {
-            text: "Hannah Salt"
-          },
-          actions: {
-            items: [
-              {
-                href: "remove-authorised-person",
-                text: "Remove",
-                visuallyHiddenText: "for FLOWERS LIMITED"
-              }
-            ]
-          }
-        },
-        rows: [
-          {
-            key: {
-              text: "Email address"
-            },
-            value: {
-              html: "hannah.salt@gmail.com"
-            }
-          },
-          {
-            key: {
-              text: "Authorisation status"
-            },
-            value: {
-              html: "<strong class='govuk-tag govuk-tag--green'>
-                Confirmed
-              </strong>"
-            }
-          }
-        ]
-      }) }} -->
-
+ 
+            
+          </tbody>
+        </table>
 
 
 
