@@ -1,4 +1,7 @@
-{% extends "layouts/layout-chs-signed-out.html" %}
+
+
+
+    {% extends "layouts/layout-chs-signed-out.html" %}
 
 {% block pageTitle %}
   Your companies - Enter the company authentication code - Companies House WebFiling account - GOV.UK
@@ -17,7 +20,7 @@
 
 <form action="manage-authorised-people-no-longer-authorised" method="post">
     <div class="govuk-grid-row">
-      <div class="govuk-grid-column-full">
+      <div class="govuk-grid-column-three-quarters">
         {% if (data['adding-jill'] == true) %}
 
 
@@ -86,8 +89,11 @@
         text: "Add new authorised person",
         href:"add-presenter"
       }) }}
-      </div>
-    </div>
+
+
+
+
+
 
 
   <div class="govuk-form-group govuk-!-margin-top-2 govuk-!-margin-bottom-0">
@@ -101,7 +107,7 @@
 
         <div class="govuk-button-group ">
 
-        <input class="govuk-input govuk-!-width-two-thirds" id="search" name="search" type="text" value="demo@example.com">
+        <input class="govuk-input govuk-!-width-two-thirds" id="search" name="search" type="text" value="jamie.edwards@example.com">
        
         
         {{ govukButton({
@@ -122,6 +128,7 @@
 
     </div>
 
+
   <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
 
@@ -133,10 +140,15 @@
     </div>
   </div>
 
-    
 
 
 
+
+    </div>
+  </div>
 </form>
 
 {% endblock %}
+
+
+

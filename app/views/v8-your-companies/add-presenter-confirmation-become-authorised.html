@@ -1,0 +1,64 @@
+{% extends "layouts/layout-chs-signed-out.html" %}
+
+{% block pageTitle %}
+  Check your details
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back to your companies",
+    href:"add-a-company"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+
+
+<div class="govuk-grid-row">
+
+
+      <div class="govuk-grid-column-two-thirds">
+      <form action="add-presenter-confirmation-become-authorised" method="post" novalidate>
+
+         {% set html %}
+        <h3 class="govuk-notification-banner__heading">
+          Email sent
+        </h3>
+        <p class="govuk-body">We've sent an email to <strong>jill.edwards@example.com</strong> inviting them to be digitally authorised to file online for ANDROID TECHNOLOGY LTD.</p>
+      {% endset %}
+
+        {{ govukNotificationBanner({
+          html: html,
+          type: 'success'
+        }) }}
+
+      <span class="govuk-caption-l">ANDROID TECHNOLOGY LTD (10866549)</span> <h1 class="govuk-heading-l">What happens now</h1> </span>
+
+      <p class="govuk-body">We've sent an email to <strong>jill.edwards@example.com</strong> inviting them to be digitally authorised to file online for ANDROID TECHNOLOGY LTD.</p>
+
+
+
+
+
+      <div class="govuk-button-group  ">
+      {{ govukButton({
+          text: "View digitally authorised people",
+          href:"confirmation-person-added-re-authorised",
+          classes:"govuk-!-static-margin-top-3"
+      }) }}
+
+
+
+    </div>
+    </form>
+  </div>
+
+  </div>
+  </div>
+
+
+
+
+{% endblock %}

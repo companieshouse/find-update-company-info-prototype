@@ -1,4 +1,7 @@
-{% extends "layouts/layout-chs-signed-out.html" %}
+
+
+
+    {% extends "layouts/layout-chs-signed-out.html" %}
 
 {% block pageTitle %}
   Your companies - Enter the company authentication code - Companies House WebFiling account - GOV.UK
@@ -17,7 +20,7 @@
 
 <form action="manage-authorised-people-no-longer-authorised" method="post">
     <div class="govuk-grid-row">
-      <div class="govuk-grid-column-full">
+      <div class="govuk-grid-column-three-quarters">
         {% if (data['adding-jill'] == true) %}
 
 
@@ -86,8 +89,11 @@
         text: "Add new authorised person",
         href:"add-presenter"
       }) }}
-      </div>
-    </div>
+
+
+
+
+
 
 
   <div class="govuk-form-group govuk-!-margin-top-2 govuk-!-margin-bottom-0">
@@ -122,104 +128,106 @@
 
     </div>
 
-    <div class="govuk-grid-row govuk-!-padding-top-3">
-      <div class="govuk-grid-column-full">
-        <table class="govuk-table">
-           <caption class="govuk-table__caption govuk-table__caption--m">Details of authorised people</caption>
-          <thead class="govuk-table__head">
-            <tr class="govuk-table__row">
-              <th scope="col" class="govuk-table__header">Email address</th>
-              <th scope="col" class="govuk-table__header">Name</th>
-              <th scope="col" class="govuk-table__header">Digital authorisation status</th>
-              <th scope="col" class="govuk-table__header">Remove or cancel  </th>
-          </tr>
-          </thead>
-          <tbody class="govuk-table__body">
-
-
-            <!-- Company added to your account -->
-            <tr class="govuk-table__row">
-              <td class="govuk-table__cell">	hannah.salt@gmail.com</th>
-              <td scope="row" class="govuk-table__cell">Hannah Salt <span class="govuk-visually-hidden"> </span></td>
-              <td class="govuk-table__cell">
-                {{govukTag({
-                  text: "Authorised",
-                  classes: "govuk-tag--green"
-                  })}}
-              </td>
-              
-              <td class="govuk-table__cell">
-                <a href="authentication-code-remove" class="govuk-link">Remove <span class="govuk-visually-hidden">indigo@outlook.com </span> </a> 
-              </td>
-
-            </tr>
-
-    
-            <tr class="govuk-table__row">
-              <td class="govuk-table__cell">jill.edwards@example.com</th>
-              <td scope="row" class="govuk-table__cell">Not provided</td>
-              <td class="govuk-table__cell">	
-
-                <ul class="govuk-list govuk-list--spaced">
-                  <li>
-                    {{govukTag({
-                      html: "Not authorised",
-                      classes: "govuk-tag--red"
-                      })}}
-                  </li>
-                   <li>
-                    <a href="add-presenter-check-details-become-authorised" class="govuk-link">Restore authorisation<span class="govuk-visually-hidden"> jill.edwards@example.com</span> </a>
-                   </li>
-                 <p>
-
-              </td>
-          
-              <td class="govuk-table__cell">	
-               
-                    <a href="authentication-code-do-not-renew" class="govuk-link">Remove<span class="govuk-visually-hidden"> jill.edwards@example.com digital authorisation</span> </a>
-                  
-                </ul>
-              </td>
-            </tr>
-
-        
-             
-            <tr class="govuk-table__row">
-              <td class="govuk-table__cell">ben.edwards@example.com</th>
-              <td scope="row" class="govuk-table__cell">Not provided</td>
-              <td class="govuk-table__cell">	
-
-                <ul class="govuk-list govuk-list--spaced">
-                  <li>
-                  {{govukTag({
-                    html: "Awaiting confirmation",
-                    classes: "govuk-tag--yellow"
-                    })}}
-                  </li>
-                  <li>
-                     <a href="manage-authorised-people-email-resent" class="govuk-link">Resend email<span class="govuk-visually-hidden">to ben.edwards@example.com</span> </a>
-                  </li>
-              </td>
-     
-              <td class="govuk-table__cell">
-                <ul class="govuk-list">
-                  <li>
-                    <a href="manage-authorised-people-email-resent" class="govuk-link">Cancel <span class="govuk-visually-hidden"> ben.edwards@example.com digital authorisation</span> </a>
-            
-               
-                </li>
-              </td>
-
-            </tr>
-
- 
-            
-          </tbody>
-        </table>
 
 
 
+
+  <h2 class="govuk-heading-m">Details of authorised people</h2>
+
+
+
+
+    <div class="govuk-summary-card">
+  <div class="govuk-summary-card__title-wrapper">
+    <h3 class="govuk-summary-card__title">
+      jill.edwards@example.com
+    </h3>
+    <ul class="govuk-summary-card__actions">
+      <li class="govuk-summary-card__action">
+        <a class="govuk-link" href="#">Remove<span class="govuk-visually-hidden">jill.edwards@example.com</span></a>
+      </li>
+      
+    </ul>
+  </div>
+
+
+  <div class="govuk-summary-card__content">
+    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Name
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Not provided
+        </dd>
       </div>
+      <div class="govuk-summary-list__row ">
+        <dt class="govuk-summary-list__key ">
+          Digital authorisation status
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <strong class="govuk-tag govuk-tag--red">
+            Not authorised
+          </strong>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="add-presenter-check-details-become-authorised">Restore authorisation<span class="govuk-visually-hidden">for jill.edwards@example.com</span></a>
+        </dd>
+      </div>
+    </dl>
+  </div>
+
+</div>
+
+
+
+
+  <div class="govuk-summary-card">
+  <div class="govuk-summary-card__title-wrapper">
+    <h3 class="govuk-summary-card__title">
+      ben.edwards@example.com
+    </h3>
+    <ul class="govuk-summary-card__actions">
+      <li class="govuk-summary-card__action">
+        <a class="govuk-link" href="#">Cancel<span class="govuk-visually-hidden">ben.edwards@example.com digital authorisation</span></a>
+      </li>
+      
+    </ul>
+  </div>
+
+
+  <div class="govuk-summary-card__content">
+    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Name
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Not provided
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Digital authorisation status
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <strong class="govuk-tag govuk-tag--yellow" style="display:block">
+            Awaiting confirmation
+          </strong>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="manage-authorised-people-email-resent">Resend email<span class="govuk-visually-hidden"> digital authorisation for ben.edwards@example.com</span></a>
+        </dd>
+      </div>
+    </dl>
+  </div>
+</div>
+
+
+
+
+
+    </div>
   </div>
 </form>
 
