@@ -26,7 +26,8 @@
         <h3 class="govuk-notification-banner__heading">
           Email sent
         </h3>
-        <p class="govuk-body">We've sent an email to <strong>jill.edwards@example.com</strong> inviting them to be digitally authorised to file online for ANDROID TECHNOLOGY LTD.</p>
+        <p class="govuk-body">We've sent an email to <strong>jill.edwards@example.com</strong> inviting them to be digitally authorised to file online for this company.</p>
+        <p class="govuk-body">We’ve also sent an email to any other people who are authorised to let them know.</p>
       {% endset %}
 
         {{ govukNotificationBanner({
@@ -34,9 +35,9 @@
           type: 'success'
         }) }}
 
-      <span class="govuk-caption-l">ANDROID TECHNOLOGY LTD (10866549)</span> <h1 class="govuk-heading-l">What happens now</h1> </span>
+      <span class="govuk-caption-l">ANDROID TECHNOLOGY LTD (10866549)</span> <h1 class="govuk-heading-l">What happens now you've invited jill.edwards@example.com to be digitally authorised</h1> </span>
 
-      <p class="govuk-body">We've sent an email to <strong>jill.edwards@example.com</strong> inviting them to be digitally authorised to file online for ANDROID TECHNOLOGY LTD.</p>
+      <p class="govuk-body"> They will need to either accept or decline the invitation to be digitally authorised.</p>
 
 
 
@@ -44,7 +45,7 @@
 
       <div class="govuk-button-group  ">
       {{ govukButton({
-          text: "View digitally authorised people",
+          text: "Go to digitally authorised people",
           href:"confirmation-person-added-re-authorised",
           classes:"govuk-!-static-margin-top-3"
       }) }}
