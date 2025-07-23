@@ -573,4 +573,35 @@ router.post('/v8-your-companies/one-login-enter-password', function (req, res) {
 
 
 
+  /*
+   * Remove and do not restore company
+   */
+
+  router.get('/v8-your-companies/remove-do-not-restore-company', function (req, res) {
+  
+
+    // company removed flag
+    req.session.data['remove-android'] = true;
+
+    res.redirect('remove-not-digitally-authorised-company')
+  
+  })
+  
+
+
+  /*
+   * restore company
+   */
+
+  router.get('/v8-your-companies/restore-test-company', function (req, res) {
+  
+
+    // company restore flag
+    req.session.data['restore-test-company'] = true;
+
+    res.redirect('confirm-company-details-re-auth')
+  
+  })
+
+
 module.exports = router
