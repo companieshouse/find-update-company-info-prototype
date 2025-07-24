@@ -14,7 +14,7 @@
 
 {% block content %}
 
-<form action="confirmation-cancel-person" method="post">
+<form action="confirmation-cancel-person-after-migration" method="post">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-full">
 
@@ -25,7 +25,7 @@
         <h3 class="govuk-notification-banner__heading">
           Digital authorisation not restored
         </h3>
-        <p class="govuk-body">You have confirmed you do not want to restore Jill Edwards's digital authorisation to file online for ANDROID TECHNOLOGY LTD. </p>
+        <p class="govuk-body">You have confirmed you do not want to restore Jill Edwards's digital authorisation to file online for BETA TECHNOLOGY LIMITED. </p>
       
         <!-- <p class="govuk-body">We've emailed Jill Edwards to let them know. We've also sent an email to any other people who are digitally authorised.</p> -->
       {% endset %}
@@ -37,7 +37,7 @@
 
       
 
-        <span class="govuk-caption-l"> ANDROID TECHNOLOGY LTD (10866549)</span> 
+        <span class="govuk-caption-l">BETA TECHNOLOGY LIMITED (10866549)</span> 
         <h1 class="govuk-heading-l">What happens now you've not restored this person's digital authorisation
     </h1>
 
@@ -58,7 +58,7 @@
 
     {{ govukButton({
       text: "Go to digitally authorised people",
-      href:""
+      href:"manage-people-removed"
     }) }}
     </div>
   </div>
