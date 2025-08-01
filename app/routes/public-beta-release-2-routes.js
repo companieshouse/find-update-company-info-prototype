@@ -303,13 +303,13 @@ router.post('/public-beta-release-2/one-login-enter-password', function (req, re
     if (req.session.data['set-journey'].includes('public-11')) 
     {
 
-      res.redirect('/public-beta-release-2/link-to-existing-chs-account') 
+      res.redirect('/public-beta-release-2/verify-email-address') 
       
     }
     else if (req.session.data['set-journey'].includes('public-14')) 
     {
   
-      res.redirect('/public-beta-release-2/end-linking-no-banner') 
+      res.redirect('/public-beta-release-2/verify-email-address') 
         
     }
     else if (req.session.data['set-journey'].includes('public-15')) 
@@ -356,9 +356,24 @@ router.post('/public-beta-release-2/one-login-enter-password', function (req, re
 
   })
   
+
+   //OTP
+   router.post('/public-beta-release-2/verify-email-address', function (req, res) {
+
+    if (req.session.data['set-journey'].includes('public-11')) 
+    {
+
+      res.redirect('/public-beta-release-2/company-lookup') 
+      
+    }
+    else if (req.session.data['set-journey'].includes('public-14')) 
+    {
   
+      res.redirect('/public-beta-release-2/end-linking-no-banner') 
+        
+    }
   
-  
+  })
   
   //One loginsign create - email address
   router.post('/public-beta-release-2/create-enter-email', function (req, res) {
@@ -455,7 +470,7 @@ router.post('/public-beta-release-2/one-login-enter-password', function (req, re
     
     if (req.session.data['set-journey'] === 'public-14') {
         
-      res.redirect('/public-beta-release-2/end-linking-no-banner')
+      res.redirect('/public-beta-release-2/verify-email-address')
     
     }
     else if (req.session.data['set-journey'] === 'public-15') {
@@ -484,7 +499,7 @@ router.post('/public-beta-release-2/one-login-enter-password', function (req, re
     }
     else if (req.session.data['set-journey'] === 'public-11') {
         
-      res.redirect('/public-beta-release-2/link-to-existing-chs-account')
+      res.redirect('/public-beta-release-2/verify-email-address')
     
     }
  
