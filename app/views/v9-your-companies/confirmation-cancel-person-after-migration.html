@@ -1,0 +1,75 @@
+{% extends "layouts/layout-chs-signed-out.html" %}
+
+{% block pageTitle %}
+  Your companies - Enter the company authentication code - Companies House WebFiling account - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Go back to your companies",
+    href:"company-added"
+  }) }}
+{% endblock %}
+
+
+{% block content %}
+
+<form action="confirmation-cancel-person-after-migration" method="post">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+
+ <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+        {% set html %}
+        <h3 class="govuk-notification-banner__heading">
+          Digital authorisation not restored
+        </h3>
+        <p class="govuk-body">You have confirmed you do not want to restore Jill Edwards's digital authorisation to file online for BETA TECHNOLOGY LIMITED. </p>
+      
+        <!-- <p class="govuk-body">We've emailed Jill Edwards to let them know. We've also sent an email to any other people who are digitally authorised.</p> -->
+      {% endset %}
+
+      {{ govukNotificationBanner({
+        html: html,
+        type: 'success'
+      }) }}
+
+      
+
+        <span class="govuk-caption-l">BETA TECHNOLOGY LIMITED (10866549)</span> 
+        <h1 class="govuk-heading-l">What happens now you've not restored this person's digital authorisation
+    </h1>
+
+   <!--  <h2 class="govuk-heading-m govuk-!-margin-bottom-1">FLOWERS LIMITED </h2>
+    <span class="govuk-body "> Company number <span class="govuk-body govuk-!-font-weight-bold"> 18882777</span></p>
+        
+    <p class="govuk-body govuk-!-font-weight-bold">
+    <span class="govuk-body">Correspondence address</span><br>
+2nd Floor Red House, 17 London Road, London  SA73 8PH </p> -->
+    
+ 
+
+<p class="govuk-body">We've emailed Jill Edwards to let them know. We've also sent an email to any other people who are digitally authorised.</p>
+
+ <p class="govuk-body">Jill Edwards has been removed from the list of digitally authorised people for this company. </p>
+
+    <!-- Digitally authorise a person to file online for this company -->
+
+    {{ govukButton({
+      text: "Go to digitally authorised people",
+      href:"manage-people-removed"
+    }) }}
+    </div>
+  </div>
+ 
+ 
+
+    
+    </div>
+  </div>
+{% endblock %}
+
+
+
+

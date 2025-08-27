@@ -1,0 +1,172 @@
+{% extends "layouts/layout-chs-signed-out.html" %}
+
+{% block pageTitle %}
+  Your companies - Companies House WebFiling account - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Go back to your companies",
+    href:""
+  }) }}
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-width-container">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+    <h1 class="govuk-heading-xl">Invitations to be digitally authorised</h1>
+
+
+
+
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+
+
+              <table class="govuk-table">
+                <caption class="govuk-table__caption govuk-table__caption--m visuallyhidden">Invitations to be digitally authorised for a company</caption>
+
+
+                <thead class="govuk-table__head">
+                  <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header">Company name</th>
+                    <th scope="col" class="govuk-table__header">Company number</th>
+                    <th scope="col" class="govuk-table__header">Invited by </th>
+                    <th scope="col" class="govuk-table__header"></th>
+                    <th scope="col" class="govuk-table__header"></th>
+                  </tr>
+                </thead>
+                <tbody class="govuk-table__body">
+                <!--   <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">ANDROID TECHNOLOGY LTD</th>
+                    <td class="govuk-table__cell">10866549</td>
+                    <td scope="col" class="govuk-table__cell">j.example@gmail.com</td>
+                    <td class="govuk-table__cell"><a href="company-invitations-accept" class="govuk-link govuk-link--no-visited-state">Accept</a></td>
+                    <td class="govuk-table__cell"><a href="company-invitations-decline" class="govuk-link govuk-link--no-visited-state">Decline</a></td>
+                  </tr>
+
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">BROWN AND SALTER LIMITED</th>
+                    <td class="govuk-table__cell">08449801</td>
+                    <td scope="col" class="govuk-table__cell">james-morris@accounting.com</td>
+                    <td class="govuk-table__cell"><a href="company-invitations-accept" class="govuk-link govuk-link--no-visited-state">Accept</a></td>
+                    <td class="govuk-table__cell"><a href="company-invitations-decline" class="govuk-link govuk-link--no-visited-state">Decline</a></td>
+                  </tr> -->
+
+                  <tbody class="govuk-table__body">
+                    <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header">FLOWERS LIMITED</th>
+                      <td class="govuk-table__cell">18882777</td>
+                      <td scope="col" class="govuk-table__cell">hannah.salt@gmail.com</td>
+                      <td class="govuk-table__cell"><a href="company-invitations-accept" class="govuk-link govuk-link--no-visited-state">Accept</a></td>
+                      <td class="govuk-table__cell"><a href="company-invitations-decline" class="govuk-link govuk-link--no-visited-state">Decline</a></td>
+                    </tr>
+
+                 <!--  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Next 33 weeks</th>
+                    <td class="govuk-table__cell">£109.80 per week</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Total estimated pay</th>
+                    <td class="govuk-table__cell">£4,282.20</td>
+                  </tr> -->
+                </tbody>
+              </table>
+
+
+
+
+
+            
+                  <!--  <p class="govuk-body govuk-!-font-weight-bold">
+                        <span class="govuk-body">Correspondence address</span><br>
+              2nd Floor Red House, 17 London Road, London  SA73 8PH </p>--> 
+
+
+                  <!--<div class="govuk-grid-row">
+                    <div class="govuk-grid-column-full">
+                    <table class="govuk-table govuk-!-margin-top-2">
+                        <caption class="govuk-table__caption govuk-table__caption--m govuk-!-margin-bottom-1">
+                          People digitally authorised to file online for this company
+                          <p class="govuk-hint govuk-!-margin-bottom-0 govuk-!-margin-top-1">Anyone with access to the current authentication code can also file online for this company</p>
+                        </caption>
+
+                      <thead class="govuk-table__head">
+
+                        <tr class="govuk-table__row">
+                          <th class="govuk-table__header" scope="col"> Name
+
+                          <th class="govuk-table__header" scope="col"> Authorisation status </th>
+                          <th class="govuk-table__header" scope="col">  </th>
+
+                        </tr>
+
+
+                      </thead>
+                      <tbody class="govuk-table__body">
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell">
+                            <p class="govuk-body govuk-!-margin-bottom-1 govuk-!-margin-top-1"> Hannah Salt (you)</p>
+                          </td>
+                          <td class="govuk-table__cell">
+                            {{govukTag({
+                              text: "CONFIRMED",
+                              classes: "govuk-tag--green"
+                            })}}
+                          </td>
+                          <td class="govuk-table__cell">
+                          <a href="authorised-persons-details" class="govuk-link">View details</a>
+                          </td>
+                        </tr>
+
+                      </tbody>
+                    </table> -->
+                    <!--<p> <a href="company-overview-flowers-ltd" class="govuk-link govuk-link--no-visited-state">File for this company</a></p>-->
+
+                    
+                    
+                    <!-- <p> <a href="add-presenter" class="govuk-link govuk-link--no-visited-state">Digitally authorise a person to file online for this company</a></p> -->
+       
+
+                   <nav class="govuk-pagination" aria-label="Pagination">
+                      <ul class="govuk-pagination__list">
+                        <li class="govuk-pagination__item govuk-pagination__item--current">
+                          <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 1" aria-current="page">
+                            1
+                          </a>
+                        </li>
+                        <li class="govuk-pagination__item">
+                          <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 2">
+                            2
+                          </a>
+                        </li>
+                        <li class="govuk-pagination__item">
+                          <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 3">
+                            3
+                          </a>
+                        </li>
+                      </ul>
+                      <div class="govuk-pagination__next">
+                        <a class="govuk-link govuk-pagination__link" href="#" rel="next">
+                          <span class="govuk-pagination__link-title">
+                            Next<span class="govuk-visually-hidden"> page</span>
+                          </span>
+                          <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+                            <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+                          </svg>
+                        </a>
+                      </div>
+                    </nav>         
+
+            
+
+</div>
+</div>
+</div>
+
+
+{% endblock %}

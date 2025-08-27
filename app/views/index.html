@@ -754,6 +754,35 @@
           Your companies on Companies House account (CHS)
         </h2>
 
+          {{ govukSummaryList({
+          card: {
+            title: {
+              html: "Your companies - users do not need to re-authenticate"
+            },
+            actions: {
+              items: [
+                {
+                  
+                }
+              ]
+            }
+          },
+          rows: [
+          {
+            key: {
+              text: "Version 9"
+            },
+            value: {
+              html: "<strong class='govuk-tag govuk-tag--blue'>
+               In progress
+              </strong> <br><br>
+              <a href='/v9-your-companies/' class='govuk-link'>Your companies prototype</a>
+              "
+            }
+          }
+          ]
+        }) }}
+
 
         {{ govukSummaryList({
           card: {

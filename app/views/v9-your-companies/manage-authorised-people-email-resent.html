@@ -1,0 +1,56 @@
+{% extends "layouts/layout-chs-signed-out.html" %}
+
+{% block pageTitle %}
+  Your companies - Enter the company authentication code - Companies House WebFiling account - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Go back to your companies",
+    href:""
+  }) }}
+{% endblock %}
+
+
+
+{% block content %}
+
+<form action="manage-authorised-people" method="post">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+
+      {% set html %}
+      <h3 class="govuk-notification-banner__heading">
+        Email sent
+      </h3>
+      <p class="govuk-body">We've sent another email to <span class='govuk-body govuk-!-font-weight-bold'> ben.edwards@example.com</span> inviting them to be digitally authorised for FLOWERS LIMITED.</p>
+    {% endset %}
+
+    {{ govukNotificationBanner({
+      html: html,
+      type: 'success'
+    }) }}
+
+
+        
+        <h1 class="govuk-heading-l">
+          <span class="govuk-caption-l">BETA TECHNOLOGY LIMITED (10866549)</span> What happens now we've sent another email invitation
+      </h1>
+
+
+      <p class="govuk-body">They will need to either accept or decline the invitation to be digitally authorised.</p>
+
+      {{ govukButton({
+        text: "Go to digitally authorised people",
+        href:"confirmation-person-added-re-authorised"
+      }) }}
+      </div>
+    </div>
+
+   
+      </div>
+  </div>
+</form>
+
+{% endblock %}

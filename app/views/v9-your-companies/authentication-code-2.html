@@ -1,0 +1,74 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Enter the company authentication code - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+
+{% set serviceName %}
+ 
+{% endset %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+
+<div class="govuk-grid-row">
+
+<div class="govuk-grid-column-two-thirds">
+    <form action="authentication-code-2" method="post">
+
+
+
+              {% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
+
+              <span class='govuk-caption-l'>TEST COMPANY LTD (1245677)</span>
+              <div class="govuk-form-group">
+                <h1 class="govuk-label-wrapper">
+                  <label class="govuk-label govuk-label--l" for="event-name">
+                    Enter the company authentication code
+                  </label>
+                </h1>
+                <div id="event-name-hint" class="govuk-hint">
+                  This is a 6 character code issued by us to each company. The code is used to authorise online filings.
+                </div>
+                <input class="govuk-input govuk-input--width-10" id="event-name" name="eventName" type="text" aria-describedby="event-name-hint">
+              </div>
+
+<details class="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      I do not have an authentication code
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+   <p class="govuk-body">You'll need to <a href="https://www.gov.uk/guidance/company-authentication-codes-for-online-filing" class="govuk-link" rel="noreferrer noopener" target="_blank">request the authentication code (opens in new tab)</a>. It is sent in the post.</p>
+  </div>
+</details>
+
+
+              {{ govukButton({
+                text: "Continue",
+                href:"confirmation-company-added-scenario-1"
+              }) }}
+
+
+              
+
+
+
+
+            </form>
+          </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+{% endblock %}

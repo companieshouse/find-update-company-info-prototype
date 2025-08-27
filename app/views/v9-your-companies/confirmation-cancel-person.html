@@ -1,0 +1,57 @@
+{% extends "layouts/layout-chs-signed-out.html" %}
+
+{% block pageTitle %}
+  Your companies - Enter the company authentication code - Companies House WebFiling account - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Go back to your companies",
+    href:"#"
+  }) }}
+{% endblock %}
+
+
+{% block content %}
+
+<form action="confirmation-cancel-person" method="post">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+        {% set html %}
+        <h3 class="govuk-notification-banner__heading">
+          Digital authorisation cancelled
+        </h3>
+        <p class="govuk-body">You've successfully cancelled digital authorisation for <span class='govuk-body govuk-!-font-weight-bold'> jill.edwards@example.com</span> to file online for FLOWERS LIMITED.</p>
+      {% endset %}
+
+      {{ govukNotificationBanner({
+        html: html,
+        type: 'success'
+      }) }}
+
+      <h1 class="govuk-heading-l">
+        <span class="govuk-caption-l"> FLOWERS LIMITED (18882777)</span> What happens now you've cancelled this person's digital authorisation
+    </h1>
+
+    <p class="govuk-body">We’ve sent an email to any people who are digitally authorised to let them know.</p>
+
+    {{ govukButton({
+      text: "Go to digitally authorised people",
+      href:"#"
+    }) }}
+    </div>
+  </div>
+  
+
+
+
+
+    
+    </div>
+  </div>
+{% endblock %}
+
+
+
+
