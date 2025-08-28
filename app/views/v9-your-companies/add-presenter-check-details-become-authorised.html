@@ -26,7 +26,7 @@
 
       <p>We'll send an email to <strong>ben.edwards@example.com</strong> asking if they want to be digitally authorised for this company.</p>
 
-      {{ govukSummaryList({
+      <!-- {{ govukSummaryList({
         classes: 'govuk-!-margin-bottom-9',
         rows: [
           {
@@ -47,12 +47,13 @@
             }
           }
         ]
-      }) }}
+      }) }} -->
 
 
       <div class="govuk-button-group">
       {{ govukButton({
           text: "Send email",
+          classes:"govuk-!-margin-top-3",
           href:"add-presenter-confirmation-become-authorised"
       }) }}
 
