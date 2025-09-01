@@ -47,3 +47,5 @@ router.use('/', require('./routes/v7-your-companies-routes.js'))
 
 
 router.use('/', require('./routes/v8-your-companies-routes.js'))
+
+router.use('/', require('./routes/v9-your-companies-routes.js'))
