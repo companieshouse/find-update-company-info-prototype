@@ -1,0 +1,187 @@
+{% extends "layouts/layout-chs-signed-out.html" %}
+
+{% block pageTitle %}
+  Your companies - Enter the company authentication code - Companies House WebFiling account - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Go back to your companies",
+    href:""
+  }) }}
+{% endblock %}
+
+
+
+{% block content %}
+
+<form action="manage-authorised-people-no-longer-authorised" method="post">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-three-quarters">
+        {% if (data['adding-jill'] == true) %}
+
+
+        {% set html %}
+        <h3 class="govuk-notification-banner__heading">
+          Email sent
+        </h3>
+        <p class="govuk-body">We've sent an email to jill.edwards@example.com inviting them to be digitally authorised to file online for FLOWERS LIMITED.</p>
+      {% endset %}
+
+        {{ govukNotificationBanner({
+          html: html,
+          type: 'success'
+        }) }}
+
+        {% endif %}
+
+
+
+
+        <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+          <div class="govuk-notification-banner__header">
+            <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+              Important
+            </h2>
+          </div>
+          <div class="govuk-notification-banner__content">
+
+            <h3 class="govuk-notification-banner__heading">
+             Restore people's digital authorisation
+            </h3>
+            <p class="govuk-body">
+             Anyone who has a ‘not authorised’ status, and still needs to be digitally authorised for this company, will need to have their authorisation restored.
+            </p>
+
+            <p class="govuk-body">
+              You can do this by selecting 'restore authorisation', or people can restore themselves. You can also remove people.
+              </p>
+          </div>
+        </div>
+
+
+        <form action="confirmation-person-added-re-authorised" method="post">
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+        
+        <h1 class="govuk-heading-l">
+          <span class="govuk-caption-l">ANDROID TECHNOLOGY LTD (10866549)</span> People digitally authorised to file online for this company 
+      </h1>
+
+     <!--  <h2 class="govuk-heading-m govuk-!-margin-bottom-1">FLOWERS LIMITED </h2>
+      <span class="govuk-body "> Company number <span class="govuk-body govuk-!-font-weight-bold"> 18882777</span></p>
+          
+      <p class="govuk-body govuk-!-font-weight-bold">
+      <span class="govuk-body">Correspondence address</span><br>
+  2nd Floor Red House, 17 London Road, London  SA73 8PH </p> -->
+      
+  <div class="govuk-inset-text">
+    Anyone with access to the current authentication code can also file online for this company.
+  </div>
+
+
+      <!-- Digitally authorise a person to file online for this company -->
+
+      {{ govukButton({
+        text: "Add new authorised person",
+        href:"add-presenter"
+      }) }}
+
+
+  <h2 class="govuk-heading-m">Details of authorised people</h2>
+
+
+
+    {{ govukSummaryList({
+    card: {
+      title: {
+        text: "hannah.salt@gmail.com"
+      },
+      actions: {
+        items: [
+          {
+            href: "authentication-code-remove",
+            text: "Remove",
+            visuallyHiddenText: "hannah.salt@gmail.com"
+          }
+        ]
+      }
+    },
+    rows: [
+      {
+        key: {
+          text: "Name"
+        },
+        value: {
+          html: "Hannah Salt"
+        }
+      },
+      {
+        key: {
+          text: "Digital authorisation status"
+        },
+        value: {
+          html: '<strong class="govuk-tag govuk-tag--green">
+                    Authorised
+                  </strong>'
+        }
+      }
+    ]
+  }) }}
+
+
+
+
+
+
+
+  <div class="govuk-summary-card">
+  <div class="govuk-summary-card__title-wrapper">
+    <h2 class="govuk-summary-card__title">
+      ben.edwards@example.com
+    </h2>
+    <ul class="govuk-summary-card__actions">
+      <li class="govuk-summary-card__action">
+        <a class="govuk-link" href="#">Cancel<span class="govuk-visually-hidden">ben.edwards@example.com digital authorisation</span></a>
+      </li>
+      
+    </ul>
+  </div>
+
+
+  <div class="govuk-summary-card__content">
+    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Name
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Not provided
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Digital authorisation status
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <strong class="govuk-tag govuk-tag--yellow" style="display:block">
+            Awaiting confirmation
+          </strong>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="manage-authorised-people-email-resent">Resend email<span class="govuk-visually-hidden"> digital authorisation for ben.edwards@example.com</span></a>
+        </dd>
+      </div>
+    </dl>
+  </div>
+</div>
+
+
+
+
+
+    </div>
+  </div>
+</form>
+
+{% endblock %}

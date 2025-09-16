@@ -1,0 +1,64 @@
+{% extends "layouts/layout-chs-signed-out.html" %}
+
+{% block pageTitle %}
+  Your companies - Enter the company authentication code - Companies House WebFiling account - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+
+
+{% block content %}
+
+<form action="confirmation-company-removed" method="post">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+        {% set html %}
+        <p class="govuk-notification-banner__heading">
+          You have removed FLOWERS LIMITED.
+          {% endset %}
+
+        {{ govukNotificationBanner({
+          html: html,
+          type: 'success'
+        }) }}
+
+        <span class="govuk-caption-l">FLOWERS LIMITED (18882777)</span>
+        <h1 class="govuk-heading-l">What happens now you've removed this company</h1>
+
+
+        <p class="govuk-body">We've removed it from the list of companies in your account.</p>
+
+        <p class="govuk-body">If you want to file online for the company in the future, you’ll need to use a current company authentication code.</p>
+
+        <p class="govuk-body">We've sent an email to any other people who are authorised to let them know.</p>
+
+
+        <div class="govuk-button-group govuk-!-padding-top-3">
+
+
+          {{ govukButton({
+            text: "Go to your companies",
+            href:"your-companies-no-longer-authorised-summary-card-alt-2-removed"
+          }) }}
+
+            
+          </button>
+          <!-- <a class="govuk-link" href="manage-authorised-people">Go to your companies</a> -->
+        </div>
+
+
+
+     
+
+    
+    </div>
+  </div>
+{% endblock %}
+
+
+
+

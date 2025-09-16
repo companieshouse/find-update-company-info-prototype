@@ -1,0 +1,60 @@
+{% extends "layouts/layout-chs-signed-out.html" %}
+
+{% block pageTitle %}
+  Your companies - Enter the company authentication code - Companies House WebFiling account - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+
+
+{% block content %}
+
+<form action="confirmation-company-added" method="post">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+        {% set html %}
+        <p class="govuk-notification-banner__heading">
+          Hannah Salt is no longer digitally authorised to file online for FLOWERS LIMITED.
+          {% endset %}
+
+        {{ govukNotificationBanner({
+          html: html,
+          type: 'success'
+        }) }}
+
+        <span class="govuk-caption-l">FLOWERS LIMITED (18882777)</span>
+        <h1 class="govuk-heading-l">What happens now you've removed this person's digital authorisation</h1>
+
+
+        <p class="govuk-body"> We've emailed Hannah Salt to let them know. We've also sent an email to any other people who are digitally authorised.
+
+</p>
+
+        <p class="govuk-body">You may wish to <a class="govuk-link" rel="noreferrer noopener" target="_blank" href="#"> change the authentication code (opens in a new tab)</a> for this company if Hannah Salt still has access to it.</p>
+
+
+     
+
+        <div class="govuk-button-group">
+          {{ govukButton({
+            text: "Go to digitally authorised people",
+            href:"#"
+          }) }}
+        
+        </div>
+
+
+     
+
+    
+    </div>
+  </div>
+{% endblock %}
+
+
+
+

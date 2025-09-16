@@ -1,0 +1,143 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  You’ve signed in to your GOV.UK One Login – GOV.UK One Login prototype
+{% endblock %}
+
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+    <form action="existing-account" method="post" novalidate>
+
+       <!-- WebFiling info saved -->
+
+      {% if (data['existing-webfiling-account'] === "yes") %}
+      {% set html %}
+      <h3 class="govuk-notification-banner__heading">
+        We have saved your WebFiling information.
+      </h3>
+    {% endset %}
+
+    {{ govukNotificationBanner({
+      html: html,
+      type: 'success'
+    }) }}
+
+     <!-- Webfiling info not saved -->
+
+    {% elif (data['existing-webfiling-account'] === "no") %}
+   
+   
+   <!--  {% set html %}
+    <h3 class="govuk-notification-banner__heading">
+      We have not saved your WebFiling information to your GOV.UK One Login.
+    </h3>
+  {% endset %}
+
+  {{ govukNotificationBanner({
+    html: html
+  }) }} -->
+
+
+    {% endif %}
+
+
+
+   
+
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+          <h1 class="govuk-fieldset__heading">
+            Do you have an existing Companies House account?
+          </h1>
+        </legend>
+
+        <div class="govuk-!-padding-top-4 govuk-!-padding-bottom-6">
+          <p>
+            Example of a Companies House account:
+          </p>
+
+          <a href="">
+            <img src="/public/images/chs.png" alt="" style='border:1px solid #000000' height="175">
+            </a>
+          </div>
+
+
+
+        <div class="govuk-radios" data-module="govuk-radios">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="existing-chs-account" name="existing-chs-account" type="radio" value="yes">
+            <label class="govuk-label govuk-radios__label" for="existing-chs-account">
+              Yes
+            </label>
+            <div id="existing-chs-account-hint" class="govuk-hint govuk-radios__hint">
+              We'll ask you for your sign in details. This will enable us to save your existing information, so you can access it when you use your GOV.UK One Login to sign in to Companies House.
+            </div>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="existing-chs-account" name="existing-chs-account" type="radio" value="no">
+            <label class="govuk-label govuk-radios__label" for="existing-chs-account">
+              No
+            </label>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+
+     <!-- {{ govukRadios({
+        name: "existing-chs-account",
+        fieldset: {
+          legend: {
+            text: "Do you have an existing Companies House account?",
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--l"
+          }
+        },
+        items: [
+          {
+            value: "yes",
+            text: "Yes",
+            hint: {
+              text: "We'll ask you for your sign in details. This will enable us to save your existing information, so you can access it when you use your GOV.UK One Login to sign in to Companies House."
+            }
+          },
+          {
+            value: "no",
+            text: "No"     
+          }
+        ]
+      }) }} -->
+
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+           What is a Companies House account?
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          <p class="govuk-body">This is the account you can use to sign in to:</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>the Companies House register - sometimes known as 'Companies House service' or 'Find and update company information'</li>
+            <li>some of our online services - for example, 'Register your company' or 'Upload a document to Companies House'</li>
+          </ul>
+        </div>
+      </details>
+
+      {{ govukButton({
+        text: "Continue"
+      }) }}
+    
+
+    </form>
+
+    </div>
+  </div>
+
+{% endblock %}

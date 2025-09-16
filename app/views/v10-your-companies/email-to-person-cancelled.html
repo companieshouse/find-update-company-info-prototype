@@ -1,0 +1,34 @@
+{% extends "layouts/layout_unbranded-with-banner.html" %}
+
+{% block pageTitle %}
+
+{% endblock %}
+
+{% block header %}
+    {{ govukHeader({ serviceName: "" }) }}
+{% endblock %}
+
+
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form action="/sign-in" method="post" novalidate>
+
+    <h1 class="govuk-heading-l">Companies House: <br>authorisation to file online for DEBMAT SURFACING LIMITED cancelled</h1>
+
+<p class="govuk-body">You are receiving this email because Tom Lawrence has cancelled your digital authorisation to file online for DEBMAT SURFACING LIMITED.</p>
+
+<p class="govuk-body">This means that if you want to file for this company online in the future, you must use a current authentication code.</p>
+
+<p class="govuk-body">If you were not expecting your authorisation to file online to be cancelled, you should try to resolve this within the company.</p>
+
+
+
+
+</form>
+
+  </div>
+  </div>
+{% endblock %}

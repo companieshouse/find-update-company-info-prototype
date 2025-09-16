@@ -1,0 +1,102 @@
+{% extends "layouts/layout-chs-signed-out.html" %}
+
+{% block pageTitle %}
+  Your companies - Companies House WebFiling account - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Go back to your companies",
+    href:""
+  }) }}
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-width-container">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+    <h1 class="govuk-heading-xl">Invitations to be digitally authorised</h1>
+
+
+
+
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+        <p class="govuk-body govuk-!-padding-top-5">No pending invitations.</p>
+
+        <h2 class="govuk-heading-m "></h2>
+
+
+
+
+
+            
+
+
+
+
+
+            
+                  <!--  <p class="govuk-body govuk-!-font-weight-bold">
+                        <span class="govuk-body">Correspondence address</span><br>
+              2nd Floor Red House, 17 London Road, London  SA73 8PH </p>--> 
+
+
+                  <!--<div class="govuk-grid-row">
+                    <div class="govuk-grid-column-full">
+                    <table class="govuk-table govuk-!-margin-top-2">
+                        <caption class="govuk-table__caption govuk-table__caption--m govuk-!-margin-bottom-1">
+                          People digitally authorised to file online for this company
+                          <p class="govuk-hint govuk-!-margin-bottom-0 govuk-!-margin-top-1">Anyone with access to the current authentication code can also file online for this company</p>
+                        </caption>
+
+                      <thead class="govuk-table__head">
+
+                        <tr class="govuk-table__row">
+                          <th class="govuk-table__header" scope="col"> Name
+
+                          <th class="govuk-table__header" scope="col"> Authorisation status </th>
+                          <th class="govuk-table__header" scope="col">  </th>
+
+                        </tr>
+
+
+                      </thead>
+                      <tbody class="govuk-table__body">
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell">
+                            <p class="govuk-body govuk-!-margin-bottom-1 govuk-!-margin-top-1"> Hannah Salt (you)</p>
+                          </td>
+                          <td class="govuk-table__cell">
+                            {{govukTag({
+                              text: "CONFIRMED",
+                              classes: "govuk-tag--green"
+                            })}}
+                          </td>
+                          <td class="govuk-table__cell">
+                          <a href="authorised-persons-details" class="govuk-link">View details</a>
+                          </td>
+                        </tr>
+
+                      </tbody>
+                    </table> -->
+                    <!--<p> <a href="company-overview-flowers-ltd" class="govuk-link govuk-link--no-visited-state">File for this company</a></p>-->
+
+                    
+                    
+                    <!-- <p> <a href="add-presenter" class="govuk-link govuk-link--no-visited-state">Digitally authorise a person to file online for this company</a></p> -->
+       
+
+                
+
+            
+
+</div>
+</div>
+</div>
+
+
+{% endblock %}

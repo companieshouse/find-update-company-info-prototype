@@ -1,0 +1,46 @@
+{% extends "layouts/layout_unbranded-with-banner.html" %}
+
+{% block pageTitle %}
+
+{% endblock %}
+
+{% block header %}
+    {{ govukHeader({ serviceName: "" }) }}
+{% endblock %}
+
+
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form action="" method="post" novalidate>
+
+    <h1 class="govuk-heading-l">Companies House: <br>Jill Edwards's digital authorisation not restored for FLOWERS LIMITED</h1>
+
+<p class="govuk-body">You are receiving this email because Hannah Salt has told us not to restore Jill Edwards's digital authorisation to file online for FLOWERS LIMITED.</p>
+
+<p class="govuk-body">This means they:</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>cannot file online for this company without a current authentication code</li>
+  <li>have been removed from the list of digitally authorised people in your account</li>
+</ul>
+
+{{ govukInsetText({
+  text: "Jill Edwards will still be able to file online for this company if they have access to the current authentication code. An authorised person may wish to change it."
+}) }}
+
+<p class="govuk-body">We've emailed Jill Edwards to let them know they are not digitally authorised to file online for this company. We’ve also sent an email to any other people who are authorised to let them know.</p>
+
+<p class="govuk-body">If Jill Edwards is appointed as an officer of the company, such as a director or secretary, this does not remove their appointment.</p>
+
+<p class="govuk-body">If you were not expecting this, and you wanted Jill Edwards's digital authorisation to be restored, you should try to resolve this within the company.</p>
+
+
+
+
+</form>
+
+  </div>
+  </div>
+{% endblock %}

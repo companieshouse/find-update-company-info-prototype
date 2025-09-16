@@ -754,6 +754,36 @@
           Your companies on Companies House account (CHS)
         </h2>
 
+               {{ govukSummaryList({
+          card: {
+            title: {
+              html: "Your companies<br><br>Users do not need to re-authenticate <br>'Not authorised' tags removed"
+            },
+            actions: {
+              items: [
+                {
+                  
+                }
+              ]
+            }
+          },
+          rows: [
+          {
+            key: {
+              text: "Version 10"
+            },
+            value: {
+              html: "<strong class='govuk-tag govuk-tag--blue'>
+               In progress
+              </strong> <br><br>
+              <a href='/v10-your-companies/' class='govuk-link'>Your companies prototype</a>
+              "
+            }
+          }
+          ]
+        }) }}
+
+
           {{ govukSummaryList({
           card: {
             title: {

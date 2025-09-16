@@ -1,0 +1,830 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Shortcuts – {{ serviceName }} - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <h1 class="govuk-heading-xl">
+      {{serviceName}}
+      <span class="govuk-caption-xl">Version 10</span>
+    </h1>
+
+    {{ govukWarningText({
+      html: "This prototype is being actively worked on so things might break or change very quickly. Some of the pages are dynamic based on the journey you select. Walk through the journey from the start to view accurate page designs. ", iconFallbackText: "Warning" })
+    }}
+
+  </div>
+</div>
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    {# ENTRY POINTS AND LINKS TAB #}
+    <div class="govuk-tabs" data-module="govuk-tabs">
+      <h4 class="govuk-tabs__title">Contents</h4>
+      <ul class="govuk-tabs__list">
+
+        <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+          <a class="govuk-tabs__tab" href="#your-companies"> Your companies</a>
+        </li>
+
+      </ul>
+
+
+
+        <!-- Your companies -->
+
+        <div class="govuk-tabs__panel" id="your-companies">
+
+          
+
+     {{ govukButton({
+          text: "Start prototype - Your companies",
+          href:"/v10-your-companies/your-companies-no-longer-authorised-summary-card-alt-2"
+        }) }}
+ 
+
+
+
+    <!-- Company re-authentication -->
+        <h2 class="govuk-heading-m">Company re-authentication</h2>
+
+
+        <h3 class="govuk-heading-s">Re-enter the authentication code to restore your digital authorisation</h3>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>
+            <a href="/v10-your-companies/your-companies-card">Your companies - you are no longer digitally authorised (up to and including 10 companies)</a><strong class="govuk-tag govuk-tag">
+          Design/Content TBC
+        </strong> <strong class="govuk-tag govuk-tag--yellow">
+          Updated 16.9.25 - Not authorised status reviewed
+        </strong>
+          </li>
+
+           <li>
+            <a href="/v10-your-companies/your-companies-no-longer-authorised-summary-card-search-pagination">Your companies - you are no longer digitally authorised (more than 10 companies with search and pagination)</a> <strong class="govuk-tag govuk-tag--green">
+          Design/Content dev-ready
+        </strong> <strong class="govuk-tag govuk-tag--yellow">
+          Updated 28.8.25 - new requirements - TBC
+        </strong>
+          </li>
+
+            <li>
+            <a href="/v10-your-companies/confirm-company-details-re-auth">Confirm this is the correct company</a><strong class="govuk-tag govuk-tag--green">
+          Design/Content dev-ready
+        </strong>
+          </li>
+          <li>
+            <a href="/v10-your-companies/authentication-code-2">Enter the company authentication code</a> <strong class="govuk-tag govuk-tag--green">
+          Design/Content dev-ready
+        </strong>
+          </li>
+
+          <li>
+            <a href="/v10-your-companies/confirmation-company-added-scenario-1
+            ">What happens now you've restored your digital authorisation</a> <strong class="govuk-tag govuk-tag--green">
+          Design/Content dev-ready
+        </strong>
+          </li>
+
+          <li>
+            <a href="/v10-your-companies/your-companies-no-longer-authorised-summary-card-alt-2-restored
+            ">Company digital authorisation restored</a> <strong class="govuk-tag govuk-tag--green">
+          Design/Content dev-ready
+        </strong> <strong class="govuk-tag govuk-tag--yellow">
+          Updated 28.8.25 - new requirements - TBC
+        </strong>
+          </li>
+          </ul>
+
+
+          <!-- Cancel and remove the company from your list -->
+
+          <h3 class="govuk-heading-s">Do not restore your digital authorisation
+          </h3> 
+           <ul class="govuk-list govuk-list--bullet">
+   
+            
+      
+  
+             <li>
+               <a href="remove-not-digitally-authorised-company">Confirm you do not want to restore your digital authorisation for this company (remove a previously digitally authorised company from my list) </a><strong class="govuk-tag govuk-tag--green">
+          Design/Content dev-ready
+        </strong> <strong class="govuk-tag govuk-tag--yellow">
+          Updated 29.8.25 - content TBC
+        </strong>
+             </li>
+             <li>
+              <a href="confirmation-company-not-digitally-authorised-removed">What happens now you’ve told us not to restore your digital authorisation (no longer able to file online without current auth code) </a> <strong class="govuk-tag govuk-tag--green">
+          Design/Content dev-ready
+        </strong> <strong class="govuk-tag govuk-tag--yellow">
+          Updated 29.8.25 - content TBC
+        </strong>
+            </li>
+            </ul>
+
+
+          <h3 class="govuk-heading-s">Restore a person's digital authorisation</h3>
+          <ul class="govuk-list govuk-list--bullet">
+
+          <li>
+            <a href="/v10-your-companies/manage-authorised-people-no-longer-authorised-summary-card">People digitally authorised to file online for this company</a> <strong class="govuk-tag govuk-tag--green">
+          Design/Content dev-ready
+        </strong> <strong class="govuk-tag govuk-tag--yellow">
+          Updated 28.8.25 - new requirements - TBC
+        </strong>
+          </li>
+
+
+          <li>
+            <a href="/v10-your-companies/add-presenter-check-details-become-authorised
+            ">Send email invitation to be digitally authorised</a> <strong class="govuk-tag govuk-tag--green">
+          Design/Content dev-ready
+        </strong>
+          </li>
+
+
+          <!--- New confirmation page -->
+
+          <li>
+            <a href="/v10-your-companies/add-presenter-confirmation-become-authorised
+            ">Email sent</a> <strong class="govuk-tag govuk-tag--orange">
+         New
+        </strong>  <strong class="govuk-tag govuk-tag--green">
+          Design/Content dev-ready
+        </strong>
+          </li>
+
+
+
+          <li>
+            <a href="/v10-your-companies/confirmation-person-added-re-authorised">People digitally authorised to file online for this company - Jill status is 'awaiting confirmation'
+          </a>  <strong class="govuk-tag govuk-tag--green">
+          Design/Content dev-ready
+        </strong> <strong class="govuk-tag govuk-tag--yellow">
+          Updated 28.8.25 - new requirements - TBC
+        </strong>
+          </li>
+        </ul>
+
+        <h3 class="govuk-heading-s">Do not restore a person's digital authorisation </h3>
+        <ul class="govuk-list govuk-list--bullet">
+
+          <li>
+            <a href="/v10-your-companies/cancel-person-after-migration">Confirm you do not want to restore digital authorisation for Jill Edwards - display name</a> <strong class="govuk-tag govuk-tag--green">
+          Design/Content dev-ready
+        </strong>
+          </li>
+          <li>
+            <a href="/v10-your-companies/cancel-person-after-migration">Confirm you do not want to restore digital authorisation for Jill Edwards - email address</a> <strong class="govuk-tag govuk-tag--blue">
+          In progress
+        </strong>
+          </li>
+          <li>
+            <a href="/v10-your-companies/cancel-person-after-migration-error-message">Confirm you do not want to restore digital authorisation for Jill Edwards - error message</a> <strong class="govuk-tag govuk-tag--green">
+          Design/Content dev-ready
+        </strong>
+          </li>
+          <li>
+            <a href="/v10-your-companies/confirmation-cancel-person-after-migration">Digital authorisation not restored - name</a> <strong class="govuk-tag govuk-tag--orange">
+          New
+        </strong> <strong class="govuk-tag govuk-tag--green">
+          Design/Content dev-ready
+        </strong>
+          </li>
+          <li>
+            <a href="/v10-your-companies/confirmation-cancel-person-after-migration">Digital authorisation not restored - email address</a> <strong class="govuk-tag govuk-tag--orange">
+          New
+        </strong> <strong class="govuk-tag govuk-tag--blue">
+          In progress
+        </strong>
+          </li>
+             <li>
+            <a href="/v10-your-companies/manage-authorised-people-not-restored-summary-card">People digitally authorised to file online for this company - Jill no longer associated with the company - name </a> <strong class="govuk-tag govuk-tag--orange">
+          New
+        </strong> </strong><strong class="govuk-tag govuk-tag--green">
+          Design/Content dev-ready
+        </strong> <strong class="govuk-tag govuk-tag--yellow">
+          Updated 28.8.25 - new requirements - TBC
+        </strong>
+          </li>
+          <li>
+            <a href="/v10-your-companies/manage-authorised-people-not-restored-summary-card">People digitally authorised to file online for this company - Jill no longer associated with the company - email </a> <strong class="govuk-tag govuk-tag--orange">
+          New
+        </strong> </strong><strong class="govuk-tag govuk-tag--green">
+          Design/Content dev-ready
+        </strong> <strong class="govuk-tag govuk-tag--yellow">
+          Updated 28.8.25 - new requirements - TBC
+        </strong>
+          </li>
+        </ul>
+
+    <h3 class="govuk-heading-s">Emails 
+    </h3>
+     <ul class="govuk-list govuk-list--bullet">
+
+      
+      <li> <strong class="govuk-tag govuk-tag--purple">
+         Existing email 
+      </strong>
+        <a href="/v10-your-companies/email-auth-person-re-authenticated
+        ">Authentication code used - 
+        Jill Edwards is now authorised to file online for FLOWERS LIMITED</a> <strong class="govuk-tag govuk-tag--green">
+          Design/Content dev-ready
+        </strong>
+      </li>
+
+      
+      <li> <strong class="govuk-tag govuk-tag--purple">
+        Existing email 
+      </strong>
+        <a href="/v10-your-companies/email-auth-person-reauthorised-added-to-company
+        ">Added by another person -
+        Jill Edwards is now authorised to file online for FLOWERS LIMITED</a> <strong class="govuk-tag govuk-tag--green">
+          Design/Content dev-ready
+        </strong>
+      </li>
+
+      <li> <strong class="govuk-tag govuk-tag--purple">
+        New email
+      </strong>
+        <a href="/v10-your-companies/email-someone-removed-re-authentication
+        ">Email to all authorised people - Jill Edwards's authorisation not restored</a> <strong class="govuk-tag govuk-tag--green">
+          Design/Content dev-ready
+        </strong>
+      </li>
+
+       <li> <strong class="govuk-tag govuk-tag--purple">
+        New email
+      </strong>
+        <a href="/v10-your-companies/email-to-person-not-restored
+        ">Email to person whose authorisation has not been restored by another person</a> <strong class="govuk-tag govuk-tag--green">
+          Design/Content dev-ready
+        </strong>
+      </li>
+
+          <li> <strong class="govuk-tag govuk-tag--purple">
+        New email
+      </strong>
+        <a href="/v10-your-companies/email-to-person-not-restored-by-self
+        ">Email to person whose authorisation has not been restored by themselves</a> <strong class="govuk-tag govuk-tag--green">
+          Design/Content dev-ready
+        </strong>
+      </li>
+    </ul>
+
+
+
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+    <h2 class="govuk-heading-m">Your companies </h2>
+
+
+        
+
+        <h3 class="govuk-heading-s">Add a company 
+         </h3>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>
+              <a href="your-companies">Not added any companies to the account </a><strong class="govuk-tag govuk-tag--green">
+          Design/Content dev-ready
+        </strong>
+            </li>
+            <li>
+
+              <a href="add-a-company">What is the company number?</a><strong class="govuk-tag govuk-tag--green">
+          Design/Content dev-ready
+        </strong>
+            <li>
+              <a href="confirm-company-details">Confirm this is the correct company</a><strong class="govuk-tag govuk-tag--green">
+          Design/Content dev-ready
+        </strong>
+            </li>
+            <li>
+              <a href="authentication-code">Enter the company authentication code</a><strong class="govuk-tag govuk-tag--green">
+          Design/Content dev-ready
+        </strong>
+            </li>
+            <li>
+              <a href="confirmation-company-added">A company has been added to the account </a> <strong class="govuk-tag govuk-tag--green">
+          Design/Content dev-ready
+        </strong>
+            </li>
+           <!--  <li>
+              <a href="company-added">Your companies - company added </a><strong class="govuk-tag govuk-tag--red">
+          Old design (table)
+        </strong>
+            </li> -->
+            <li>
+              <a href="your-companies-no-longer-authorised-summary-card-company-added">Your companies - company added </a><strong class="govuk-tag govuk-tag--green">
+          Design/content dev-ready
+        </strong> <strong class="govuk-tag govuk-tag--yellow">
+          Updated 28.8.25 - new requirements - TBC
+        </strong>
+            </li>
+          </ul>
+
+
+          <h3 class="govuk-heading-s">Remove a company 
+          </h3> 
+           <ul class="govuk-list govuk-list--bullet">
+             <li>
+               <a href="remove-company">Are you sure you want to remove this company? (remove a company from your list) </a> <br> <strong class="govuk-tag govuk-tag--green">
+          Design/Content dev-ready
+        </strong> <strong class="govuk-tag govuk-tag--yellow">
+          Updated 29.8.25 - content TBC
+        </strong>
+             </li>
+             <li>
+              <a href="confirmation-company-removed">Confirmation a company is removed (you are no longer able to file) </a><strong class="govuk-tag govuk-tag--green">
+          Design/Content dev-ready
+        </strong>
+            </li>
+            </ul>
+
+
+        <h3 class="govuk-heading-s">Multiple companies (company search and search results)</h3>
+
+        <ul class="govuk-list">
+
+
+           <li>
+            <a class="govuk-link" target="_blank"  href="home-multiple-companies-with-1-result">Search for a company within your account - 1 result</a>  <strong class="govuk-tag govuk-tag--green">
+          Design/content dev-ready
+        </strong>
+          </li>
+          <li>
+            <a class="govuk-link" target="_blank"  href="home-multiple-companies-page-2">Search for a company within your account - 2 or more results </a> <strong class="govuk-tag govuk-tag--green">
+          Design/content dev-ready
+        </strong>
+          </li>
+          <li>
+            <a class="govuk-link" target="_blank"  href="home-multiple-companies-page-no-results-found">Search for a company within your account - no results found </a> <strong class="govuk-tag govuk-tag--green">
+          Design/content dev-ready
+        </strong>
+          </li>
+        </ul>
+
+        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+
+        <h3 class="govuk-heading-m">People digitally authorised to file online for this company  </h3>
+
+        <ul class="govuk-list">
+          <li>
+            <a class="govuk-link" target="_blank"  href="manage-authorised-people-no-longer-authorised-summary-card">People digitally authorised to file online for this company</a> <strong class="govuk-tag govuk-tag--green">
+          Design/Content dev-ready
+        </strong> 
+          </li>
+          <li>
+            <a class="govuk-link" target="_blank"  href="manage-people-search">People digitally authorised to file online for this company (search)</a>  <strong class="govuk-tag govuk-tag--green">
+          Design/Content dev-ready
+        </strong> <strong class="govuk-tag govuk-tag--yellow">
+          Updated 28.8.25 - new requirements - TBC
+        </strong>
+          </li>
+
+          <li>
+            <a class="govuk-link" target="_blank"  href="manage-people-search-no-results">People digitally authorised to file online for this company (search with no results found)</a> <br> <strong class="govuk-tag govuk-tag--green">
+          Design/Content dev-ready
+        </strong> <strong class="govuk-tag govuk-tag--yellow">
+          Updated 28.8.25 - new requirements - TBC
+        </strong>
+          </li>
+          <li>
+            <a class="govuk-link" target="_blank"  href="manage-people-search-1-result">People digitally authorised to file online for this company (search with 1 result)</a> <br> <strong class="govuk-tag govuk-tag--green">
+          Design/Content dev-ready
+        </strong> <strong class="govuk-tag govuk-tag--yellow">
+          Updated 28.8.25 - new requirements - TBC
+        </strong>
+          </li>
+
+
+
+        </ul>
+
+          <h3 class="govuk-heading-s">Add new authorised person </h3>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>
+              <a href="add-presenter">What is the authorised person's email address?</a><strong class="govuk-tag govuk-tag--green">
+          Design/Content dev-ready
+        </strong>
+            </li>
+            <li>
+              <a href="add-presenter-check-details">Check the authorised person's email address before we send the email</a><strong class="govuk-tag govuk-tag--green">
+          Design/Content dev-ready
+        </strong>
+            </li>
+            <li>
+              <a href="add-presenter-already-added">Person has already been added (interrupt page) <strong class="govuk-tag govuk-tag--green">
+          Design/Content dev-ready
+        </strong>
+            </li>
+
+            <li>
+              <a href="confirmation-person-added"> What happens now - Confirmation an email request has been sent  </a> <strong class="govuk-tag govuk-tag--orange">
+          New
+        </strong><strong class="govuk-tag govuk-tag--green">
+          Design/Content dev-ready
+        </strong> 
+            </li>
+
+
+
+
+            </ul>
+
+            <h3 class="govuk-heading-s">Confirm or decline authorised person email request  </h3>
+
+            {{ govukButton({
+              text: "Email invitiation",
+              href:"email-confirm-you-are-the-presenter"
+            }) }}
+
+
+
+
+            <ul class="govuk-list govuk-list--bullet">
+            <li>
+              <a href="email-confirm-you-are-the-presenter">Email - authorisation to file online for a company</a> <strong class="govuk-tag govuk-tag--green">
+          Design/Content dev-ready
+        </strong>
+            </li>
+            <li>
+              <a href="sign-in-auth-person-request">Create or sign in to GOV.UK One Login (journeys not included)</a> 
+            </li>
+            <li>
+              <a href="invitation-banner"> 
+                Invitations to be digitally authorised</a><strong class="govuk-tag govuk-tag--green">
+          Design/content dev-ready
+        </strong> 
+            </li>
+            <li>
+              <a href="company-invitations-none"> No invitations to be digitally authorised  </a><strong class="govuk-tag govuk-tag--green">
+          Design/content dev-ready
+        </strong> 
+            </li>
+            <li>
+              <a href="company-invitations"> Your companies invitations </a><strong class="govuk-tag govuk-tag--green">
+          Design/content dev-ready
+        </strong> 
+            </li>
+            <li>
+              <a href="company-invitations-pagination"> Your companies invitations (pagination - 15 per page)</a> <strong class="govuk-tag govuk-tag--green">
+          Design/content dev-ready
+        </strong> 
+            </li>
+            <li>
+              <a href="company-invitations-accept"> Accept - digitally authorised to file </a> <strong class="govuk-tag govuk-tag--green">
+          Design/content dev-ready
+        </strong>  
+            </li>
+            <li>
+              <a href="company-invitations-decline"> Decline - digitally authorised to file </a> <strong class="govuk-tag govuk-tag--green">
+          Design/content dev-ready
+        </strong>  
+            </li>
+          </ul>
+
+          <h3 class="govuk-heading-s">Remove an authorised person</h3>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>
+              <a href="authentication-code-remove">Authentication code</a><strong class="govuk-tag govuk-tag--green">
+          Design/Content dev-ready
+        </strong>
+            </li>
+            <li>
+              <a href="remove-authorised-person">Remove a person's authorisation to file online for this company - name </a><strong class="govuk-tag govuk-tag--green">
+          Design/content dev-ready
+        </strong>  
+            </li>
+            <li>
+              <a href="remove-authorised-person-email-address">Remove a person's authorisation to file online for this company - email address </a><strong class="govuk-tag govuk-tag--green">
+          Design/content dev-ready
+        </strong>  
+            </li>
+            
+           <!--  <li>
+               <a href="confirmation-person-removed">Confirmation a person has been removed (shown in a banner) </a>  <strong class="govuk-tag govuk-tag--orange">
+          Check width of H1/inset text
+        </strong>
+            </li> -->
+
+            <li>
+              <a href="confirmation-person-removed-2">Confirmation a person has been removed (separate page)</a>  <strong class="govuk-tag govuk-tag--green">
+          Design/Content dev-ready
+        </strong>
+            </li> 
+
+            <li>
+              <a href="confirmation-person-removed-3">Confirmation a person has been removed - You are no longer associated with this company (separate page)</a> <strong class="govuk-tag govuk-tag--green">
+          Design/content dev-ready
+        </strong>  
+            </li>
+          
+          
+          </ul>
+
+          <h3 class="govuk-heading-s">Cancel an authorised person </h3> 
+          <ul class="govuk-list govuk-list--bullet">
+            <li>
+              <a href="cancel-person">Cancel a person's authorisation to file online for this company  </a> <strong class="govuk-tag govuk-tag--green">
+          Design/content dev-ready
+        </strong>  
+            </li>
+            <li>
+              <a href="confirmation-cancel-person">Confirmation the  person's authorisation to file online for this company has been cancelled  </a><strong class="govuk-tag govuk-tag--green">
+          Design/Content dev-ready
+        </strong>
+            </li>
+          </ul>
+
+        <h3 class="govuk-heading-s">Resend email to an authorised person</h3>
+
+      
+
+
+          <ul class="govuk-list govuk-list--bullet">
+            <li>
+              <a href="manage-authorised-people-email-resent">Email sent confirmation  </a> <strong class="govuk-tag govuk-tag--orange">
+                New
+               </strong><strong class="govuk-tag govuk-tag--yellow">
+                Design TBC
+               </strong><strong class="govuk-tag govuk-tag--green">
+                Content dev-ready
+               </strong> 
+            </li>
+          </ul>
+
+          
+
+
+
+          <h3 class="govuk-heading-s">Emails to notify all existing authorised people when: </h3>
+ 
+          <ul class="govuk-list">
+            <li>
+              <a href="email-auth-person-invited" class="govuk-link" target="_blank">An authorised person has been invited</a><strong class="govuk-tag govuk-tag--green">
+          Design/Content dev-ready
+        </strong>
+            </li>
+
+            <li>
+              <a href="email-auth-person-added-to-company" class="govuk-link" target="_blank">An authorised person has been added by another authorised person</a><strong class="govuk-tag govuk-tag--green">
+                Design/content dev-ready
+               </strong> 
+            </li>
+
+            <li>
+              <a href="email-auth-person-added" class="govuk-link" target="_blank">A user has added the company using the authentication code </a><strong class="govuk-tag govuk-tag--green">
+                Design/content dev-ready
+               </strong> 
+            </li>
+
+            <li>
+              <a href="email-auth-person-declined" class="govuk-link" target="_blank">A user has declined to be added as an authorised person </a><strong class="govuk-tag govuk-tag--green">
+                Design/content dev-ready
+               </strong> 
+            </li>
+
+            <li>
+              <a href="email-expired" class="govuk-link" target="_blank">Email has expired </a><strong class="govuk-tag govuk-tag--pink">
+               Out of scope
+               </strong> 
+            </li>
+
+            <li>
+              <a href="email-someone-removed" class="govuk-link" target="_blank">An authorised person has removed someone else's authorisation - email to all authorised users </a> <strong class="govuk-tag govuk-tag--green">
+                Design/content dev-ready
+               </strong> 
+            </li>
+            </li>
+
+            <li>
+              <a href="email-to-person-removed" class="govuk-link" target="_blank">An authorised person has removed their own or someone else's authorisation - email to person who was removed </a><strong class="govuk-tag govuk-tag--green">
+                Design/content dev-ready
+               </strong> 
+            </li>
+
+ <li>
+              <a href="email-someone-removed-by-ch" class="govuk-link" target="_blank">Companies House has removed someone's authorisation - email to all authorised users </a><strong class="govuk-tag govuk-tag--green">
+                Design/content dev-ready
+               </strong> 
+            </li>
+
+               <li>
+              <a href="email-to-person-removed-by-ch" class="govuk-link" target="_blank">Companies House has removed someone's authorisation - email to person who was removed </a><strong class="govuk-tag govuk-tag--green">
+                Design/content dev-ready
+               </strong> 
+            </li>
+
+            <li>
+              <a href="email-invite-cancelled" class="govuk-link" target="_blank">An authorised person has cancelled someone's invitation to be authorised </a> <strong class="govuk-tag govuk-tag--green">
+                Design/content dev-ready
+               </strong> 
+            </li>
+
+            <li>
+              <a href="email-to-person-cancelled" class="govuk-link" target="_blank">An authorised person has cancelled someone's invitation to be authorised - email to person who was cancelled </a>   <strong class="govuk-tag govuk-tag--green">
+                Design/content dev-ready
+               </strong>
+            </li>
+
+            <!--
+            <li>
+              <a href="email-to-ROA-person-added" class="govuk-link" target="_blank">Email to ROA - A user has been added as an authorised person <strong class="govuk-tag govuk-tag--turquoise">
+                Content tbc
+              </strong> </a>
+            </li>
+            <li>
+              <a href="email-to-ROA-person-removed" class="govuk-link" target="_blank">Email to ROA - A user has been removed as an authorised person <strong class="govuk-tag govuk-tag--turquoise">
+                Content tbc
+              </strong> </a>
+            </li>
+          </ul>-->
+
+          <h3 class="govuk-heading-s govuk-!-padding-top-3">Notifications shown within the account after sign in  <strong class="govuk-tag govuk-tag--pink">
+            Banner used
+          </strong> </h3>
+
+        <ul class="govuk-list">
+          <li>
+            <a href="email-auth-person-request-already-accepted-declined" class="govuk-link" target="blank">The user has already confirmed or declined the request (opens in new tab)</a><strong class="govuk-tag govuk-tag--pink">
+               Not required
+               </strong> 
+          </li>
+          <li>
+            <a href="email-auth-person-request-already-associated" class="govuk-link" target="blank">The user is already associated with this company (opens in new tab)</a><strong class="govuk-tag govuk-tag--pink">
+               Not required
+               </strong> 
+          </li>
+
+          <li>
+            <a href="email-auth-person-request-withdrawn-expired" class="govuk-link" target="blank">The request has been withdrawn or is expired (opens in new tab)</a><strong class="govuk-tag govuk-tag--pink">
+               Not required
+               </strong> 
+          </li>
+          </ul>
+
+          <h3 class="govuk-heading-s govuk-!-padding-top-3">Stop screens  
+            <ul class="govuk-list govuk-list--bullet">
+              <li>
+                <a href="stop-screen-page-unavailable" class="govuk-link">Page not found </a><strong class="govuk-tag govuk-tag--green">
+                Design/content dev-ready
+               </strong> 
+              </li>
+              </ul>
+
+
+
+         <!--  <h2 class="govuk-heading-m"></h2>
+          
+          <h3 class="govuk-heading-s">Add a company at the same time as doing a filing <strong class="govuk-tag govuk-tag--orange">
+            Review live service
+          </strong></h3>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>
+              <a href="add-company-to-account">Do you want to add this company to your Companies House account?</a>
+            </li>
+            <li>
+              <a href="">Company added confirmation during the journey or when they come into their account</a>
+            </li>
+          </ul>
+
+          <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+  
+
+
+          
+          <h2 class="govuk-heading-m">Re-design of Companies House service <strong class="govuk-tag govuk-tag--red">
+            Out of scope
+          </strong></h2>
+          <ul class="govuk-list govuk-list--bullet">
+          <li>
+            <a href="home-chs">Redesign of Companies House search the register</a>
+          </li>
+          <li>
+            <a href="filing-history">Filing history</a>
+          </li>
+          <li>
+            <a href="officers">Officers</a>
+          </li>
+          <li>
+            <a href="results">Search results</a>
+          </li>
+        </ul>
+ -->
+        
+
+     
+      <!-- <h2 class="govuk-heading-m">Existing Companies House service</h2>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>
+            <a href="search">Search the register</a>
+          </li>
+          <li>
+            <a href="search-results">Search results</a>
+          </li>
+        </ul>-->
+      </div> 
+
+
+      {# PREVIOUS VERSIONS TAB #}
+      <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="form-versions">
+        <table class="govuk-table version-history">
+          <caption class="govuk-table__caption govuk-heading-l">
+            Previous versions
+          </caption>
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">
+                Version
+              </th>
+              <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">
+                Tested on
+              </th>
+              <th scope="col" class="govuk-table__header govuk-!-width-one-half">
+                Changes
+              </th>
+              <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">
+                Status
+              </th>
+            </tr>
+          </thead>
+
+          <tbody class="govuk-table__body">
+           <!-- <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                <a href="javascript: void(0)">Version X</a>
+              </th>
+              <td class="govuk-table__cell">TBA</td>
+              <td class="govuk-table__cell">
+                <p><a href="#">Feature</a></p>
+                <p></p>
+                <ul class="govuk-list govuk-list--bullet">
+                  <li>Feature description</li>
+                </ul>
+              </td>
+              <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--red">
+                  Not ready for user testing
+                </strong>
+              </td>
+            </tr>
+
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                <a href="">Version X</a>
+              </th>
+              <td class="govuk-table__cell">June 2022</td>
+              <td class="govuk-table__cell">
+                <p><a href="#">Feature</a></p>
+                <p></p>
+                <ul class="govuk-list govuk-list--bullet">
+                  <li>Feature description</li>
+                </ul>
+              </td>
+              <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--green">
+                  Ready for user testing
+                </strong>
+              </td>
+            </tr> -->
+
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                <a href="">Version 1</a> 
+              </th>
+              <td class="govuk-table__cell">June 2023</td>
+              <td class="govuk-table__cell">
+                <p><a href="#">Feature</a></p>
+                <p></p>
+                <ul class="govuk-list govuk-list--bullet">
+                  <li>Add feature description</li>
+                </ul>
+              </td>
+
+              <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--light-blue">
+                  In progress 
+                </strong>
+              </td>
+            </tr>
+
+          </tbody>
+
+        </table>
+      </div>
+
+      
+
+    </div>
+  </div>
+</div>
+
+{% endblock %}
