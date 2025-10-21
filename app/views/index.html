@@ -886,6 +886,46 @@
       <div class="govuk-tabs__panel" id="agent">
         <h2 class="govuk-heading-l">Authorised agent account services </h2>
 
+
+
+                                 <!-- Authorised agent services -->
+                    <h2 class="govuk-heading-m govuk-!-padding-top-4">Version 9
+                    </h2>
+                       
+                   
+                       {{ govukSummaryList({
+                         card: {
+                           title: {
+                             html: "Authorised agent"
+                           },
+                           actions: {
+                             items: [
+                               {
+                                 
+                               }
+                             ]
+                           }
+                         },
+                         rows: [
+                         {
+                           key: {
+                             text: "Version 9"
+                           },
+                           value: {
+                             html: "<strong class='govuk-tag govuk-tag--blue'>
+                              In progress
+                             </strong> <br><br>
+                             Adding the new service, Change identity verification details form and public authorised agent list. <br>
+                             <a href='/authorised-agent-v9/index' class='govuk-link'>Prototype version 9</a>
+                             "
+                           }
+                         }
+                         ]
+                       }) }}
+
+
+
+
                     <!-- Authorised agent services -->
                     <h2 class="govuk-heading-m govuk-!-padding-top-4">Version 8
                     </h2>

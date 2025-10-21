@@ -1,0 +1,57 @@
+{% extends "layouts/layout-signed-out-agent.html" %}
+{% block pageTitle %}
+You cannot use this service
+  -
+  {{serviceName}}
+  - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href:""
+  }) }}
+{% endblock %}
+
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      
+      <h1 class="govuk-heading-l">Before you add a user</h1>
+     <!-- {{ govukButton({
+        text: "Appoint new director",
+        href: "add/name?type=add"
+      }) }} -->
+       <p class="govuk-body">To add someone as a user, they must already have a Companies House account. This is different to a WebFiling account.</p>
+        
+        <p>A Companies House account is used to sign in to:</p>
+       
+       <ul>
+        <li>the Companies House register - sometimes known as 'Find and update company information', or the 'Companies House service'</li>
+        <li>some of our online services, such as 'Upload a document to Companies House'</li>
+      </ul>
+
+
+
+
+        <details class="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              If the user does not have a Companies House account                </span>
+          </summary>
+          <div class="govuk-details__text">
+           <p>Ask them to <a href="" target="_blank">create sign in details for Companies House (opens in a new tab)</a>.</p>
+           <p> The user will need to do this before you add them. </p>
+          </div>
+        </details>
+
+        {{ govukButton({
+          text: "Continue",
+          href:"add-a-member"
+        }) }}
+
+    </div>
+  </div>
+{% endblock %}

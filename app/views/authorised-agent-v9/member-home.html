@@ -1,0 +1,137 @@
+{% extends "layouts/layout-signed-out-agent.html" %}
+
+
+
+{% block pageTitle %}
+ Manage members 
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Return to authorised agent services",
+    href:"check-company-details"
+  }) }}
+{% endblock %}
+
+
+{% set serviceName %}
+ 
+{% endset %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+  <div class="govuk-grid-row">
+
+     <div class="govuk-grid-column-full">
+      <span class="govuk-caption-l">MORRIS ACCOUNTING LTD<h1 class="govuk-heading-l">Manage users</h1></span>
+
+
+
+           {{ govukButton({
+              text: "Add a user",
+              href:"add-a-member"
+            }) }}
+
+          <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+<!--           <div class="govuk-inset-text">
+            To change the permissions of a member you'll need to remove the member. Then 'Add a new member' with their new permissions. 
+          </div>-->
+
+
+
+          <div class="govuk-tabs govuk-!-padding-top-6" data-module="govuk-tabs">
+            <h2 class="govuk-tabs__title">
+              Authorised user roles
+            </h2>
+            <ul class="govuk-tabs__list">
+              <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+                <a class="govuk-tabs__tab" href="#super-admin">
+                  Account owners
+                </a>
+              </li>
+              <li class="govuk-tabs__list-item">
+                <a class="govuk-tabs__tab" href="#admin">
+                  Administrators
+                </a>
+              </li>
+              <li class="govuk-tabs__list-item">
+                <a class="govuk-tabs__tab" href="#standard">
+                  Standard users
+                </a>
+              </li>
+            </ul>
+            <div class="govuk-tabs__panel" id="super-admin">
+              <h2 class="govuk-heading-l">Account owners</h2>
+
+             
+
+                   <!-- Super admin users -->
+
+                  <table class="govuk-table">
+                   <thead class="govuk-table__head">
+                     <tr class="govuk-table__row">
+  
+
+                 <!-- UNDER REVIEW       <th scope="col" class="govuk-table__header">File for authorised agent</th> -->
+                       <th scope="col" class="govuk-table__header">Email address</th>
+                       <th scope="col" class="govuk-table__header">Name</th> 
+                      <!--  *R2* <th scope="col" class="govuk-table__header">Status</th> -->
+                      <th scope="col" class="govuk-table__header"> </th>
+                       <th scope="col" class="govuk-table__header"></th>
+                     </tr>
+                   </thead>
+                   <tbody class="govuk-table__body">
+
+                     <!-- Member 1 -->
+                     <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">
+                        james.morris@gmail.com
+                       </td>
+                      <td class="govuk-table__cell"> James Morris </th>
+                    
+                     <!--  *R2*  <td class="govuk-table__cell">	
+                       {{govukTag({
+                         text: "Added",
+                         classes: "govuk-tag--green"
+                         })}}
+                     </td> -->
+
+                     <td class="govuk-table__cell">
+                      <a href="edit-member-role-admin" class="govuk-link">Change role <span class="govuk-visually-hidden">james.morris@gmail.com</span> </a>
+                    </td>
+
+
+                       <td class="govuk-table__cell">
+                         <a href="" class="govuk-link">Remove <span class="govuk-visually-hidden">james.morris@gmail.com</span> </a>
+                       </td>
+                       <td scope="row" class="govuk-table__cell"> </td>
+                    </tr>
+                  </tbody>
+                 </table>
+        
+            </div>
+
+
+            <!-- Admin users -->
+            <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="admin">
+              <h2 class="govuk-heading-l">Administrators</h2>
+                  
+              <p class="govuk-body">You have no admin users.</p>
+                      
+                    
+            </div>
+
+            <!-- Standard users -->
+            <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="standard">
+              <h2 class="govuk-heading-l">Standard users</h2>
+              <p class="govuk-body">You have no standard users.</p>
+            </div>
+            
+          </div>
+
+</div>
+</div>
+
+
+{% endblock %}

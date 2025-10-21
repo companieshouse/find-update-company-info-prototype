@@ -1,0 +1,156 @@
+{% extends "layouts/layout-signed-out-agent.html" %}
+
+{% block pageTitle %}
+  Your companies
+{% endblock %}
+
+{% set serviceName %}
+ 
+{% endset %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Return to manage users"
+  }) }}
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-width-container">
+  <div class="govuk-grid-row">
+
+     <div class="govuk-grid-column-two-thirds">
+       <span class="govuk-caption-l">MORRIS ACCOUNTING LTD</span>
+          <h1 class="govuk-heading-l">Add a user</h1> 
+
+
+
+        <p>To add someone as a user, you'll need to provide the email address they use to sign in to the 'Find and update company information' service. This is also known as the Companies House register. It is different to WebFiling.</p>
+          <p>
+          
+            <details class="govuk-details">
+              <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                  If the user does not already have sign in details                 </span>
+              </summary>
+              <div class="govuk-details__text">
+               <p>Ask them to <a href="" target="_blank">create sign in details for Companies House (opens in a new tab)</a>.</p>
+               <p> The user will need to do this before you add them. </p>
+              </div>
+            </details>
+ 
+
+
+      <!--option 1    
+<p>Before you add a user, check that they have a Companies House account. If they do not, they will need to create one first. </p>
+
+
+<details class="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      How to check if someone has a Companies House account
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+   <p>Ask them if they already have sign in details for the Companies House register. This is sometimes known as 'Find and update company information', or the 'Companies House service. </p>
+   <p>It would be the same details they use for some of our online services, such as 'Register your company' or 'Upload a document to Companies House'. </p>
+   <p>A Companies House account is different to WebFiling, which is the service to submit certain filings digitally, such as dormant accounts. </p>
+  </div>
+</details>
+-->
+
+
+
+
+
+          {{ govukInput({
+            label: {
+              text: "What is their email address?",
+              classes: "govuk-label--m"
+            },
+            hint: {
+              html: "It must be the one they use to sign in to Companies House. "
+            },
+            id: "email",
+            name: "email",
+            type: "email",
+            autocomplete: "email",
+            spellcheck: false
+          }) }}
+
+
+          <h2 class="govuk-heading-m">Choose their role</h2> 
+
+
+
+
+
+
+
+
+          {{ govukRadios({
+             name: "role",
+             fieldset: {
+               legend: {
+                       classes: "govuk-fieldset__legend--m govuk-!-static-padding-top-3"
+               }
+             },
+             items: [
+               {
+                 value: "super-admin",
+                 html: "<span class='govuk-body govuk-!-font-weight-bold'> Account owner</span>  <p class='govuk-body govuk-!-static-padding-top-2'>They'll be able to:</p>
+                 <ul>
+                   <li>update the authorised agent's details</li>
+                   <li>add and remove all users</li> 
+                   <li>close the account</li>
+                   </ul>"
+               },
+               {
+                 value: "admin",
+                 html: "<span class='govuk-!-font-weight-bold govuk-!-padding-bottom-0'>Administrator</span> <p class='govuk-body govuk-!-static-padding-top-2'> They'll be able to add and remove:</p>
+                 <ul>
+                   <li>administrators</li> 
+                   <li>standard users</li>
+                   </ul>"
+               },
+               {
+                 value: "standard-user",
+                 html: "<span class='govuk-!-font-weight-bold govuk-!-padding-bottom-0'> Standard user </span> <p class='govuk-body govuk-!-static-padding-top-2'> They will not be able to add or remove users. </p>"
+               }
+             ]
+           }) }}
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ <div class="govuk-inset-text">
+ <p class="govuk-body">All users who are added to this account will be able to: </p>
+           <ul class="govuk-list govuk-list--bullet govuk-!-margin-bottom-6">
+                   <li>view users who have been added to this account</li>
+                         <li>verify people's identity for Companies House</li>
+             <li>file as an authorised agent </li>
+             </ul>
+             </div>
+ 
+ 
+
+
+           {{ govukButton({
+              text: "Continue",
+              href:"choose-role"
+            }) }}
+
+
+
+
+
+</div>
+</div>
+
+
+{% endblock %}
