@@ -1,0 +1,206 @@
+{% extends "layouts/layout-signed-out-agent.html" %}
+
+
+{% block pageTitle %}
+Authorised agent account
+{% endblock %}
+
+{% set serviceName %}
+Find and update company information
+{% endset %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+  <div class="govuk-grid-row">
+
+     <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-l govuk-!-margin-bottom-3">Authorised agent account</h1> 
+      <div class="govuk-hint">
+        This is also known as an Authorised Corporate Service Provider (ACSP).
+
+      </div>
+
+      <div>
+
+      <style>
+          dt {
+            float: left;
+            margin-right: 10px;
+          }
+        </style> 
+
+        <dl class="govuk-list">
+          <dt class="govuk-!-font-weight-bold"> 
+            ACSP name:
+          </dt>
+          <dd>
+            MORRIS ACCOUNTING LTD 
+          </dd>
+          <dt class="govuk-!-font-weight-bold"> 
+            ACSP status:
+          </dt>
+          <dd>
+            <span class="govuk-tag govuk-tag--green">
+              Active
+            </span> 
+          </dd>
+          <dt class="govuk-!-font-weight-bold"> 
+            ACSP number: 
+          </dt>
+          <dd class="govuk-!-margin-left-2">
+           06254821
+          </dd>
+          <dt class="govuk-!-font-weight-bold"> 
+            Your role:
+          </dt>
+          <dd>
+            account owner
+          </dd>
+
+        </dl>
+      </div>
+
+      <ul class="govuk-list">
+        <li class="gem-c-cards__list-item">
+            <h3 class="govuk-heading-s">
+              <a href="/browse/benefits">Add or remove the ACSP's details from the public list</a></h3>           
+
+              <p class="govuk-body ">To inlude the ACSP's details on the public list, you'll need to request to be added.</p>
+        </li>
+
+        <li class="gem-c-cards__list-item">
+          <h3 class="govuk-heading-s">
+           <a href="/browse/benefits">Guidance on being an ACSP</a>
+</h3>           
+<p class="govuk-body ">Read the guidance to find out about your legal responsibilities and using this account.</p>
+
+      </li>
+
+</ul>
+
+          
+
+
+
+  
+  <!-- Agent services  -->
+
+  <h2 class="govuk-heading-m govuk-!-static-padding-top-3 govuk-!-static-padding-bottom-3">Manage account</h2>
+
+
+        
+      <div class="govuk-grid-row">
+        
+        <div class="govuk-grid-column-one-third govuk-topic-block">
+
+           <!-- Manage users  -->
+          <h3 class="govuk-heading-s">Users for the authorised agent</h3>
+          <p class="govuk-body">You can:</p> 
+          <ul class="govuk-list govuk-list--bullet">
+            <li>view users who have been added </li>
+            <li>add new users if they need to use services for the authorised agent</li>
+            <li>remove users</li>
+
+            </ul>
+
+            <a class="govuk-link govuk-link--no-visited-state" href="member-home">Manage users</a>
+
+        </div>
+         <!-- Update details of the agent  -->
+        <div class="govuk-grid-column-one-third govuk-topic-block">
+                  
+
+         <h3 class="govuk-heading-s">Authorised agent details</a></h3>
+
+          <p class="govuk-body">Tell us about changes to the:  </p>
+                    <ul class="govuk-list govuk-list--bullet">
+                      <li>business details</li>
+                      <li>Anti-Money Laundering (AML) registration details for this business</li>
+                      </ul>
+
+         {{ govukWarningText({
+            text: "You must tell us about any changes within 14 days.",
+            iconFallbackText: "Warning"
+          }) }} 
+
+          <a class="govuk-link govuk-link--no-visited-state" href="https://register-an-acsp-prototype.herokuapp.com/v4-update/index-update">View and update the authorised agent's details</a>
+        </div>
+
+       
+
+        <!-- Close the agent  -->
+        <div class="govuk-grid-column-one-third govuk-topic-block">
+                  
+          <h3 class="govuk-heading-s">Tell us if you need to close</h3>
+          <p class="govuk-body">If you close this account, MORRIS ACCOUNTING LTD will no longer be registered as an authorised agent with Companies House. 
+          </p>
+
+          <a class="govuk-link govuk-link--no-visited-state govuk-link--no-visited-state" href="https://register-an-acsp-prototype.herokuapp.com/v1-close/start-page">Close the authorised agent account</a>
+
+
+        </div>
+       
+    </div>
+
+
+      <h2 class="govuk-heading-m govuk-!-static-padding-top-7 govuk-!-static-padding-bottom-3">Services
+      </h2>
+
+<div class="govuk-grid-row">
+
+
+
+  <div class="govuk-grid-column-full">
+
+     
+  <div class="govuk-grid-row ">
+    <div class="govuk-grid-column-one-third govuk-topic-block">
+
+       <!-- Verify clients identities  -->
+       <h3 class="govuk-heading-s">Verifying someone's identity </a></h3>
+       <p class="govuk-body">Use our service to <a href="https://acsp-verify-identity-prototype.herokuapp.com/v10/start-page">Tell Companies House you have verified someone's identity</a href>. </p>  
+
+      </div>
+
+
+       <div class="govuk-grid-column-one-third govuk-topic-block">
+
+       <!-- Changing or reporting someone's verification details  -->
+       <h3 class="govuk-heading-s">Changing someone's identity verification details</a></h3>
+
+
+          <p class="govuk-body">You can change the details for a person you've verified if:</p>
+                    <ul class="govuk-list govuk-list--bullet">
+                      <li>you entered their details incorrectly</li>
+                      <li>they have changed their name or email address</li>
+                      </ul>
+
+
+       <p class="govuk-body">Use the form to <a href="https://submit.forms.service.gov.uk/preview-draft/8629/change-or-report-incorrect-identity-verification-details/33128">change identity verification details</a href>.</p>  
+
+      </div>
+
+
+
+      </div>
+
+
+
+
+
+
+
+
+
+</div>
+
+</div>
+</div>
+
+      
+      
+   
+          
+
+{% endblock %}
