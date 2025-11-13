@@ -1,0 +1,86 @@
+{% extends "layouts/layout-signed-out-agent.html" %}
+
+{% block pageTitle %}
+Home - Companies House account - GOV.UK
+{% endblock %}
+
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+   
+      <form action="member-invite-confirm" method="post" novalidate>
+
+  
+
+
+        <h1 class="govuk-heading-l">What happens if you're added to an authorised agent account
+        </h1> 
+
+        <p>You’ll be able to use services for the authorised agent. This includes: </p>
+
+
+        <ul class="govuk-list govuk-list--bullet">
+          <li>telling Companies House you’ve verified someone’s identity</li>
+          <li>filing on behalf of clients</li>
+          </ul>
+
+
+          
+          <h2 class="govuk-heading-s">You'll be added as a standard user
+          </h2> 
+          <p class="govuk-!-margin-bottom-6">This means you'll be able to view other users who have been added to the account, but you cannot add or remove them.</p>
+    
+
+<!--
+          <details class="govuk-details">
+            <summary class="govuk-details__summary">
+              <span class="govuk-details__summary-text">
+                What roles can a user have for an authorised agent?
+              </span>
+            </summary>
+            <div class="govuk-details__text">
+              <p>When someone adds a user to an authorised agent account, they can choose which role they want the user to have. If you're added as an:</p>
+              <ul class="govuk-list govuk-list--bullet">
+                <li>account owner – you can update the authorised agent’s details, and add and remove all users</li>
+                <li>administrator – you can add and remove administrators and standard users</li>
+                <li>standard users – you cannot add and remove other users</li>
+                </ul>
+              
+            </div>
+          </details> -->
+
+      {{ govukRadios({
+        name: "confirm-decline-invite",
+        fieldset: {
+          legend: {
+            text: "Do you want to be added to the account for MORRIS ACCOUNTING LTD?",
+            isPageHeading: false,
+            classes: "govuk-fieldset__legend--m"
+          }
+        },
+        items: [
+          {
+            value: "yes",
+            text: "Yes"
+          },
+          {
+            value: "no",
+            text: "No",
+            hint: {
+              text:"We'll email the person who tried to add you to tell them you've declined. You'll be signed out when you select continue."
+            }
+          }
+        ]
+      }) }}
+
+      {{ govukButton({
+        text: "Continue",
+        href:"member-invitations-accept"
+      }) }}
+
+</form>
+
+  </div>
+</div>
+{% endblock %}

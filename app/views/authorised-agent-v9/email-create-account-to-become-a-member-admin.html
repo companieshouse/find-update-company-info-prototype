@@ -1,0 +1,67 @@
+{% extends "layouts/layout-signed-out-agent.html" %}
+
+{% block pageTitle %}
+You have been invited to be a standard user for a Companies House authorised agent
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+   
+      <h1 class="govuk-heading-s">[Email subject line] Someone wants to add you to a Companies House authorised agent account</h1>
+      
+      <p class="govuk-body">James Morris wants to add you to the Companies House authorised agent account for MORRIS ACCOUNTING LTD. </p>
+      <p></p>They’ve requested to add you as an administrator. </p>
+      
+
+
+<div class="govuk-inset-text">
+<p>To accept, sign in or create sign in details using <strong>email@example.com</strong>: 
+  <a href="create-or-sign-in-invite">https://companieshouse/sign-in-5xbk3ft88 </a></p>
+
+
+</div>
+
+<p>If you do not want to be added you can sign in to decline, or you can ignore this email. </p>
+
+<h2 class="govuk-heading-m">What an administrator for an authorised agent can do</h2>
+
+            <p>An administrator can access services for the authorised agent.</p>
+            <p>They can also view all users who have been added to the account. They can add and remove:</p>
+            
+
+
+            <ul class="govuk-list govuk-list--bullet">
+                <li>administrators</li>
+                <li>standard users</li>
+            </ul>
+
+<p>Authorised agents are also known as Authorised Corporate Service Providers (ACSPs). Read our guidance for more information on what an ACSP is, and the services you can use: </p>
+<p><a href="">https://www.gov.uk/guidance/being-an-authorised-corporate-service-provider</a> </p>
+
+
+
+
+
+            <h2 class="govuk-heading-s">Contact us</h2>
+
+            <p>Telephone: 0303 1234 500</p>
+            <p>Email: <a href="">enquiries@companieshouse.gov.uk</a></p>
+
+
+
+
+
+
+    </div>
+    </div>
+
+
+  </div>
+</div>
+{% endblock %}

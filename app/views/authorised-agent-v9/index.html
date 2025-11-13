@@ -1,0 +1,518 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Shortcuts – {{ serviceName }} - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <h1 class="govuk-heading-xl">
+      Authorised agent
+      <span class="govuk-caption-xl">Version 8</span>
+    </h1>
+
+    {{ govukWarningText({
+      html: "This prototype is being actively worked on so things might break or change very quickly. Some of the pages are dynamic based on the journey you select. Walk through the journey from the start to view accurate page designs. ", iconFallbackText: "Warning" })
+    }}
+
+  </div>
+</div>
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    {# ENTRY POINTS AND LINKS TAB #}
+    <div class="govuk-tabs" data-module="govuk-tabs">
+      <h4 class="govuk-tabs__title">Contents</h4>
+      <ul class="govuk-tabs__list">
+      
+        <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+          <a class="govuk-tabs__tab" href="#authorised-agent"> Authorised agent</a>
+        </li>
+      </ul>
+
+  
+
+      <!-- Authorised agent -->
+      <div class="govuk-tabs__panel" id="authorised-agent">
+
+        <!-- Home -->
+        <h2 class="govuk-heading-m">Authorised agent acceptance email and sign in </h2>
+
+        {{ govukButton({
+          text: "Registration acceptance email",
+          href:"email-acsp-registration-accepted-release-1"
+        }) }}
+
+         <ul class="govuk-list govuk-list--bullet">
+           <li>
+             <a href="email-acsp-registration-accepted-release-1">Registration acceptance email </a>
+           </li>
+           <li>
+            <a href="create-or-sign-in">GOV.UK One Login - create or sign in</a>
+          </li>
+          <li>
+            <a href="create-enter-email">GOV.UK One Login - email address</a>
+          </li>
+          <li>
+            <a href="create-enter-password">GOV.UK One Login - password</a>
+          </li>
+          <li>
+            <a href="enter-code">GOV.UK One Login - security code</a>
+          </li>
+       
+         </ul>
+
+         <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+        <h2 class="govuk-heading-m">Home</h2>
+        <h2 class="govuk-heading-s">Active</h2>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>
+              <a href="acsp-home-super-admin-tiles">Authorised agent home <strong class="govuk-tag">
+                Account owner
+              </strong> </a>
+            </li>
+            <li>
+              <a href="acsp-home-admin-tiles">Authorised agent home <strong class="govuk-tag govuk-tag--turquoise">
+                Admin
+              </strong> </a>
+            </li>
+            <li>
+              <a href="acsp-home-standard-tiles">Authorised agent home <strong class="govuk-tag govuk-tag--yellow">
+                Standard user
+              </strong> </a>
+            </li>
+            <li>
+              <a href="acsp-home-super-admin-tiles-r1">Authorised agent home <strong class="govuk-tag">
+                Account owner - alt release 1
+              </strong> </a>
+            </li>
+          </ul>
+
+          <h2 class="govuk-heading-s">Suspended</h2>
+
+          <ul class="govuk-list govuk-list--bullet">
+            <li>
+              <a href="acsp-home-super-admin-suspended">Authorised agent home <strong class="govuk-tag">
+                Account owner
+              </strong> </a>
+            </li>
+            <li>
+              <a href="acsp-home-admin-suspended">Authorised agent home <strong class="govuk-tag govuk-tag--turquoise">
+                Admin
+              </strong> </a>
+            </li>
+            <li>
+              <a href="acsp-home-standard-suspended">Authorised agent home <strong class="govuk-tag govuk-tag--yellow">
+                Standard user
+              </strong> </a>
+            </li>
+        
+          </ul>
+          <h2 class="govuk-heading-s">Release 1 versions</h2>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>
+              <a href="acsp-home-super-admin-tiles-release-1">Release 1 - Authorised agent home <strong class="govuk-tag">
+                Account owner
+              </strong> </a>
+            </li>
+            </ul>
+
+<!-- Deauthorised -->
+<!-- 
+          <h2 class="govuk-heading-s">Deauthorised <strong class="govuk-tag govuk-tag--red">
+            Need requirements
+          </strong></h2>
+
+          <ul class="govuk-list govuk-list--bullet">
+            <li>
+              <a href="acsp-home-super-admin-deauthorised">Authorised agent home <strong class="govuk-tag">
+                Account owner
+              </strong> </a>
+            </li>
+            <li>
+              <a href="acsp-home-super-admin-deauthorised">Authorised agent home <strong class="govuk-tag govuk-tag--turquoise">
+                Admin
+              </strong> </a>
+            </li>
+            <li>
+              <a href="acsp-home-super-admin-deauthorised">Authorised agent home <strong class="govuk-tag govuk-tag--yellow">
+                Standard user
+              </strong> </a>
+            </li>
+        
+          </ul> -->
+
+          <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+          <h2 class="govuk-heading-m">Managing users
+          </h2>
+           <ul class="govuk-list govuk-list--bullet">
+             <li>
+               <a href="member-home">Manage users (view, add and remove any user) <strong class="govuk-tag">
+                Account owner
+              </strong> </a>
+             </li>
+
+             <li>
+              <a href="member-home-admin">Manage users (view all users, add users, remove only admins and standard users)</a> <strong class="govuk-tag govuk-tag--turquoise">
+              Admin
+             </strong>   <strong class="govuk-tag govuk-tag--red">
+              New view
+             </strong> <strong class="govuk-tag govuk-tag--red">
+              Content TBC
+             </strong>
+            </li>
+
+         
+
+            <li> 
+              <a href="member-home-dylan-accept"> Manage users (view users)</a> <strong class="govuk-tag govuk-tag--yellow">
+                Standard user
+              </strong>
+            </li>
+
+            <li>
+              <a href="member-home-search">Manage members with search and pagination  </a> <strong class="govuk-tag govuk-tag--red">
+                In progress
+              </strong> 
+            </li>
+      
+  
+           </ul>
+ 
+           
+
+
+
+
+          <!-- Adding a member-->
+          <h3 class="govuk-heading-s">Add a member <strong class="govuk-tag">
+            Account owner
+          </strong>
+          <strong class="govuk-tag govuk-tag--turquoise">
+           Admin
+          </strong>
+          </h3>
+
+          <ul class="govuk-list govuk-list--bullet">
+            <li>
+              <a href="add-a-member">Add an admin user (scenario: admin user)  </a>
+            </li>
+            <li>
+              <a href="add-a-member-error">Add an admin user - error summary and messages </a> <strong class="govuk-tag govuk-tag--turquoise">
+                Content TBC
+               </strong>
+            </li>
+            <li>
+              <a href="interrupt-user-already-added">Add an new user interrupt page (user already added to this or another ACSP) </a><strong class="govuk-tag govuk-tag--turquoise">
+                Content TBC
+               </strong>
+            </li>
+            <li>
+              <a href="check-member-details">Check admin users details  </a>
+            </li>
+            <li>
+              <a href="confirmation-member-added">Confirmation user added (scenario: admin)</a>  <strong class="govuk-tag govuk-tag--turquoise">
+             Content TBC
+            </strong>
+            </li>
+            <li>
+              <a href="confirmation-member-added-2">Confirmation user added (scenario: standard)</a>  <strong class="govuk-tag govuk-tag--turquoise">
+             Content TBC
+            </strong>
+            </li>
+
+            <li>
+              <a href="confirmation-member-added-3">Confirmation user added (scenario: account owner)</a>  <strong class="govuk-tag govuk-tag--turquoise">
+             Content TBC
+            </strong>
+            </li>
+
+            <li>
+                <a href="member-home-member-added">Manage users - admin user added</a> <strong class="govuk-tag govuk-tag">
+                  New design - status added
+                 </strong>
+            </li>
+
+           
+
+            <li>
+              <a href="add-a-member-2">Add a standard user </a>
+            </li>
+            <li>
+              <a href="check-member-details-2">Check standard users details </a>
+            </li>
+
+
+
+
+            <li>
+              <a href="confirmation-member-added-2">Confirmation standard user added </a> <strong class="govuk-tag govuk-tag--turquoise">
+                Content TBC
+               </strong>
+            </li>
+
+            <li>
+              <a href="member-home-member-added-2">Manage users - standard user added</a> <strong class="govuk-tag govuk-tag">
+                New design - status added
+               </strong>
+            </li>
+
+</ul>
+            <!-- Confirm or decline authorised member email request -->
+          <h3 class="govuk-heading-s">Add a user - new invitation journey <strong class="govuk-tag govuk-tag--blue">
+        Create and sign in
+          </strong> <strong class="govuk-tag govuk-tag--blue">
+            New design
+              </strong>
+          </h3>
+
+          <p>Adding a user - updated screens</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li><a href="add-a-member">Add a user (hint text updated)</a></li>
+            <li><a href="check-member-details">Check the details (inset text updated)</a></li>
+            <li><a href="confirmation-member-added">Request sent (content updated)</a></li>
+            <li><a href="member-home-member-added-2">Manage users (user status added)</a></li>
+            <li><a href="interrupt-user-already-added">Stop screen - user already added to an account</a></li>
+
+            </ul>
+
+          <h4 class="govuk-heading-xs">Email invitations <strong class="govuk-tag govuk-tag--grey">
+            Emails
+           </strong> </h4>
+
+          <ul class="govuk-list govuk-list--bullet">
+
+
+            <li>
+              <a href="email-create-account-to-become-a-member-admin">Sign in / create an account to view ACSP services (scenario: admin)</a>  <strong class="govuk-tag govuk-tag--turquoise">
+                New - Content TBC
+               </strong>
+            <li>
+              <a href="email-create-account-to-become-a-member-owner">Sign in / create an account to view ACSP services (scenario: owner)</a> <strong class="govuk-tag govuk-tag--turquoise">
+                New - Content TBC
+               </strong>
+            </li>
+            <li>
+              <a href="email-create-account-to-become-a-member-standard"> Sign in / create an account to view ACSP services (scenario: standard)</a> <strong class="govuk-tag govuk-tag--turquoise">
+                New - Content TBC
+               </strong> 
+            </li>
+</ul>
+
+<p>Request or decline being added to an account</p>
+
+
+          <ul class="govuk-list govuk-list--bullet">
+          
+            <li>
+              <a href="member-invite-confirm-owner"> Confirm you want to be added as a member - owner </a>
+            </li>
+            <li>
+              <a href="member-invite-confirm-admin"> Confirm you want to be added as a member - admin </a>
+            </li>
+            <li>
+              <a href="member-invite-confirm-standard"> Confirm you want to be added as a member - standard </a>
+            </li> 
+
+</ul>
+
+<p>If user declines</p>
+<ul class="govuk-list govuk-list--bullet">
+
+          <li>
+            <a href="email-user-declined"><strong class="govuk-tag govuk-tag--grey">
+              Email
+             </strong> User declined request to be added declined</a> <strong class="govuk-tag govuk-tag--turquoise">
+              New - Content TBC
+             </strong>
+          </li>
+
+        </ul>
+
+
+          <!-- Adding a member-->
+          <h3 class="govuk-heading-s">Change a users role <strong class="govuk-tag">
+            Account owner
+          </strong>
+          <strong class="govuk-tag govuk-tag--turquoise">
+           Admin
+          </strong>
+          </h3>
+
+          <ul class="govuk-list govuk-list--bullet">
+            <li>
+              <a href="edit-member-role">Change a users role (scenario: admin user)  </a>
+            </li>
+            <li>
+              <a href="check-edit-member-role-details.html">Check details (scenario: admin user)  </a>
+            </li>
+
+            <li>
+              <a href="confirmation-edit-role-member-updated">Confirmation user role has been updated (scenario: account owner)  </a> <strong class="govuk-tag govuk-tag--red">
+                Content TBC
+               </strong>
+            </li>
+            <li>
+              <a href="confirmation-edit-role-member-updated-admin">Confirmation user role has been updated (scenario: admin)  </a><strong class="govuk-tag govuk-tag--red">
+                Content TBC
+               </strong>
+            </li>
+
+            <li>
+              <a href="confirmation-edit-role-member-updated-standard">Confirmation user role has been updated (scenario: standard user)  </a><strong class="govuk-tag govuk-tag--red">
+                Content TBC
+               </strong>
+            </li>
+
+            <li>
+              <a href="stop-screen-edit-role-removing-relevant-officer">Stop screen - You need to add a new account owner before you can change this account owners role. </a><strong class="govuk-tag govuk-tag--red">
+                Content TBC
+               </strong>
+            </li>
+
+            <li>
+              <a href="email-role-changed"><strong class="govuk-tag govuk-tag--grey">
+                Email
+               </strong> Your role has been changed to admin</a> <strong class="govuk-tag govuk-tag--turquoise">
+                New - Content TBC
+               </strong>
+            </li>
+
+            <li>
+              <a href="email-role-changed-owner"><strong class="govuk-tag govuk-tag--grey">
+                Email
+               </strong> Your role has been changed to account owner </a> <strong class="govuk-tag govuk-tag--turquoise">
+                New - Content TBC
+               </strong>
+            </li>
+
+            <li>
+              <a href="email-role-changed-standard"><strong class="govuk-tag govuk-tag--grey">
+                Email
+               </strong> Your role has been changed to standard user </a> <strong class="govuk-tag govuk-tag--turquoise">
+                New - Content TBC
+               </strong>
+            </li>
+    
+
+
+            </ul>
+
+            
+
+
+
+          <!-- Confirm or decline authorised member email request -->
+          <h3 class="govuk-heading-s">Remove a user
+           <strong class="govuk-tag">
+            Account owner
+          </strong>
+          <strong class="govuk-tag govuk-tag--turquoise">
+           Admin
+          </strong></h3>
+
+           
+
+           {{ govukButton({
+            text: "Cancel admin user and then remove standard user",
+            href:"../authorised-agent/member-home-remove-cancel"
+          }) }}
+ 
+           <ul class="govuk-list govuk-list--bullet">
+            <li>
+              <a href="remove-member">Remove a user (email address) </a>
+            </li>
+            <li>
+              <a href="remove-member-name">Remove a user (display name) </a> <strong class="govuk-tag govuk-tag--turquoise">Content TBC
+              </strong>
+            </li>
+            <li>
+              <a href="confirmation-member-removed">Confirmation a person has been removed </a> <strong class="govuk-tag govuk-tag--turquoise">Content TBC
+              </strong>
+            </li>
+
+            <li>
+              <a href="remove-yourself">Remove yourself </a> <strong class="govuk-tag govuk-tag--turquoise">Content TBC
+              </strong>
+            </li>
+            <li>
+              <a href="confirmation-you-are-removed">Confirmation you have been removed </a> <strong class="govuk-tag govuk-tag--turquoise">Content TBC
+              </strong>
+            </li>
+
+
+            
+           
+
+            <li>
+              <a href="member-home-member-removed">Manage users - member removed</a>
+            </li>
+
+            <li>
+              <a href="stop-screen-remove-relevant-officer">Stop screen - You need to add an Account owner before removing the current Account owner </a> <strong class="govuk-tag">In progress
+              </strong> <strong class="govuk-tag govuk-tag--turquoise">Content TBC
+               </strong>
+            </li>
+
+
+            <li>
+              <a href="email-member-removed"><strong class="govuk-tag govuk-tag--grey">Email
+              </strong> Remove a member </a>
+            </li>
+          
+          
+          </ul>
+
+           <!-- Confirm or decline authorised member email request -->
+         <!--  <h3 class="govuk-heading-s">Cancel a member
+           </h3>
+ 
+           <ul class="govuk-list govuk-list--bullet">
+            <li>
+              <a href="cancel-member">Cancel a members invitation   </a>
+            </li>
+            <li>
+              <a href="confirmation-cancel-member">Confirmation the  person's authorisation to file online for this company has been cancelled  </a>
+            </li>
+          </ul> -->
+
+           <!-- Confirm or decline authorised member email request -->
+         <!--  <h3 class="govuk-heading-s">Resend email to an authoirsed person
+           </h3>
+ 
+           <ul class="govuk-list govuk-list--bullet">
+             <li>
+               <a href="email-invite-resent"> Email sent confirmation </a>
+             </li>
+           </ul>
+
+        
+         
+
+          </div>-->
+
+          <!-- Confirm or decline authorised member email request -->
+          <h3 class="govuk-heading-s">Accessibility statment
+          </h3>
+
+
+          <ul class="govuk-list govuk-list--bullet">
+            <li>
+              <a href="../accessibility-statement-authorised-agents">Authorised agent services accessbility statement </a> <strong class="govuk-tag govuk-tag--turquoise">
+                Content TBC
+              </strong>
+            </li>
+          </ul>
+
+
+    </div>
+  </div>
+</div>
+
+{% endblock %}

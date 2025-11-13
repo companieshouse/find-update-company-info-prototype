@@ -1,0 +1,49 @@
+{% extends "layouts/layout-signed-out-agent.html" %}
+{% block pageTitle %}
+You cannot use this service
+  -
+  {{serviceName}}
+  - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href:""
+  }) }}
+{% endblock %}
+
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      
+      <h1 class="govuk-heading-l">We cannot add the user with the email address you provided</h1>
+     <!-- {{ govukButton({
+        text: "Appoint new director",
+        href: "add/name?type=add"
+      }) }} -->
+       <p>This could be because they do not have a Companies House account that uses the email address. Or, they may have already been added to another authorised agent account.     sometimes known as 'Find and update company information', 
+        </p>
+
+        <h2 class="govuk-heading-m">If they do not have a Companies House account</h2>
+
+        <p>Ask them to create sign in details for Companies House. To do this, they’ll need to go to the <a href="https://find-and-update.company-information.service.gov.uk/" target="_blank">Companies House register (opens in a new tab)</a> and select 'Sign / Register'. This is different to a WebFiling account.</p>
+
+        <p>The user will need to do this before you can add them.  </p>
+
+
+        <h2 class="govuk-heading-m">If they've already been added to another authorised agent account</h2>
+<p>You can either:</p>
+<ul>
+  <li>add the user once they've been removed from the other account</li>
+  <li>provide a different email address</li>
+</ul>
+
+       <p><a href="">Manage users for MORRIS ACCOUNTING LTD</a>.</p>
+
+      
+    </div>
+  </div>
+{% endblock %}

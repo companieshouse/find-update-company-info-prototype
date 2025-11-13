@@ -1,4 +1,4 @@
-{% extends "layout-signed-in.html" %}
+{% extends "layouts/layout-signed-in.html" %}
 
 {% block pageTitle %}
 Home – {{serviceName}} – GOV.UK
@@ -25,7 +25,7 @@ Home – {{serviceName}} – GOV.UK
          Search the Companies House register 
       </h1>
       <div class="govuk-form-group govuk-!-margin-bottom-9">
-        <form action="/results" method="post">
+        <form action="results" method="post">
           <label class="govuk-label" for="weight">Enter a company name, company number or officer name. </label>
           <div class="govuk-input__wrapper ">
           <input class="govuk-input" id="weight" name="weight" type="text" spellcheck="false">
