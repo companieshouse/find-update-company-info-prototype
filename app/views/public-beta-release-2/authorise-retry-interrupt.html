@@ -1,0 +1,68 @@
+
+{% extends "layouts/layout_unbranded-with-banner.html" %}
+
+
+
+
+{% set serviceName %}
+ 
+{% endset %}
+{% block beforeContent %}
+
+{% endblock %}
+
+
+{% block pageTitle %}
+Add your display name  – {{ serviceName }} - GOV.UK
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+      <form action="re-authentication" method="post" novalidate>
+        
+    
+      <div class="govuk-form-group">
+      
+        <h1 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--l" for="display-name">
+            We are trying to access OneLogin
+          </label>
+        </h1>
+      
+        <p class="govuk-body">Something went wrong with OneLogin. We are trying again to authorise your access.</p>
+       
+        <details class="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              What has gone wrong?
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            Technical stuff
+          </div>
+        </details>
+      
+        <h2 class="govuk-heading-m">What can I do?</h2>
+   
+
+      <p> You can:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>Wait while we try to authorise you. This process should take no longer than....</li>
+          <li><A>Click here</A> to return to your Companies House account.</li>
+          
+        </ul>
+        
+       
+
+      </div>
+     
+      
+      </div>
+
+    </form>
+  </div>
+</div>
+{% endblock %}

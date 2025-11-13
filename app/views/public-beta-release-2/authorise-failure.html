@@ -1,0 +1,64 @@
+
+{% extends "layouts/layout_unbranded-with-banner.html" %}
+
+
+
+
+{% set serviceName %}
+ 
+{% endset %}
+{% block beforeContent %}
+
+{% endblock %}
+
+
+{% block pageTitle %}
+Add your display name  – {{ serviceName }} - GOV.UK
+{% endblock %}
+
+
+
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+      <form action="re-authentication" method="post" novalidate>
+    
+      <div class="govuk-form-group">
+      
+        <h1 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--l" for="display-name">
+       There is a problem with the service
+          </label>
+        </h1>
+      
+        <p class="govuk-body">Something went wrong with OneLogin and we are unable to sign you in at this time.</p>
+
+     
+        <details class="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              Why can I not access this service?
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            Technical stuff
+          </div>
+        </details>
+
+        <p class="govuk-body">Please try again later.</p>
+
+       
+       
+        <p class="govuk-body">In the meantime return to <a>your Companies House account</a></p>
+     
+
+      </div>
+     
+      
+      </div>
+
+    </form>
+  </div>
+</div>
+{% endblock %}
