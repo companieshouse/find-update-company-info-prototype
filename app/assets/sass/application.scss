@@ -12,6 +12,84 @@
 @import "custom";
 
 
+//user bar
+
+ul#navigation {
+    font-size: 0.9em;
+    margin-top: 15px;
+    text-align: right;
+    font-family: 'GDS Transport', Arial, Helvetica, sans-serif;
+    display: block;  
+    li {
+      display: inline;
+      font-size: 19px;
+      overflow-wrap: break-word;
+      a {margin-left: 0.9em;}
+    }
+  }
+
+
+// current live banner added November 2025 into prototype
+.account-banner {
+    text-align: right;
+    font-size: 16px;
+    font-family: 'proxima_nova', Arial, sans-serif;
+    font-weight: 400;
+    text-transform: none;
+    z-index: 60;
+    clear: none;
+    background: transparent;
+    vertical-align: middle;
+}
+
+.input-group {
+  border-collapse: separate;
+  display: table;
+  position: relative;
+  width:100%;
+}
+
+.idv_warning_box {
+  background-color: #FDF2D5;
+  border-style: solid;
+  border-color: #F5C25C;
+  padding: 10px 10px 0px 10px; 
+  margin: -20px 0px 45px;
+}
+.search_input {
+  width: 95%;
+  line-height: 1.5;
+  height: 47px;
+  font-size: 1rem;
+  border: 2px solid black;
+  padding-left: 20px;
+  position: relative;
+}
+
+.search_button {
+  border: 0;
+  padding: .375rem .75rem;
+  text-align: center;
+  white-space: nowrap;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-image: url("/public/images/search_icon.png"); 
+  background-size: cover; 
+  background-position: center; 
+  color: white; 
+  background-color: #275CA0;
+}
+
+//search icon
+
+.search_icon {
+  width: 47px;
+  height: 47px;
+  float: right;
+  margin: -77px 3px 0 0;
+}
+
 
 .highlight-box {
     background-color: #f9f9f8;
