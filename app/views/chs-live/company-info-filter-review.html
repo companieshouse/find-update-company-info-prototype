@@ -229,7 +229,7 @@ Find and update company information
 
         <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="history">
           <div class="govuk-grid-row">
-            <div class="govuk-grid-column-one-third">
+            <!-- <div class="govuk-grid-column-one-third">
 
               <h2 class="govuk-heading-m">Filter by category</h2>
 
@@ -245,39 +245,47 @@ Find and update company information
                   </div>
                 </fieldset>
               </div>
-            </div>
+            </div> -->
 
-            <div class="govuk-grid-column-one-third">
+            <div class="govuk-grid-column-two-thirds">
+
               <div class="govuk-form-group">
+
                 <fieldset class="govuk-fieldset" aria-describedby="category">
-                  <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
-                    <div class="govuk-checkboxes__item">
-                      <input class="govuk-checkboxes__input" id="accounts" name="accounts" type="checkbox" onclick="filter_table()">
-                      <label class="govuk-label govuk-checkboxes__label" for="accounts" style="font-size: 16px;">
-                        Accounts
-                      </label>
-                    </div>
-                    <div class="govuk-checkboxes__item">
-                      <input class="govuk-checkboxes__input" id="capital" name="capital" type="checkbox" onclick="filter_table()">
-                      <label class="govuk-label govuk-checkboxes__label" for="capital" style="font-size: 16px;">
-                        Capital
-                      </label>
-                    </div>
-                    <div class="govuk-checkboxes__item">
-                      <input class="govuk-checkboxes__input" id="charges" name="charges" type="checkbox" onclick="filter_table()">
-                      <label class="govuk-label govuk-checkboxes__label" for="charges" style="font-size: 16px;">
-                        Charges
-                      </label>
-                    </div>
-                  </div>
-                </fieldset>
-              </div>
-            </div>
 
-            <div class="govuk-grid-column-one-third">
-              <div class="govuk-form-group">
-                <fieldset class="govuk-fieldset" aria-describedby="category-2">
-                  <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                  <h2 class="govuk-heading-m">Filter by category</h2>
+
+                  <div class="govuk-grid-row">
+                    
+                     <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+
+                     
+                      <div class="govuk-grid-column-one-half">
+
+                     
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="accounts" name="accounts" type="checkbox" onclick="filter_table()">
+                          <label class="govuk-label govuk-checkboxes__label" for="accounts" style="font-size: 16px;">
+                            Accounts
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="capital" name="capital" type="checkbox" onclick="filter_table()">
+                          <label class="govuk-label govuk-checkboxes__label" for="capital" style="font-size: 16px;">
+                            Capital
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="charges" name="charges" type="checkbox" onclick="filter_table()">
+                          <label class="govuk-label govuk-checkboxes__label" for="charges" style="font-size: 16px;">
+                            Charges
+                          </label>
+                        </div>
+                    </div>
+                        
+                    
+                     <div class="govuk-grid-column-one-half">
+
                     <div class="govuk-checkboxes__item">
                       <input class="govuk-checkboxes__input" id="statement" name="statement" type="checkbox" onclick="filter_table()">
                       <label class="govuk-label govuk-checkboxes__label" for="statements" style="font-size: 16px;">
@@ -306,7 +314,7 @@ Find and update company information
             <thead class="govuk-table__head">
               <tr class="govuk-table__row" name="header">
                 <th scope="col" class="govuk-table__header govuk-body-s">Date</th>
-                <th scope="col" class="govuk-table__header govuk-body-s govuk-visually-hidden" name="type_cols">Type</th>
+                <th scope="col" class="govuk-table__header govuk-body-s" name="type_cols">Type</th>
                 <th scope="col" class="govuk-table__header govuk-body-s">Description</th>
                 <th scope="col" class="govuk-table__header govuk-body-s">View / Download</th>
               </tr>
@@ -314,7 +322,7 @@ Find and update company information
             <tbody class="govuk-table__body">
               <tr class="govuk-table__row" name="statement">
                 <td class="govuk-table__cell govuk-body-s">16 September 2024</th>
-                <td class="govuk-table__cell govuk-body-s govuk-visually-hidden" name="type_cols">GAZ2</th>
+                <td class="govuk-table__cell govuk-body-s " name="type_cols">GAZ2</th>
                 <td class="govuk-table__cell govuk-body-s"><b>Confirmation statement</b>made on 30 August 2024 with no updates</td>
                 <td class="govuk-table__cell govuk-body-s">
                   <a href="javascript:void(0)" class="govuk-link">View PDF</a>(3 pages)
@@ -322,7 +330,7 @@ Find and update company information
               </tr>
               <tr class="govuk-table__row" name="accounts">
                 <td class="govuk-table__cell govuk-body-s">4 March 2024</th>
-                <td class="govuk-table__cell govuk-body-s govuk-visually-hidden" name="type_cols">GAZ2</th>
+                <td class="govuk-table__cell govuk-body-s " name="type_cols">GAZ2</th>
                 <td class="govuk-table__cell govuk-body-s"><b>	Total exemption full accounts</b>made up to 31 August 2023</td>
                 <td class="govuk-table__cell govuk-body-s">
                   <a href="javascript:void(0)" class="govuk-link">View PDF</a>(6 pages)<br>
@@ -331,7 +339,7 @@ Find and update company information
               </tr>
                <tr class="govuk-table__row" name="statement">
                 <td class="govuk-table__cell govuk-body-s">10 September 2023</th>
-                <td class="govuk-table__cell govuk-body-s govuk-visually-hidden" name="type_cols">GAZ2</th>
+                <td class="govuk-table__cell govuk-body-s " name="type_cols">GAZ2</th>
                 <td class="govuk-table__cell govuk-body-s"><b>Confirmation statement</b>made on 30 August 2023 with no updates</td>
                 <td class="govuk-table__cell govuk-body-s">
                   <a href="javascript:void(0)" class="govuk-link">View PDF</a>(3 pages)
@@ -339,7 +347,7 @@ Find and update company information
               </tr>
               <tr class="govuk-table__row" name="accounts">
                 <td class="govuk-table__cell govuk-body-s">11 March 2023</th>
-                <td class="govuk-table__cell govuk-body-s govuk-visually-hidden" name="type_cols">GAZ2</th>
+                <td class="govuk-table__cell govuk-body-s" name="type_cols">GAZ2</th>
                 <td class="govuk-table__cell govuk-body-s"><b>	Total exemption full accounts</b>made up to 31 August 2023</td>
                 <td class="govuk-table__cell govuk-body-s">
                   <a href="javascript:void(0)" class="govuk-link">View PDF</a>(6 pages)<br>
@@ -348,7 +356,7 @@ Find and update company information
               </tr>
               <tr class="govuk-table__row" name="statement">
                 <td class="govuk-table__cell govuk-body-s">30 September 2022</th>
-                <td class="govuk-table__cell govuk-body-s govuk-visually-hidden" name="type_cols">GAZ2</th>
+                <td class="govuk-table__cell govuk-body-s " name="type_cols">GAZ2</th>
                 <td class="govuk-table__cell govuk-body-s"><b>Confirmation statement</b>made on 30 August 2022 with no updates</td>
                 <td class="govuk-table__cell govuk-body-s">
                   <a href="javascript:void(0)" class="govuk-link">View PDF</a>(3 pages)
@@ -356,7 +364,7 @@ Find and update company information
               </tr>
               <tr class="govuk-table__row" name="accounts">
                 <td class="govuk-table__cell govuk-body-s">15 April 2022</th>
-                <td class="govuk-table__cell govuk-body-s govuk-visually-hidden" name="type_cols">GAZ2</th>
+                <td class="govuk-table__cell govuk-body-s " name="type_cols">GAZ2</th>
                 <td class="govuk-table__cell govuk-body-s"><b>	Total exemption full accounts</b>made up to 31 August 2022</td>
                 <td class="govuk-table__cell govuk-body-s">
                   <a href="javascript:void(0)" class="govuk-link">View PDF</a>(6 pages)<br>
@@ -365,7 +373,7 @@ Find and update company information
               </tr>
               <tr class="govuk-table__row" name="statement">
                 <td class="govuk-table__cell govuk-body-s">1 October 2021</th>
-                <td class="govuk-table__cell govuk-body-s govuk-visually-hidden" name="type_cols">GAZ2</th>
+                <td class="govuk-table__cell govuk-body-s " name="type_cols">GAZ2</th>
                 <td class="govuk-table__cell govuk-body-s"><b>Confirmation statement</b>made on 30 August 2021 with no updates</td>
                 <td class="govuk-table__cell govuk-body-s">
                   <a href="javascript:void(0)" class="govuk-link">View PDF</a>(3 pages)
@@ -373,7 +381,7 @@ Find and update company information
               </tr>
               <tr class="govuk-table__row" name="accounts">
                 <td class="govuk-table__cell govuk-body-s">16 May 2021</th>
-                <td class="govuk-table__cell govuk-body-s govuk-visually-hidden" name="type_cols">GAZ2</th>
+                <td class="govuk-table__cell govuk-body-s " name="type_cols">GAZ2</th>
                 <td class="govuk-table__cell govuk-body-s"><b>	Micro exemption full accounts</b>made up to 31 August 2021</td>
                 <td class="govuk-table__cell govuk-body-s">
                   <a href="javascript:void(0)" class="govuk-link">View PDF</a>(6 pages)<br>
@@ -382,7 +390,7 @@ Find and update company information
               </tr>
               <tr class="govuk-table__row" name="statement">
                 <td class="govuk-table__cell govuk-body-s">1 September 2020</th>
-                <td class="govuk-table__cell govuk-body-s govuk-visually-hidden" name="type_cols">GAZ2</th>
+                <td class="govuk-table__cell govuk-body-s " name="type_cols">GAZ2</th>
                 <td class="govuk-table__cell govuk-body-s"><b>Confirmation statement</b>made on 30 August 2020 with no updates</td>
                 <td class="govuk-table__cell govuk-body-s">
                   <a href="javascript:void(0)" class="govuk-link">View PDF</a>(3 pages)
@@ -390,7 +398,7 @@ Find and update company information
               </tr>
               <tr class="govuk-table__row" name="incorporation">
                 <td class="govuk-table__cell govuk-body-s">17 December 2024</th>
-                <td class="govuk-table__cell govuk-body-s govuk-visually-hidden" name="type_cols">GAZ2</th>
+                <td class="govuk-table__cell govuk-body-s " name="type_cols">GAZ2</th>
                 <td class="govuk-table__cell govuk-body-s"><b>Incorporation</td>
                 <td class="govuk-table__cell govuk-body-s">
                   <a href="javascript:void(0)" class="govuk-link">View PDF</a>(13 pages)
