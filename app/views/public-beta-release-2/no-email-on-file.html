@@ -1,0 +1,59 @@
+{% extends "layouts/main.html" %}
+<!-- Overwrite suerfice name -->
+
+
+{% block pageTitle %}
+  {{ serviceName }} – Prototype
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-two-thirds ">
+
+  <form action="choose-sign-in" method="post" novalidate="">
+
+
+
+
+    
+    {% set html %}
+    
+  {% endset %}
+
+
+
+  <h1 class="govuk-heading-xl">You do not have a Companies House account.</h1>
+
+  <p class="govuk-body">There is no Companies House account for <strong>thomasjames@gmail.com</strong>.</p>
+
+
+  <p class="govuk-body">To create new sign-in details go to GOV.UK OneLogin.</p>
+
+
+
+
+    {{ govukButton({
+      text: "GOV.UK One Login",
+      href:"create-or-sign-in"
+    }) }}
+  
+
+
+  <p class="govuk-body">If you've entered your email address incorrectly, <a href="chs-sign-in-email.html" class="govuk-link">go back and try another email address.</a></p>
+
+
+
+
+  </form>
+
+ 
+          
+
+{% endblock %}
