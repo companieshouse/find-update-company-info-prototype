@@ -229,40 +229,34 @@ Find and update company information
 
         <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="history">
           <div class="govuk-grid-row">
-            <!-- <div class="govuk-grid-column-one-third">
 
-              <h2 class="govuk-heading-m">Filter by category</h2>
-
-              <div class="govuk-form-group">
-                <fieldset class="govuk-fieldset" aria-describedby="show-filing">
-                  <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-                    <div class="govuk-checkboxes__item">
-                      <input class="govuk-checkboxes__input" id="show-filing" name="show-filing" type="checkbox" onclick="show_filing_type()">
-                      <label class="govuk-label govuk-checkboxes__label govuk-!-font-weight-bold" for="show-filing">
-                        Show filing type
-                      </label>
-                    </div>
-                  </div>
-                </fieldset>
-              </div>
-            </div> -->
 
             <div class="govuk-grid-column-two-thirds">
 
               <div class="govuk-form-group">
 
-                <fieldset class="govuk-fieldset" aria-describedby="category">
+                <fieldset class="govuk-fieldset" aria-describedby="category-hint">
 
-                  <h2 class="govuk-heading-m">Filter by category</h2>
-
-                  <div class="govuk-grid-row">
+                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
                     
-                     <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                    <h2 class="govuk-fieldset__heading">
+                    Filter by category
+                    </h2>
 
-                     
-                      <div class="govuk-grid-column-one-half">
+                  </legend>
 
-                     
+                  <div  id="category-hint" class="govuk-hint">
+
+                      When you select a filter, the page will reload to show the filtered results.
+                  
+                  </div>
+
+             
+
+                <div class="govuk-grid-column-one-half">
+                    
+                    <div class="govuk-checkboxes govuk-checkboxes" data-module="govuk-checkboxes">
+
                         <div class="govuk-checkboxes__item">
                           <input class="govuk-checkboxes__input" id="accounts" name="accounts" type="checkbox" onclick="filter_table()">
                           <label class="govuk-label govuk-checkboxes__label" for="accounts" style="font-size: 16px;">
@@ -281,34 +275,45 @@ Find and update company information
                             Charges
                           </label>
                         </div>
-                    </div>
-                        
-                    
-                     <div class="govuk-grid-column-one-half">
 
-                    <div class="govuk-checkboxes__item">
-                      <input class="govuk-checkboxes__input" id="statement" name="statement" type="checkbox" onclick="filter_table()">
-                      <label class="govuk-label govuk-checkboxes__label" for="statements" style="font-size: 16px;">
-                        Confirmation statements / Annual returns
-                      </label>
                     </div>
-                    <div class="govuk-checkboxes__item">
+                </div>
+
+           
+                <div class="govuk-grid-column-one-half">
+
+                    <div class="govuk-checkboxes govuk-checkboxes" data-module="govuk-checkboxes">
+                    
+                      
+                      <div class="govuk-checkboxes__item">
                       <input class="govuk-checkboxes__input" id="incorporation" name="incorporation" type="checkbox" onclick="filter_table()">
                       <label class="govuk-label govuk-checkboxes__label" for="incorporation" style="font-size: 16px;">
                         Incorporation
                       </label>
-                    </div>
-                    <div class="govuk-checkboxes__item">
+                      </div>
+                      <div class="govuk-checkboxes__item">
                       <input class="govuk-checkboxes__input" id="officers" name="officers" type="checkbox" onclick="filter_table()">
                       <label class="govuk-label govuk-checkboxes__label" for="officers" style="font-size: 16px;">
                         Officers
                       </label>
-                    </div>
+                      </div>
+                      <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="statement" name="statement" type="checkbox" onclick="filter_table()">
+                      <label class="govuk-label govuk-checkboxes__label" for="statement" style="font-size: 16px;">
+                        Confirmation statements / Annual returns
+                      </label>
+                      </div>
                   </div>
+                </div>
+             
+                
+
                 </fieldset>
               </div>
             </div>
           </div>
+
+          
 
           <table class="govuk-table" id="history_table">
             <thead class="govuk-table__head">
