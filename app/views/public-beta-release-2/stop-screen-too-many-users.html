@@ -1,0 +1,39 @@
+{% extends "layouts/main.html" %}
+<!-- Overwrite suerfice name -->
+
+
+{% block pageTitle %}
+  {{ serviceName }} – Prototype
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-width-container">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <div class="govuk-width-container">
+        <main class="govuk-main-wrapper govuk-main-wrapper--l" id="main-content" role="main">
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+              <h1 class="govuk-heading-l">Sorry, the GOV.UK One Login service 
+              is unavailable</h1>
+              <p class="govuk-body">
+                There are too many people using this service at the moment. Try again later.
+
+              </p>
+              <p class="govuk-body">We don't know when the service will be available again. However, you can <a class="govuk-link" href="https://www.gov.uk/find-contact-details-companies-house">contact us</a> if you have any other questions.
+            </div>
+          </div>
+        </main>
+      </div>
+
+
+
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}
