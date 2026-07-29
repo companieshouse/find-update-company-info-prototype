@@ -42,9 +42,13 @@ sign-in-one-login-only copy
 <p class="govuk-body">You can unfollow this company at any time</p>
  
 <div class="govuk-button-group">
-  <button class="govuk-button" data-module="govuk-button">
-    Follow this company
-  </button>
+
+  {{ govukButton({
+  text: "Follow this company",
+  href: "sign-in-company-info-3"
+
+}) }}
+
   <a class="govuk-link" href="">Cancel</a>
 </div>
   
