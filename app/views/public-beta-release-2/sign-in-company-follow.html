@@ -1,0 +1,52 @@
+{% extends "layouts/layout_unbranded-with-banner.html" %}
+
+
+{% set serviceName %}
+  
+{% endset%}
+
+
+{% block beforeContent %}
+
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-two-thirds ">
+
+
+
+  <form action="choose-sign-in" method="post" novalidate="">
+
+
+
+
+    
+    {% set html %}
+sign-in-one-login-only copy    
+  {% endset %}
+<br>
+
+
+  <h1 class="govuk-heading-xl">Follow a company</h1>
+
+    <h2 class="govuk-heading-l">BIG SHOP LTD (12345678)</h2>
+
+
+  <p class="govuk-body">The email address we'll use to send notifications of the company activity is <strong>johnsmith@gmail.com</strong></p>
+
+ <p class="govuk-body govuk-!-margin-bottom-0">Are you sure you want to follow this company?</p>
+
+<p class="govuk-body">You can unfollow this company at any time</p>
+ 
+<div class="govuk-button-group">
+  <button class="govuk-button" data-module="govuk-button">
+    Follow this company
+  </button>
+  <a class="govuk-link" href="#">Cancel</a>
+</div>
+  
+
+{% endblock %}

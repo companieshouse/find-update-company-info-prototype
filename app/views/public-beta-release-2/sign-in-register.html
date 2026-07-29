@@ -1,0 +1,217 @@
+{% extends "layouts/layout_unbranded-with-banner.html" %}
+
+
+{% set serviceName %}
+  
+{% endset%}
+
+
+{% block beforeContent %}
+
+{% endblock %}
+
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        {{ govukInput({
+          label: {
+            text: "Search",
+            classes: "govuk-visually-hidden",
+            isPageHeading: false
+          }
+        }) }}
+      <p class="govuk-body"><a href="#" class="govuk-link">Advanced company search</a></p>
+      
+      <div class="moj-primary-navigation tabs">
+        <div class="moj-primary-navigation__container" style="border-bottom: 1px solid #0b0c0c;">
+          <div class="moj-primary-navigation__nav">
+            <nav class="moj-primary-navigation" aria-label="Primary navigation">
+              <ul class="moj-primary-navigation__list tabs">
+                <li class="moj-primary-navigation__item">
+                  <a class="moj-primary-navigation__link active_tab" id="all_link" href="javascript:search_tab_click('all')">All</a>
+                </li>
+      
+                <li class="moj-primary-navigation__item">
+                  <a class="moj-primary-navigation__link" id="companies_link" href="javascript:search_tab_click('companies')">Companies</a>
+                </li>
+      
+                <li class="moj-primary-navigation__item">
+                  <a class="moj-primary-navigation__link" id="search_officers_link" href="javascript:search_tab_click('officers')">Officers</a>
+                </li>
+
+                <li class="moj-primary-navigation__item">
+                  <a class="moj-primary-navigation__link" id="disqualifications_link" href="javascript:search_tab_click('disqualifications')">Disqualifications</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="all_tab">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <ul class="govuk-list govuk-!-margin-top-9">
+          <li style="font-size: 20px">
+            <a class="govuk-link" href="company-info">BIG SHOP LTD</a>
+          </li>
+          <li class="govuk-body-s" style="color: #70777A;">
+            12345678 - Incorporated on 17 December 1999
+          </li>
+          <li class="govuk-body-s">
+            72 Guild Street, London, SE23 6FH
+          </li>
+        </ul>
+  
+        <ul class="govuk-list govuk-!-margin-top-5">
+          <li style="font-size: 20px">
+            <a class="govuk-link" href="#">BIGGEST SHOP LLC</a>
+          </li>
+          <li class="govuk-body-s" style="color: #70777A;">
+            11112222 - Incorporated on 16 March 2023
+          </li>
+          <li class="govuk-body-s">
+            78 Hill road, Bristol, BS4 7GH
+          </li>
+        </ul>
+  
+        <ul class="govuk-list govuk-!-margin-top-5">
+          <li style="font-size: 20px">
+            <a class="govuk-link" href="#">BIG SHOPS LIMITED</a>
+          </li>
+          <li class="govuk-body-s" style="color: #70777A;">
+            Total number of appointments 1
+          </li>
+          <li class="govuk-body-s">
+            5 Short street, Birmingham, BX1 4SA
+          </li>
+        </ul>
+  
+        <ul class="govuk-list govuk-!-margin-top-5">
+          <li style="font-size: 20px">
+            <a class="govuk-link" href="#">MEGAMART LTD</a>
+          </li>
+          <li class="govuk-body-s" style="color: #70777A; border-left: 3px solid #BFC1C3; padding-left: 15px;">
+              Matching previous names:<br>
+              BIG SHOP
+          </li>
+          <li class="govuk-body-s" style="color: #70777A;">
+            22223333 - Incorporated on 8 May 2023
+          </li>
+          <li class="govuk-body-s">
+            98 Apple street, Cardiff, CF1 9IJ
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div id="companies_tab" class="govuk-visually-hidden">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <ul class="govuk-list govuk-!-margin-top-9">
+          <li style="font-size: 20px">
+            <a class="govuk-link" href="company-info">BIG SHOP LTD</a>
+          </li>
+          <li class="govuk-body-s" style="color: #70777A;">
+            12345678 - Incorporated on 17 December 1999
+          </li>
+          <li class="govuk-body-s">
+            72 Guild Street, London, SE23 6FH
+          </li>
+        </ul>
+  
+        <ul class="govuk-list govuk-!-margin-top-5">
+          <li style="font-size: 20px">
+            <a class="govuk-link" href="#">BIGGEST SHOP LLC</a>
+          </li>
+          <li class="govuk-body-s" style="color: #70777A;">
+            11112222 - Incorporated on 16 March 2023
+          </li>
+          <li class="govuk-body-s">
+            78 Hill road, Bristol, BS4 7GH
+          </li>
+        </ul>
+  
+        <ul class="govuk-list govuk-!-margin-top-5">
+          <li style="font-size: 20px">
+            <a class="govuk-link" href="#">MEGAMART LTD</a>
+          </li>
+          <li class="govuk-body-s" style="color: #70777A; border-left: 3px solid #BFC1C3; padding-left: 15px;">
+              Matching previous names:<br>
+              BIG SHOP
+          </li>
+          <li class="govuk-body-s" style="color: #70777A;">
+            Total number of appointments 1
+          </li>
+          <li class="govuk-body-s">
+            98 Apple street, Cardiff, CF1 9IJ
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div id="search_officers_tab" class="govuk-visually-hidden">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+  
+        <details class="govuk-details govuk-!-margin-top-5">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              Did you know you can search for officers by location?
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            You can add location details when you search for a name, such as: 
+            <b>John Smith location:"High Street, London"</b> or <b>John Smith location:"CF14" </b>  
+          </div>
+        </details>
+  
+        <ul class="govuk-list govuk-!-margin-top-9">
+          <li style="font-size: 20px">
+            <a class="govuk-link" href="#">BIG SHOPS LIMITED</a>
+          </li>
+          <li class="govuk-body-s" style="color: #70777A;">
+            Total number of appointments 1
+          </li>
+          <li class="govuk-body-s">
+            5 Short street, Birmingham, BX1 4SA
+          </li>
+        </ul>
+  
+      </div>
+    </div>
+  </div>
+
+  <div id="disqualifications_tab" class="govuk-visually-hidden">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h2 class="govuk-heading-l govuk-!-margin-top-9">No results found</h2>
+  
+        <p class="govuk-body">There are no results that match your search. Try 
+          searching again using different search criteria.
+        </p>
+      </div>
+      <div class="govuk-grid-column-one-third">
+        <div class="grey-box govuk-!-margin-top-9">
+          <ul class="govuk-list govuk-list--bullet">
+            <li><a class="govuk-link govuk-body-s" href="https://find-and-update.company-information.service.gov.uk/register-of-disqualifications/A">Register of disqualifications</a></li>
+            <li><a class="govuk-link govuk-body-s" href="https://www.gov.uk/report-a-disqualified-director">Report a disqualified director</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+          
+
+{% endblock %}
