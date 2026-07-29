@@ -864,6 +864,23 @@ router.post('/public-beta-release-2/one-login-email-address-updated', function (
   })
 
 
+  //July 2026 CHS journey Emma and Howard
+
+
+ 
+
+
+
+      /*
+       * CHS - journey
+       */ 
+      router.post('/public-beta-release-2/sign-in-get-information', function (req, res) {
+        req.session.data['signIn'] = true;
+
+        res.redirect('/public-beta-release-2/start-lp-2');
+      });
+
+
       /*
        * CHS - journey
        */ 
@@ -874,8 +891,32 @@ router.post('/public-beta-release-2/one-login-email-address-updated', function (
 
 
 
+      /*
+       * Search the register 
+       */ 
+      router.post('/public-beta-release-2/sign-in-start-signed-in-lp', function (req, res) {
 
-          /*
+        res.redirect('sign-in-search-results-list-lp')
+      })
+
+      
+    /*
+      * A user signing into CHS
+      */ 
+      router.post('/public-beta-release-2/verify-email-address-3', function (req, res) {
+
+
+        //set signIn to true
+        req.session.data['signIn'] == true;
+
+        res.redirect('sign-in-start-signed-in-lp')
+      })
+
+
+
+
+      
+      /*
        * CHS - journey
        */ 
       router.post('/public-beta-release-2/sign-in-search-results', function (req, res) {
