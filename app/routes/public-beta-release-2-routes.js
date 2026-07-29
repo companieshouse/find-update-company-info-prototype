@@ -864,5 +864,24 @@ router.post('/public-beta-release-2/one-login-email-address-updated', function (
   })
 
 
+      /*
+       * CHS - journey
+       */ 
+      router.post('/public-beta-release-2/sign-in-start-signed-in-lp', function (req, res) {
+
+        res.redirect('sign-in-search-results-list-lp')
+      })
+
+
+
+
+          /*
+       * CHS - journey
+       */ 
+      router.post('/public-beta-release-2/sign-in-search-results', function (req, res) {
+
+        res.redirect('sign-in-search-results-list-lp')
+      })
+
 
 module.exports = router

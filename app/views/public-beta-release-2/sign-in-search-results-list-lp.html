@@ -26,14 +26,10 @@ Find and update company information
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
-        {{ govukInput({
-          label: {
-            text: "Search",
-            classes: "govuk-visually-hidden",
-            isPageHeading: false
-          }
-        }) }}
-
+        <div class="input-group">
+          <div><input class="search_input"></input></div>
+          <div><button class="govuk-button search_button"></button></div>
+      </div>
 
 
         
