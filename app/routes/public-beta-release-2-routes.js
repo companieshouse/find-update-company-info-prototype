@@ -875,7 +875,7 @@ router.post('/public-beta-release-2/one-login-email-address-updated', function (
        * CHS - journey
        */ 
       router.post('/public-beta-release-2/sign-in-get-information', function (req, res) {
-        req.session.data['signIn'] = true;
+        req.session.data['signIn'] = false;
 
         res.redirect('/public-beta-release-2/start-lp-2');
       });
