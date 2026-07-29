@@ -12,6 +12,26 @@
 @import "custom";
 
 
+
+// tab styling for CHS
+
+
+.tabs {
+  background-color: white !important;
+}
+
+
+.tabs li a {
+  padding: 16px;
+  font-size: 16px;
+  color: #1D70B8 !important;
+  font-weight: normal !important;
+}
+
+.tabs li a:hover {
+  text-decoration: underline;
+}
+
 //user bar
 
 ul#navigation {
@@ -1694,3 +1714,550 @@ ul#navigation {
       }
   }
 
+
+//CHS styling - July 2026
+
+ul#navigation {
+    font-size: 0.9em;
+    margin-top: 15px;
+    text-align: right;
+    font-family: 'GDS Transport', Arial, Helvetica, sans-serif;
+    display: block;  
+    li {
+      display: inline;
+      font-size: 19px;
+      overflow-wrap: break-word;
+      a {margin-left: 0.9em;}
+    }
+  }
+
+
+  ///info panel///
+
+.ch-info-panel {
+  background-color: #F3F2F1;
+	text-align: left;
+  margin: 1em 0;
+  padding: 2em;
+	.govuk-panel__title {
+		font-size: 1.7em;
+	}
+}
+
+
+.language-toggle {
+  span {
+    margin-left: 0.5em;
+  }
+  #cym {
+    margin-left: 0.4em !important;
+  }
+}
+
+
+  //Payment
+
+.payment-summary {
+  border-top: 2px solid #005ea5;
+  padding: 15px;
+  background-color: #f8f8f8;
+}
+
+.sticky {
+  position: -webkit-sticky !important;
+  position: sticky !important;
+  top: 0;
+}
+
+.card-images {
+  position: relative;
+
+  img {
+    height: 35px;
+  }
+
+  .original-accepted {
+    margin: 10px 0 0;
+    max-width: 340px;
+    position: relative;
+    z-index: 1;
+  }
+}
+
+img.card-image {
+  margin: -5px 0 0 8px;
+  max-height: 38px;
+  padding-top: 2px;
+  vertical-align: middle;
+}
+
+.ch-idv-accepted {
+  padding:0.5em 0.7em;
+  border: 5px solid #00703c;
+}
+
+.hidden-div, .authorised {
+  display: none;
+}
+
+// Making LP names uppercase
+.uppercase {text-transform: uppercase;}
+  
+
+
+// UR shortcuts - not part of actual service
+
+.ur-shortcuts {
+  margin-top: 3em;
+  p, ul, li, a, .govuk-label {
+    color: #b1b4b6  !important;
+    font-size: 19px !important;
+  }
+}
+
+// Second nationality
+
+/* Hide the link by default */
+#second-nationality-link {
+  display: none;
+}
+
+/* Show the link only when JavaScript is enabled */
+.js-enabled #second-nationality-link {
+  display: inline;
+}
+
+/* Hide the div when JavaScript is enabled */
+.js-enabled #second-nationality-div {
+  display: none;
+}
+
+// Unstyling the GOV Suffix from a text inout (name ending)
+.ch-unstyled-suffix {
+  border: none;
+  background: none;
+}
+
+// Styling for alternate name ending pattern
+.ch-name-ending {
+  border-left: 0;
+}
+
+// Styling for hidden (not currently in scope) links on index
+.govuk-tabs__panel s, .govuk-tabs__panel s a:any-link {
+  color:#727279	;
+}
+
+  //Styles for interrupt card
+
+  .interrupt-card {
+    background-color:#175B96; // this blue ensure sufficient colour contrast
+    color: #fff !important;
+    padding: 2em 2em 0em;
+  
+    h1, h2, h3, p, ul, li, a:link {
+      color:#fff;
+    }
+    a:hover, a:visited  {
+      color:   #f3f2f1		;
+    }
+    a:focus {
+      text-decoration:none;
+      color:  $govuk-focus-text-colour;
+      background-color:  $govuk-focus-colour	;
+    }
+  
+    .govuk-button {
+      background-color: #fff;
+      color: #000 !important;
+      &:visited {
+        background-color: #f3f2f1	;
+        color:  $govuk-focus-text-colour;
+      }
+      &:hover {
+        background-color: 	#b1b4b6 	;
+        color:  $govuk-focus-text-colour;
+      }
+  
+    }
+    .govuk-inset-text {
+      border-left-color: #fff !important;
+    }
+  
+  }
+
+
+
+  //Styles for interrupt card
+
+  .interrupt-card-rp {
+    background-color:#003078; // this blue ensure sufficient colour contrast
+    color: #fff !important;
+    padding: 2em 2em 0em;
+  
+    h1, h2, h3, p, ul, li, a:link {
+      color:#fff;
+    }
+    a:hover, a:visited  {
+      color:   #f3f2f1		;
+    }
+    a:focus {
+      text-decoration:none;
+      color:  $govuk-focus-text-colour;
+      background-color:  $govuk-focus-colour	;
+    }
+  
+    .govuk-button {
+      background-color: #fff;
+      color: #000 !important;
+      &:visited {
+        background-color: #f3f2f1	;
+        color:  $govuk-focus-text-colour;
+      }
+      &:hover {
+        background-color: 	#b1b4b6 	;
+        color:  $govuk-focus-text-colour;
+      }
+  
+    }
+  
+  }
+
+
+  .govuk-summary-card .govuk-button {
+    margin-bottom: 0;
+  }
+
+
+
+// CHS screens
+#chs-customer-insights-top {
+  position: relative;
+  background-color: #376EB3;
+  padding: 5px;
+  z-index: 10;
+  color: #fff;
+}
+
+
+
+.chs-account-banner {
+    font-size: 16px;
+    font-family: 'proxima_nova', Arial, sans-serif;
+    font-weight: 400;
+    text-transform: none;
+    z-index: 60;
+    clear: none;
+    background: transparent;
+    vertical-align: middle;
+}
+
+
+.no-wrap {
+  white-space: nowrap;
+}
+
+.update-partnership-name {
+  position:relative; 
+  top:-20px;
+}
+
+
+.blue-banner a {
+  color: white;
+  margin: 30px;
+}
+
+.idv_warning_box {
+  background-color: #FDF2D5;
+  border-style: solid;
+  border-color: #F5C25C;
+  padding: 10px 10px 0px 10px; 
+  margin: -20px 0px 45px;
+}
+
+.grey-box {
+  background-color: #DFE1E1;
+  padding: 10px 10px 5px 10px; 
+}
+
+
+.tabs {
+  background-color: white !important;
+}
+
+
+.tabs li a {
+  padding: 16px;
+  font-size: 16px;
+  color: #1D70B8 !important;
+  font-weight: normal !important;
+}
+
+.tabs li a:hover {
+  text-decoration: underline;
+}
+
+.input-group {
+  border-collapse: separate;
+  display: table;
+  position: relative;
+  width:100%;
+}
+
+.input-group>div {
+  display: table-cell;
+}
+
+.input-group>div:first-child {
+  width: 100%;
+} 
+
+.search_input {
+  width: 95%;
+  line-height: 1.5;
+  height: 47px;
+  font-size: 1rem;
+  border: 2px solid black;
+  padding-left: 20px;
+  position: relative;
+}
+//
+//.search_container {
+ // background-color: #dee0e2;
+ // padding:8px 8px 8px 8px;
+ // background-image: url("/public/images/search_icon.png"); 
+ // background-repeat: no-repeat;
+  //background-size:47px;
+ // background-position:   95% 26% !important;
+ // max-height: 50px;
+//}
+
+.search_container {
+  background-color: #dee0e2;
+  padding:8px 8px 8px 8px;
+  max-height: 50px;
+}
+.search_icon {
+  width: 47px;
+  height: 47px;
+  float: right;
+  margin: -77px 3px 0 0;
+}
+
+.tabs {
+  background-color: white !important;
+  padding-left: 0;
+}
+
+.tabs li {
+  display: inline-block;
+
+}
+.tabs li a {
+  padding: 16px;
+  font-size: 18px!important;
+  color: #1D70B8 !important;
+  font-weight: normal !important;
+  text-decoration-line: none;
+}
+
+.tabs li a:hover {
+  text-decoration: underline;
+}
+
+
+.active_tab {
+  text-decoration: underline solid #275CA0 50% !important;
+  text-underline-offset: 13px;
+}
+
+.ch-overdue {
+  margin-bottom: 0;
+}
+.ch-overdue .govuk-warning-text__text  {
+  color: govuk-colour("red");
+  margin-bottom: 0;
+}
+.ch-overdue .govuk-warning-text__icon {
+  color: #fff;
+  border-color:govuk-colour("red");
+  background-color: govuk-colour("red");
+}
+
+li.ch-tab-overdue {
+  background-color: govuk-colour("red") !important;
+}
+
+li.govuk-tabs__list-item--selected.ch-tab-overdue {
+  background-color: govuk-colour("white") !important;
+}
+li.ch-tab-overdue a {
+  color: govuk-colour("white") !important;
+}
+li.govuk-tabs__list-item--selected.ch-tab-overdue a {
+  color: govuk-colour("black") !important;
+}
+
+
+.govuk-js-hidden {
+  display: none;
+}
+
+
+#chs-customer-insights-top {
+  position: relative;
+  background-color: #376EB3;
+  padding: 5px;
+  z-index: 10;
+  color: #fff;
+}
+
+.blue-banner {
+  color: #FFFFFF !important;
+}
+
+h1, h2, p, a, li {
+  font-family: "GDS Transport", Arial, Helvetica, sans-serif !important;
+}
+
+.footer_blue_banner{
+  background-color: #376EB3;
+  padding: 10px 10px 1px 10px; 
+  margin: -20px 0px -45px;
+}
+
+.footer_blue_line {
+  border: 5px solid #376EB3;
+  margin: -2px 0px -4px 0px;
+}
+
+.account-banner {
+    text-align: right;
+    font-size: 16px;
+    font-family: 'proxima_nova', Arial, sans-serif;
+    font-weight: 400;
+    text-transform: none;
+    z-index: 60;
+    clear: none;
+    background: transparent;
+    vertical-align: middle;
+}
+
+ul#navigation {
+  font-size: 0.9em;
+  text-align: right;
+  float: right;
+  li {
+    display: inline;
+    font-family: 'nta', Arial;
+    font-size: 16px;
+    overflow-wrap: break-word;
+    a {margin-left: 0.9em;}
+  }
+}
+.no-wrap {
+  white-space: nowrap;
+}
+
+
+.blue-banner a {
+  color: white;
+  margin: 30px;
+}
+
+.idv_warning_box {
+  background-color: #FDF2D5;
+  border-style: solid;
+  border-color: #F5C25C;
+  padding: 10px 10px 0px 10px; 
+  margin: -20px 0px 45px;
+}
+
+.grey-box {
+  background-color: #DFE1E1;
+  padding: 10px 10px 5px 10px; 
+}
+
+
+.tabs {
+  background-color: white !important;
+}
+
+
+.tabs li a {
+  padding: 16px;
+  font-size: 16px;
+  color: #1D70B8 !important;
+  font-weight: normal !important;
+}
+
+.tabs li a:hover {
+  text-decoration: underline;
+}
+
+.input-group {
+  border-collapse: separate;
+  display: table;
+  position: relative;
+  width:100%;
+}
+
+.input-group>div {
+  display: table-cell;
+}
+
+.input-group>div:first-child {
+  width: 100%;
+} 
+
+.search_input {
+  position: relative;
+  z-index: 2;
+  width: 98%;
+  font-size: .875rem;
+  line-height: 1.5;
+  height: 47px;
+  font-size: 19px;
+  border: 2px solid black;
+}
+
+.search_button {
+  border: 0;
+  padding: .375rem .75rem;
+  text-align: center;
+  white-space: nowrap;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-image: url("/public/images/search_icon.png"); 
+  background-size: cover; 
+  background-position: center; 
+  color: white; 
+  background-color: #275CA0;
+}
+
+
+.active_tab {
+  text-decoration: underline solid #275CA0 50%;
+  text-underline-offset: 13px;
+}
+
+.cs-overdue h2 {
+  color:	#d4351c;
+}
+
+.cs-overdue .govuk-warning-text__icon {
+  background-color:	#d4351c;
+  border-color: 	#d4351c;
+  top:17px;
+}
+
+.govuk-warning-text.cs-overdue  {
+  margin-bottom: 0 !important;
+}
+
+.govuk-tag--dark-grey {
+  background-color: #505a5f;
+  color: #fff;
+}
