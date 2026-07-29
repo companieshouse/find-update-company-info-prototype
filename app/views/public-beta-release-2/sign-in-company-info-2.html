@@ -31,9 +31,13 @@
         <li class="govuk-!-margin-top-4">Company number 12345678</li>
       </ul>
 
-      <button type="submit" class="govuk-button" data-module="govuk-button">
-        Follow this company
-      </button>
+
+
+      {{ govukButton({
+        text: "Follow this company",
+        href: "sign-in-company-follow"
+      }) }}
+
 
     
       
