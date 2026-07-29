@@ -1,3 +1,9 @@
 {
-  "serviceName": "Find and update company information prototype"
+  "serviceName": "File for a limited partnership",
+  "plugins": {
+    "govuk-frontend": {
+      "rebrand": true
+    }
+  }
+
 }
