@@ -59,13 +59,56 @@
         {{ govukSummaryList({
           card: {
             title: {
+              html: 'Search the register and follow a company'
+            },
+            actions: {
+              items: [
+                {
+                  href: "public-beta-release-2/index",
+                  text: "View prototype",
+                  visuallyHiddenText: "for Search the register and follow a company"
+                }
+              ]
+            }
+          },
+          rows: [
+          {
+            key: {
+              text: "Status"
+            },
+            value: {
+              html: "<strong class='govuk-tag govuk-tag--blue'>
+               In progress
+              </strong>"
+            }
+          },
+            {
+              key: {
+                text: ""
+              },
+              value: {
+                html: ''
+              }
+            }
+          ]
+        }) }}
+
+
+        <h3 class="govuk-heading-m govuk-!-padding-top-4">Public beta - Release 2
+        </h3>
+            
+
+             
+        {{ govukSummaryList({
+          card: {
+            title: {
               html: 'Public Beta 
                Release 2 <br>  Migrating CHS accounts to GOV.UK One Login'
             },
             actions: {
               items: [
                 {
-                  href: "public-beta-release-2/index",
+                  href: "",
                   text: "View prototype",
                   visuallyHiddenText: "of public beta"
                 }
