@@ -392,11 +392,7 @@ router.post('/public-beta-release-2/one-login-enter-password', function (req, re
   })
   
   //One loginsign create - check email 
-  router.post('/public-beta-release-2/create-check-your-email', function (req, res) {
-  
-    res.redirect('create-enter-password')
-  })
-  
+
   
   //One loginsign create - check email 
   router.post('/public-beta-release-2/create-enter-password', function (req, res) {
