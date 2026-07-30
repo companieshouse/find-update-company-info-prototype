@@ -1,4 +1,4 @@
-{% extends "layouts/layout.html" %}
+{% extends "layouts/layout_rebrand.html" %}
 <!-- Overwrite suerfice name -->
 {% set serviceName %}
   
@@ -73,8 +73,13 @@
             ]
           }) }}
 
+          {{ govukButton({
+            text: "Continue",
+            href:"create-complete"
+          }) }}
 
-        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+
 
       </form>
 

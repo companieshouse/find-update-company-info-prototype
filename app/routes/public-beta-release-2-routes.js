@@ -401,7 +401,7 @@ router.post('/public-beta-release-2/one-login-enter-password', function (req, re
   })
   
   //One loginsign create - check email 
-  router.post('/public-beta-release-2/create-choose-security-type', function (req, res) {
+  router.post('/public-beta-release-2/one-login/create-choose-security-type', function (req, res) {
   
      //If they have an existing chs account
      if (req.session.data['choose-security-type'] === 'text-message-on-sign-in') {
