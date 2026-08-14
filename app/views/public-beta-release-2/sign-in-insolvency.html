@@ -5,6 +5,9 @@
   
 {% endset%}
 
+{% block pageTitle %}
+Sign in to Companies House - Find and update company information - GOV.UK
+{% endblock %}
 
 {% block beforeContent %}
 
@@ -23,14 +26,9 @@
 
     
     {% set html %}
-    <p class="govuk-notification-banner__heading">
-      We are introducing a new way to sign in to some of our services.
-    </p>
+    
   {% endset %}
 
-  {{ govukNotificationBanner({
-    html: html
-  }) }}
 
   <h1 class="govuk-heading-l">Sign in to Companies House</h1>
 
@@ -79,41 +77,12 @@
   <p class="govuk-body"> <a href="create-new-sign-in-details" class="govuk-link">Create sign in details</a> </p>
 
 
-  <h2 class="govuk-heading-m">GOV.UK One Login</h2> 
-
-  <p class="govuk-body">This is the new way to sign in to some of our services.</p> 
-
-  <p class="govuk-body"><a href="create-or-sign-in" class="govuk-link">Sign in with GOV.UK One Login</a> if you already have one.</p> 
-
-
-
-
-
  
-
-  <!--
-  <p class="govuk-body"><a href="../public-beta-v2/create-or-sign-in" class="govuk-link">Create sign in details</a></p> 
-<p class="govuk-body"><a href="../public-beta-v2/create-or-sign-in" class="govuk-link">Sign in with GOV.UK One Login</a></p> 
--->
-
-
-
-<!-- <p class="govuk-body"><a href="create-or-sign-in" class="govuk-link">Create GOV.UK One Login sign in details</a> if you do not have an existing Companies House account.</p>  -->
-
-
-
-
-
-
-
-
-
-
 
 
   </form>
 
-            </div>
-          </div>
+ 
+          
 
 {% endblock %}
