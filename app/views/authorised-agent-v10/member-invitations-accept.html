@@ -1,0 +1,59 @@
+{% extends "layouts/layout-signed-out-agent.html" %}
+
+{% block pageTitle %}
+  Your companies - Enter the company authentication code - Companies House WebFiling account - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+
+
+{% block content %}
+
+<form action="acsp-home-standard" method="post">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+        {% set html %}
+        <p class="govuk-notification-banner__heading">
+          You have been added as a standard user for MORRIS ACCOUNTING LTD.
+          {% endset %}
+
+        {{ govukNotificationBanner({
+          html: html,
+          type: 'success'
+        }) }}
+
+       
+        <h1 class="govuk-heading-l">What happens now</h1>
+
+        <p class="govuk-body">You can: </p>
+        <ul class="govuk-list govuk-list--bullet">
+
+          <li>verify someone's identity for Companies House from XX DATE
+            </li>
+          <li>file as an authorised agent from XX DATE
+            </li>
+
+
+        </ul>
+
+        <p class="govuk-body govuk-!-padding-bottom-3">We’ve sent an email to the account owners to let them know you've been added.</p>
+
+    
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          View services for authorised agents
+        </button>
+
+     
+
+    
+    </div>
+  </div>
+{% endblock %}
+
+
+
+

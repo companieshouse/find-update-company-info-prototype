@@ -1,0 +1,47 @@
+{% extends "layouts/layout-signed-out-agent.html" %}
+{% block pageTitle %}
+You cannot use this service
+  -
+  {{serviceName}}
+  - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href:""
+  }) }}
+{% endblock %}
+
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      
+      <h1 class="govuk-heading-l">You cannot add this user</h1>
+     <!-- {{ govukButton({
+        text: "Appoint new director",
+        href: "add/name?type=add"
+      }) }} -->
+       <p class="govuk-body">We have not been able to add the user with the email address you provided. </p>
+       
+       <p>This could be because they do not have a Companies House account that uses the email address. Or, they may have already been added to an authorised agent account.</p>
+   
+   <p>The user may need to create a Companies House account, or be removed from another authorised account before you can add them. </p>
+
+<!--
+   <p>Alternatively, you can try using a different email address to add a user. </p> -->
+       
+    
+<!--
+       <button type="submit" class="govuk-button govuk-!-margin-top-3" data-module="govuk-button">
+        Add another user 
+      </button> -->
+
+       <p><a href="">Manage users for MORRIS ACCOUNTING LTD</a>.</p>
+
+      
+    </div>
+  </div>
+{% endblock %}

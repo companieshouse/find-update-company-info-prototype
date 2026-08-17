@@ -1,0 +1,84 @@
+{% extends "layouts/layout-signed-out-agent.html" %}
+
+{% block pageTitle %}
+  Your companies
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href:""
+  }) }}
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-width-container">
+
+
+<div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+    <form action="/remove-yourself" method="post" novalidate>
+
+
+    <span class="govuk-caption-xl" >MORRIS ACCOUNTING LTD</span>
+
+    <h1 class="govuk-heading-xl">Are you sure you want to remove yourself?</h1>
+
+    <p class="govuk-body">
+    If you remove yourself from the authorised agent account, you will no longer be able to use services for this authorised agent.
+</p> 
+
+<p>You’ll be immediately signed out. The next time you sign in, you will no longer be able to access the authorised agent account. </p>
+
+
+<!--
+  {{ govukCheckboxes({
+    idPrefix: "waste",
+    name: "waste",
+    fieldset: {
+      legend: {
+        text: "",
+        isPageHeading: true,
+        classes: "govuk-fieldset__legend--l"
+      }
+    },
+
+    items: [
+
+      {
+        value: "mines",
+        text: "I confirm that I have read and understood this information."
+      }
+    ] 
+  }) }}  -->
+
+
+
+  <div class="govuk-button-group">
+    {{ govukButton({
+      text: "Remove and sign out",
+      classes: "govuk-button--warning",
+      href:"confirmation-member-removed"
+    }) }}
+  
+    <a class="govuk-link" href="manage-authorised-people">Cancel</a>
+  </div>
+
+
+
+     
+
+
+      </div>
+    </div>
+  </form>
+</div>
+</div>
+</div>
+
+
+{% endblock %}

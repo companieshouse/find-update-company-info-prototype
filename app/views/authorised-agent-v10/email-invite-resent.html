@@ -1,0 +1,46 @@
+{% extends "layouts/layout-signed-out-agent.html" %}
+
+{% block pageTitle %}
+  Your companies - Enter the company authentication code - Companies House WebFiling account - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back to your companies",
+    href:""
+  }) }}
+{% endblock %}
+
+
+
+{% block content %}
+
+<form action="manage-authorised-people" method="post">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+
+
+      {% set html %}
+      <h3 class="govuk-notification-banner__heading">
+        Email sent
+      </h3>
+      <p class="govuk-body">We've sent another email to <span class='govuk-body govuk-!-font-weight-bold'>k.williams@example.com</span> inviting them to be a standard user for MORRIS ACCOUNTING LIMITED.</p>
+    {% endset %}
+
+    {{ govukNotificationBanner({
+      html: html,
+      type: 'success'
+    }) }}
+
+
+        
+
+
+
+
+
+      </div>
+  </div>
+</form>
+
+{% endblock %}
