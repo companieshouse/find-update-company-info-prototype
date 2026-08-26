@@ -1,0 +1,58 @@
+{% extends "layouts/layout_rebrand.html" %}
+
+
+{% set serviceName %}
+  
+{% endset%}
+
+{% block pageTitle %}
+Sign in to Companies House - Find and update company information - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-two-thirds ">
+
+  <form action="choose-sign-in" method="post" novalidate="">
+
+
+
+
+    
+    {% set html %}
+    
+  {% endset %}
+
+
+  <h1 class="govuk-heading-l">Sign in to Companies House</h1>
+
+  <p class="govuk-body">If you are a managed user sign in here using Entra ID. If not then then <a href="sign-in-one-login-only-v2.html"> return to the start page</a> and access our services using GOV.UK One Login.</p>
+
+
+
+
+
+
+  
+
+
+  {{ govukButton({
+    text: "Sign in"
+  }) }}  
+  
+
+ 
+
+
+  </form>
+
+ 
+          
+
+{% endblock %}
