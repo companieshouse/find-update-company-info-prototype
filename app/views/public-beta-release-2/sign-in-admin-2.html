@@ -1,0 +1,71 @@
+{% extends "layouts/layout_rebrand.html" %}
+
+
+{% set serviceName %}
+  
+{% endset%}
+
+{% block pageTitle %}
+Sign in to Companies House - Find and update company information - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-two-thirds ">
+
+  <form action="choose-sign-in" method="post" novalidate="">
+
+
+
+
+    
+    {% set html %}
+    
+  {% endset %}
+
+
+  <h1 class="govuk-heading-l">Managed access to Companies House</h1>
+
+  <p class="govuk-body">If you access Companies House using Entra ID, enter your email address and select continue to sign in.</p>
+
+   <p class="govuk-body">If not, <a href="sign-in-one-login-only-v2.html"> go back to sign in using GOV.UK One Login</a>.</p>
+
+
+
+
+
+
+  {{ govukInput({
+    label: {
+      text: "Email address",
+      classes:"govuk-!-font-weight-bold"
+    },
+    id: "chs-email",
+    name: "chs-email",
+    type: "email",
+    autocomplete: "email",
+    spellcheck: false
+  }) }}  
+  
+
+
+  {{ govukButton({
+    text: "Continue"
+  }) }}  
+  
+
+ 
+
+
+  </form>
+
+ 
+          
+
+{% endblock %}
