@@ -1,72 +1,67 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-  ACME LIMITED PARTNERSHIP (SL123456)  – Find and update company information – GOV.UK Prototype Kit
-{% endblock %}
-
-{% block beforeContent %}
-
-
-<a class="govuk-link govuk-link--no-visited-state" href="https://resources.companieshouse.gov.uk/serviceInformation.shtml#compInfo">Companies House does not verify the accuracy of the information filed</a>
-<div class="account-banner hide-when-authorised" style="float:right; margin-top:30px;">
-  <a href="#">Sign in/Register</a>
-</div>
-
-    <!-- <div class="govuk-!-margin-top-4 account-banner authorised" style="float:right; margin-bottom:10px">
-      <span style="padding-right: 20px;">{{ data['emailAddress'] }}</span>
-      <span style="padding-right: 20px;"><a href="" id="your-details">Your details</a></span>
-      <span style="padding-right: 20px;"><a href="" id="your-filings">Your filings</a></span>
-      <span style="padding-right: 20px;"><a href="" id="companies-you-follow">Companies you follow</a></span>
-      <span style="padding-right: 20px;"><a href="" id="your-basket">Basket(0)</a></span>
-      <a href="#">Sign out</a>
-    </div> -->
-
-
+Find and update company information - GOV.UK 
 {% endblock %}
 {% set serviceName %}
 Find and update company information
 {% endset%}
 
+{% block beforeContent %}
 
 
+
+{% if data['signIn'] == true %}
+<!-- not signed in -->
+
+<a class="govuk-link govuk-link--no-visited-state" href="https://resources.companieshouse.gov.uk/serviceInformation.shtml#compInfo">Companies House does not verify the accuracy of the information filed</a> 
+<div class="govuk-!-margin-top-4 account-banner">
+  <a class=" govuk-link--no-visited-state" href="sign-in-one-login-only">Sign in/Register</a>
+</div>
+       
+
+{% else %}
+  
+
+<!-- signed in -->
+<div class="govuk-!-margin-top-4 account-banner">
+  <span style="padding-right: 20px;">{{ data['emailAddress'] }}</span>
+  <span style="padding-right: 20px;"><a href="" id="your-details">Your details</a></span>
+  <span style="padding-right: 20px;"><a href="" id="your-filings">Your filings</a></span>
+  <span style="padding-right: 20px;"><a href="" id="companies-you-follow">Companies you follow</a></span>
+  <span style="padding-right: 20px;"><a href="" id="your-basket">Basket(0)</a></span>
+  <a href="../sign-out">Sign out</a>
+</div>
+
+
+
+
+{% endif %}
+
+{% endblock %}
 
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
 
-<!-- 
-      <h1 class="govuk-heading-xl govuk-!-margin-bottom-3">Company search</h1> -->
+      <label class="govuk-label govuk-label" for="event-name">
+                Search for a company or officer
+              </label>
+        <div class="input-group">
 
-      <div class="search_container  govuk-!-margin-bottom-5">
+         
+          <div> 
+    
 
-        {{ govukInput({
-          label: {
-            text: "Company search",
-            classes: "govuk-label--xl",
-            isPageHeading: true
-          },
-          hint: {
-            text: "Enter company name, number or officer name"
-          },
-          id: "company-search",
-          name: "companySearch",
-          classes: "search_input"
-        }) }}
+            
+            <input class="search_input"></input></div>
+          <div><button class="govuk-button search_button"></button></div>
+      </div>
 
 
-       <!--  {{ govukInput({
-          label: {
-            text: "Enter company name, number or officer name"
-          },
-          classes: "search_input"
-        }) }} 
-        <img src="/public/images/search_icon.png" class="search_icon" alt="Search">-->
-    </div>
-
-
-
-      <p class="govuk-body"><a href="javascript:void(0)" class="govuk-link govuk-!-font-size-16">Advanced company search</a></p>
-
+        
+      <p class="govuk-body"><a href="#" class="govuk-link">Advanced company search</a></p>
+      
 
       <!--banner removed after round 10 of user research
       {% set html %}
