@@ -1459,35 +1459,7 @@ Find and update company information
     </div>
 
 
-      <div class="ur-shortcuts">
-      <!-- Not part of ACTUAL screen: only for UR purposes -->
-      <p class="govuk-body-s govuk-!-margin-bottom-1">UR shortcut:</p>
-{% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
-
-      {{ govukCheckboxes({
-            name: "overdue",
-            classes: "overdue",
-            fieldset: {
-              legend: {
-                text: "overdue",
-                classes: "govuk-visually-hidden"
-              }
-            },
-            items: [
-              {
-                value: "overdue",
-                text: "Toggle overdue CS",
-                id: "toggle-overdue"
-              },
-               {
-                value: "authorised",
-                text: "Toggle authorised",
-                id: "toggle-authorised"
-              }
-            ]
-          }) }}
-
-</div>
+      
 
 
   </div>
