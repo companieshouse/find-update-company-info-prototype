@@ -1,0 +1,80 @@
+{% extends "layouts/layout_rebrand.html" %}
+
+
+{% set serviceName %}
+  
+{% endset%}
+
+{% block pageTitle %}
+Sign in to Companies House - Find and update company information - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-two-thirds ">
+
+  <form action="choose-sign-in" method="post" novalidate="">
+
+
+
+
+    
+    {% set html %}
+    
+  {% endset %}
+
+
+  <h1 class="govuk-heading-l">Sign in to Companies House</h1>
+
+  
+
+  <p class="govuk-body">From now on, everyone must sign in to Companies House using GOV.UK One Login. You'll be able to create a GOV.UK One Login if you do not already have one.</p>
+<p><a href="#" class="govuk-link govuk-link--no-visited-state">Read more about the changes to signing in to Companies House</a>.</p>
+
+
+ 
+  <h2 class="govuk-heading-m">You can save your existing information</h1>
+
+    <p class="govuk-body">If you use the same email address for your GOV.UK One Login as your existing Companies House account, we'll save any information stored, such as: </p>
+   <ul class="govuk-list govuk-list--bullet">
+     <li>your filing history</li>
+     <li>companies you follow</li>
+    
+   </ul>
+
+
+
+    {{ govukButton({
+      text: "Go to GOV.UK One Login",
+      href:"one-login/create-or-sign-in"
+    }) }}
+  
+
+  <details class="govuk-details">
+    <summary class="govuk-details__summary">
+      <span class="govuk-details__summary-text">
+        Benefits of GOV.UK One Login
+      </span>
+    </summary>
+    <div class="govuk-details__text">
+    <p>A GOV.UK One Login allows you to access many government services using the same email address and password. It also makes your Companies House account more secure. </p> 
+ 
+    
+   </ul></div>
+  </details>
+  
+ 
+
+
+  </form>
+
+ 
+          
+
+{% endblock %}
