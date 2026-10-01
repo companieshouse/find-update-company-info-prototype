@@ -15,11 +15,13 @@ function search_tab_click(tab) {
   var all_tab = document.getElementById('all_tab');
   var companies_tab = document.getElementById('companies_tab');
   var search_officers_tab = document.getElementById('search_officers_tab');
+  var psc_tab = document.getElementById('psc_tab');
   var disqualifications_tab = document.getElementById('disqualifications_tab');
 
   var all_link = document.getElementById('all_link');
   var companies_link = document.getElementById('companies_link');
   var search_officers_link = document.getElementById('search_officers_link');
+  var psc_link = document.getElementById('psc_link'); 
   var disqualifications_link = document.getElementById('disqualifications_link');
 
   if (tab == 'all') {
@@ -45,6 +47,9 @@ function search_tab_click(tab) {
       search_officers_tab.classList.add('govuk-visually-hidden');
       search_officers_link.classList.remove('active_tab');
 
+      psc_tab.classList.add('govuk-visually-hidden');
+      psc_link.classList.remove('active_tab');
+
       disqualifications_tab.classList.add('govuk-visually-hidden');
       disqualifications_link.classList.remove('active_tab');
 
@@ -58,8 +63,28 @@ function search_tab_click(tab) {
       search_officers_tab.classList.remove('govuk-visually-hidden');
       search_officers_link.classList.add('active_tab');
 
+      psc_tab.classList.add('govuk-visually-hidden');
+      psc_link.classList.remove('active_tab');
+
       disqualifications_tab.classList.add('govuk-visually-hidden');
       disqualifications_link.classList.remove('active_tab');
+
+  } else if (tab == 'psc') {
+      all_tab.classList.add('govuk-visually-hidden');
+      all_link.classList.remove('active_tab');
+    
+      companies_tab.classList.add('govuk-visually-hidden');
+      companies_link.classList.remove('active_tab');
+
+      search_officers_tab.classList.add('govuk-visually-hidden');
+      search_officers_link.classList.remove('active_tab');
+      
+      psc_tab.classList.remove('govuk-visually-hidden');
+      psc_link.classList.add('active_tab');
+
+      disqualifications_tab.classList.add('govuk-visually-hidden');
+      disqualifications_link.classList.remove('active_tab');
+
 
   } else if (tab == 'disqualifications') {
       all_tab.classList.add('govuk-visually-hidden');
@@ -70,6 +95,9 @@ function search_tab_click(tab) {
 
       search_officers_tab.classList.add('govuk-visually-hidden');
       search_officers_link.classList.remove('active_tab');
+
+      psc_tab.classList.add('govuk-visually-hidden');
+      psc_link.classList.remove('active_tab');
 
       disqualifications_tab.classList.remove('govuk-visually-hidden');
       disqualifications_link.classList.add('active_tab');
