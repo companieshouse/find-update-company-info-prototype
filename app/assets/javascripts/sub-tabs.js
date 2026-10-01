@@ -33,6 +33,9 @@ function search_tab_click(tab) {
 
       search_officers_tab.classList.add('govuk-visually-hidden');
       search_officers_link.classList.remove('active_tab');
+      
+      psc_tab.classList.add('govuk-visually-hidden');
+      psc_link.classList.remove('active_tab');
 
       disqualifications_tab.classList.add('govuk-visually-hidden');
       disqualifications_link.classList.remove('active_tab');
