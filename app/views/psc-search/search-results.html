@@ -24,16 +24,12 @@ Find and update company information
   
 
 <!-- signed in -->
+
+
 <div class="govuk-!-margin-top-4 account-banner">
-  <span style="padding-right: 20px;">{{ data['emailAddress'] }}</span>
-  <span style="padding-right: 20px;"><a href="" id="your-details">Your details</a></span>
-  <span style="padding-right: 20px;"><a href="" id="your-filings">Your filings</a></span>
-  <span style="padding-right: 20px;"><a href="" id="companies-you-follow">Companies you follow</a></span>
-  <span style="padding-right: 20px;"><a href="" id="your-basket">Basket(0)</a></span>
-  <a href="../sign-out">Sign out</a>
+  <a class=" govuk-link--no-visited-state" href="sign-in-one-login-only">Sign in/Register</a>
 </div>
-
-
+       
 
 
 {% endif %}
@@ -50,10 +46,12 @@ Find and update company information
 
 
         
-      <p class="govuk-body"><a href="#" class="govuk-link">Advanced company search</a></p>
+      <p class="govuk-body govuk-!-margin-top-6"><a href="#" class="govuk-link">Advanced company search</a></p>
       
 
-      <h1 class="govuk-heading-l">Search results</h1>
+      <h1 class="govuk-heading-xl">Search results</h1>
+
+  
 
       <div class="moj-primary-navigation tabs">
         <div class="moj-primary-navigation__container" style="border-bottom: 1px solid #0b0c0c;">
@@ -73,7 +71,9 @@ Find and update company information
                 </li>
 
                 <li class="moj-primary-navigation__item">
-                  <a class="moj-primary-navigation__link" id="psc_link" href="javascript:search_tab_click('psc')">People with signicant control (PSCs)</a>
+                  <a class="moj-primary-navigation__link" id="psc_link" href="javascript:search_tab_click('psc')">People with signicant control (PSCs) <strong class="govuk-tag--green">
+  New
+</strong></a> 
                 </li>
                 <li class="moj-primary-navigation__item">
                   <a class="moj-primary-navigation__link" id="disqualifications_link" href="javascript:search_tab_click('disqualifications')">Disqualifications</a>
@@ -86,15 +86,24 @@ Find and update company information
     </div>
   </div>
 
+
   <div id="all_tab">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
 
-        <p class="govuk-body govuk-list govuk-!-margin-top-3">Results include companies, officers, people with significant control (PSCs) and disqualifications. If you want to view just one of these categories, you can filter results using the tabs.</p>
+       
+     <h2 class="govuk-heading-m govuk-!-margin-top-6">All results</h2>
+<div class="govuk-inset-text">
+  Results include companies, officers, people with significant control (PSCs) and disqualifications. If you want to view just one of these categories, you can filter results using the tabs.
 
-        <ul class="govuk-list govuk-!-margin-top-5">
+
+</div>
+        <ul class="govuk-list govuk-!-margin-top-2">
           <li style="font-size: 20px">
             <a class="govuk-link" href="company-info">ACME LIMITED PARTNERSHIP</a>
+          </li>
+          <li>
+           <strong>Company</strong>
           </li>
           <li class="govuk-body-s" style="color: #70777A;">
             SL123456 - Registered on 17 July 2025
@@ -103,37 +112,186 @@ Find and update company information
             1 Rose Street, Edinburgh, EH1 2EB
           </li>
         </ul>
+           <ul class="govuk-list govuk-!-margin-top-2">
+          <li style="font-size: 20px">
+            <a class="govuk-link" href="company-info">ACMED SERVICES</a>
+          </li>
+          <li>
+           <strong>Company</strong>
+          </li>
+          <li class="govuk-body-s" style="color: #70777A;">
+            SL123456 - Registered on 17 July 2025
+          </li>
+          <li class="govuk-body-s">
+            1 Rose Street, Edinburgh, EH1 2EB
+          </li>
+        </ul>
+         <ul class="govuk-list govuk-!-margin-top-2">
+          <li style="font-size: 20px">
+            <a class="govuk-link" href="company-info">John ACMENTHAL</a>
+          </li>
+          <li>
+           <strong>Officer</strong>
+          </li>
+          <li class="govuk-body-s" style="color: #70777A;">
+            Total number of appointments 2 - Born November 1982
+          </li>
+          <li class="govuk-body-s">
+           4 Charles Street, Sheffield, United Kingdom, S1 2HS
+          </li>
+        </ul>
+          <ul class="govuk-list govuk-!-margin-top-2">
+          <li style="font-size: 20px">
+            <a class="govuk-link" href="company-info">James ACME</a>
+          </li>
+          <li>
+           <strong>Person of Significant Control</strong>
+          </li>
+          <li class="govuk-body-s" style="color: #70777A;">
+            Born January 1981
+          </li>
+          <li class="govuk-body-s">
+             12 King Street, Bridgwater, TA7 0JK
+          </li>
+        </ul>
+              <ul class="govuk-list govuk-!-margin-top-2">
+          <li style="font-size: 20px">
+            <a class="govuk-link" href="company-info">Dorothy ACME</a>
+          </li>
+          <li>
+           <strong>Person of Significant Control</strong>
+          </li>
+          <li class="govuk-body-s" style="color: #70777A;">
+            Born January 1981
+          </li>
+          <li class="govuk-body-s">
+             315 Long Street, Bishopston, BS34 5HG
+          </li>
+        </ul>
+           <ul class="govuk-list govuk-!-margin-top-2">
+          <li style="font-size: 20px">
+            <a class="govuk-link" href="company-info">ACMET INTERNATIONAL LTD</a>
+          </li>
+          <li>
+           <strong>Company</strong>
+          </li>
+          <li class="govuk-body-s" style="color: #70777A;">
+            SL123456 - Registered on 17 July 2025
+          </li>
+          <li class="govuk-body-s">
+            1 Rose Street, Edinburgh, EH1 2EB
+          </li>
+        </ul>
+                </ul>
+           <ul class="govuk-list govuk-!-margin-top-2">
+          <li style="font-size: 20px">
+            <a class="govuk-link" href="company-info">Denise ACME</a>
+          </li>
+          <li>
+           <strong>Officer</strong>
+          </li>
+          <li class="govuk-body-s" style="color: #70777A;">
+            Total number of appointments - 2 - Born October 1965
+          </li>
+          <li class="govuk-body-s">
+            12 Flower Street, Edinburgh, EH1 2ED
+          </li>
+        </ul>
+                </ul>
+        
+        <ul class="govuk-list govuk-!-margin-top-2">
+          <li style="font-size: 20px">
+            <a class="govuk-link" href="company-info">Adam ACMEDINGER</a>
+          </li>
+          <li>
+           <strong>Officer</strong>
+          </li>
+          <li class="govuk-body-s" style="color: #70777A;">
+            Total number of appointments 1 - Born January 1973
+          </li>
+          <li class="govuk-body-s">
+            1 Pie Street, Milton Mowbray, MM1 2HG
+          </li>
+        </ul>
+              <ul class="govuk-list govuk-!-margin-top-2">
+          <li style="font-size: 20px">
+            <a class="govuk-link" href="company-info">Dorothy ACME</a>
+          </li>
+          <li>
+           <strong>Person of Significant Control</strong>
+          </li>
+          <li class="govuk-body-s" style="color: #70777A;">
+            Born January 1981
+          </li>
+          <li class="govuk-body-s">
+             315 Long Street, Bishopston, BS34 5HG
+          </li>
+        </ul>
+              <ul class="govuk-list govuk-!-margin-top-2">
+          <li style="font-size: 20px">
+            <a class="govuk-link" href="company-info">Fred ACME-SMITH</a>
+          </li>
+          <li>
+           <strong>Person of Significant Control</strong>
+          </li>
+          <li class="govuk-body-s" style="color: #70777A;">
+            Born March 1990
+          </li>
+          <li class="govuk-body-s">
+             1 Diamond Street, Bristol, BS3 3LF
+          </li>
+        </ul>
       </div>
     </div>
   </div>
 
+
   <div id="companies_tab">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <ul class="govuk-list govuk-!-margin-top-5">
+        <h2 class="govuk-heading-m govuk-!-margin-top-6">Company results</h2>
+                <ul class="govuk-list govuk-!-margin-top-2">
           <li style="font-size: 20px">
-            <a class="govuk-link" href="javascript:void(0)">ACMED LIMITED PARTERSHIP</a>
+            <a class="govuk-link" href="company-info">ACME LIMITED PARTNERSHIP</a>
+          </li>
+          <li>
+           <strong>Company</strong>
           </li>
           <li class="govuk-body-s" style="color: #70777A;">
-            SL222333 - Registered on 17 December 2023
+            SL123456 - Registered on 17 July 2025
           </li>
           <li class="govuk-body-s">
-            72 Guild Street, London, SE23 6FH
+            1 Rose Street, Edinburgh, EH1 2EB
           </li>
         </ul>
-  
-        <ul class="govuk-list govuk-!-margin-top-5">
+           <ul class="govuk-list govuk-!-margin-top-2">
           <li style="font-size: 20px">
-            <a class="govuk-link" href="javascript:void(0)">ACME LTD</a>
+            <a class="govuk-link" href="company-info">ACMED SERVICES</a>
+          </li>
+          <li>
+           <strong>Company</strong>
           </li>
           <li class="govuk-body-s" style="color: #70777A;">
-            11112222 - Incorporated on 16 March 2023
+            SL123456 - Registered on 17 July 2025
           </li>
           <li class="govuk-body-s">
-            78 Hill Road, Bristol, BS4 7GH
+            1 Rose Street, Edinburgh, EH1 2EB
           </li>
         </ul>
-  
+           <ul class="govuk-list govuk-!-margin-top-2">
+          <li style="font-size: 20px">
+            <a class="govuk-link" href="company-info">ACMET INTERNATIONAL LTD</a>
+          </li>
+          <li>
+           <strong>Company</strong>
+          </li>
+          <li class="govuk-body-s" style="color: #70777A;">
+            SL123456 - Registered on 17 July 2025
+          </li>
+          <li class="govuk-body-s">
+            1 Rose Street, Edinburgh, EH1 2EB
+          </li>
+        </ul>
         
       </div>
     </div>
@@ -154,16 +312,48 @@ Find and update company information
             <b>John Smith location:"High Street, London"</b> or <b>John Smith location:"CF14" </b>  
           </div>
         </details>
-  
-        <ul class="govuk-list govuk-!-margin-top-9">
+   <h2 class="govuk-heading-m govuk-!-margin-top-6">Officer results</h2>
+             <ul class="govuk-list govuk-!-margin-top-2">
           <li style="font-size: 20px">
-            <a class="govuk-link" href="#">BIG SHOPS LIMITED</a>
+            <a class="govuk-link" href="company-info">John ACMENTHAL</a>
+          </li>
+          <li>
+           <strong>Officer</strong>
           </li>
           <li class="govuk-body-s" style="color: #70777A;">
-            Total number of appointments 1
+            Total number of appointments 1 - Born November 1982
           </li>
           <li class="govuk-body-s">
-            5 Short street, Birmingham, BX1 4SA
+           4 Charles Street, Sheffield, United Kingdom, S1 2HS
+          </li>
+        </ul>
+           <ul class="govuk-list govuk-!-margin-top-2">
+          <li style="font-size: 20px">
+            <a class="govuk-link" href="company-info">Denise ACME</a>
+          </li>
+          <li>
+           <strong>Officer</strong>
+          </li>
+          <li class="govuk-body-s" style="color: #70777A;">
+            Total number of appointments - 2 - Born October 1965
+          </li>
+          <li class="govuk-body-s">
+            12 Flower Street, Edinburgh, EH1 2ED
+          </li>
+        </ul>
+                </ul>
+           <ul class="govuk-list govuk-!-margin-top-2">
+          <li style="font-size: 20px">
+            <a class="govuk-link" href="company-info">Adam ACMEDINGER</a>
+          </li>
+          <li>
+           <strong>Officer</strong>
+          </li>
+          <li class="govuk-body-s" style="color: #70777A;">
+            Total number of appointments 1 - Born January 1973
+          </li>
+          <li class="govuk-body-s">
+            1 Pie Street, Milton Mowbray, MM1 2HG
           </li>
         </ul>
   
@@ -175,27 +365,47 @@ Find and update company information
   <div id="psc_tab" class="govuk-visually-hidden">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <ul class="govuk-list govuk-!-margin-top-5">
+         <h2 class="govuk-heading-m govuk-!-margin-top-6">Persons of significant control results</h2>
+                 <ul class="govuk-list govuk-!-margin-top-2">
           <li style="font-size: 20px">
-            <a class="govuk-link" href="javascript:void(0)">ACMED LIMITED PARTERSHIP</a>
+            <a class="govuk-link" href="company-info">James ACME</a>
+          </li>
+          <li>
+           <strong>Person of Significant Control</strong>
           </li>
           <li class="govuk-body-s" style="color: #70777A;">
-            SL222333 - Registered on 17 December 2023
+            Born January 1981
           </li>
           <li class="govuk-body-s">
-            72 Guild Street, London, SE23 6FH
+             12 King Street, Bridgwater, TA7 0JK
           </li>
         </ul>
-  
-        <ul class="govuk-list govuk-!-margin-top-5">
+              <ul class="govuk-list govuk-!-margin-top-2">
           <li style="font-size: 20px">
-            <a class="govuk-link" href="javascript:void(0)">ACME LTD</a>
+            <a class="govuk-link" href="company-info">Dorothy ACME</a>
+          </li>
+          <li>
+           <strong>Person of Significant Control</strong>
           </li>
           <li class="govuk-body-s" style="color: #70777A;">
-            11112222 - Incorporated on 16 March 2023
+            Born January 1981
           </li>
           <li class="govuk-body-s">
-            78 Hill Road, Bristol, BS4 7GH
+             315 Long Street, Bishopston, BS34 5HG
+          </li>
+        </ul>
+              <ul class="govuk-list govuk-!-margin-top-2">
+          <li style="font-size: 20px">
+            <a class="govuk-link" href="company-info">Fred ACME-SMITH</a>
+          </li>
+          <li>
+           <strong>Person of Significant Control</strong>
+          </li>
+          <li class="govuk-body-s" style="color: #70777A;">
+            Born March 1990
+          </li>
+          <li class="govuk-body-s">
+             1 Diamond Street, Bristol, BS3 3LF
           </li>
         </ul>
   
