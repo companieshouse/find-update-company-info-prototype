@@ -1,0 +1,240 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Find and update company information - GOV.UK 
+{% endblock %}
+{% set serviceName %}
+Find and update company information
+{% endset%}
+
+{% block beforeContent %}
+
+
+
+{% if data['signIn'] == true %}
+<!-- not signed in -->
+
+<a class="govuk-link govuk-link--no-visited-state" href="https://resources.companieshouse.gov.uk/serviceInformation.shtml#compInfo">Companies House does not verify the accuracy of the information filed</a> 
+<div class="govuk-!-margin-top-4 account-banner">
+  <a class=" govuk-link--no-visited-state" href="sign-in-one-login-only">Sign in/Register</a>
+</div>
+       
+
+{% else %}
+  
+
+<!-- signed in -->
+<div class="govuk-!-margin-top-4 account-banner">
+  <a class=" govuk-link--no-visited-state" href="sign-in-one-login-only">Sign in/Register</a>
+</div>
+
+
+
+
+{% endif %}
+
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <label class="govuk-label govuk-label" for="event-name">
+                Search for a company or officer
+              </label>
+        <div class="input-group">
+
+         
+          <div> 
+    
+
+            
+            <input class="search_input govuk-!-margin-bottom-6"></input></div>
+          <div><button class="govuk-button search_button"></button></div>
+      </div>
+
+
+        
+      <p class="govuk-body govuk-!-margin-bottom-9"><a href="#" class="govuk-link">Advanced company search</a></p>
+      
+<h1 class="govuk-heading-xl">Dorothy ACME</h1>
+
+    <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+     <h2 class="govuk-heading-m govuk-!-margin-bottom-2">Filter notification</h2>
+      <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email" data-aria-controls="conditional-contact">
+        <label class="govuk-label govuk-checkboxes__label" for="contact">
+         Current notifications
+        </label>
+      </div>
+     
+    </div>
+  </fieldset>
+</div>
+    
+    <h2 class="govuk-heading-m">Total number of notifications 2</h2>
+
+      <p class="govuk-body govuk-!-margin-bottom-1">
+      Date of birth
+    </p>
+    <p class="govuk-body govuk-!-font-weight-bold govuk-!-margin-bottom-7 govuk-!-margin-bottom-4">
+     January 1981
+    </p>
+
+<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+<p class="govuk-body-l"><strong>
+  <a href="company-details-acme-events.html" class="govuk-link govuk-link--no-visited-state">ACME EVENTS LTD (0124656)</a>
+</strong></p>
+
+
+
+
+<div class="govuk-grid-row govuk-!-margin-top-4">
+
+  <div class="govuk-grid-column-one-third">
+
+    <p class="govuk-body govuk-!-margin-bottom-1">
+      Company status
+    </p>
+    <p class="govuk-body govuk-!-font-weight-bold govuk-!-margin-top-0 govuk-!-margin-bottom-4">
+      Dissolved
+    </p>
+
+    <p class="govuk-body govuk-!-margin-bottom-1">
+      Nature of control
+    </p>
+    <p class="govuk-body govuk-!-font-weight-bold govuk-!-margin-top-0 govuk-!-margin-bottom-4">
+      Over 25% shares
+    </p>
+
+    <p class="govuk-body govuk-!-margin-bottom-1">
+      Nationality
+    </p>
+    <p class="govuk-body govuk-!-font-weight-bold govuk-!-margin-top-0">
+      British
+    </p>
+    
+        <p class="govuk-body govuk-!-margin-bottom-1">
+     Identity verification due
+    </p>
+    <p class="govuk-body govuk-!-font-weight-bold govuk-!-margin-top-0">
+      7 July 2026
+    </p>
+
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+
+    <p class="govuk-body govuk-!-margin-bottom-1">
+      Correspondence address
+    </p>
+    <p class="govuk-body govuk-!-font-weight-bold govuk-!-margin-top-0 govuk-!-margin-bottom-4">
+      63 York Road, Essex, SS12BY
+    </p>
+
+    <p class="govuk-body govuk-!-margin-bottom-1">
+      Notified on
+    </p>
+    <p class="govuk-body govuk-!-font-weight-bold govuk-!-margin-top-0 govuk-!-margin-bottom-4">
+      6 September 2021
+    </p>
+
+    <p class="govuk-body govuk-!-margin-bottom-1">
+      Place of residence
+    </p>
+    <p class="govuk-body govuk-!-font-weight-bold govuk-!-margin-top-0">
+      United Kingdom
+    </p>
+
+  </div>
+
+</div>
+
+<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--xl govuk-!-margin-top-9">
+
+
+<p class="govuk-body-l"><strong>
+  <a href="#" class="govuk-link govuk-link--no-visited-state">WELLBEING EVENTS MANAGEMENT LTD (01456736)</a>
+</strong></p>
+
+
+
+
+<div class="govuk-grid-row govuk-!-margin-top-4">
+
+  <div class="govuk-grid-column-one-third">
+
+    <p class="govuk-body govuk-!-margin-bottom-1">
+      Company status
+    </p>
+    <p class="govuk-body govuk-!-font-weight-bold govuk-!-margin-top-0 govuk-!-margin-bottom-4">
+      Dissolved
+    </p>
+
+    <p class="govuk-body govuk-!-margin-bottom-1">
+      Nature of control <strong class="govuk-tag govuk-tag--green">
+  ACTIVE
+</strong>
+    </p>
+    <p class="govuk-body govuk-!-font-weight-bold govuk-!-margin-top-0 govuk-!-margin-bottom-4">
+      Over 25% shares
+    </p>
+
+    <p class="govuk-body govuk-!-margin-bottom-1">
+      Nationality
+    </p>
+    <p class="govuk-body govuk-!-font-weight-bold govuk-!-margin-top-0">
+      British
+    </p>
+
+  <p class="govuk-body govuk-!-margin-bottom-1">
+     Identity verification due
+    </p>
+    <p class="govuk-body govuk-!-font-weight-bold govuk-!-margin-top-0">
+      7 July 2026
+    </p>
+
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+
+    <p class="govuk-body govuk-!-margin-bottom-1">
+      Correspondence address
+    </p>
+    <p class="govuk-body govuk-!-font-weight-bold govuk-!-margin-top-0 govuk-!-margin-bottom-4">
+      63 York Road, Essex, SS12BY
+    </p>
+
+    <p class="govuk-body govuk-!-margin-bottom-1">
+      Notified on
+    </p>
+    <p class="govuk-body govuk-!-font-weight-bold govuk-!-margin-top-0 govuk-!-margin-bottom-4">
+      6 December 2023
+    </p>
+
+    <p class="govuk-body govuk-!-margin-bottom-1">
+      Place of residence
+    </p>
+    <p class="govuk-body govuk-!-font-weight-bold govuk-!-margin-top-0">
+      United Kingdom
+    </p>
+
+  </div>
+
+</div>
+
+<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--xl govuk-!-margin-top-9">
+
+
+{% endblock %}
+
+  
+
+{% block pageScripts %}
+<script src="/public/javascripts/application.js"></script>
+<script src="/public/javascripts/sub-tabs.js"></script>
+{% endblock %}
