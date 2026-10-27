@@ -1,0 +1,68 @@
+{% extends "layouts/layout-signed-out-agent.html" %}
+
+
+{% block pageTitle %}
+Check the details before we send the email  – {{ serviceName }} – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back"
+  }) }}
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-width-container">
+  <div class="govuk-grid-row">
+
+     <div class="govuk-grid-column-two-thirds">
+      <span class="govuk-caption-l">MORRIS ACCOUNTING LTD</span>
+          <h1 class="govuk-heading-l">Check your name</h1> 
+
+          {{ govukSummaryList({
+            rows: [
+              {
+                key: {
+                  text: "Name"
+                },
+                value: {
+                  text: "James Morris"
+                },    actions: {
+                  items: [
+                    {
+                      href: "#",
+                      text: "Change",
+                      visuallyHiddenText: "name"
+                    }
+                  ]
+                }
+              
+
+              }
+              
+            ]
+          }) }}
+
+      <div class="govuk-inset-text">
+  <p>We'll store your name with any filings you make. We will not show this on the public register. </p>
+
+</div>
+
+            {{ govukButton({
+              text: "Confirm name",
+              href:"member-home2"
+            }) }}
+          
+
+        
+          
+
+          
+
+</div>
+</div>
+
+
+{% endblock %}

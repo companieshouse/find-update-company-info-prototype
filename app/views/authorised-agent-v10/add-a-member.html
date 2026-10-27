@@ -31,13 +31,41 @@
 </div>-->
 
 
+
+<h2 class="govuk-label-wrapper">
+  <label class="govuk-label govuk-label--m" for="name">
+    What is their name?
+  </label>
+
+
+</h2>
+
+<div class="govuk-form-group">
+  <label class="govuk-label" >
+    First name
+  </label>
+  <input class="govuk-input govuk-!-width-two-thirds" type="text">
+</div>
+<div class="govuk-form-group">
+  <label class="govuk-label" >
+Last Name  </label>
+  <input class="govuk-input govuk-!-width-two-thirds" type="text">
+</div>
+
+
+
+
+<div class="govuk-inset-text">
+  <p class="govuk-body">We'll store this name with any filings they make. We will not show this on the public register.</p>
+              </div>
+
           {{ govukInput({
             label: {
               text: "What is their email address?",
               classes: "govuk-label--m"
             },
             hint: {
-              html: "This must be the email address they use for their Companies House account. If they do not have a Companies House account, they must create one before you can add them."
+              html: "This should be the email address they use to sign in to Companies House. They’ll be able to create sign in details if they do not already have an account."
             },
             id: "email",
             name: "email",
@@ -134,7 +162,7 @@
           <ul class="govuk-list govuk-list--bullet govuk-!-margin-bottom-6">
                   <li>view users who have been added to this account</li>
                         <li>verify people's identity for Companies House</li>
-            <li>file as an authorised agent </li>
+            <li>file as an Authorised Corporate Service Provider (ACSP)</li>
             </ul>
             </div>
 

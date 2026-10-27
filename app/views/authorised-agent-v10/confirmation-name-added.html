@@ -1,0 +1,79 @@
+{% extends "layouts/layout-signed-out-agent.html" %}
+
+{% block pageTitle %}
+  Your companies
+{% endblock %}
+
+{% set serviceName %}
+ 
+{% endset %}
+
+
+{% block content %}
+
+<div class="govuk-width-container">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+    {% set html %}
+    <h3 class="govuk-notification-banner__heading">
+      Name added 
+    </h3>
+    <p class="govuk-body">We'll store your name with any filings you make. We will not show this on the public register. </p>
+
+  {% endset %}
+
+    {{ govukNotificationBanner({
+      html: html,
+      type: 'success'
+    }) }}
+
+
+
+       <span class="govuk-caption-l">MORRIS ACCOUNTING LTD</span>
+          <h1 class="govuk-heading-l">If you need to update your name</h1> 
+
+<p>If you need to update your name on the ACSP account, you will need to ask another user to remove you from the account. Then they will need to add you as a user with your updated name. </p>
+
+
+<!--
+<details class="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      What an administrator can do
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+
+  <p class="govuk-body">An administrator can access services for the authorised agent.</p>
+
+
+    <p>They can also view all users who have been added to this account. They can add and remove:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>administrators</li>
+      <li>standard users</li>
+    </ul>
+      </div>
+</details> -->
+
+
+
+
+
+
+
+           {{ govukButton({
+              text: "Go to manage users",
+              href:"member-home-member-added-2",
+              classes:"govuk-!-margin-top-3"
+            }) }}
+
+
+
+
+
+</div>
+</div>
+
+
+{% endblock %}

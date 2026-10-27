@@ -19,31 +19,38 @@ Check the details before we send the email  – {{ serviceName }} – GOV.UK
 
      <div class="govuk-grid-column-two-thirds">
       <span class="govuk-caption-l">MORRIS ACCOUNTING LTD</span>
-          <h1 class="govuk-heading-l">Check the details</h1> 
+          <h1 class="govuk-heading-l">Check their details</h1> 
 
           {{ govukSummaryList({
             rows: [
               {
                 key: {
-                  text: "Email address"
+                  text: "Name"
+                },
+                value: {
+                  text: "Laura Williams"
+                }
+              
+
+              }, 
+
+              {
+                key: {
+                  text: "Email"
                 },
                 value: {
                   text: "l.williams@example.com"
                 }
-              },
-              {
-                key: {
-                  text: "Role"
-                },
-                value: {
-                  text: "Administrator"
-                }
+              
+
               }
+              
             ]
           }) }}
 
       <div class="govuk-inset-text">
-  We'll send an email to <strong>l.williams@example.com</strong> to tell them you've added them.
+  <p>We'll send an email to <strong>l.williams@example.com</strong> to tell them you've added them. They will be able to access the account immediately. </p>
+
 </div>
 
             {{ govukButton({
